@@ -1,11 +1,11 @@
 {% extends "govuk_template.html" %}
 
 {% block head %}
-  {% include "includes/head.html" %}
+  {% include "./includes/head.html" %}
 {% endblock %}
 
 {% block body_start %}
-{% include "includes/banner_prototype.html" %}
+{% include "./includes/banner_prototype.html" %}
 {% endblock %}
 
 {% block cookie_message %}
@@ -13,7 +13,7 @@
 {% endblock %}
 
 {% block proposition_header %}
-  {% include "includes/propositional_navigation_search.html" %}
+  {% include "./includes/propositional_navigation_search.html" %}
 {% endblock %}
 
 {% block header_class %}
@@ -21,7 +21,6 @@
 {% endblock %}
 
 {% block body_end %}
-  {% include "includes/scripts.html" %}
+  {% include "./includes/scripts.html" %}
   <!-- GOV.UK Prototype kit {{releaseVersion}} -->
-{% include "includes/sprints.html" %}
 {% endblock %}

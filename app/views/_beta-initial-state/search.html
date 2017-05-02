@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "./layout.html" %}
 
 {% block page_title %}
 Careers Service - Search
@@ -7,7 +7,7 @@ Careers Service - Search
 {% block content %}
 
 <main id="content" role="main">
-		{% include "includes/phase_banner_alpha.html" %} {% include "includes/breadcrumb_search.html" %}
+		{% include "./includes/phase_banner_alpha.html" %} {% include "./includes/breadcrumb_search.html" %}
 		<header class="hero search">
 			<div class="grid-row">
 				<div class="column-two-thirds">
@@ -39,14 +39,14 @@ Careers Service - Search
 							<a class="#"><span class="tag-filter">Apprenticeship route</span></a>
 						</li>
 					</ul>
-					<p><a href="./job-profile-index.html">Change your choice</a></p>	
+					<p><a href="job-profile-index.html">Change your choice</a></p>	
 			</div>
 
 			<div class="column-two-thirds search-results-list">
-				<p class="heading-small">8 results found. <!--<a href="./job-profile-browse.html">Browse jobs by sector</a>.--></p>
+				<p class="heading-small">8 results found. <!--<a href="job-A-Z-lists/job-profile-browse.html">Browse jobs by sector</a>.--></p>
 				<!-- ////////// Result 1 - START ////////// -->
 				<div class="search-result">
-					<h3 class="heading-medium"><a href="/plumber">Plumber</a></h3>
+					<h3 class="heading-medium"><a href="plumber">Plumber</a></h3>
 					<p class="meta grey">Heating and ventilation engineer, HVAC engineer</p>
 					<p>Plumbers fit and service heating systems. They also repair faults in hot and cold water supplies and drainage networks.</p>
 					<p class="heading-small">Salary: £18,000 to £35,000 (average per year)</p>
@@ -67,14 +67,14 @@ Careers Service - Search
 				</div><!-- ////////// Result 1 - END ////////// -->
 				<!-- ////////// Result 2 - START ////////// -->
 				<div class="search-result">
-					<h3 class="heading-medium"><a href="/paralegal">Paralegal</a></h3>
+					<h3 class="heading-medium"><a href="paralegal">Paralegal</a></h3>
 					<p class="meta grey">Legal executive, legal clerk</p>
 					<p>Paralegals prepare legal documents, carry out research and give legal advice to clients.</p>
 					<p class="heading-small">Salary: £16,000 to £40,000 (average per year)</p>
 				</div><!-- ////////// Result 2 - END ////////// -->
 				<!-- ////////// Result 3 - START ////////// -->
 				<div class="search-result">
-					<h3 class="heading-medium"><a href="/diver">Diver</a></h3>
+					<h3 class="heading-medium"><a href="diver">Diver</a></h3>
 					<p class="meta grey">Deep sea diver</p>
 					<p>Divers work underwater at sea, or in rivers, lakes, canals and reservoirs.</p>
 					<p class="heading-small">Salary: Variable (average per year)</p>
@@ -91,7 +91,7 @@ Careers Service - Search
 				<!-- ////////// Sub content result 1 - START ////////// -->
 				<!--<div class="search-result">
                          <h3 class="heading-medium">
-                              <a href="/sample-application-letters">Completing application forms</a>
+                              <a href="sample-application-letters">Completing application forms</a>
                          </h3>
                          <p class="meta grey">Job preparation</p>
                          <p>
@@ -102,7 +102,7 @@ Careers Service - Search
 				<!-- ////////// Sub content result 2 - START ////////// -->
 				<!--<div class="search-result">
                          <h3 class="heading-medium">
-                              <a href="/sample-cv">Writing your CV</a>
+                              <a href="sample-cv">Writing your CV</a>
                          </h3>
                          <p class="meta grey">Job preparation</p>
                          <p>
@@ -113,7 +113,7 @@ Careers Service - Search
 				<!-- ////////// Sub content result 3 - START ////////// -->
 				<!--<div class="search-result">
                          <h3 class="heading-medium">
-                              <a href="/interview-skills">Interview skills</a>
+                              <a href="interview-skills">Interview skills</a>
                          </h3>
                          <p class="meta grey">Job preparation</p>
                          <p>
@@ -125,35 +125,35 @@ Careers Service - Search
 				<!-- ============================== Related links - END ============================== -->
 				<!-- ////////// Result 4 - START ////////// -->
 				<div class="search-result">
-					<h3 class="heading-medium"><a href="/credit-controller">Credit controller</a></h3>
+					<h3 class="heading-medium"><a href="credit-controller">Credit controller</a></h3>
 					<p class="meta grey">Debt collection agent</p>
 					<p>Credit controllers help firms get the money they're owed from businesses and individuals.</p>
 					<p class="heading-small">Salary: £16,000 to £30,000 (average per year)</p>
 				</div><!-- ////////// Result 4 - END ////////// -->
 				<!-- ////////// Result 5 - START ////////// -->
 				<div class="search-result">
-					<h3 class="heading-medium"><a href="/chef">Chef</a></h3>
+					<h3 class="heading-medium"><a href="chef">Chef</a></h3>
 					<p class="meta grey">Cook, gourmet chef, sous chef</p>
 					<p>Chefs prepare and cook food.</p>
 					<p class="heading-small">Salary: £13,000 to £50,000 (average per year)</p>
 				</div><!-- ////////// Result 5 - END ////////// -->
 				<!-- ////////// Result 6 - START ////////// -->
 				<div class="search-result">
-					<h3 class="heading-medium"><a href="/publican">Publican</a></h3>
+					<h3 class="heading-medium"><a href="publican">Publican</a></h3>
 					<p class="meta grey">Pub landlord, licensee, manager of licensed premises</p>
 					<p>Publicans, or pub landlords, manage licensed premises like pubs and bars.</p>
 					<p class="heading-small">Salary: £20,000 to £50,000 (average per year)</p>
 				</div><!-- ////////// Result 6 - END ////////// -->
 				<!-- ////////// Result 7 - START ////////// -->
 				<div class="search-result">
-					<h3 class="heading-medium"><a href="/bank-manager">Bank manager</a></h3>
+					<h3 class="heading-medium"><a href="bank-manager">Bank manager</a></h3>
 					<p class="meta grey">Building society manager, financial institution manager or director</p>
 					<p>Bank managers oversee the day-to-day operations of their branch, supervise staff and work to attract new customers.</p>
 					<p class="heading-small">Salary: £18,000 to £70,000 (average per year)</p>
 				</div><!-- ////////// Result 7 - END ////////// -->
 				<!-- ////////// Result 8 - START ////////// -->
 				<div class="search-result">
-					<h3 class="heading-medium"><a href="/medical-secretary">Medical secretary</a></h3>
+					<h3 class="heading-medium"><a href="medical-secretary">Medical secretary</a></h3>
 					<p class="meta grey">Hospital administrator, medical practice administrator</p>
 					<p>Medical secretaries provide office support in hospitals, GP surgeries and universities.</p>
 					<p class="heading-small">Salary: £16,500 to £28,500 (average per year)</p>
