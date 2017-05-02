@@ -1,0 +1,161 @@
+// Import GOV.UK elements from /govuk-modules/, this will import the frontend toolkit and some base styles.
+// Take a look in /govuk-modules/_govuk-elements.scss to see which files are imported.
+@import 'node_modules/govuk_frontend_toolkit/stylesheets/colours.scss';
+
+
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+//  FOR ALL
+
+.main-navigation {
+     ul#proposition-links {
+          li {
+               //position: relative;
+               &.icon {
+                    display: none;
+               }
+               .mega-menu {
+                    display: none;
+               }
+               &:hover {
+                    // border-radius: 5px 5px 0 0; 
+                    .mega-menu {
+                         display: inline-block;
+                         position: absolute;
+                         z-index: 100;
+                         width: 400px;
+                         // bottom: 1em;
+                         left: 0;
+                         margin: 0;
+                         padding: 0;
+                         &:before {
+                              display: inline-block;
+                              position: absolute;
+                              left: 1em;
+                              top: 0.25em;
+                              // width: 1em;
+                              // height: 1em;
+                              // background: $turquoise;
+                              content: '';
+                              border-style: solid;
+                              border-width: 0 0.75em 0.75em 0.75em;
+                              border-color: transparent transparent $black transparent;
+                         }
+                         .wrapper {
+                              // background: $black;
+                              // padding: 1em 1em 0 1em;
+                              display: inline-block;
+                              text-align: left;
+                              width: 100%;
+                              &:hover {
+                                   cursor: default;
+                              }
+                              h1 {
+                                   font-size: 1.6rem;
+                                   color: $white;
+                                   font-weight: bold;
+                                   padding: 0.75em 1em;
+                                   background: $black;
+                                   border-radius: 0 5px 0 0;
+                                   border-bottom: 1px solid rgba($white,0.4);
+                              }
+                              ul {
+                                   display: inline-block;
+                                   width: 90%;
+                                   margin: 0;
+                                   padding: 1.25em 5% 0.5em 5%;
+                                   background: lighten($black,10%);
+                                   border-radius: 0 0 5px 5px;
+                                   li {
+                                        width: 50%;
+                                        text-align: left;
+                                        &:hover {
+                                             background: none;
+                                        }
+                                        a {
+                                             border-bottom: none;
+                                             padding: 0 0 1em 0;
+                                             text-align: left;
+                                             &:hover {
+                                                  cursor: pointer;
+                                                  background: none;
+                                             }
+                                        }
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
+
+
+// ONLY FOR DESKTOP (1020px)
+@media (min-width: 1020px) {
+
+
+
+}
+
+// LARGE UP (769px and above)
+@media (min-width: 769px) {
+
+
+
+}
+
+// MEDIUM ONLY (641px)
+// @media (min-width: 641px) {
+//
+//
+//
+// }
+
+// MEDIUM UP (641px and above)
+@media (min-width: 641px) {
+
+	 .main-navigation {
+          ul#proposition-links {
+               li { position:relative;
+                    //&.icon {
+                         //display: inline-block;
+						 //float: right !important;
+                    //}
+               }
+          }
+     }
+
+}
+
+// @media (min-width: 480px) {
+//
+//
+// }
+
+// SMARTPHONE ONLY (Up to 640px)
+@media (max-width: 640px) {
+
+     .main-navigation {
+          ul#proposition-links {
+               li {
+                    &.icon {
+                         display: inline-block;
+						 float: right !important;
+                    }
+				    
+               }
+          }
+     }
+
+}
+
+// SMARTPHONE ONLY (Up to 480px)
+// @media screen and (max-width: 480px) {
+//
+//
+//
+// }
