@@ -1,8 +1,11 @@
 {
   "paths": {
     "public": "public/",
+    "publicS1": "public/S1/",
     "assets" : "app/assets/",
+    "assetsS1" : "app/assets/S1/",
     "docsAssets" : "docs/assets/",
+    "docsAssetsS1" : "docs/assets/S1/",
     "govukModules": "govuk_modules/",
     "nodeModules": "node_modules/",
     "lib": "lib/"
