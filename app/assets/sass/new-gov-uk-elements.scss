@@ -108,7 +108,7 @@ header.hero {
 }
 
 #global-header.with-proposition .header-wrapper .header-global {
-     width: 100%;
+     // width: 100%;
      float: left;
 }
 
@@ -190,6 +190,13 @@ header.hero {
 
 
 #global-header {
+
+     .header-wrapper{
+          #search {
+               margin-right:15px;
+          }
+     }
+
      .header-proposition {
           #proposition-menu {
                margin-top: 0;
@@ -375,9 +382,9 @@ a {
      #global-header {
           &.with-proposition {
                .header-wrapper .header-global {
-                    width: 100%;
+                    // width: 100%;
                     .header-logo {
-                         width: 33.3%;
+                         // width: 33.3%;
                     }
                     .site-search {
                          width: 40%;
@@ -431,6 +438,7 @@ a {
                     }
                }
           }
+
      }
 
      header.hero {
