@@ -1,11 +1,14 @@
 {
   "paths": {
     "public": "public/",
-    "publicS1": "public/S1/",
+    "publicbeta": "public/_beta-initial-state/",
+    "publicS1": "public/_sprint1/",
     "assets" : "app/assets/",
-    "assetsS1" : "app/assets/S1/",
+    "assetsbeta" : "app/assets/_beta-initial-state/",
+    "assetsS1" : "app/assets/_sprint1/",
     "docsAssets" : "docs/assets/",
-    "docsAssetsS1" : "docs/assets/S1/",
+    "docsAssetsbeta" : "docs/assets/_beta-initial-state/",
+    "docsAssetsS1" : "docs/assets/_sprint1/",
     "govukModules": "govuk_modules/",
     "nodeModules": "node_modules/",
     "lib": "lib/"

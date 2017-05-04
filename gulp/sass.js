@@ -33,6 +33,28 @@ gulp.task('sass-documentation', function () {
   .pipe(gulp.dest(config.paths.public + '/stylesheets/'))
 })
 
+gulp.task('sass-beta', function () {
+  return gulp.src(config.paths.assetsbeta + '/sass/*.scss')
+  .pipe(sourcemaps.init())
+  .pipe(sass({outputStyle: 'expanded',
+    includePaths: ['govuk_modules/govuk_frontend_toolkit/stylesheets',
+      'govuk_modules/govuk_template/assets/stylesheets',
+      'govuk_modules/govuk-elements-sass/']}).on('error', sass.logError))
+  .pipe(sourcemaps.write())
+  .pipe(gulp.dest(config.paths.publicbeta + '/stylesheets/'))
+})
+
+gulp.task('sass-documentation-beta', function () {
+  return gulp.src(config.paths.docsAssetsbeta + '/sass/*.scss')
+  .pipe(sourcemaps.init())
+  .pipe(sass({outputStyle: 'expanded',
+    includePaths: ['govuk_modules/govuk_frontend_toolkit/stylesheets',
+      'govuk_modules/govuk_template/assets/stylesheets',
+      'govuk_modules/govuk-elements-sass/']}).on('error', sass.logError))
+  .pipe(sourcemaps.write())
+  .pipe(gulp.dest(config.paths.publicbeta + '/stylesheets/'))
+})
+
 gulp.task('sass-S1', function () {
   return gulp.src(config.paths.assetsS1 + '/sass/*.scss')
   .pipe(sourcemaps.init())

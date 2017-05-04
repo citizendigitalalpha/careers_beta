@@ -19,10 +19,14 @@ gulp.task('generate-assets', function (done) {
                 'copy-govuk-modules',
                 'sass',
                 'sass-documentation',
+                'sass-beta',
+                'sass-documentation-beta',
                 'sass-S1',
                 'sass-documentation-S1',
                 'copy-assets',
                 'copy-documentation-assets',
+                'copy-assets-beta',
+                'copy-documentation-assets-beta',
                 'copy-assets-S1',
                 'copy-documentation-assets-S1', done)
 })
@@ -36,9 +40,11 @@ gulp.task('copy-govuk-modules', [
 
 gulp.task('watch', function (done) {
   runSequence('watch-sass',
-              'watch-sassS1',
-              'watch-assetsS1',
-               'watch-assets', done)
+              'watch-assets',
+              'watch-sass-beta',
+              'watch-assets-beta',
+              'watch-sass-S1',
+              'watch-assets-S1', done)
 })
 
 gulp.task('test', function () {

@@ -17,11 +17,20 @@ gulp.task('watch-assets', function () {
 })
 
 
-gulp.task('watch-sassS1', function () {
+gulp.task('watch-sass-beta', function () {
+  return gulp.watch(config.paths.assetsbeta + 'sass/**', {cwd: './'}, ['sass-S1']);
+})
+
+gulp.task('watch-assets-beta', function () {
+  return gulp.watch([config.paths.assetsbeta + 'images/**',
+    config.paths.assetsbeta + 'javascripts/**'], {cwd: './'}, ['copy-assets-S1']);
+})
+
+gulp.task('watch-sass-S1', function () {
   return gulp.watch(config.paths.assetsS1 + 'sass/**', {cwd: './'}, ['sass-S1']);
 })
 
-gulp.task('watch-assetsS1', function () {
+gulp.task('watch-assets-S1', function () {
   return gulp.watch([config.paths.assetsS1 + 'images/**',
     config.paths.assetsS1 + 'javascripts/**'], {cwd: './'}, ['copy-assets-S1']);
 })

@@ -19,6 +19,18 @@ gulp.task('copy-documentation-assets', function () {
   .pipe(gulp.dest(config.paths.public))
 })
 
+gulp.task('copy-assets-beta', function () {
+  return gulp.src(['!' + config.paths.assetsbeta + 'sass{,/**/*}',
+    config.paths.assetsbeta + '/**'])
+  .pipe(gulp.dest(config.paths.publicS1))
+})
+
+gulp.task('copy-documentation-assets-beta', function () {
+  return gulp.src(['!' + config.paths.docsAssetsbeta + 'sass{,/**/*}',
+    config.paths.docsAssetsbeta + '/**'])
+  .pipe(gulp.dest(config.paths.publicS1))
+})
+
 gulp.task('copy-assets-S1', function () {
   return gulp.src(['!' + config.paths.assetsS1 + 'sass{,/**/*}',
     config.paths.assetsS1 + '/**'])
