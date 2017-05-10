@@ -13,12 +13,15 @@
 	&_blue {
 		background-color:$light-blue-50;
 	}
+	&_orange {
+		background-color:$orange-50;
+	}
 }
 
 #tools_key {
 	left:0px;
 	bottom:0px;
-	width:200px;
+	width:120px;
 	height:200px;
 	position:fixed;
 	background: $page-colour;
