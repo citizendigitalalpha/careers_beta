@@ -1,0 +1,74 @@
+{% extends "./layout.html" %}
+
+{% block page_title %}
+	Careers Service
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+     {% include "./includes/phase_banner_beta.html" %}
+
+     <header class="hero">
+          <div class="grid-row">
+               <div class="column-two-thirds">
+
+                    <h1 class="heading-xlarge">Search job profiles</h1>
+				<p class="lede">Search the many job profiles to learn more about each one, and find out how to become your chosen profession</p>
+
+                    <div class="search">
+                         <form id="searchForm" onsubmit="saveSearchTermsAndContinue()" role="search">
+                              <div id="search-box" class="search__input"></div>
+                              <input class="search__submit" type="submit" value="Search">
+                         </form>
+                    </div>
+               </div>
+          </div>
+     </header>	
+</main>
+
+<script>
+
+function init () {
+
+     var dataFilePath = "/public/_sprint1/data/picker-data-job-profile.json"
+     accessibleTypeahead({
+          element: document.querySelector('#search-box'),
+          id: 'my-typeahead',
+          source: locationPickerSuggestions(dataFilePath),
+          placeholder: 'Search',
+          showNoOptionsFound: false,
+          displayMenu: 'overlay',
+          minLength: 2
+          // onSelect:function(){document.getElementById("searchForm").submit()}
+     })  
+
+     // This function make sure the form is submitted when search field is in focus and the user presses enter
+     // This function is overriding one set in the accessible-typeahead.min.js that doesn't allow this behaviour if there are auto-complete options
+     function searchOnReturn() {
+          var searchContainer = document.getElementById("my-typeahead");
+          searchContainer.addEventListener('keydown', function(event) {
+               if (event.which === 13) {
+                    document.getElementById("searchForm").submit(); 
+               }
+          });
+     } 
+
+     // This function gets the value entered in the search box and saves it to the session data
+     function saveSearchTermsAndContinue() {
+          event.preventDefault();
+          var searchTerm = document.getElementById('my-typeahead').value;
+          console.log(searchTerm);
+          // req.session.searchTerms = "";
+          // window.location.href="search-results_blank";
+     }
+
+     searchOnReturn();
+}
+window.onload = init;
+
+</script>
+
+
+{% endblock %}

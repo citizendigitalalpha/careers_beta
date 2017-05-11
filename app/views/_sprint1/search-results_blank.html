@@ -1,0 +1,59 @@
+{% extends "./layout.html" %}
+
+{% block page_title %}
+Careers Service - Search
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+		{% include "./includes/phase_banner_beta.html" %} 
+		<div class="breadcrumbs">
+			<ol>
+				<li><a href="typeahead-experiment.html">Home</a></li>
+				<li>Search</li>	      
+			</ol>
+		</div>
+		<header class="hero search">
+			<div class="grid-row">
+				<div class="column-two-thirds">
+					<label class="heading-xlarge" for="search">Search results for X</label>
+<!-- 					<div class="search">
+						<form action="/search" method="get" role="search">
+							<div class="search__input">
+								<input class="js-search-focus" id="search" name="q" type="search" placeholder="for example, plumber">
+							</div><
+							<input class="search__submit" type="submit" value="Search">
+						</form>
+					</div>	 -->									
+				</div>
+				<div class="column-one-third">					
+			</div>
+		</header>
+		<div class="grid-row">
+			<div class="column-two-thirds search-results-list">
+				<p class="heading-small">Loading results </p>
+				<!-- ////////// Result 1 - START ////////// -->
+<!-- 				<div class="search-result">
+					<h3 class="heading-medium"><a href="./job-profiles/plumber">Plumber</a></h3>
+					<p class="meta grey">Heating and ventilation engineer, HVAC engineer</p>
+					<p>Plumbers fit and service heating systems. They also repair faults in hot and cold water supplies and drainage networks.</p>
+					<p class="heading-small">Salary: £18,000 to £35,000 (average per year)</p>
+				</div> -->
+				<!-- ////////// Result 1 - END ////////// -->
+				
+				<!-- <nav aria-label="Pagination" class="pagination form-group" role="navigation">
+					<ul class="list">
+						<li class="previous">
+							<a href="#" rel="prev" title="Navigate to previous page"><span class="pagination-label">Previous</span> <span class="visually-hidden">page</span> <span class="pagination-part-title">1 of 3</span></a>
+						</li>
+						<li class="next">
+							<a href="#" rel="next" title="Navigate to next page"><span class="pagination-label">Next</span> <span class="visually-hidden">page</span> <span class="pagination-part-title">3 of 3</span></a>
+						</li>
+					</ul>
+				</nav> -->
+			</div>
+		</div>
+	</main>
+
+{% endblock %}

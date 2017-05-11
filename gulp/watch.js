@@ -16,7 +16,6 @@ gulp.task('watch-assets', function () {
     config.paths.assets + 'javascripts/**'], {cwd: './'}, ['copy-assets']);
 })
 
-
 gulp.task('watch-sass-beta', function () {
   return gulp.watch(config.paths.assetsbeta + 'sass/**', {cwd: './'}, ['sass-S1']);
 })
@@ -34,4 +33,3 @@ gulp.task('watch-assets-S1', function () {
   return gulp.watch([config.paths.assetsS1 + 'images/**',
     config.paths.assetsS1 + 'javascripts/**'], {cwd: './'}, ['copy-assets-S1']);
 })
-
