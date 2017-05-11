@@ -3,7 +3,12 @@ var router = express.Router()
 
 // Route index page
 router.get('/', function (req, res) {
-  res.render('index')
+  res.render('index', { data : req.session['data'] })
+})
+
+router.post('/data', function(req, res){
+	req.session['data'] = req.body;
+	res.send({ success : true });
 })
 
 // add your routes here

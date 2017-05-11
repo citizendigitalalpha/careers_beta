@@ -1,6 +1,12 @@
+{% set searchTerm = data.searchTerm %}
+
 {% extends "govuk_template.html" %}
 
 {% block head %}
+  <script>
+	  // Making data object accessible in client
+	  var session = {{ data | dump | safe }};
+  </script>
   {% include "./includes/head.html" %}
 {% endblock %}
 

@@ -126,6 +126,15 @@ app.use(session({
   secret: crypto.randomBytes(64).toString('hex')
 }))
 
+// Set/update default session variables on data object
+app.use(function(req,res,next){
+  if (req.session['data'] == null)
+  {
+    req.session['data'] = {};
+  }
+  next()
+})
+
 // add nunjucks function called 'checked' to populate radios and checkboxes,
 // needs to be here as it needs access to req.session and nunjucks environment
 var addCheckedFunction = function (app, nunjucksEnv) {
