@@ -1,7 +1,7 @@
 {% extends "./layout.html" %}
 
 {% block page_title %}
-	Service T
+	Service Green
 {% endblock %}
 
 {% block content %}
@@ -14,14 +14,14 @@
           <div class="grid-row">
                <div class="column-two-thirds">
 
-                    <h1 class="heading-xlarge">Service T</h1>
+                    <h1 class="heading-xlarge">Service Green</h1>
                     <p class="lede">Find information, advice and guidance to help you make decisions on your career path</p>
 
                     <form id="searchForm">
                          <div class="form-group">
                               <div class="search">
                                    <div id="search-box" class="search__input">
-                                        <input class="typeahead__input" autocomplete="off" id="my-typeahead" name="input-typeahead" placeholder="Search" type="text">
+                                        <input class="typeahead__input" autocomplete="off" id="my-typeahead" name="input-typeahead" placeholder="Search the service" type="text">
                                    </div>
                                    <input class="search__submit" onclick="saveSearchTermsAndContinue()" type="button" value="Search">
                               </div>
@@ -35,6 +35,7 @@
 <script>
 
 // This function gets the value entered in the search box and saves it to the session data
+// Then loads the next page
 function saveSearchTermsAndContinue() {
      event.preventDefault();
      var searchTerm = document.getElementById('my-typeahead').value;

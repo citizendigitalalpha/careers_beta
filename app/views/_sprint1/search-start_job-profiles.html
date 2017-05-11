@@ -1,7 +1,7 @@
 {% extends "./layout.html" %}
 
 {% block page_title %}
-	Service T
+	Service Green
 {% endblock %}
 
 {% block content %}
@@ -14,7 +14,7 @@
           <div class="grid-row">
                <div class="column-two-thirds">
 
-                    <h1 class="heading-xlarge">Service T</h1>
+                    <h1 class="heading-xlarge">Service Green</h1>
                     <p class="lede">Explore job profiles to find out what a job involves and if it will suit you</p>
 
                     <form id="searchForm">
@@ -36,6 +36,7 @@
 <script>
 
 // This function gets the value entered in the search box and saves it to the session data
+// Then loads the next page
 function saveSearchTermsAndContinue() {
      event.preventDefault();
      var searchTerm = document.getElementById('my-typeahead').value;

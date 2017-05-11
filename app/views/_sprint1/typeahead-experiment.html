@@ -14,15 +14,15 @@
           <div class="grid-row">
                <div class="column-two-thirds">
 
-                    <h1 class="heading-xlarge">Search job profiles</h1>
-				<p class="lede">Search the many job profiles to learn more about each one, and find out how to become your chosen profession</p>
+                    <h1 class="heading-xlarge">Service Green</h1>
+				<p class="lede">Explore job profiles to find out what a job involves and if it will suit you</p>
 
-                    <div class="search">
-                         <form id="searchForm" onsubmit="saveSearchTermsAndContinue()" role="search">
+                    <form id="searchForm" onsubmit="saveSearchTermsAndContinue()" role="search">
+                         <div class="form-group search">
                               <div id="search-box" class="search__input"></div>
                               <input class="search__submit" type="submit" value="Search">
-                         </form>
-                    </div>
+                         </div>
+                    </form>
                </div>
           </div>
      </header>	
@@ -30,40 +30,40 @@
 
 <script>
 
-function init () {
+// This function gets the value entered in the search box and saves it to the session data
+// Then loads the next page
+function saveSearchTermsAndContinue() {
+     event.preventDefault();
+     var searchTerm = document.getElementById('my-typeahead').value;
+     window.setSessionData('searchTerm', searchTerm);
+     window.location.href="search-results_blank";
+}
 
-     var dataFilePath = "/public/_sprint1/data/picker-data-job-profile.json"
+// This function make sure the form is submitted when search field is in focus and the user presses enter
+// This function is overriding one set in the accessible-typeahead.min.js that doesn't allow this behaviour if there are auto-complete options
+function searchOnReturn() {
+     var searchContainer = document.getElementById("my-typeahead");
+     searchContainer.addEventListener('keydown', function(event) {
+          if (event.which === 13) {
+               saveSearchTermsAndContinue(); 
+          }
+     });
+} 
+
+function init () {
+     // Path to JSON file with all auto-complete data
+     var dataFilePath = "/public/_sprint1/data/picker-data-job-profile.json";
+
+     // Create accessible typeahead
      accessibleTypeahead({
           element: document.querySelector('#search-box'),
           id: 'my-typeahead',
           source: locationPickerSuggestions(dataFilePath),
-          placeholder: 'Search',
+          placeholder: 'Enter a job title',
           showNoOptionsFound: false,
           displayMenu: 'overlay',
           minLength: 2
-          // onSelect:function(){document.getElementById("searchForm").submit()}
-     })  
-
-     // This function make sure the form is submitted when search field is in focus and the user presses enter
-     // This function is overriding one set in the accessible-typeahead.min.js that doesn't allow this behaviour if there are auto-complete options
-     function searchOnReturn() {
-          var searchContainer = document.getElementById("my-typeahead");
-          searchContainer.addEventListener('keydown', function(event) {
-               if (event.which === 13) {
-                    document.getElementById("searchForm").submit(); 
-               }
-          });
-     } 
-
-     // This function gets the value entered in the search box and saves it to the session data
-     function saveSearchTermsAndContinue() {
-          event.preventDefault();
-          var searchTerm = document.getElementById('my-typeahead').value;
-          console.log(searchTerm);
-          // req.session.searchTerms = "";
-          // window.location.href="search-results_blank";
-     }
-
+     }) 
      searchOnReturn();
 }
 window.onload = init;
