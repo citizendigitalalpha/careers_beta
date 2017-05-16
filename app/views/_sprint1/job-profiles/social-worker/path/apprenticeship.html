@@ -1,4 +1,4 @@
-{% extends "../../layout_search.html" %}
+{% extends "../../../layout_search.html" %}
 
 {% block page_title %}
   Service Green
@@ -11,39 +11,38 @@
 			<ol>
 				<li><a href="#1">Home</a></li>
 				<li><a href="#1">Job profiles</a></li>
-				<li><a href="#1">????</a></li>
-				<li><a href="../social-worker_v2">Social worker</a></li>
-				<li><a href="./education">Education</a></li>
-				<li>Undergraduate course</li>
+				
+				<li><a href="../../social-worker_v2">Social worker</a></li>
+				<li>Apprenticeship</li>
 			</ol>
 		</div>
         <div class="grid-row">
             <div class="column-two-thirds">
                 <h1 class="heading-xlarge">
-                	<span class="heading-secondary">Finding an undergraduate course</span>
+                	<span class="heading-secondary">Finding an apprenticeship</span>
 	                Social worker
                 </h1>
 
-                <p>Blurb about using this page and generic information about searching for a undergraduate course</p>
+                <p>Blurb about using this page and generic information about searching for an apprenticeship</p>
 
-            	<a href="https://www.gov.uk/higher-education-courses-find-and-apply">More about undergraduate courses</a>
+            	<a href="https://www.gov.uk/apprenticeships-guide/overview">More about apprenticeships</a>
 
                 <section>
 	                <h2 class="heading-large">What to look for</h2>
 					<table style="margin-bottom:30px;">
 						<tbody>
 							<tr>
-								<td style="vertical-align: top;">Course title</td>
+								<td style="vertical-align: top;">Apprenticeship title</td>
 								<td>
 									<ul style="margin-top: 0" class="list list-bullet">
-										<li>Social worker course</li>
-										<li>Carer course</li>
-										<li>Healthcare course</li>
+										<li>Social worker apprenticeship</li>
+										<li>Carer apprenticeship</li>
+										<li>Healthcare apprenticeship</li>
 									</ul>
 								</td>
 							</tr>
 							<tr>
-								<td style="vertical-align: top;">Course level</td>
+								<td style="vertical-align: top;">Apprenticeship level</td>
 								<td>
 									Level 3 or higher
 									<br/>
@@ -74,7 +73,7 @@
 					</table>  
 				</section>              
 
-            	<a href="https://nationalcareersservice.direct.gov.uk/course-directory/home" class="button">Find a course</a>
+            	<a href="https://www.gov.uk/apply-apprenticeship" class="button	">Find an apprenticeship</a>
             	<br/>
             	<br/>
 				<a href="javascript:window.print()">Print page</a>
@@ -84,18 +83,18 @@
 				    <h2 class="heading-medium" id="related-gov-links">
 				    Other paths to becoming a Social worker</h2>
 				    <nav aria-labelledby="related-gov-links" role="navigation">
-				        <ul class="font-xsmall list">			   
+				        <ul class="font-xsmall list">
 				            <li>
-				                <a href="path/apprenticeship">Apprenticeship</a>
+				                <a href="education">Education</a>
+				            </li>				   
+				            <li>
+				                <a href="graduate">Graduate scheme</a>
 				            </li>
 				            <li>
-				                <a href="path/graduate">Graduate scheme</a>
+				                <a href="volunteer">Volunteering</a>
 				            </li>
 				            <li>
-				                <a href="path/volunteer">Volunteering</a>
-				            </li>
-				            <li>
-				                <a href="path/job">Job</a>
+				                <a href="job">Job</a>
 				            </li>				         
 				        </ul>
 				    </nav>
@@ -103,9 +102,5 @@
             </div>
         </div>
     </main>
-
-    <script src="/public/_sprint1/javascripts/jquery-1.11.3.js"></script>
-    <script src="/public/_sprint1/javascripts/paralegal-dynamic-panels.js"></script>
-
 
 {% endblock %}
