@@ -38,7 +38,6 @@
 // This function gets the value entered in the search box and saves it to the session data
 // Then loads the next page
 function saveSearchTermsAndContinue() {
-     event.preventDefault();
      var searchTerm = document.getElementById('my-typeahead').value;
      window.setSessionData('searchTerm', searchTerm);
      window.location.href="search-results_blank";
@@ -48,9 +47,11 @@ function saveSearchTermsAndContinue() {
 // This function is overriding one set in the accessible-typeahead.min.js that doesn't allow this behaviour if there are auto-complete options
 function searchOnReturn() {
      var searchContainer = document.getElementById("my-typeahead");
-     searchContainer.addEventListener('keydown', function(event) {
-          if (event.which === 13) {
-               saveSearchTermsAndContinue(); 
+     var e = window.event;
+     searchContainer.addEventListener('keydown', function(e) {
+          if (e.which === 13 || e.keycode === 13) {
+               e.preventDefault();
+               saveSearchTermsAndContinue();
           }
      });
 } 
