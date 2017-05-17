@@ -35,12 +35,17 @@
 
 <script>
 
+var counter = 0;
+
 // This function gets the value entered in the search box and saves it to the session data
 // Then loads the next page
 function saveSearchTermsAndContinue() {
      var searchTerm = document.getElementById('my-typeahead').value;
      window.setSessionData('searchTerm', searchTerm);
-     window.location.href="search-results_blank";
+     if (counter > 0) {
+          window.location.href="search-results_blank";
+     };
+     counter++;
 }
 
 // This function make sure the form is submitted when search field is in focus and the user presses enter
