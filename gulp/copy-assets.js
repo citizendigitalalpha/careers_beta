@@ -22,13 +22,13 @@ gulp.task('copy-documentation-assets', function () {
 gulp.task('copy-assets-beta', function () {
   return gulp.src(['!' + config.paths.assetsbeta + 'sass{,/**/*}',
     config.paths.assetsbeta + '/**'])
-  .pipe(gulp.dest(config.paths.publicS1))
+  .pipe(gulp.dest(config.paths.publicbeta))
 })
 
 gulp.task('copy-documentation-assets-beta', function () {
   return gulp.src(['!' + config.paths.docsAssetsbeta + 'sass{,/**/*}',
     config.paths.docsAssetsbeta + '/**'])
-  .pipe(gulp.dest(config.paths.publicS1))
+  .pipe(gulp.dest(config.paths.publicbeta))
 })
 
 gulp.task('copy-assets-S1', function () {
@@ -41,4 +41,16 @@ gulp.task('copy-documentation-assets-S1', function () {
   return gulp.src(['!' + config.paths.docsAssetsS1 + 'sass{,/**/*}',
     config.paths.docsAssetsS1 + '/**'])
   .pipe(gulp.dest(config.paths.publicS1))
+})
+
+gulp.task('copy-assets-S2', function () {
+  return gulp.src(['!' + config.paths.assetsS2 + 'sass{,/**/*}',
+    config.paths.assetsS2 + '/**'])
+  .pipe(gulp.dest(config.paths.publicS2))
+})
+
+gulp.task('copy-documentation-assets-S2', function () {
+  return gulp.src(['!' + config.paths.docsAssetsS2 + 'sass{,/**/*}',
+    config.paths.docsAssetsS2 + '/**'])
+  .pipe(gulp.dest(config.paths.publicS2))
 })
