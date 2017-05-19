@@ -1,7 +1,7 @@
 // Import GOV.UK elements from /govuk-modules/, this will import the frontend toolkit and some base styles.
 // Take a look in /govuk-modules/_govuk-elements.scss to see which files are imported.
 @import 'node_modules/govuk_frontend_toolkit/stylesheets/colours.scss';
-
+@import 'govuk-elements';
 
 /* ---------------------------------------------------------------------------
 * Main styles affecting the Application
@@ -241,27 +241,28 @@ a {
      }
 }
 
-.page-contents {
-     .heading-small {
-          margin-top: 0.2631578947em;
-          margin-bottom: 0.75em;
-     }
-     ul {
-          li {
-               margin-bottom: 10px;
-               list-style: none;
-               // font-size: 1.5rem;
-               padding: 0 0 0 15px;
-               &:before {
-                    content: "–";
-                    float: left;
-                    display: block;
-                    width: 15px;
-                    margin-left: -15px;
-               }
-          }
-     }
-}
+// .page-contents {
+//      .heading-small {
+//           margin-top: 0.2631578947em;
+//           margin-bottom: 0.75em;
+//      }
+//      ul {
+//           li {
+//                margin-bottom: 10px;
+//                list-style: none;
+//                // font-size: 1.5rem;
+//                padding: 0 0 0 15px;
+//                &:before {
+//                     content: "–";
+//                     float: left;
+//                     display: block;
+//                     width: 15px;
+//                     margin-left: -15px;
+//                }
+//           }
+//      }
+// }
+
 // ========================================== GENERAL PAGE - END ========================================== //
 
 // ========================================== STICKY NAV - START ========================================== //
@@ -471,3 +472,157 @@ a {
      }
 
 }
+
+// ========================================== PAGE CONTENT NAV ========================================== //
+
+.page-contents {
+    margin-top: 1em
+}
+
+@media (min-width: 641px) {
+    .page-contents {
+        margin-top:0;
+        padding: 2.3684em 0;
+    }
+}
+
+.page-contents__title {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: none;
+    font-size: 14px;
+    line-height: 1.14286;
+    margin-bottom: 5px
+}
+
+@media (min-width: 641px) {
+    .page-contents__title {
+        font-size:16px;
+        line-height: 1.25
+    }
+}
+
+.page-contents__list li {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 14px;
+    line-height: 1.14286;
+    list-style-type: none;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    padding-right: 15px
+}
+
+@media (min-width: 641px) {
+    .page-contents__list li {
+        font-size:16px;
+        line-height: 1.25
+    }
+}
+
+.page-contents__list li:before {
+    content: "–";
+    float: left;
+    display: block;
+    width: 15px;
+    margin-left: -15px
+}
+
+.page-contents__list a {
+    text-decoration: none;
+    letter-spacing: 0.022em
+}
+
+.page-contents__list a:hover,.page-contents__list a:focus,.page-contents__list a:active {
+    text-decoration: underline
+}
+
+.page-contents__list .active {
+    letter-spacing: 0;
+    font-weight: bold
+}
+
+// ========================================== FEEDBACK FOOTER ========================================== //
+
+.improve-this-page__prompt {
+    background-color: $turquoise;
+    color: #fff;
+    padding: 10px 15px 0;
+    @extend %site-width-container;
+    @extend %contain-floats;
+}
+
+.improve-this-page__prompt a:link,.improve-this-page__prompt a:visited {
+    color: #fff;
+    display: inline-block;
+}
+
+.improve-this-page__prompt:focus {
+    outline: none;
+}
+
+.improve-this-page__page-is-useful-button {
+    margin-right: 0.2em;
+}
+
+.improve-this-page__is-useful-question {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: none;
+    font-size: 14px;
+    line-height: 1.14286;
+    display: inline;
+}
+
+@media (min-width: 641px) {
+    .improve-this-page__is-useful-question {
+        font-size:16px;
+        line-height: 1.25;
+    }
+}
+
+.improve-this-page__anything-wrong {
+    float: right;
+}
+
+.improve-this-page__form {
+    margin-top: 30px;
+    padding: 15px 0;
+    border-top: 10px solid $turquoise;
+}
+
+.improve-this-page__form .form-control {
+    width: 100%;
+}
+
+.improve-this-page__close {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 14px;
+    line-height: 1.14286;
+    text-align: right;
+    display: block;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 641px) {
+    .improve-this-page__close {
+        font-size:16px;
+        line-height: 1.25;
+    }
+}
+
+@media (min-width: 641px) {
+    .improve-this-page__close {
+        display:inherit;
+        float: right;
+        padding-top: 0;
+    }
+}
+
+.full-page-width-wrapper {
+     border-bottom: 10px solid $turquoise;
+}
+
