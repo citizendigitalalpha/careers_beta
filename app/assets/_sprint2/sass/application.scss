@@ -113,6 +113,21 @@ $path: "/public/images/";
 	height: 100%;
 }
 
+.opportunity-item {
+	border-left:5px solid $turquoise;
+	padding-left:0.8em;
+	.heading-small {
+		margin: 0 0 1.05263em 0;
+	}
+	.opportunity-item__button {
+		margin-top:1.05263em;
+	}
+}
+
+.opportunity-footer {
+	margin-top: 1.05263em;
+}
+
 /*My account jump links*/
 
 .jump-links ol {
@@ -659,6 +674,7 @@ ul#az-index li {
 #site-search-text:-ms-input-placeholder {  
    color: black;  
 }
+
 // ========================================== MAIN NAVIGATION - END ========================================== //
 
 @import 'hybrid';
