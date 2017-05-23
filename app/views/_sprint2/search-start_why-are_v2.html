@@ -37,8 +37,12 @@
 // Then loads the next page
 function saveSearchTermsAndContinue() {
      var searchTerm = document.getElementById('my-typeahead').value;
-     window.setSessionData('searchTerm', searchTerm);
-     window.location.href="search-results_blank";
+     window.setSessionData('searchTerm', searchTerm, function(){
+          setTimeout(changePage, 500);
+          function changePage() {
+             window.location.href="search-results_blank";
+          }
+     });
 }
 
 // This function make sure the form is submitted when search field is in focus and the user presses enter

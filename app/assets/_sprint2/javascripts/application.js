@@ -30,9 +30,13 @@ $(document).ready(function () {
   Set session data
   ------------------------------------------------------------- */
 
-  window.setSessionData = function(label, value) {
+  window.setSessionData = function(label, value, callback) {
     session[label] = value;
-    $.post('/data', session, function(data){});  
+    $.post('/data', session, function(data){}); 
+
+    if(callback) {
+      callback();
+    }
   }
   
 })
