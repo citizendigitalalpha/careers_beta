@@ -36,11 +36,13 @@
 // This function gets the value entered in the search box and saves it to the session data
 // Then loads the next page
 function saveSearchTermsAndContinue() {
+     var searchPrompt = "Search the service";
+     window.setSessionData('searchPrompt', searchPrompt);
      var searchTerm = document.getElementById('my-typeahead').value;
      window.setSessionData('searchTerm', searchTerm, function(){
           setTimeout(changePage, 500);
           function changePage() {
-             window.location.href="search-results_blank";
+             window.location.href="search-results_data-upload";
           }
      });
 }

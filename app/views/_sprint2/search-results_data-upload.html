@@ -17,30 +17,23 @@ Careers Service - Search
 	<header>
 		<div class="grid-row">
 			<div class="column-two-thirds">
-				<h1 class="heading-large" for="search" style="margin-bottom:0.625em;">Search results for '{{ searchTerm }}'</h1>
-
-				<!-- <header class="hero"> -->
-	                <form id="searchForm">
-	                     <div class="form-group">
-	                          <div class="search">
-	                               <div id="search-box" class="search__input">
-	                                    <input class="typeahead__input" autocomplete="off" id="my-typeahead" name="input-typeahead" placeholder="Search the service" type="text">
-	                               </div>
-	                               <input class="search__submit" onclick="saveSearchTermsAndContinue()" type="button" value="Search">
-	                          </div>
-	                     </div>
-	                </form>
-				<!-- </header> -->
+				<h1 class="heading-large" for="search" style="margin:0.625em 0;">Search results for</h1>
+				<div class="search">
+					<div id="search-box" class="search__input">
+						<input class="typeahead__input" autocomplete="off" id="my-typeahead" name="input-typeahead" placeholder="{{ searchPrompt }}" value="{{ searchTerm }}" type="text">
+					</div>
+					<input class="search__submit" type="button" value="Search">
+				</div>
 			</div>
 		</div>
 	</header>
 	<div class="grid-row">
 		<div class="column-two-thirds" id="uploadUI">
-		    <input id="dataFile" type="file" />
+		    <input id="dataFile" type="file" style="margin:0.83333em 0 1.875em 0;" />
 		</div>
 
 		<div class="column-two-thirds search-results-list js-hidden" id="searchResultsList">
-			<p class="heading-small" style="margin-bottom: 30px;"><span id="numberOfResults"></span> results found.</p>
+			<h2 class="heading-medium" style="margin:0.83333em 0 1.875em 0;"><span id="numberOfResults"></span> results found</h2>
 		</div>
 	</div>
 </main>
