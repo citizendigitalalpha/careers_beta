@@ -31,7 +31,8 @@ gulp.task('watch-sass-S1', function () {
 
 gulp.task('watch-assets-S1', function () {
   return gulp.watch([config.paths.assetsS1 + 'images/**',
-    config.paths.assetsS1 + 'javascripts/**'], {cwd: './'}, ['copy-assets-S1']);
+    config.paths.assetsS1 + 'javascripts/**',
+    config.paths.assetsS1 + 'data/**'], {cwd: './'}, ['copy-assets-S1']);
 })
 
 gulp.task('watch-sass-S2', function () {
@@ -40,5 +41,6 @@ gulp.task('watch-sass-S2', function () {
 
 gulp.task('watch-assets-S2', function () {
   return gulp.watch([config.paths.assetsS2 + 'images/**',
-    config.paths.assetsS2 + 'javascripts/**'], {cwd: './'}, ['copy-assets-S2']);
+    config.paths.assetsS2 + 'javascripts/**',
+    config.paths.assetsS2 + 'data/**'], {cwd: './'}, ['copy-assets-S2']);
 })
