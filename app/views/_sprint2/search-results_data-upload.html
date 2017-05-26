@@ -36,33 +36,28 @@ Careers Service - Search
 			<h2 class="heading-medium" style="margin:0.83333em 0 1.875em 0;"><span id="numberOfResults"></span> results found</h2>
 		</div>
 
-		<div class="column-two-thirds" id="searchResultsPagination">
+		<div class="column-two-thirds js-hidden pagination" id="searchResultsPagination">
 			<ul class="previous-next-navigation">
 				<li class="next">
-					<a href="#1">
-						Next <span class="visuallyhidden">page</span>
+					<a href="#1" id="nextBtn">
+						<span class="pagination-label">Next</span>
+						<span class="visuallyhidden">page</span>
 						<span class="page-numbers">2 of Number of Pages</span>
 					</a>
 				</li>
-<!-- 				<li class="previous">
-					<a href="/search?filter_manual=%2Fservice-manual&amp;q=forms">
-						Previous <span class="visuallyhidden">page</span>
+				<li class="previous">
+					<a href="#1" id="prevBtn">
+						<span class="pagination-label">Previous</span>
+						<span class="visuallyhidden">page</span>
 						<span class="page-numbers">1 of Number of pages</span>
 					</a>
-				</li> -->
+				</li>
 			</ul>
 		</div>
 	</div>
 </main>
 
 <script>
-
-	// function Get(yourUrl){
-	//     var Httpreq = new XMLHttpRequest(); 
-	//     Httpreq.open("GET",yourUrl,false);
-	//     Httpreq.send(null);
-	//     return Httpreq.responseText;          
-	// }
 
 	function createResultMarkup(title, alternativeTitles, overview, link){
 		var emptyDataLabel = '<span class="text-secondary">No data</span>';
@@ -152,8 +147,68 @@ Careers Service - Search
     	}
 	}
 
-	function addPageToPagination() {
+	function paginationClicked(thisDirection) {
+		updatePage(thisDirection);
+		updatePaginationModel(thisDirection);
+		updatePaginationView();
+	}
 
+	function updatePaginationModel(thisDirection) {
+		if (thisDirection === 'next') {
+			currentPage = currentPage+1;
+			nextPage = nextPage+1;
+			prevPage = prevPage+1;
+		} else {
+			currentPage = currentPage-1;
+			nextPage = nextPage-1;
+			prevPage = prevPage-1
+		}
+	}
+
+	function initPaginationModel() {
+		currentPage = 1;
+		nextPage = 2;
+		prevPage = 0;
+	}
+
+	function updatePage(thisDirection) {
+		if (thisDirection === 'next') {
+			thisDirection = nextPage;
+		} else {
+			thisDirection = prevPage;
+		}
+		document.getElementById('page' + currentPage).classList.add('js-hidden');
+		document.getElementById('page' + thisDirection).classList.remove('js-hidden');
+	}
+
+	function updatePaginationView() {
+		// Create labels for next and previous UI
+		var nextLabel = nextPage + ' of ' + pageNumber;
+		var prevLabel = prevPage + ' of ' + pageNumber;
+
+		// Set pagination buttons
+		for(i = 0; i < nextBtn.childNodes.length; i++) {
+			if(nextBtn.childNodes[i].classList && nextBtn.childNodes[i].classList.contains('page-numbers')) {
+				nextBtn.childNodes[i].innerHTML = nextLabel;
+			}
+		}
+		for(i = 0; i < prevBtn.childNodes.length; i++) {
+			if(prevBtn.childNodes[i].classList && prevBtn.childNodes[i].classList.contains('page-numbers')) {
+				prevBtn.childNodes[i].innerHTML = prevLabel;
+			}
+		}	
+
+		// Hide UI if at beginnig or end
+		if (prevPage === 0) {
+			prevBtn.parentNode.classList.add('js-hidden');
+		} else {
+			prevBtn.parentNode.classList.remove('js-hidden');
+		}
+		if (currentPage === pageNumber) {
+			nextBtn.parentNode.classList.add('js-hidden');
+		} else {
+			nextBtn.parentNode.classList.remove('js-hidden');
+		}
 	}
 
 	function JSONLoaded(JSONFile){
@@ -187,6 +242,13 @@ Careers Service - Search
 		}
 		showResultContainer();	
 		removeUploadUI();
+
+		// Setup default model
+		initPaginationModel();
+		// Make sure default button labels are correct
+		updatePaginationView();
+		// Make pagination visible
+		document.getElementById('searchResultsPagination').classList.remove('js-hidden');
 	}
 
 	var mainContainer = document.getElementById('searchResultsList');
@@ -194,9 +256,12 @@ Careers Service - Search
 	var itemsCounter = itemsPerPage;
 	var pageNumber = 1;
 	var uploadElement = document.getElementById('dataFile');
+	var nextBtn = document.getElementById('nextBtn');
+	var prevBtn = document.getElementById('prevBtn');
 
     uploadElement.addEventListener('change', onChange);
-
+    nextBtn.addEventListener('click', function() { paginationClicked('next'); });
+	prevBtn.addEventListener('click', function() { paginationClicked('prev'); });
  
 </script>
 

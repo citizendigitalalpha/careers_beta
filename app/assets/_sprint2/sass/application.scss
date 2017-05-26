@@ -236,7 +236,7 @@ h3.heading-medium.appointment {
 .pagination {
 	display: block;
 	margin: 4em 0 0;
-	border-bottom: 1px solid #bfc1c3;
+	// border-bottom: 1px solid #bfc1c3;
 }
 @media (max-width: 640px) {
 	.pagination {
@@ -290,7 +290,7 @@ h3.heading-medium.appointment {
 		line-height: 1.25;
 	}
 }
-.pagination li a .pagination-part-title {
+.pagination li a:hover .page-numbers {
 	text-decoration: underline;
 }
 .pagination li.next {
