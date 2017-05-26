@@ -113,7 +113,11 @@ Careers Service - Search
 
 	function insertNewPage() {
 		pageNumber = pageNumber+1;
-		mainContainer.insertAdjacentHTML( 'beforeend', '<div class="paginated-page js-hidden" id="page' + pageNumber + '"></div>' );		
+		if (pageNumber > 1) {
+			var pageVisible = 'js-hidden';
+		}
+		console.log(pageVisible);
+		mainContainer.insertAdjacentHTML( 'beforeend', '<div class="paginated-page ' + pageVisible +'" id="page' + pageNumber + '"></div>' );		
 	}
 
     function onChange(event) {
@@ -137,10 +141,13 @@ Careers Service - Search
     	searchResultsList.classList.remove('js-hidden');
     }
 
-    function checkForSplit(i) {
-    	if(itemsCounter === 1) {
-    		itemsCounter = itemsPerPage; 
+    function checkForSplit() {
+    	if(itemsCounter === 10) {
+    		itemsCounter = itemsCounter-1;
     		return true;
+    	} else if (itemsCounter === 1){
+			itemsCounter = itemsPerPage;
+			return false;
     	} else {
     		itemsCounter = itemsCounter-1;
     		return false;
@@ -148,9 +155,12 @@ Careers Service - Search
 	}
 
 	function paginationClicked(thisDirection) {
-		updatePage(thisDirection);
-		updatePaginationModel(thisDirection);
-		updatePaginationView();
+		// A delay has been added to mimic page refresh
+		delayLoadOfPage = window.setTimeout(function() {
+			updatePage(thisDirection);
+			updatePaginationModel(thisDirection);
+			updatePaginationView();
+		;}, 700);
 	}
 
 	function updatePaginationModel(thisDirection) {
@@ -179,6 +189,8 @@ Careers Service - Search
 		}
 		document.getElementById('page' + currentPage).classList.add('js-hidden');
 		document.getElementById('page' + thisDirection).classList.remove('js-hidden');
+		// Move user to the top of the window as if a new page has loaded
+		window.scrollTo( 0, 0);
 	}
 
 	function updatePaginationView() {
@@ -204,7 +216,7 @@ Careers Service - Search
 		} else {
 			prevBtn.parentNode.classList.remove('js-hidden');
 		}
-		if (currentPage === pageNumber) {
+		if (currentPage === pageNumber || pageNumber === 1) {
 			nextBtn.parentNode.classList.add('js-hidden');
 		} else {
 			nextBtn.parentNode.classList.remove('js-hidden');
@@ -219,25 +231,25 @@ Careers Service - Search
 		document.getElementById('numberOfResults').innerHTML = resultAmount.toString();
 
 		// Create the first page for results to go in
-		mainContainer.insertAdjacentHTML( 'beforeend', '<div class="paginated-page" id="page' + pageNumber + '"></div>' );	
+		// mainContainer.insertAdjacentHTML( 'beforeend', '<div class="paginated-page" id="page' + pageNumber + '"></div>' );	
 
 		// Loop through results and create HTML
 		for (i = 0; i < data.value.length; i++) { 
 			var title = data.value[i].Title;
 			var alternativeTitles = data.value[i].AlternativeTitles;
 			var overview = data.value[i].Overview;
-
 			// The data is missing hyperlink & salary 
 			// var salary = data.value[i].Salary;
 			var link = data.value[i].Link;
 
+			// Add a new page for every ten result items
+			if(checkForSplit()){
+				insertNewPage();
+			}
+
 			if (title.length > 0) { // As a minimum the title must exist
 				var thisResultView = createResultMarkup (title, alternativeTitles, overview, link);
 				insertResultMarkup(thisResultView);		
-			}
-
-			if(checkForSplit(i)){
-				insertNewPage();
 			}
 		}
 		showResultContainer();	
@@ -254,7 +266,7 @@ Careers Service - Search
 	var mainContainer = document.getElementById('searchResultsList');
 	var itemsPerPage = 10;
 	var itemsCounter = itemsPerPage;
-	var pageNumber = 1;
+	var pageNumber = 0;
 	var uploadElement = document.getElementById('dataFile');
 	var nextBtn = document.getElementById('nextBtn');
 	var prevBtn = document.getElementById('prevBtn');
