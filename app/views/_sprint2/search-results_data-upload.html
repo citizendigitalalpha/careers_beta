@@ -35,19 +35,36 @@ Careers Service - Search
 		<div class="column-two-thirds search-results-list js-hidden" id="searchResultsList">
 			<h2 class="heading-medium" style="margin:0.83333em 0 1.875em 0;"><span id="numberOfResults"></span> results found</h2>
 		</div>
+
+		<div class="column-two-thirds" id="searchResultsPagination">
+			<ul class="previous-next-navigation">
+				<li class="next">
+					<a href="#1">
+						Next <span class="visuallyhidden">page</span>
+						<span class="page-numbers">2 of Number of Pages</span>
+					</a>
+				</li>
+<!-- 				<li class="previous">
+					<a href="/search?filter_manual=%2Fservice-manual&amp;q=forms">
+						Previous <span class="visuallyhidden">page</span>
+						<span class="page-numbers">1 of Number of pages</span>
+					</a>
+				</li> -->
+			</ul>
+		</div>
 	</div>
 </main>
 
 <script>
 
-	function Get(yourUrl){
-	    var Httpreq = new XMLHttpRequest(); 
-	    Httpreq.open("GET",yourUrl,false);
-	    Httpreq.send(null);
-	    return Httpreq.responseText;          
-	}
+	// function Get(yourUrl){
+	//     var Httpreq = new XMLHttpRequest(); 
+	//     Httpreq.open("GET",yourUrl,false);
+	//     Httpreq.send(null);
+	//     return Httpreq.responseText;          
+	// }
 
-	var createResultMarkup = function(title, alternativeTitles, overview, link){
+	function createResultMarkup(title, alternativeTitles, overview, link){
 		var emptyDataLabel = '<span class="text-secondary">No data</span>';
 
 		// Set link href
@@ -92,12 +109,17 @@ Careers Service - Search
 		return thisResult;
 	}
 
-	var insertResultMarkup = function(thisResultView) {
-		var container = document.getElementById('searchResultsList');
-		container.insertAdjacentHTML( 'beforeend', thisResultView );
+	function insertResultMarkup(thisResultView) {
+		var page = 'page' + pageNumber;
+		console.log(page);
+		var container = document.getElementById(page);
+		container.insertAdjacentHTML( 'beforeend', thisResultView);
 	}
 
-	//
+	function insertNewPage() {
+		pageNumber = pageNumber+1;
+		mainContainer.insertAdjacentHTML( 'beforeend', '<div class="paginated-page js-hidden" id="page' + pageNumber + '"></div>' );		
+	}
 
     function onChange(event) {
         var reader = new FileReader();
@@ -120,17 +142,29 @@ Careers Service - Search
     	searchResultsList.classList.remove('js-hidden');
     }
 
- 
-	var uploadElement = document.getElementById('dataFile');
-    uploadElement.addEventListener('change', onChange);
+    function checkForSplit(i) {
+    	if(itemsCounter === 1) {
+    		itemsCounter = itemsPerPage; 
+    		return true;
+    	} else {
+    		itemsCounter = itemsCounter-1;
+    		return false;
+    	}
+	}
 
+	function addPageToPagination() {
 
-	var JSONLoaded = function(JSONFile){
+	}
+
+	function JSONLoaded(JSONFile){
 		var data = JSONFile;
 		
 		// Set result counter
 		var resultAmount = data.value.length;
 		document.getElementById('numberOfResults').innerHTML = resultAmount.toString();
+
+		// Create the first page for results to go in
+		mainContainer.insertAdjacentHTML( 'beforeend', '<div class="paginated-page" id="page' + pageNumber + '"></div>' );	
 
 		// Loop through results and create HTML
 		for (i = 0; i < data.value.length; i++) { 
@@ -144,12 +178,25 @@ Careers Service - Search
 
 			if (title.length > 0) { // As a minimum the title must exist
 				var thisResultView = createResultMarkup (title, alternativeTitles, overview, link);
-				insertResultMarkup(thisResultView);
-				showResultContainer();	
-				removeUploadUI();		
+				insertResultMarkup(thisResultView);		
+			}
+
+			if(checkForSplit(i)){
+				insertNewPage();
 			}
 		}
+		showResultContainer();	
+		removeUploadUI();
 	}
+
+	var mainContainer = document.getElementById('searchResultsList');
+	var itemsPerPage = 10;
+	var itemsCounter = itemsPerPage;
+	var pageNumber = 1;
+	var uploadElement = document.getElementById('dataFile');
+
+    uploadElement.addEventListener('change', onChange);
+
  
 </script>
 
