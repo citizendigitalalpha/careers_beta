@@ -273,7 +273,7 @@ h3.heading-medium.appointment {
 	text-decoration: none;
 }
 .pagination li a:hover, .pagination li a:active {
-	background-color: #f8f8f8;
+	background-color: $grey-4;
 }
 .pagination li a .pagination-label {
 	font-size: 20px;
@@ -327,8 +327,8 @@ h3.heading-medium.appointment {
 }
 @media (max-width: 640px) {
 	.pagination li.previous, .pagination li.next {
-		float: none;
-		width: 100%;
+		float: right;
+		width: 50%;
 	}
 	.pagination li.next a {
 		text-align: right;
