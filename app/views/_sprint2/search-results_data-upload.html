@@ -106,7 +106,6 @@ Careers Service - Search
 
 	function insertResultMarkup(thisResultView) {
 		var page = 'page' + pageNumber;
-		console.log(page);
 		var container = document.getElementById(page);
 		container.insertAdjacentHTML( 'beforeend', thisResultView);
 	}
@@ -116,7 +115,6 @@ Careers Service - Search
 		if (pageNumber > 1) {
 			var pageVisible = 'js-hidden';
 		}
-		console.log(pageVisible);
 		mainContainer.insertAdjacentHTML( 'beforeend', '<div class="paginated-page ' + pageVisible +'" id="page' + pageNumber + '"></div>' );		
 	}
 
@@ -160,6 +158,8 @@ Careers Service - Search
 			updatePage(thisDirection);
 			updatePaginationModel(thisDirection);
 			updatePaginationView();
+			nextBtn.blur();
+			prevBtn.blur();
 		;}, 700);
 	}
 
