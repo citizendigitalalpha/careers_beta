@@ -623,3 +623,25 @@ a {
      border-bottom: 10px solid $turquoise;
 }
 
+// ========================================== TYPOGRAPHY ========================================== //
+
+.heading-medium {
+    & .heading-secondary {
+        font-family: "nta", Arial, sans-serif;
+        font-weight: 400;
+        text-transform: none;
+        font-size: 19px;
+        line-height: 1.2;
+        display: block;
+        padding-top:5px;
+        padding-bottom: 2px;
+        display: block;
+        color: #6f777b; 
+    }
+    @include media(tablet) {
+        font-size: 24px;
+        line-height: 1.25; 
+        padding-top: 6px;
+        padding-bottom: 4px; 
+    }
+}

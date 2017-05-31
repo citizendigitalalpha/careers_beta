@@ -202,7 +202,8 @@
 
 					<p>Here you will find the latest apprenticeships and courses to help you progress towards becoming a social worker.</p>
 
-					<a href="#1" id="showLocationFormBtn" class="button button-grey">Update results based on your location</a>
+                    <a href="#1" id="showLocationFormBtn" class="button button-grey">Show opportunities based on your location</a>
+
 					<div class="js-hidden clearfix" id="locationForm">
 						<div class="form-group form-group-compound">
 							<label id="your-location-label" class="form-label-bold" for="postcode">Your location
@@ -211,14 +212,17 @@
 							<input id="locationTextbox" class="form-control form-control-2-3" type="text" name="postcode" aria-labelledby="your-location-label"/>
 						</div>
 						<div class="form-group" style="margin-bottom:3px;"">
-							<button id="locationFormSubmitBtn" class="button" type="button">Update results</button>
+							<button id="locationFormSubmitBtn" class="button" type="button">Update opportunities</button>
 							<button id="locationFormCancelBtn" class="button button-link" type="button">Cancel</button>
 						</div>
-					</div>
-
-					<h2 class="heading-medium">Apprenticeships</h2>
+					</div> 
 
                     <div class="grid-row" id="appGeneric">
+                    	<div class="column-full">
+	                    	<h2 class="heading-medium">Apprenticeships
+		                    	<span class="heading-secondary">In England</span>
+	                    	</h2>
+                    	</div>
 	                    <div class="column-half">
 		                    <div class="opportunity-item">
 			                    <h3 class="heading-small"><a href="https://www.findapprenticeship.service.gov.uk/apprenticeship/-36234">Apprentice Health &amp; Social Care Support Worker</a></h3>
@@ -241,16 +245,24 @@
 	                    </div>	                
                     </div> 
 
-            		<p id="appGeo" class="js-hidden">There are currently no apprenticeships for social worker available in your location.</p>
+                    <div id="appGeo" class="js-hidden">
+                    	<h2 class="heading-medium">Apprenticeships
+	                    	<span class="heading-secondary">Near coventry</span>
+                    	</h2>
+	            		<p>There are currently no apprenticeships for social worker available in your location.</p>
+            		</div>
 
                     <div class="opportunity-footer">
                     	<a href="https://www.findapprenticeship.service.gov.uk">Explore other apprenticeships</a>
                     	<!-- <a href="#1" style="display: block;">Show apprenticeships in your location</a> -->
                     </div>
 
-					<h2 class="heading-medium">Training courses</h2>
-
                     <div class="grid-row" id="courseGeneric">
+                    	<div class="column-full">
+							<h2 class="heading-medium">Training courses
+								<span class="heading-secondary">In England</span>
+							</h2>
+                    	</div>
 	                    <div class="column-half">
 		                    <div class="opportunity-item">
 			                    <h3 class="heading-small"><a href="https://nationalcareersservice.direct.gov.uk/course-directory/course-details?courseid=54678546">Preparation for Access - Nursing, Health Sciences and Social Work</a></h3>
@@ -274,6 +286,11 @@
                     </div> 
 
                     <div class="grid-row js-hidden" id="courseGeo">
+                    	<div class="column-full">
+							<h2 class="heading-medium">Training courses
+								<span class="heading-secondary">Near coventry</span>
+							</h2>
+                    	</div>                 
 	                    <div class="column-half">
 		                    <div class="opportunity-item">
 			                    <h3 class="heading-small"><a href="https://nationalcareersservice.direct.gov.uk/course-directory/course-details?courseid=54678546">BTEC Level 3 National in Health &amp; Social Care (Double)</a></h3>
@@ -299,7 +316,24 @@
                     <div class="opportunity-footer">
                     	<a href="https://nationalcareersservice.direct.gov.uk/course-directory/home">Explore other courses</a>
                     	<!-- <a href="#1" style="display: block;">Show courses in your location</a> -->
-                    </div>                                
+                    </div>  
+
+                    <!-- <div style="margin-top: 30px">
+	                    <a href="#1" id="showLocationFormBtn" class="button button-grey">Update opportunities based on location</a>
+
+						<div class="js-hidden clearfix" id="locationForm">
+							<div class="form-group form-group-compound">
+								<label id="your-location-label" class="form-label-bold" for="postcode">Your location
+									<span class="form-hint">Enter postcode, town or city, or use <a href="#1">current location</a></span>
+								</label>
+								<input id="locationTextbox" class="form-control form-control-2-3" type="text" name="postcode" aria-labelledby="your-location-label"/>
+							</div>
+							<div class="form-group" style="margin-bottom:3px;"">
+								<button id="locationFormSubmitBtn" class="button" type="button">Update opportunities</button>
+								<button id="locationFormCancelBtn" class="button button-link" type="button">Cancel</button>
+							</div>
+						</div>  
+					</div>  -->                                           
 				</section>
 
 				<p class="grey font-xsmallw100">Last updated: 23 March 2016</p>
@@ -374,8 +408,16 @@
 	    	hideLocationForm();
 	    }
 
+		
+
 		var locationForm = document.getElementById('locationForm');
-		var locationTextbox = document.getElementById('locationTextbox')
+
+		var locationTextbox = document.getElementById('locationTextbox');
+		locationTextbox.addEventListener('keydown', function(event) {
+			if (event.which === 13) {
+				saveSearchTermsAndContinue(); 
+			}
+		});
 
 		var showLocationFormBtn = document.getElementById('showLocationFormBtn');
 		showLocationFormBtn.addEventListener('click', showLocationForm);
