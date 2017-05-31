@@ -198,25 +198,32 @@
 				<section  id="current-opportunities" style="margin-bottom:30px">
 					<h2 class="heading-large">7. Current opportunities</h2>
 
-					<p>Below are the latest apprenticeships from <a href="https://www.findapprenticeship.service.gov.uk">find an apprentice</a> service and courses from the <a href="https://nationalcareersservice.direct.gov.uk/course-directory/home">find a course</a> service.</p>
+<!-- 					<p>Below are the latest opportunities to help you become a social worker, with apprenticeships from the <a href="https://www.findapprenticeship.service.gov.uk">find an apprentice</a> service, and courses from the <a href="https://nationalcareersservice.direct.gov.uk/course-directory/home">find a course</a> service.</p> -->
+
+					<p>Here you will find the latest apprenticeships and courses to help you progress towards becoming a social worker.</p>
 
 					<a href="#1" id="showLocationFormBtn" class="button button-grey">Update results based on your location</a>
-					<form class="js-hidden" id="locationForm">
-						<div class="form-group">
-							<label class="form-label-bold" for="postcode">Enter postcode</label>
-							<input id="locationTextbox" class="form-control" type="text" name="postcode"/>
-							<button id="locationFormSubmitBtn" class="button" type="submit">Update results</button>
-							<button id="locationFormCancelBtn" class="button">Cancel</button>
+					<div class="js-hidden clearfix" id="locationForm">
+						<div class="form-group form-group-compound">
+							<label id="your-location-label" class="form-label-bold" for="postcode">Your location
+								<span class="form-hint">Enter postcode, town or city, or use <a href="#1">current location</a></span>
+							</label>
+							<input id="locationTextbox" class="form-control form-control-2-3" type="text" name="postcode" aria-labelledby="your-location-label"/>
 						</div>
-					</form>
+						<div class="form-group" style="margin-bottom:3px;"">
+							<button id="locationFormSubmitBtn" class="button" type="button">Update results</button>
+							<button id="locationFormCancelBtn" class="button button-link" type="button">Cancel</button>
+						</div>
+					</div>
 
 					<h2 class="heading-medium">Apprenticeships</h2>
 
-                    <div class="grid-row">
+                    <div class="grid-row" id="appGeneric">
 	                    <div class="column-half">
 		                    <div class="opportunity-item">
 			                    <h3 class="heading-small"><a href="https://www.findapprenticeship.service.gov.uk/apprenticeship/-36234">Apprentice Health &amp; Social Care Support Worker</a></h3>
 			                    <ul class="list">
+			                    	<li><span class="bold-small">Location:</span> Preston</li>
 				                    <li><span class="bold-small">Weekly wage:</span> £262.50</li>
 			                        <li><span class="bold-small">Weekly hours:</span> 37.50</li>
 			                    </ul>
@@ -226,23 +233,29 @@
 		                    <div class="opportunity-item">
 			                    <h3 class="heading-small"><a href="https://www.findapprenticeship.service.gov.uk/apprenticeship/-125526">Apprentice Health and Social Care Worker - Carer Level 3</a></h3>
 			                    <ul class="list">
+			                    	<li><span class="bold-small">Location:</span> Diss</li>
 				                    <li><span class="bold-small">Weekly wage:</span> £234</li>
 			                        <li><span class="bold-small">Weekly hours:</span> 37.50</li>
 			                    </ul>
 		                    </div>
 	                    </div>	                
-	                    <div class="column-full opportunity-footer">
-	                    	<a href="https://www.findapprenticeship.service.gov.uk" >Explore more apprenticeships</a>
-	                    	<!-- <a href="#1" style="display: block;">Show apprenticeships in your location</a> -->
-	                    </div>
                     </div> 
 
+            		<p id="appGeo" class="js-hidden">There are currently no apprenticeships for social worker available in your location.</p>
+
+                    <div class="opportunity-footer">
+                    	<a href="https://www.findapprenticeship.service.gov.uk">Explore other apprenticeships</a>
+                    	<!-- <a href="#1" style="display: block;">Show apprenticeships in your location</a> -->
+                    </div>
+
 					<h2 class="heading-medium">Training courses</h2>
-                    <div class="grid-row">
+
+                    <div class="grid-row" id="courseGeneric">
 	                    <div class="column-half">
 		                    <div class="opportunity-item">
 			                    <h3 class="heading-small"><a href="https://nationalcareersservice.direct.gov.uk/course-directory/course-details?courseid=54678546">Preparation for Access - Nursing, Health Sciences and Social Work</a></h3>
 			                    <ul class="list">
+			                    	<li><span class="bold-small">Location:</span> Merton</li>
 				                    <li><span class="bold-small">Provider:</span> SOUTH THAMES COLLEGE</li>
 			                        <li><span class="bold-small">Start date:</span> 11 September 2017</li>
 			                    </ul>
@@ -252,16 +265,41 @@
 		                    <div class="opportunity-item">
 			                    <h3 class="heading-small"><a href="https://nationalcareersservice.direct.gov.uk/course-directory/course-details?courseid=54045884">Access to Higher Education - Social Work</a></h3>
 			                    <ul class="list">
+			                    	<li><span class="bold-small">Location:</span> <span class="text-secondary"> Not available</span></li>
 				                    <li><span class="bold-small">Provider:</span> Seevic College</li>
 			                        <li><span class="bold-small">Start date:</span> 01 September 2017</li>
 			                    </ul>
 		                    </div>
 	                    </div>
-	                    <div class="column-full opportunity-footer">
-	                    	<a href="https://nationalcareersservice.direct.gov.uk/course-directory/home">Explore more courses</a>
-	                    	<!-- <a href="#1" style="display: block;">Show courses in your location</a> -->
+                    </div> 
+
+                    <div class="grid-row js-hidden" id="courseGeo">
+	                    <div class="column-half">
+		                    <div class="opportunity-item">
+			                    <h3 class="heading-small"><a href="https://nationalcareersservice.direct.gov.uk/course-directory/course-details?courseid=54678546">BTEC Level 3 National in Health &amp; Social Care (Double)</a></h3>
+			                    <ul class="list">
+			                    	<li><span class="bold-small">Location:</span> Coventry</li>
+				                    <li><span class="bold-small">Provider:</span> West Coventry Sixth Form</li>
+			                        <li><span class="bold-small">Start date:</span> 01 September 2017</li>
+			                    </ul>
+		                    </div>
+	                    </div>
+	                    <div class="column-half">
+		                    <div class="opportunity-item">
+			                    <h3 class="heading-small"><a href="https://nationalcareersservice.direct.gov.uk/course-directory/course-details?courseid=54045884">Health &amp; Social Care</a></h3>
+			                    <ul class="list">
+			                    	<li><span class="bold-small">Location:</span> Coventry</li>
+				                    <li><span class="bold-small">Provider:</span> Caludon Castle School</li>
+			                        <li><span class="bold-small">Start date:</span> Sep-16</li>
+			                    </ul>
+		                    </div>
 	                    </div>
                     </div> 
+
+                    <div class="opportunity-footer">
+                    	<a href="https://nationalcareersservice.direct.gov.uk/course-directory/home">Explore other courses</a>
+                    	<!-- <a href="#1" style="display: block;">Show courses in your location</a> -->
+                    </div>                                
 				</section>
 
 				<p class="grey font-xsmallw100">Last updated: 23 March 2016</p>
@@ -298,29 +336,61 @@
     </main>
 
     <script>
-    var showLocationForm = function(){
-    	locationForm.classList.remove('js-hidden');
-    	showLocationFormBtn.classList.add('js-hidden');
-    	locationTextbox.focus();
-    }
+	    function showLocationForm(){
+	    	event.preventDefault();
+	    	locationForm.classList.remove('js-hidden');
+	    	showLocationFormBtn.classList.add('js-hidden');
+	    	yourLocationLabel.focus();
+	    }
 
-    var hideLocationForm = function(){
-    	locationForm.classList.add('js-hidden');
-    	showLocationFormBtn.classList.remove('js-hidden');
-    	locationTextbox.blur();
-    }
+	    function hideLocationForm(){
+	    	event.preventDefault();
+	    	locationForm.classList.add('js-hidden');
+	    	showLocationFormBtn.classList.remove('js-hidden');
+	    	locationTextbox.blur();
+	    }
 
-	var locationForm = document.getElementById('locationForm');
-	var locationTextbox = document.getElementById('locationTextbox')
+	    function updateOpportunities(){
+	    	if (locationTextbox.value === ''){
+		    	appGeneric.classList.remove('js-hidden');
+		    	courseGeneric.classList.remove('js-hidden');
 
-	var showLocationFormBtn = document.getElementById('showLocationFormBtn');
-	showLocationFormBtn.addEventListener('click', showLocationForm);
+		    	appGeo.classList.add('js-hidden');
+		    	courseGeo.classList.add('js-hidden');	    		
+	    	} else {
+	    		setTimeout(function(){
+			    	appGeneric.classList.add('js-hidden');
+			    	courseGeneric.classList.add('js-hidden');
 
-	var locationFormCancelBtn = document.getElementById('locationFormCancelBtn');
-	locationFormCancelBtn.addEventListener('click', hideLocationForm);
-	
+			    	appGeo.classList.remove('js-hidden');
+			    	courseGeo.classList.remove('js-hidden');
+		    	}, 700);
+	    	}	    		
+	    }
 
-	var locationFormSubmitBtn = document.getElementById('locationFormSubmit');	
+	    function cancelLocationForm() {
+	    	locationTextbox.value = '';
+	    	updateOpportunities();
+	    	hideLocationForm();
+	    }
+
+		var locationForm = document.getElementById('locationForm');
+		var locationTextbox = document.getElementById('locationTextbox')
+
+		var showLocationFormBtn = document.getElementById('showLocationFormBtn');
+		showLocationFormBtn.addEventListener('click', showLocationForm);
+
+		var locationFormCancelBtn = document.getElementById('locationFormCancelBtn');
+		locationFormCancelBtn.addEventListener('click', cancelLocationForm);
+
+		var locationFormSubmitBtn = document.getElementById('locationFormSubmitBtn');
+		locationFormSubmitBtn.addEventListener('click', updateOpportunities);
+
+		var yourLocationLabel = document.getElementById('your-location-label');	
+		var appGeneric = document.getElementById('appGeneric');
+		var appGeo = document.getElementById('appGeo');
+		var courseGeneric = document.getElementById('courseGeneric');
+		var courseGeo = document.getElementById('courseGeo');
 
     </script>
 
