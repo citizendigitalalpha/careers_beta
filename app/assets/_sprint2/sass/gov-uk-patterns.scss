@@ -493,13 +493,13 @@ main.search #results .zero-results ul,main.search #results .zero-results p {
 }
 
 main.no-results-term {
-    padding-top: 30px;
+    padding-top: 0px;
     padding-bottom: 130px
 }
 
 @media (min-width: 641px) {
     main.no-results-term {
-        padding-top:40px;
+        padding-top:0px;
         padding-bottom: 300px
     }
 
