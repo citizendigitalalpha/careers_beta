@@ -320,10 +320,10 @@ h3.heading-medium.appointment {
 	text-align: left;
 }
 .pagination li.previous a {
-	padding: .75em 0 .75em 3em;
+	padding: .75em 0 .75em 2em;
 }
 .pagination li.next a {
-	padding: .75em 3em .75em 0;
+	padding: .75em 2em .75em 0;
 }
 @media (max-width: 640px) {
 	.pagination li.previous, .pagination li.next {
@@ -406,12 +406,12 @@ h3.heading-medium.appointment {
 /**search box**/
 
 #search-main, #autocomplete_home {
-	float: left;
-	width: 76%;
-	width: -webkit-calc(100% - 62px);
-	width: calc(100% - 62px);
-	height: 38px;
-     background: $white;
+	// float: left;
+	// width: 76%;
+	// width: -webkit-calc(100% - 62px);
+	// width: calc(100% - 62px);
+	// height: 38px;
+ //    background: $white;
 }
 
 /*search button*/
@@ -685,3 +685,6 @@ ul#az-index li {
 @import 'buttons';
 
 header.hero.search p a {color:$link-colour;}
+
+@import 'gov-uk-patterns';
+@import 'MVS_styles';
