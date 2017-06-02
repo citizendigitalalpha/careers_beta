@@ -1,3 +1,32 @@
+@import 'node_modules/govuk_frontend_toolkit/stylesheets/conditionals.scss';
+
+.header-title {
+    float: left;
+    color: #fff;
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: none;
+    font-size: 18px;
+    line-height: 1.2;
+
+    @media (min-width: 641px) {
+        font-size:24px;
+        line-height: 1.25
+    }
+
+    @media screen and (max-width: 379px) {
+        margin:5px 15px 0
+    }
+
+    @media screen and (min-width: 380px) {
+        margin-top:14px
+    }
+
+    @media (min-width: 641px) {
+        margin-top:8px
+    }
+}
+
 main.search {
     padding-bottom: 30px
 }
