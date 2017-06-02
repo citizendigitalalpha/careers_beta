@@ -112,6 +112,10 @@ $site-width:960px;
 		&:hover {
 			cursor: pointer;
 		}
+		&:focus {
+		    z-index: 15;
+		    position: relative;
+		}
 	}
 }
 
