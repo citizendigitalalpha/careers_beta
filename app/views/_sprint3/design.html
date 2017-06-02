@@ -1,4 +1,4 @@
-{% extends "./layout.html" %}
+{% extends "./layout-admin.html" %}
 
 {% block page_title %}
   GOV.UK prototype kit
@@ -16,7 +16,7 @@
 			</div> -->
 
 			<h1 class="heading-xlarge">
-				<span class="heading-secondary">Sprint 2</span>
+				<span class="heading-secondary">Sprint 3</span>
 				Design exploration
 			</h1>	
 
@@ -33,17 +33,17 @@
 
 			<h2 class="heading-large">Search journeys</h2>
 			<ul class="list list-bullet">
-				<li><a href="search-start_job-profiles">Job title - v1</a></li>
+				<li class="ADMIN_archived"><a href="search-start_job-profiles">Job title - v1</a></li>
 				<li><a href="search-start_job-profiles_v2">Job title - v2 (WIP)</a></li>
-				<li><a href="search-start_why-are">Service wide - v1</a></li>
-				<li><a href="search-start_why-are_v2">Service wide - v2 (WIP)</a></li>
+				<li class="ADMIN_archived"><a href="search-start_why-are">Service wide - v1</a></li>
+				<li class="ADMIN_archived"><a href="search-start_why-are_v2">Service wide - v2 (WIP)</a></li>
 				<li><a href="search-start_typeahead">Job title - typeahead - v1</a></li>
 			</ul>
 
 			<h2 class="heading-large">Search results page</h2>
 			<ul class="list list-bullet">
-				<li><a href="search-results_blank">Search results - blank</a></li>
-				<li><a href="search-results_data">Search results - from file</a></li>
+				<li class="ADMIN_archived"><a href="search-results_blank">Search results - blank</a></li>
+				<li class="ADMIN_archived"><a href="search-results_data">Search results - from file</a></li>
 				<li><a href="search-results_data-upload">Search results - from uploaded file</a></li>
 				<li><a href="PROD_search-results_success">Search results - from file - GOV styles</a></li>
 				<li><a href="PROD_search-results_no-results">Search results - no results - GOV styles</a></li>
@@ -69,17 +69,17 @@
 
 			<h3 class="heading-small">Social worker</h3>
 			<ul class="list list-bullet">
-				<li><a href="job-profiles/social-worker">Social worker - v1</a></li>
-				<li><a href="job-profiles/social-worker_v2">Social worker - v2</a></li>
-				<li><a href="job-profiles/social-worker_v2_highlighted">Social worker - v2 - highlighted</a></li>
+				<li class="ADMIN_archived"><a href="job-profiles/social-worker">Social worker - v1</a></li>
+				<li class="ADMIN_archived"><a href="job-profiles/social-worker_v2">Social worker - v2</a></li>
+				<li class="ADMIN_archived"><a href="job-profiles/social-worker_v2_highlighted">Social worker - v2 - highlighted</a></li>
 				<li><a href="job-profiles/social-worker_v3">Social worker - v3</a></li>
 			</ul>
 
 			<h3 class="heading-small">Primary school teacher</h3>
 			<ul class="list list-bullet">
-				<li><a href="job-profiles/primary-school-teacher">Primary school teacher - v1</a></li>
-				<li><a href="job-profiles/primary-school-teacher_v2">Primary school teacher - v2</a></li>
-				<li><a href="job-profiles/primary-school-teacher_v2_highlighted">Primary school teacher - v2 - highlighted</a></li>
+				<li class="ADMIN_archived"><a href="job-profiles/primary-school-teacher">Primary school teacher - v1</a></li>
+				<li class="ADMIN_archived"><a href="job-profiles/primary-school-teacher_v2">Primary school teacher - v2</a></li>
+				<li class="ADMIN_archived"><a href="job-profiles/primary-school-teacher_v2_highlighted">Primary school teacher - v2 - highlighted</a></li>
 				<li><a href="job-profiles/primary-school-teacher_v3">Primary school teacher - v3</a></li>
 			</ul>
 
@@ -106,7 +106,46 @@
 			</ul>
 		</div>
 	</div>
+	<div class="grid-row" style="margin-top:60px;">
+		<div class="column-two-thirds">
+			<button class="button-grey" id="archivedToggleBtn" onclick="toggleArchived()">Show archived</button>
+		</div>
+	</div>
 </main>
+
+<script>
+
+	function initAdmin(){
+		archived = document.getElementsByClassName('ADMIN_archived');
+		archivedToggleBtn = document.getElementById('archivedToggleBtn');
+		archiveShowLabel = "Show archived";
+		archiveHideLabel = "Hide archived";
+		hideArchived();	
+	}
+
+	function hideArchived(){
+		for(var i = 0; i < archived.length; i++) {
+			archived[i].style.display = "none";
+		}
+		archivedToggleBtn.innerHTML = archiveShowLabel;
+	}
+
+	function showArchived(){
+		for(var i = 0; i < archived.length; i++) {
+			archived[i].style.display = "list-item";
+		}
+		archivedToggleBtn.innerHTML = archiveHideLabel;
+	}
+
+	function toggleArchived(){
+		if (archivedToggleBtn.innerHTML === archiveShowLabel) {
+			showArchived();
+		} else {
+			hideArchived();
+		}
+	}
+	initAdmin();
+</script>
 
 {% endblock %}
 
