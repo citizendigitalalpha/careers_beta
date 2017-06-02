@@ -31,28 +31,36 @@ $site-width:960px;
 }
 
 /* -------------------------------------------------------------
-	Heroes
+	Hero
 ------------------------------------------------------------- */
 
 .PROD_hero {
-  background: $turquoise;
-  margin: 0 0 0em 0;
-  padding: 25px 0 15px;
-  color: $white;
+	background: $turquoise;
+	margin: 0 0 0em 0;
+	padding: 25px 30px 15px;
+	color: $white;
+	@include media(tablet) {
+		padding: 40px 30px 30px;
+	}
+	.heading-xlarge {
+		margin: 0 0 30px 0;
+	}
+	p {
+		a {
+			font-weight: bold;
+			color: $white;
+		}
+	}
+}
 
-  @include media(tablet) {
-  	padding: 40px 0 30px;
-  }
-
-  .heading-xlarge {
-      margin: 0 0 30px 0;
-  }
-  p {
-      a {
-           font-weight: bold;
-           color: $white;
-      }
-  }
+//Changes to the hero when inside a full width container
+.PROD_full-page-width-wrapper { 
+	.PROD_hero {
+		padding: 25px 0 15px;
+		@include media(tablet) {
+			padding: 40px 0 30px;
+		}
+	}
 }
 
 .PROD_hero .PROD_search {
