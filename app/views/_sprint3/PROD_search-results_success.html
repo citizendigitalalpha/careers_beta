@@ -75,7 +75,7 @@ Careers Service - Search
 	    return Httpreq.responseText;          
 	}
 
-	function createResultMarkup(title, alternativeTitles, overview, link){
+	function createResultMarkup(title, alternativeTitles, overview, link, salary){
 		var emptyDataLabel = '<span class="text-secondary">No data</span>';
 
 		// Set link href
@@ -101,12 +101,12 @@ Careers Service - Search
 			var overviewHTML = emptyDataLabel;
 		}
 
-		//Set salary HTML
-		// if (salary.length > 0) {
-		// 	var salaryHTML = '<p>' + overview + '</p>';
-		// } else {
-		// 	var salaryHTML = emptyDataLabel;
-		// }
+		// Set salary HTML
+		if (salary.length > 0) {
+			var salaryHTML = '<p class="heading-small">Salary: ' + salary + ' (average per year)</p>';
+		} else {
+			var salaryHTML = emptyDataLabel;
+		}
 
 		//Create and return final HTML
 		var thisResult = 
@@ -114,8 +114,7 @@ Careers Service - Search
 				titleHTML +
 				alternativeTitlesHTML +
 				overviewHTML +
-				// salaryHTML
-				'<p class="heading-small">Salary: ' + emptyDataLabel + ' (average per year)</p>' +
+				salaryHTML +
 			'</div>'
 		return thisResult;
 	}
@@ -258,6 +257,7 @@ Careers Service - Search
 			var overview = data.value[i].Overview;
 			// The data is missing hyperlink & salary 
 			// var salary = data.value[i].Salary;
+			var	salary = '£26,350 to £102,500'; // Manually set salary on all results as there currenlty isn't anything data to use
 			var link = data.value[i].Link;
 
 			// Add a new page for every ten result items
@@ -266,7 +266,7 @@ Careers Service - Search
 			}
 
 			if (title.length > 0) { // As a minimum the title must exist
-				var thisResultView = createResultMarkup (title, alternativeTitles, overview, link);
+				var thisResultView = createResultMarkup (title, alternativeTitles, overview, link, salary);
 				insertResultMarkup(thisResultView);		
 			}
 		}
