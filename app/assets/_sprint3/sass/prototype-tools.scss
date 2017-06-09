@@ -35,3 +35,15 @@
 	display:inline-block;
 	margin-right:0.3em;
 }
+
+// Making sure fake links with no href still look like the same as normal links
+
+.prototype-link{
+  color:$link-colour !important;
+  &:hover {
+    color:$link-hover-colour !important;
+  }
+  &:visited, &:active {
+    color:$link-colour;
+  }
+}
