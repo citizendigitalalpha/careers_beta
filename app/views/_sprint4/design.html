@@ -9,14 +9,8 @@
 <main id="content" role="main">
 	<div class="grid-row">
 		<div class="column-two-thirds">
-			<!--<div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
-				<h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-1" style="margin-bottom:0.08em;">
-					Do not be set this page as 'index.html' during testing
-				</h1>
-			</div> -->
-
 			<h1 class="heading-xlarge">
-				<span class="heading-secondary">Sprint 3</span>
+				<span class="heading-secondary">Sprint 4</span>
 				Design exploration
 			</h1>	
 
@@ -25,23 +19,23 @@
 	</div>
 	<div class="grid-row">
 		<div class="column-half">
-			<h2 class="heading-large">Hero styles</h2>
+			<h2 class="heading-large ADMIN_archived">Hero styles</h2>
 			<ul class="list list-bullet">
-				<li><a href="PROD_search">Content width</a></li>
-				<li><a href="PROD_search_full-width-hero">Full screen width</a></li>
+				<li class="ADMIN_archived"><a href="PROD_search">Content width</a></li>
+				<li class="ADMIN_archived"><a href="PROD_search_full-width-hero">Full screen width</a></li>
 			</ul>			
 
 			<h2 class="heading-large">Search journeys</h2>
 			<ul class="list list-bullet">
 				<li class="ADMIN_archived"><a href="search-start_job-profiles">Job title - v1</a></li>
-				<li><a href="search-start_job-profiles_v2">Job title - v2 (WIP)</a></li>
+				<li class="ADMIN_archived"><a href="search-start_job-profiles_v2">Job title - v2 (WIP)</a></li>
 				<li class="ADMIN_archived"><a href="search-start_why-are">Service wide - v1</a></li>
 				<li class="ADMIN_archived"><a href="search-start_why-are_v2">Service wide - v2</a></li>
 				<li><a href="search-start_typeahead">Job title - typeahead - v1</a></li>
-				<li><a href="search-start_job-profiles-keywords_v1">Job title and keywords - v1</a></li>
+				<li class="ADMIN_archived"><a href="search-start_job-profiles-keywords_v1">Job title and keywords - v1</a></li>
 				<li><a href="search-start_job-profiles-keywords_job-categories_v1">Job title and keywords, browse by job sectors - v1</a></li>
 				<li><a href="search-start_job-profiles-keywords_job-categories_v2">Job title and keywords, browse by job sectors - v2</a></li>
-				<li><a href="search-start_job-profiles-keywords_job-categories_v3">Job title and keywords, browse by job sectors - v3 (WIP)</a></li>
+				<li><a href="search-start_job-profiles-keywords_job-categories_v3">Job title and keywords, browse by job sectors - v3</a></li>
 			</ul>
 
 			<h2 class="heading-large">Search results page</h2>
@@ -148,7 +142,11 @@
 
 	function showArchived(){
 		for(var i = 0; i < archived.length; i++) {
-			archived[i].style.display = "list-item";
+			if (archived[i].nodeName === "LI") {
+				archived[i].style.display = "list-item";
+			} else {
+				archived[i].style.display = "block";
+			}
 		}
 		archivedToggleBtn.innerHTML = archiveHideLabel;
 	}
