@@ -24,6 +24,58 @@ Job categories on homepage
 	}	
 }
 
+
+.browse-aside {
+	display: none;
+	border-right:1px solid $grey-2;
+
+	@media (min-width: 641px) {
+		display: block;
+	    margin-bottom:45px;
+	}
+
+	@media (min-width: 641px) {
+	    margin-top:45px;
+	}
+
+	.browse-aside__header {
+		padding-left:15px;
+		font-weight: 700;
+		font-size: 19px;
+		margin-bottom: 10px;
+	}
+	.browse-aside__list {
+
+	}
+	.browse-aside__list-item {
+		position: relative;
+		a {
+			font-size: 16px;
+			display: block;
+			padding:10px 30px 8px 15px;
+			text-decoration: none;
+			&::after {
+			    position: absolute;
+			    top: 50%;
+			    margin-top: -10px;
+			    right: 10px;
+			    float: right;
+			    content: "\203A";
+			}
+			&:hover, &:focus {
+				background: $grey-3;
+			}
+		}
+
+		&--selected {
+			a {
+				color: $page-colour;
+				background: $link-colour;
+			}
+		}
+	}
+}
+
 /* ----------------------------------------------------
 Job categories - individual items
 ----------------------------------------------------- */
