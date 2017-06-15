@@ -71,6 +71,10 @@ Job categories on homepage
 			a {
 				color: $page-colour;
 				background: $link-colour;
+				&:hover, &:focus {
+					color: $page-colour;
+					background: $link-colour;
+				}
 			}
 		}
 	}
