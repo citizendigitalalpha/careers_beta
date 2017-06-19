@@ -130,3 +130,25 @@ Back to top button
 		color: $page-colour;
 	} 	
 }
+
+/* ----------------------------------------------------
+Searh results
+----------------------------------------------------- */
+
+.search-result, .category-job {
+	.heading-medium {
+		margin-bottom: 0.1em !important;
+		padding-bottom:0px; 
+		a {
+			text-decoration: none;
+		}
+
+	}
+	p {
+		margin-bottom: 0.3em !important;
+		&.meta {
+			margin-bottom: 0.4em !important;
+		}		
+	}
+
+}
