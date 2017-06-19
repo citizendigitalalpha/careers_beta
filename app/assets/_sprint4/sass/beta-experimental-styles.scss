@@ -9,17 +9,21 @@ Job categories on homepage
 .category-list {
 	li {
 		margin-bottom: 0.526em;
-		&.selected {
-			font-weight: bold;
-			color: $grey-1;
-		}
 	}
 	a {
 		font-weight: bold;
 		text-decoration: none;
-
 		&:hover {
 			text-decoration: underline;
+		}
+		&.selected {
+			font-weight: bold;
+			color: $grey-1 !important;
+			cursor: default;
+
+			&:hover {
+				text-decoration: none;
+			}
 		}		
 	}	
 }

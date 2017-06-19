@@ -16,6 +16,9 @@ $path: "/public/images/";
   border-top: 10px solid $govuk-blue;
   padding-top: 5px;
 
+	@media (min-width: 1020px) {
+		margin-top: 49px;
+	}
   .heading-medium {
     margin-top: 0.3em;
     margin-bottom: 0.5em;
@@ -237,6 +240,11 @@ h3.heading-medium.appointment {
 	display: block;
 	margin: 4em 0 0;
 	// border-bottom: 1px solid #bfc1c3;
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
 }
 @media (max-width: 640px) {
 	.pagination {
