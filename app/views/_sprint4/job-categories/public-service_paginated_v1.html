@@ -1012,7 +1012,7 @@
           } else {
                prevBtn.parentNode.classList.remove('js-hidden');
           }
-          if (currentPage === pageNumber || pageNumber === 1) {
+          if (currentPage === numberOfPages || numberOfPages === 1) {
                nextBtn.parentNode.classList.add('js-hidden');
           } else {
                nextBtn.parentNode.classList.remove('js-hidden');
@@ -1026,7 +1026,7 @@
           updatePaginationView();
      }
 
-     var pageNumber = 0;
+     var pageNumber = 1;
      var numberOfPages = 17;
 
      // uploadElement.addEventListener('change', onChange);
