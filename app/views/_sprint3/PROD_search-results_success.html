@@ -103,7 +103,12 @@ Careers Service - Search
 
 		// Set salary HTML
 		if (salary.length > 0) {
-			var salaryHTML = '<p class="heading-small">Average salary: ' + salary + ' per year</p>';
+			variableSalaryPosition = variableSalaryPosition - 1;
+			if (variableSalaryPosition === 0) {
+				var salaryHTML = '<p class="heading-small">Average salary: Variable';
+			} else {
+				var salaryHTML = '<p class="heading-small">Average salary: ' + salary + ' per year</p>';
+			}	
 		} else {
 			var salaryHTML = emptyDataLabel;
 		}
@@ -281,10 +286,15 @@ Careers Service - Search
 		document.getElementById('searchResultsPagination').classList.remove('js-hidden');
 	}
 
+	function randomNumber(min, max) {
+		return Math.random() * (max - min) + min;
+	}
+
 	var mainContainer = document.getElementById('searchResultsList');
 	var itemsPerPage = 10;
 	var itemsCounter = itemsPerPage;
 	var pageNumber = 0;
+	var variableSalaryPosition = 2;
 	var uploadElement = document.getElementById('dataFile');
 	var nextBtn = document.getElementById('nextBtn');
 	var prevBtn = document.getElementById('prevBtn');
