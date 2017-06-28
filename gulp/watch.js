@@ -64,3 +64,13 @@ gulp.task('watch-assets-S4', function () {
     config.paths.assetsS4 + 'javascripts/**',
     config.paths.assetsS4 + 'data/**'], {cwd: './'}, ['copy-assets-S4']);
 })
+
+gulp.task('watch-sass-S5', function () {
+  return gulp.watch(config.paths.assetsS5 + 'sass/**', {cwd: './'}, ['sass-S5']);
+})
+
+gulp.task('watch-assets-S5', function () {
+  return gulp.watch([config.paths.assetsS5 + 'images/**',
+    config.paths.assetsS5 + 'javascripts/**',
+    config.paths.assetsS5 + 'data/**'], {cwd: './'}, ['copy-assets-S5']);
+})

@@ -78,3 +78,15 @@ gulp.task('copy-documentation-assets-S4', function () {
     config.paths.docsAssetsS4 + '/**'])
   .pipe(gulp.dest(config.paths.publicS4))
 })
+
+gulp.task('copy-assets-S5', function () {
+  return gulp.src(['!' + config.paths.assetsS5 + 'sass{,/**/*}',
+    config.paths.assetsS5 + '/**'])
+  .pipe(gulp.dest(config.paths.publicS5))
+})
+
+gulp.task('copy-documentation-assets-S5', function () {
+  return gulp.src(['!' + config.paths.docsAssetsS5 + 'sass{,/**/*}',
+    config.paths.docsAssetsS5 + '/**'])
+  .pipe(gulp.dest(config.paths.publicS5))
+})
