@@ -73,7 +73,7 @@
 // This function gets the value entered in the search box and saves it to the session data
 // Then loads the next page
 function saveSearchTermsAndContinue() {
-     var searchPrompt = "Enter a job title";
+     var searchPrompt = "Enter a job title or keywords";
      window.setSessionData('searchPrompt', searchPrompt);
      var searchTerm = document.getElementById('searchInput').value;
      window.setSessionData('searchTerm', searchTerm, function(){

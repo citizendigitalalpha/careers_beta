@@ -12,22 +12,23 @@ $path: "/public/images/";
 // Related items
 // (These styles will be moved to GOV.UK elements, duplicating here for now.)
 .govuk-related-items {
-  margin-top: $gutter;
-  border-top: 10px solid $govuk-blue;
-  padding-top: 5px;
+	margin-top: 15px;
+	border-top: 10px solid $turquoise;
+	padding-top: 5px;
 
-	@media (min-width: 1020px) {
+	@include media(tablet) {
 		margin-top: 49px;
 	}
-  .heading-medium {
-    margin-top: 0.3em;
-    margin-bottom: 0.5em;
-  }
+	.heading-medium {
+		margin-top: 0.3em;
+		margin-bottom: 0.5em;
+		padding:0px;
+	}
 
-  li {
-    margin-bottom: 10px;
-    list-style-type: none;
-  }
+	li {
+		margin-bottom: 10px;
+		list-style-type: none;
+	}
 }
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
@@ -570,11 +571,6 @@ input[type="search"] {
   // Pressing enter when focus is on the skiplink sets focus on the #content area
   // Remove the blue outline
   outline: none;
-}
-
-
-.govuk-related-items {
-    border-top: 10px solid $turquoise;
 }
 
 /**navi**/

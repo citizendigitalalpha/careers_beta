@@ -5,8 +5,8 @@
 
 {% block head %}
   <script>
-	  // Making data object accessible in client
-	  var session = {{ data | dump | safe }};
+  // Making data object accessible in client
+  var session = {{ data | dump | safe }};
   </script>
   {% include "./includes/head.html" %}
 {% endblock %}
