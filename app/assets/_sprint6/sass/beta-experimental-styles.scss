@@ -28,6 +28,32 @@ Job categories on homepage
 	}	
 }
 
+.category-list--style-two {
+	li,.heading-small {
+		margin-bottom: 0.526em;
+		ul {
+			font-size: 16px;
+			margin-bottom: 0.526em;
+		}
+	}
+	a {
+		font-weight: normal;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+		&.selected {
+			font-weight: bold;
+			color: $grey-1 !important;
+			cursor: default;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}		
+	}	
+}
+
 
 .browse-aside {
 	display: none;
