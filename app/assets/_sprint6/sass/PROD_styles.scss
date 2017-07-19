@@ -119,3 +119,45 @@ $site-width:960px;
 	}
 }
 
+/* -------------------------------------------------------------
+	Useful links
+------------------------------------------------------------- */
+
+.PROD_govuk-related-items {
+	border-top: 3px solid $turquoise;
+	margin-top: 40px;
+	padding-top: 15px;
+
+	@include media(tablet) {
+		border-top: 6px solid $turquoise;
+		padding-top: 10px;
+		margin-top: 30px;
+	}
+
+	.heading-medium {
+		font-family: "nta", Arial, sans-serif;
+	    font-weight: 700;
+	    text-transform: none;
+	    font-size: 24px;
+	    line-height: 1.04167;
+	    margin-top: 0.3em;
+	    margin-bottom: 0.41667em;
+
+		@include media(tablet) {
+			margin-bottom: 0.5em;
+			padding:0px;
+		}
+	}
+
+	ul {
+		@include media(tablet) {
+			font-size: 16px;
+		}
+		li {
+			// margin-bottom: 8px;
+			list-style-type: none;
+		}
+	}
+}
+
+
