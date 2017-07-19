@@ -153,10 +153,6 @@ $site-width:960px;
 		@include media(tablet) {
 			font-size: 16px;
 		}
-		li {
-			// margin-bottom: 8px;
-			list-style-type: none;
-		}
 	}
 }
 
