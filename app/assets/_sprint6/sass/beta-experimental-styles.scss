@@ -3,6 +3,14 @@
 @import 'node_modules/govuk_frontend_toolkit/stylesheets/grid_layout.scss';
 
 /* ----------------------------------------------------
+Global
+----------------------------------------------------- */
+// Replicates the <main> element styles
+.main {
+	@extend %site-width-container;
+}
+
+/* ----------------------------------------------------
 Job categories on homepage
 ----------------------------------------------------- */
 
@@ -180,5 +188,39 @@ Searh results
 			margin-bottom: 0.4em !important;
 		}		
 	}
+}
 
+
+/* ----------------------------------------------------
+Consume - Voice of customer survey
+----------------------------------------------------- */
+
+.VOC-consume_container {
+	overflow: hidden;
+	border-bottom: 10px solid $turquoise;
+	.VOC-consume_banner {
+		color: $page-colour;
+		background: $turquoise;
+		padding: 15px;
+		.heading-medium {
+			margin:0px 0px 5px 0px;
+		}
+		a {
+			color: $page-colour;
+			font-weight: 700;
+		}
+	}
+	// .VOC-consume_divider {
+	// 	height: 10px;
+	// 	background: $turquoise;
+	// }
+	.VOC-consume_survey {
+		border-left: 2px solid $turquoise;
+		border-right: 2px solid $turquoise;
+		padding: 30px 15px;
+
+		.VOC-consume_survey__page {
+
+		}
+	}
 }
