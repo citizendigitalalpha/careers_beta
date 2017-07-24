@@ -214,18 +214,20 @@ Consume - Voice of customer survey
 		color: $page-colour;
 		background: $turquoise;
 		padding: 15px;
-		.heading-medium {
-			margin:0px 0px 5px 0px;
+		margin-bottom: -10px;
+		overflow: hidden;
+		.heading-small {
+			margin:0px 0px 0px 0px;
 		}
 		a {
 			color: $page-colour;
-			font-weight: 700;
+			// font-weight: 700;
 		}
 	}
 	.VOC-consume_survey {
 		border-left: 5px solid $turquoise;
 		border-right: 5px solid $turquoise;
-		padding: 15px 15px 30px 15px;
+		padding: 25px 15px 30px 15px;
 
 		.VOC-consume_survey__page {
 			.link-back {
