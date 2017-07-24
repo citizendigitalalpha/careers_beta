@@ -196,8 +196,20 @@ Consume - Voice of customer survey
 ----------------------------------------------------- */
 
 .VOC-consume_container {
+	font-family: "nta", Arial, sans-serif;
+	font-weight: 400;
+	text-transform: none;
+	font-size: 16px;
+	line-height: 1.25;
+	-webkit-font-smoothing: antialiased;
 	overflow: hidden;
 	border-bottom: 10px solid $turquoise;
+
+	@include media(tablet) {
+		font-size: 19px;
+		line-height: 1.31579; 
+	}
+
 	.VOC-consume_banner {
 		color: $page-colour;
 		background: $turquoise;
@@ -210,17 +222,25 @@ Consume - Voice of customer survey
 			font-weight: 700;
 		}
 	}
-	// .VOC-consume_divider {
-	// 	height: 10px;
-	// 	background: $turquoise;
-	// }
 	.VOC-consume_survey {
-		border-left: 2px solid $turquoise;
-		border-right: 2px solid $turquoise;
-		padding: 30px 15px;
+		border-left: 5px solid $turquoise;
+		border-right: 5px solid $turquoise;
+		padding: 15px 15px 30px 15px;
 
 		.VOC-consume_survey__page {
-
+			.link-back {
+				margin-top: 0;
+				margin-bottom: 1.48em;
+			}
+			legend {
+				overflow: hidden;
+			}
+			.heading-medium, .heading-large {
+				margin-top: 0px;
+			}
 		}
+	}
+	.form-group .panel-border-narrow:last-child {
+		margin-top:0px;
 	}
 }
