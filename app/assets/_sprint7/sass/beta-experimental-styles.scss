@@ -241,6 +241,10 @@ Consume - Voice of customer survey
 				margin-top: 0px;
 			}
 		}
+		&.VOC-consume_survey--iframe {
+			padding: 10px 0px 0px 0px;
+			overflow: hidden;
+		}
 	}
 	.form-group .panel-border-narrow:last-child {
 		margin-top:0px;
