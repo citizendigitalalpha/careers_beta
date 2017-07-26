@@ -7,6 +7,8 @@
 {% block content %}
 
 <main id="content" role="main">
+		{% include "../../includes/phase_banner_beta.html" %}
+		
 		<div class="breadcrumbs">
 			<ol>
 				<li><a href="../index.html">Home</a></li>
@@ -252,38 +254,33 @@
 				<p class="grey font-xsmallw100">Last updated: 23 March 2016</p>
             </div>
             <div class="column-one-third">
-				<aside class="govuk-related-items" role="complementary">
+				<aside class="PROD_govuk-related-items" role="complementary">
 				    <h2 class="heading-medium" id="related-gov-links">
 				    Useful links</h2>
-				    <nav aria-labelledby="related-gov-links" role="navigation">
-				        <ul class="font-xsmall">
-				            <li>
-				                <a href="https://nationalcareersservice.direct.gov.uk/course-directory/home">Find a course</a>
-				            </li>
-							<li>
-				                <a href="https://www.gov.uk/apply-apprenticeship">Apprenticeships</a>
-				            </li>
-				            <li>
-				                <a href="https://www.ucas.com/">Thinking about university</a>
-				            </li>
-				            <li>
-				                <a href="https://www.gov.uk/further-education-courses">Help with funding</a>
-				            </li>
-				            <li>
-				                <a href="https://www.gov.uk/volunteering">Become a volunteer</a>
-				            </li>
-							<li>
-				                <a href="#">Find a job</a>
-				            </li>
-				        </ul>
-				    </nav>
+			        <ul class="list">
+			            <li>
+			                <a href="https://nationalcareersservice.direct.gov.uk/course-directory/home">Find a course</a>
+			            </li>
+						<li>
+			                <a href="https://www.gov.uk/apply-apprenticeship">Apprenticeships</a>
+			            </li>
+			            <li>
+			                <a href="https://www.ucas.com/">Thinking about university</a>
+			            </li>
+			            <li>
+			                <a href="https://www.gov.uk/further-education-courses">Help with funding</a>
+			            </li>
+			            <li>
+			                <a href="https://www.gov.uk/volunteering">Become a volunteer</a>
+			            </li>
+			        </ul>
 				</aside>
             </div>
         </div>
     </main>
 
-    <script src="/public/_sprint6/javascripts/jquery-1.11.3.js"></script>
-    <script src="/public/_sprint6/javascripts/paralegal-dynamic-panels.js"></script>
+    <script src="/public/_sprint7/javascripts/jquery-1.11.3.js"></script>
+    <script src="/public/_sprint7/javascripts/paralegal-dynamic-panels.js"></script>
 
 
 {% endblock %}
