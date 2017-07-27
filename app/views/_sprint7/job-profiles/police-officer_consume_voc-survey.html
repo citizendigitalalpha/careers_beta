@@ -300,7 +300,7 @@
     		</div>
     		<div id="survey-header" class="js-hidden">
 	    		<h3 style="float: left" class="heading-small">Tell us what you think of this page</h3>
-	    		<a style="float:right;" href="#1" onclick="resetSurvey()">Close</a>
+	    		<a style="float:right;" href="#1" onclick="hideOrReset()">Close</a>
     		</div>
     		<div id="survey-done" class="js-hidden">
 	    		<h3 class="heading-small" style="margin:0px;">Thank you for your feedback</h3>
@@ -313,278 +313,267 @@
 	<div class="main">
     	<div class="VOC-consume_survey js-hidden" id="consumeSurvey">
 			<div class="grid-row">
-					<form>
-			    		<div class="VOC-consume_survey__page" id="VOC-consume_page0">
-			    			<div class="column-two-thirds">
-								<div class="form-group">
-									<fieldset>
-										<legend>
-											<h3 class="heading-medium" style="padding-top:15px;">Were you using this page for yourself or someone else?</h3>
-										</legend>
-										<div class="multiple-choice">
-											<input id="role-myself" type="radio" name="role-q-one" value="myself">
-											<label for="role-myself">For myself</label>
-										</div>
-										<div class="multiple-choice" data-target="someone-else">
-											<input id="role-someone-else" type="radio" name="role-q-one" value="someone-else">
-											<label for="role-someone-else">For someone else</label>
-										</div>
-									</fieldset>
-								</div>
-								<div class="form-group js-hidden" id="someone-else">
-									<fieldset>
-										<legend>
-											<h3 class="heading-medium">
-												What is your role?
-											</h3>
-										</legend>
-										<div class="multiple-choice">
-											<input id="role-adviser" type="radio" name="role-q-two" value="adviser">
-											<label for="role-adviser">Careers adviser</label>
-										</div>
-										<div class="multiple-choice">
-											<input id="role-adviser" type="radio" name="role-q-three" value="work coach">
-											<label for="role-adviser">Job Centre Plus work coach</label>
-										</div>
-										<div class="multiple-choice">
-											<input id="role-adviser" type="radio" name="role-q-four" value="teacher">
-											<label for="role-adviser">Teacher</label>
-										</div>
-										<div class="multiple-choice">
-											<input id="role-adviser" type="radio" name="role-q-five" value="parent">
-											<label for="role-adviser">Parent</label>
-										</div>						
-										<div class="multiple-choice" data-target="other-textfield">
-											<input id="role-other" type="radio" name="role-q-six" value="other">
-											<label for="role-other">Other</label>
-										</div>
-
-										<div class="panel panel-border-narrow js-hidden" id="other-textfield">
-											<div class="form-group">
-												<label class="form-label" for="role">Describe your role (optional)</label>
-												<input class="form-control" id="role" type="text" name="otherRole">
-											</div>
-										</div>
-									</fieldset>
-								</div>
-								<div class="inline">
-									<a href="#1" class="button" onclick="surveyNextQuestion()">Next question</a>
-								</div>
+				<form>
+		    		<div class="VOC-consume_survey__page" id="VOC-consume_page0">
+		    			<div class="column-two-thirds">
+							<div class="form-group">
+								<fieldset>
+									<legend>
+										<h3 class="heading-medium" style="padding-top:15px;">Were you using this page for yourself or someone else?</h3>
+									</legend>
+									<div class="multiple-choice">
+										<input id="role-myself" type="radio" name="role-q-one" value="myself">
+										<label for="role-myself">For myself</label>
+									</div>
+									<div class="multiple-choice" data-target="someone-else">
+										<input id="role-someone-else" type="radio" name="role-q-one" value="someone-else">
+										<label for="role-someone-else">For someone else</label>
+									</div>
+								</fieldset>
 							</div>
-			    		</div>
+							<div class="form-group js-hidden" id="someone-else">
+								<fieldset>
+									<legend>
+										<h3 class="heading-medium">
+											What is your role?
+										</h3>
+									</legend>
+									<div class="multiple-choice">
+										<input id="role-adviser" type="radio" name="role-q-two" value="adviser">
+										<label for="role-adviser">Careers adviser</label>
+									</div>
+									<div class="multiple-choice">
+										<input id="role-adviser" type="radio" name="role-q-three" value="work coach">
+										<label for="role-adviser">Job Centre Plus work coach</label>
+									</div>
+									<div class="multiple-choice">
+										<input id="role-adviser" type="radio" name="role-q-four" value="teacher">
+										<label for="role-adviser">Teacher</label>
+									</div>
+									<div class="multiple-choice">
+										<input id="role-adviser" type="radio" name="role-q-five" value="parent">
+										<label for="role-adviser">Parent</label>
+									</div>						
+									<div class="multiple-choice" data-target="other-textfield">
+										<input id="role-other" type="radio" name="role-q-six" value="other">
+										<label for="role-other">Other</label>
+									</div>
 
-			    		<div class="VOC-consume_survey__page" id="VOC-consume_page1">
-				    		<div class="column-two-thirds">
-					    		<a href="#1" class="link-back" onclick="surveyPrevQuestion()">Back</a>
-								<div class="form-group">
-									<h3 class="heading-medium">What information were you looking for on this page?</h3>
-									<label class="form-label visually-hidden" for="textarea">What information were you looking for on this page?</label>
-									<textarea class="form-control form-control-3-4" name="why-have-you-come" id="why-have-you-come" rows="5"></textarea>
-								</div>
-								<div class="inline">
-									<a href="#1" class="button" onclick="surveyNextQuestion()">Next question</a>
-								</div>
+									<div class="panel panel-border-narrow js-hidden" id="other-textfield">
+										<div class="form-group">
+											<label class="form-label" for="role">Describe your role (optional)</label>
+											<input class="form-control" id="role" type="text" name="otherRole">
+										</div>
+									</div>
+								</fieldset>
 							</div>
-			    		</div>
-
-			    		<div class="VOC-consume_survey__page" id="VOC-consume_page2">
-			    			<div class="column-two-thirds">
-				    			<a href="#1" class="link-back" onclick="surveyPrevQuestion()">Back</a>
-								<div class="form-group">
-									<fieldset class="inline">
-										<legend>
-											<h3 class="heading-medium">Did you find what you were looking for?</h3>
-										</legend>
-										<div class="multiple-choice">
-											<input id="find-yes" type="radio" name="find-what-you-need" value="Yes">
-											<label for="find-yes">Yes</label>
-										</div>
-										<div class="multiple-choice" data-target="someone-else">
-											<input id="find-no" type="radio" name="find-what-you-need" value="No">
-											<label for="find-no">No</label>
-										</div>
-									</fieldset>
-								</div>
-								<div class="inline">
-									<a href="#1" class="button" onclick="didYouFind()">Next question</a>
-								</div>
+							<div class="inline">
+								<a href="#1" class="button" onclick="surveyNextQuestion()">Next question</a>
 							</div>
-			    		</div>
-
-						<!-- Option for 'yes' -->
-			    		<div class="VOC-consume_survey__page" id="VOC-consume_page3">
-				    		<div class="column-two-thirds">
-					    		<a href="#1" class="link-back" onclick="surveyPrevQuestion()">Back</a>
-								<div class="form-group">
-									<h3 class="heading-medium">How useful was the information?</h3>
-									<label class="form-label visually-hidden" for="improvement-suggestion">How useful was the information?</label>
-									<textarea class="form-control form-control-3-4" name="improvement-suggestion" id="improvement-suggestion" rows="5"></textarea>
-								</div>
-								<div class="inline">
-									<a href="#1" class="button" onclick="surveyNextQuestion()">Next question</a>
-								</div>
-							</div>
-			    		</div>
-
-			    		<!-- Option for 'no' -->
-			    		<div class="VOC-consume_survey__page" id="VOC-consume_page3b">
-				    		<div class="column-two-thirds">
-					    		<a href="#1" class="link-back" onclick="surveyPrevQuestion('b')">Back</a>
-								<div class="form-group">
-									<h3 class="heading-medium">How could we improve this page?</h3>
-									<label class="form-label visually-hidden" for="improvement-suggestion">How could we improve this page?</label>
-									<textarea class="form-control form-control-3-4" name="improvement-suggestion" id="improvement-suggestion" rows="5"></textarea>
-								</div>
-								<div class="inline">
-									<a href="#1" class="button" onclick="surveyNextQuestion()">Next question</a>
-								</div>
-							</div>
-			    		</div>
-
-			    		<div class="VOC-consume_survey__page" id="VOC-consume_page4">
-				    		<div class="column-two-thirds">
-					    		<a href="#1" class="link-back" onclick="surveyPrevQuestion()">Back</a>
-								<div class="form-group">
-									<fieldset>
-										<legend>
-											<h3 class="heading-medium">Overall, how satisfied were you with this page?</h3>
-										</legend>
-										<div class="multiple-choice">
-											<input id="find-yes" type="radio" name="find-what-you-need" value="1">
-											<label for="find-yes">Very dissatisfied</label>
-										</div>
-										<div class="multiple-choice" data-target="someone-else">
-											<input id="find-no" type="radio" name="find-what-you-need" value="2">
-											<label for="find-no">Dissatisfied</label>
-										</div>
-										<div class="multiple-choice">
-											<input id="find-yes" type="radio" name="find-what-you-need" value="3">
-											<label for="find-yes">Neither satisfied and dissatisfied</label>
-										</div>
-										<div class="multiple-choice" data-target="someone-else">
-											<input id="find-no" type="radio" name="find-what-you-need" value="4">
-											<label for="find-no">Satisfied</label>
-										</div>
-										<div class="multiple-choice" data-target="someone-else">
-											<input id="find-no" type="radio" name="find-what-you-need" value="5">
-											<label for="find-no">Very satisfied</label>
-										</div>								
-									</fieldset>
-								</div>
-								<div class="inline">
-									<a href="#1" class="button" onclick="surveyNextQuestion()">Next question</a>
-								</div>
-							</div>
-			    		</div>
-
-			    		<div class="VOC-consume_survey__page" id="VOC-consume_page5">
-			    			<div class="column-full">
-			    				<a href="#1" class="link-back" onclick="surveyPrevQuestion()">Back</a>
-								<div class="form-group">
-									<fieldset>
-										<legend>
-											<h3 class="heading-medium">How likely is it that you would recommend this service to a friend or colleague?</h3>
-										</legend>
-										<div class="multiple-choice">
-											<input id="find-yes" type="radio" name="find-what-you-need" value="0">
-											<label for="find-yes">0 - Not at all likely</label>
-										</div>						
-										<div class="multiple-choice">
-											<input id="find-yes" type="radio" name="find-what-you-need" value="1">
-											<label for="find-yes">1</label>
-										</div>
-										<div class="multiple-choice" data-target="someone-else">
-											<input id="find-no" type="radio" name="find-what-you-need" value="2">
-											<label for="find-no">2</label>
-										</div>
-										<div class="multiple-choice">
-											<input id="find-yes" type="radio" name="find-what-you-need" value="3">
-											<label for="find-yes">3</label>
-										</div>
-										<div class="multiple-choice" data-target="someone-else">
-											<input id="find-no" type="radio" name="find-what-you-need" value="4">
-											<label for="find-no">4</label>
-										</div>
-										<div class="multiple-choice" data-target="someone-else">
-											<input id="find-no" type="radio" name="find-what-you-need" value="5">
-											<label for="find-no">5</label>
-										</div>
-										<div class="multiple-choice">
-											<input id="find-yes" type="radio" name="find-what-you-need" value="6">
-											<label for="find-yes">6</label>
-										</div>
-										<div class="multiple-choice" data-target="someone-else">
-											<input id="find-no" type="radio" name="find-what-you-need" value="7">
-											<label for="find-no">7</label>
-										</div>
-										<div class="multiple-choice">
-											<input id="find-yes" type="radio" name="find-what-you-need" value="8">
-											<label for="find-yes">8</label>
-										</div>
-										<div class="multiple-choice" data-target="someone-else">
-											<input id="find-no" type="radio" name="find-what-you-need" value="9">
-											<label for="find-no">9</label>
-										</div>
-										<div class="multiple-choice" data-target="someone-else">
-											<input id="find-no" type="radio" name="find-what-you-need" value="10">
-											<label for="find-no">10 - Extremely likely</label>
-										</div>															
-									</fieldset>
-								</div>
-								<div class="inline">
-									<a href="#1" class="button" onclick="surveyNextQuestion()">Send feedback</a>
-								</div>
-							</div>
-			    		</div>
-
-<!-- 			    		<div class="VOC-consume_survey__page" id="VOC-consume_page6">
-				    		<div class="column-two-thirds">
-					    		<a href="#1" class="link-back" onclick="surveyPrevQuestion()">Back</a>
-								<div class="form-group">
-									<h3 class="heading-medium">Anything else?</h3>
-									<label class="form-label visually-hidden" for="anything-else">Anything else?</label>
-									<textarea class="form-control form-control-3-4" name="anything-else" id="anything-else" rows="5"></textarea>
-								</div>
-								<div class="inline">
-									<a href="#1" class="button" onclick="surveyNextQuestion()">Submit</a>
-								</div>
-				    		</div>
-			    		</div>	 -->		
-					</form>
-
-		    		<div class="VOC-consume_survey__page" id="VOC-consume_page6">
-			    		<div class="column-two-thirds">
-							<h3 class="heading-large" style="padding-top:15px;">Thank you for your feedback</h3>
-							<p>We use your feedback to improve our service.</p>
-							<p>Get involved in future research</p>
-							<!-- <h3 class="heading-medium">Be involved with future research</h3> -->
-							<form>
-								<div class="form-group form-group-compound">
-								  <label class="form-label" for="name">Full name (optional)</label>
-								  <input class="form-control" id="name" name="name" type="text">
-								</div>
-								<div class="form-group">
-								  <label class="form-label" for="email-address">Email address</label>
-								  <input class="form-control" id="email-address" name="email-address" type="text">
-								</div>
-								<div class="inline">
-									<a href="#1" class="button" onclick="submitSurvey()">Send contact details</a>
-									<a href="#1" class="button beta-grey-button" onclick="submitSurvey()">No thanks</a>
-								</div>
-							</form>
 						</div>
 		    		</div>
 
-		    		<!-- <div class="VOC-consume_survey__page" id="VOC-consume_page7">
+		    		<div class="VOC-consume_survey__page" id="VOC-consume_page1">
 			    		<div class="column-two-thirds">
-							<h3 class="heading-large" style="padding-top:15px;">Thank you</h3>
-							<p>We will contact you via your email when future research is taking place</p>
-							
+				    		<a href="#1" class="link-back" onclick="surveyPrevQuestion()">Back</a>
+							<div class="form-group">
+								<h3 class="heading-medium">What information were you looking for on this page?</h3>
+								<label class="form-label visually-hidden" for="textarea">What information were you looking for on this page?</label>
+								<textarea class="form-control form-control-3-4" name="why-have-you-come" id="why-have-you-come" rows="5"></textarea>
+							</div>
 							<div class="inline">
-								<a href="#1" class="button" onclick="submitSurvey()">Close</a>
+								<a href="#1" class="button" onclick="surveyNextQuestion()">Next question</a>
 							</div>
 						</div>
-		    		</div> -->
+		    		</div>
+
+		    		<div class="VOC-consume_survey__page" id="VOC-consume_page2">
+		    			<div class="column-two-thirds">
+			    			<a href="#1" class="link-back" onclick="surveyPrevQuestion()">Back</a>
+							<div class="form-group">
+								<fieldset class="inline">
+									<legend>
+										<h3 class="heading-medium">Did you find what you were looking for?</h3>
+									</legend>
+									<div class="multiple-choice">
+										<input id="find-yes" type="radio" name="find-what-you-need" value="Yes">
+										<label for="find-yes">Yes</label>
+									</div>
+									<div class="multiple-choice" data-target="someone-else">
+										<input id="find-no" type="radio" name="find-what-you-need" value="No">
+										<label for="find-no">No</label>
+									</div>
+								</fieldset>
+							</div>
+							<div class="inline">
+								<a href="#1" class="button" onclick="didYouFind()">Next question</a>
+							</div>
+						</div>
+		    		</div>
+
+					<!-- Option for 'yes' -->
+		    		<div class="VOC-consume_survey__page" id="VOC-consume_page3">
+			    		<div class="column-two-thirds">
+				    		<a href="#1" class="link-back" onclick="surveyPrevQuestion()">Back</a>
+							<div class="form-group">
+								<h3 class="heading-medium">How useful was the information?</h3>
+								<label class="form-label visually-hidden" for="improvement-suggestion">How useful was the information?</label>
+								<textarea class="form-control form-control-3-4" name="improvement-suggestion" id="improvement-suggestion" rows="5"></textarea>
+							</div>
+							<div class="inline">
+								<a href="#1" class="button" onclick="surveyNextQuestion()">Next question</a>
+							</div>
+						</div>
+		    		</div>
+
+		    		<!-- Option for 'no' -->
+		    		<div class="VOC-consume_survey__page" id="VOC-consume_page3b">
+			    		<div class="column-two-thirds">
+				    		<a href="#1" class="link-back" onclick="surveyPrevQuestion('b')">Back</a>
+							<div class="form-group">
+								<h3 class="heading-medium">How could we improve this page?</h3>
+								<label class="form-label visually-hidden" for="improvement-suggestion">How could we improve this page?</label>
+								<textarea class="form-control form-control-3-4" name="improvement-suggestion" id="improvement-suggestion" rows="5"></textarea>
+							</div>
+							<div class="inline">
+								<a href="#1" class="button" onclick="surveyNextQuestion()">Next question</a>
+							</div>
+						</div>
+		    		</div>
+
+		    		<div class="VOC-consume_survey__page" id="VOC-consume_page4">
+			    		<div class="column-two-thirds">
+				    		<a href="#1" class="link-back" onclick="surveyPrevQuestion()">Back</a>
+							<div class="form-group">
+								<fieldset>
+									<legend>
+										<h3 class="heading-medium">Overall, how satisfied were you with this page?</h3>
+									</legend>
+									<div class="multiple-choice">
+										<input id="find-yes" type="radio" name="find-what-you-need" value="1">
+										<label for="find-yes">Very dissatisfied</label>
+									</div>
+									<div class="multiple-choice" data-target="someone-else">
+										<input id="find-no" type="radio" name="find-what-you-need" value="2">
+										<label for="find-no">Dissatisfied</label>
+									</div>
+									<div class="multiple-choice">
+										<input id="find-yes" type="radio" name="find-what-you-need" value="3">
+										<label for="find-yes">Neither satisfied and dissatisfied</label>
+									</div>
+									<div class="multiple-choice" data-target="someone-else">
+										<input id="find-no" type="radio" name="find-what-you-need" value="4">
+										<label for="find-no">Satisfied</label>
+									</div>
+									<div class="multiple-choice" data-target="someone-else">
+										<input id="find-no" type="radio" name="find-what-you-need" value="5">
+										<label for="find-no">Very satisfied</label>
+									</div>								
+								</fieldset>
+							</div>
+							<div class="inline">
+								<a href="#1" class="button" onclick="surveyNextQuestion()">Next question</a>
+							</div>
+						</div>
+		    		</div>
+
+		    		<div class="VOC-consume_survey__page" id="VOC-consume_page5">
+		    			<div class="column-full">
+		    				<a href="#1" class="link-back" onclick="surveyPrevQuestion()">Back</a>
+							<div class="form-group">
+								<fieldset>
+									<legend>
+										<h3 class="heading-medium">How likely is it that you would recommend this service to a friend or colleague?</h3>
+									</legend>
+									<div class="multiple-choice">
+										<input id="find-yes" type="radio" name="find-what-you-need" value="0">
+										<label for="find-yes">0 - Not at all likely</label>
+									</div>						
+									<div class="multiple-choice">
+										<input id="find-yes" type="radio" name="find-what-you-need" value="1">
+										<label for="find-yes">1</label>
+									</div>
+									<div class="multiple-choice" data-target="someone-else">
+										<input id="find-no" type="radio" name="find-what-you-need" value="2">
+										<label for="find-no">2</label>
+									</div>
+									<div class="multiple-choice">
+										<input id="find-yes" type="radio" name="find-what-you-need" value="3">
+										<label for="find-yes">3</label>
+									</div>
+									<div class="multiple-choice" data-target="someone-else">
+										<input id="find-no" type="radio" name="find-what-you-need" value="4">
+										<label for="find-no">4</label>
+									</div>
+									<div class="multiple-choice" data-target="someone-else">
+										<input id="find-no" type="radio" name="find-what-you-need" value="5">
+										<label for="find-no">5</label>
+									</div>
+									<div class="multiple-choice">
+										<input id="find-yes" type="radio" name="find-what-you-need" value="6">
+										<label for="find-yes">6</label>
+									</div>
+									<div class="multiple-choice" data-target="someone-else">
+										<input id="find-no" type="radio" name="find-what-you-need" value="7">
+										<label for="find-no">7</label>
+									</div>
+									<div class="multiple-choice">
+										<input id="find-yes" type="radio" name="find-what-you-need" value="8">
+										<label for="find-yes">8</label>
+									</div>
+									<div class="multiple-choice" data-target="someone-else">
+										<input id="find-no" type="radio" name="find-what-you-need" value="9">
+										<label for="find-no">9</label>
+									</div>
+									<div class="multiple-choice" data-target="someone-else">
+										<input id="find-no" type="radio" name="find-what-you-need" value="10">
+										<label for="find-no">10 - Extremely likely</label>
+									</div>															
+								</fieldset>
+							</div>
+							<div class="inline">
+								<a href="#1" class="button" onclick="submitFeedback()">Send feedback</a>
+							</div>
+						</div>
+		    		</div>
+
+<!-- 			    		<div class="VOC-consume_survey__page" id="VOC-consume_page6">
+			    		<div class="column-two-thirds">
+				    		<a href="#1" class="link-back" onclick="surveyPrevQuestion()">Back</a>
+							<div class="form-group">
+								<h3 class="heading-medium">Anything else?</h3>
+								<label class="form-label visually-hidden" for="anything-else">Anything else?</label>
+								<textarea class="form-control form-control-3-4" name="anything-else" id="anything-else" rows="5"></textarea>
+							</div>
+							<div class="inline">
+								<a href="#1" class="button" onclick="surveyNextQuestion()">Submit</a>
+							</div>
+			    		</div>
+		    		</div>	 -->		
+				</form>
+
+	    		<div class="VOC-consume_survey__page" id="VOC-consume_page6">
+		    		<div class="column-two-thirds">
+						<h3 class="heading-large" style="padding-top:15px;">Thank you for your feedback</h3>
+						<p>We use your feedback to improve our service.</p>
+						<p>Get involved in future research</p>
+						<!-- <h3 class="heading-medium">Be involved with future research</h3> -->
+						<form>
+							<div class="form-group form-group-compound">
+							  <label class="form-label" for="name">Full name (optional)</label>
+							  <input class="form-control" id="name" name="name" type="text">
+							</div>
+							<div class="form-group">
+							  <label class="form-label" for="email-address">Email address</label>
+							  <input class="form-control" id="email-address" name="email-address" type="text">
+							</div>
+							<div class="inline">
+								<a href="#1" class="button" onclick="endSurvey()">Send contact details</a>
+								<a href="#1" class="button beta-grey-button" onclick="endSurvey()">No thanks</a>
+							</div>
+						</form>
+					</div>
+	    		</div>
 			</div>
     	</div>
 	</div>
@@ -607,10 +596,15 @@ function hideSurvey() {
 	survey.classList.add('js-hidden');
 }
 
-function submitSurvey() {
+function endSurvey() {
 	hideSurvey();
 	document.getElementById('survey-done').classList.remove('js-hidden');
 	document.getElementById('survey-header').classList.add('js-hidden');
+}
+
+function submitFeedback() {
+	surveySubmitted = true;
+	surveyNextQuestion();
 }
 
 function resetSurvey() {
@@ -618,7 +612,13 @@ function resetSurvey() {
 	surveyInit();
 	document.getElementById('recruit-message').classList.remove('js-hidden');
 	document.getElementById('survey-header').classList.add('js-hidden');
+	surveySubmitted = false;
 }
+
+function hideOrReset() {
+	surveySubmitted ? endSurvey() : resetSurvey();
+}
+
 
 function initPageModel() {
 	currentPage = 0;
@@ -651,6 +651,8 @@ function checkForPageBranch(direction){
 }
 
 function surveyInit() {
+	surveySubmitted = false;
+
 	var surveyPages = document.getElementsByClassName('VOC-consume_survey__page');
 
 	for(i = 0; i < surveyPages.length; i++) {
