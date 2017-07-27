@@ -313,9 +313,11 @@
 	<div class="main">
     	<div class="VOC-consume_survey VOC-consume_survey--iframe js-hidden" id="consumeSurvey">
 			<div class="grid-row">
-	    		<div class="VOC-consume_survey__page" id="VOC-consume_page0">
-					<script id="ss-embed-371257">(function(d,w){var s,ss;ss=d.createElement('script');ss.type='text/javascript';ss.async=true;ss.src=('https:'==d.location.protocol?'https://':'http://')+'www.smartsurvey.co.uk/s/r/embed.aspx?i=336199&c=371257';s=d.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ss, s);})(document,window);</script> 
-	    		</div>		
+				<div class="column-full">
+		    		<div class="VOC-consume_survey__page">
+						<script id="ss-embed-377538">(function(d,w){var s,ss;ss=d.createElement('script');ss.type='text/javascript';ss.async=true;ss.src=('https:'==d.location.protocol?'https://':'http://')+'www.smartsurvey.co.uk/s/r/embed.aspx?i=341674&c=377538';s=d.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ss, s);})(document,window);</script></div>		
+					</div>
+				</div>
 			</div>
     	</div>
 	</div>
@@ -338,74 +340,74 @@ function hideSurvey() {
 	survey.classList.add('js-hidden');
 }
 
-function submitSurvey() {
-	hideSurvey();
-	document.getElementById('survey-done').classList.remove('js-hidden');
-	document.getElementById('survey-header').classList.add('js-hidden');
-}
+// function submitSurvey() {
+// 	hideSurvey();
+// 	document.getElementById('survey-done').classList.remove('js-hidden');
+// 	document.getElementById('survey-header').classList.add('js-hidden');
+// }
 
-function resetSurvey() {
-	hideSurvey();
-	surveyInit();
-	document.getElementById('recruit-message').classList.remove('js-hidden');
-	document.getElementById('survey-header').classList.add('js-hidden');
-}
+// function resetSurvey() {
+// 	hideSurvey();
+// 	surveyInit();
+// 	document.getElementById('recruit-message').classList.remove('js-hidden');
+// 	document.getElementById('survey-header').classList.add('js-hidden');
+// }
 
-function initPageModel() {
-	currentPage = 0;
-	nextPage = 1;
-	prevPage = -1;
-}
+// function initPageModel() {
+// 	currentPage = 0;
+// 	nextPage = 1;
+// 	prevPage = -1;
+// }
 
-function surveyInit() {
-	var surveyPages = document.getElementsByClassName('VOC-consume_survey__page');
+// function surveyInit() {
+// 	var surveyPages = document.getElementsByClassName('VOC-consume_survey__page');
 
-	for(i = 0; i < surveyPages.length; i++) {
-		if(i > 0) {
-			surveyPages[i].classList.add('js-hidden');
-		} else {
-			surveyPages[i].classList.remove('js-hidden');
-		}
-	}
-	initPageModel();
-}
-surveyInit();
+// 	for(i = 0; i < surveyPages.length; i++) {
+// 		if(i > 0) {
+// 			surveyPages[i].classList.add('js-hidden');
+// 		} else {
+// 			surveyPages[i].classList.remove('js-hidden');
+// 		}
+// 	}
+// 	initPageModel();
+// }
+// surveyInit();
 
-function surveyNextQuestion() {
-	var thisPageId = 'VOC-consume_page' + currentPage.toString();
-	var thisPageElement = document.getElementById(thisPageId);
-	thisPageElement.classList.add('js-hidden');
+// function surveyNextQuestion() {
+// 	var thisPageId = 'VOC-consume_page' + currentPage.toString();
+// 	var thisPageElement = document.getElementById(thisPageId);
+// 	thisPageElement.classList.add('js-hidden');
 
-	var nextPageId = 'VOC-consume_page' + nextPage.toString();
-	var nextPageElement = document.getElementById(nextPageId);
-	nextPageElement.classList.remove('js-hidden');
+// 	var nextPageId = 'VOC-consume_page' + nextPage.toString();
+// 	var nextPageElement = document.getElementById(nextPageId);
+// 	nextPageElement.classList.remove('js-hidden');
 
-	updatePageModel('next');
-}
+// 	updatePageModel('next');
+// }
 
-function surveyPrevQuestion() {
-	var thisPageId = 'VOC-consume_page' + currentPage.toString();
-	var thisPageElement = document.getElementById(thisPageId);
-	thisPageElement.classList.add('js-hidden');
+// function surveyPrevQuestion() {
+// 	var thisPageId = 'VOC-consume_page' + currentPage.toString();
+// 	var thisPageElement = document.getElementById(thisPageId);
+// 	thisPageElement.classList.add('js-hidden');
 
-	var prevPageId = 'VOC-consume_page' + prevPage.toString();
-	var prevPageElement = document.getElementById(prevPageId);
-	prevPageElement.classList.remove('js-hidden');
+// 	var prevPageId = 'VOC-consume_page' + prevPage.toString();
+// 	var prevPageElement = document.getElementById(prevPageId);
+// 	prevPageElement.classList.remove('js-hidden');
 
-	updatePageModel('prev');
-}
+// 	updatePageModel('prev');
+// }
 
-function updatePageModel(thisDirection) {
-	if (thisDirection === 'next') {
-		currentPage = currentPage+1;
-		nextPage = nextPage+1;
-		prevPage = prevPage+1;
-	} else {
-		currentPage = currentPage-1;
-		nextPage = nextPage-1;
-		prevPage = prevPage-1
-	}
-}
+// function updatePageModel(thisDirection) {
+// 	if (thisDirection === 'next') {
+// 		currentPage = currentPage+1;
+// 		nextPage = nextPage+1;
+// 		prevPage = prevPage+1;
+// 	} else {
+// 		currentPage = currentPage-1;
+// 		nextPage = nextPage-1;
+// 		prevPage = prevPage-1
+// 	}
+// }
 
 </script>
 

@@ -319,15 +319,15 @@
 								<div class="form-group">
 									<fieldset>
 										<legend>
-											<h3 class="heading-medium" style="padding-top:15px;">Are you using this page for yourself or someone else?</h3>
+											<h3 class="heading-medium" style="padding-top:15px;">Were you using this page for yourself or someone else?</h3>
 										</legend>
 										<div class="multiple-choice">
 											<input id="role-myself" type="radio" name="role-q-one" value="myself">
-											<label for="role-myself">Myself</label>
+											<label for="role-myself">For myself</label>
 										</div>
 										<div class="multiple-choice" data-target="someone-else">
 											<input id="role-someone-else" type="radio" name="role-q-one" value="someone-else">
-											<label for="role-someone-else">Someone else</label>
+											<label for="role-someone-else">For someone else</label>
 										</div>
 									</fieldset>
 								</div>
@@ -335,15 +335,27 @@
 									<fieldset>
 										<legend>
 											<h3 class="heading-medium">
-												Are you a...
+												What is your role?
 											</h3>
 										</legend>
 										<div class="multiple-choice">
 											<input id="role-adviser" type="radio" name="role-q-two" value="adviser">
 											<label for="role-adviser">Careers adviser</label>
 										</div>
+										<div class="multiple-choice">
+											<input id="role-adviser" type="radio" name="role-q-three" value="work coach">
+											<label for="role-adviser">Job Centre Plus work coach</label>
+										</div>
+										<div class="multiple-choice">
+											<input id="role-adviser" type="radio" name="role-q-four" value="teacher">
+											<label for="role-adviser">Teacher</label>
+										</div>
+										<div class="multiple-choice">
+											<input id="role-adviser" type="radio" name="role-q-five" value="parent">
+											<label for="role-adviser">Parent</label>
+										</div>						
 										<div class="multiple-choice" data-target="other-textfield">
-											<input id="role-other" type="radio" name="role-q-two" value="other">
+											<input id="role-other" type="radio" name="role-q-six" value="other">
 											<label for="role-other">Other</label>
 										</div>
 
@@ -365,8 +377,8 @@
 				    		<div class="column-two-thirds">
 					    		<a href="#1" class="link-back" onclick="surveyPrevQuestion()">Back</a>
 								<div class="form-group">
-									<h3 class="heading-medium">Why have you come to the site today?</h3>
-									<label class="form-label visually-hidden" for="textarea">Why have you come to the site today?</label>
+									<h3 class="heading-medium">What information were you looking for on this page?</h3>
+									<label class="form-label visually-hidden" for="textarea">What information were you looking for on this page?</label>
 									<textarea class="form-control form-control-3-4" name="why-have-you-come" id="why-have-you-come" rows="5"></textarea>
 								</div>
 								<div class="inline">
@@ -394,17 +406,33 @@
 									</fieldset>
 								</div>
 								<div class="inline">
+									<a href="#1" class="button" onclick="didYouFind()">Next question</a>
+								</div>
+							</div>
+			    		</div>
+
+						<!-- Option for 'yes' -->
+			    		<div class="VOC-consume_survey__page" id="VOC-consume_page3">
+				    		<div class="column-two-thirds">
+					    		<a href="#1" class="link-back" onclick="surveyPrevQuestion()">Back</a>
+								<div class="form-group">
+									<h3 class="heading-medium">How useful was the information?</h3>
+									<label class="form-label visually-hidden" for="improvement-suggestion">How useful was the information?</label>
+									<textarea class="form-control form-control-3-4" name="improvement-suggestion" id="improvement-suggestion" rows="5"></textarea>
+								</div>
+								<div class="inline">
 									<a href="#1" class="button" onclick="surveyNextQuestion()">Next question</a>
 								</div>
 							</div>
 			    		</div>
 
-			    		<div class="VOC-consume_survey__page" id="VOC-consume_page3">
+			    		<!-- Option for 'no' -->
+			    		<div class="VOC-consume_survey__page" id="VOC-consume_page3b">
 				    		<div class="column-two-thirds">
-					    		<a href="#1" class="link-back" onclick="surveyPrevQuestion()">Back</a>
+					    		<a href="#1" class="link-back" onclick="surveyPrevQuestion('b')">Back</a>
 								<div class="form-group">
-									<h3 class="heading-medium">How should we improve this page?</h3>
-									<label class="form-label visually-hidden" for="improvement-suggestion">How should we improve this page?</label>
+									<h3 class="heading-medium">How could we improve this page?</h3>
+									<label class="form-label visually-hidden" for="improvement-suggestion">How could we improve this page?</label>
 									<textarea class="form-control form-control-3-4" name="improvement-suggestion" id="improvement-suggestion" rows="5"></textarea>
 								</div>
 								<div class="inline">
@@ -417,29 +445,29 @@
 				    		<div class="column-two-thirds">
 					    		<a href="#1" class="link-back" onclick="surveyPrevQuestion()">Back</a>
 								<div class="form-group">
-									<fieldset class="inline">
+									<fieldset>
 										<legend>
-											<h3 class="heading-medium">How satisfied were you overall with this page?</h3>
+											<h3 class="heading-medium">Overall, how satisfied were you with this page?</h3>
 										</legend>
 										<div class="multiple-choice">
-											<input id="find-yes" type="radio" name="find-what-you-need" value="Yes">
-											<label for="find-yes">1</label>
+											<input id="find-yes" type="radio" name="find-what-you-need" value="1">
+											<label for="find-yes">Very dissatisfied</label>
 										</div>
 										<div class="multiple-choice" data-target="someone-else">
-											<input id="find-no" type="radio" name="find-what-you-need" value="No">
-											<label for="find-no">2</label>
+											<input id="find-no" type="radio" name="find-what-you-need" value="2">
+											<label for="find-no">Dissatisfied</label>
 										</div>
 										<div class="multiple-choice">
-											<input id="find-yes" type="radio" name="find-what-you-need" value="Yes">
-											<label for="find-yes">3</label>
+											<input id="find-yes" type="radio" name="find-what-you-need" value="3">
+											<label for="find-yes">Neither satisfied and dissatisfied</label>
 										</div>
 										<div class="multiple-choice" data-target="someone-else">
-											<input id="find-no" type="radio" name="find-what-you-need" value="No">
-											<label for="find-no">4</label>
+											<input id="find-no" type="radio" name="find-what-you-need" value="4">
+											<label for="find-no">Satisfied</label>
 										</div>
 										<div class="multiple-choice" data-target="someone-else">
-											<input id="find-no" type="radio" name="find-what-you-need" value="No">
-											<label for="find-no">5</label>
+											<input id="find-no" type="radio" name="find-what-you-need" value="5">
+											<label for="find-no">Very satisfied</label>
 										</div>								
 									</fieldset>
 								</div>
@@ -453,59 +481,63 @@
 			    			<div class="column-full">
 			    				<a href="#1" class="link-back" onclick="surveyPrevQuestion()">Back</a>
 								<div class="form-group">
-									<fieldset class="inline">
+									<fieldset>
 										<legend>
-											<h3 class="heading-medium">NPS: 10 point scale</h3>
+											<h3 class="heading-medium">How likely is it that you would recommend this service to a friend or colleague?</h3>
 										</legend>
 										<div class="multiple-choice">
-											<input id="find-yes" type="radio" name="find-what-you-need" value="Yes">
+											<input id="find-yes" type="radio" name="find-what-you-need" value="0">
+											<label for="find-yes">0 - Not at all likely</label>
+										</div>						
+										<div class="multiple-choice">
+											<input id="find-yes" type="radio" name="find-what-you-need" value="1">
 											<label for="find-yes">1</label>
 										</div>
 										<div class="multiple-choice" data-target="someone-else">
-											<input id="find-no" type="radio" name="find-what-you-need" value="No">
+											<input id="find-no" type="radio" name="find-what-you-need" value="2">
 											<label for="find-no">2</label>
 										</div>
 										<div class="multiple-choice">
-											<input id="find-yes" type="radio" name="find-what-you-need" value="Yes">
+											<input id="find-yes" type="radio" name="find-what-you-need" value="3">
 											<label for="find-yes">3</label>
 										</div>
 										<div class="multiple-choice" data-target="someone-else">
-											<input id="find-no" type="radio" name="find-what-you-need" value="No">
+											<input id="find-no" type="radio" name="find-what-you-need" value="4">
 											<label for="find-no">4</label>
 										</div>
 										<div class="multiple-choice" data-target="someone-else">
-											<input id="find-no" type="radio" name="find-what-you-need" value="No">
+											<input id="find-no" type="radio" name="find-what-you-need" value="5">
 											<label for="find-no">5</label>
 										</div>
 										<div class="multiple-choice">
-											<input id="find-yes" type="radio" name="find-what-you-need" value="Yes">
+											<input id="find-yes" type="radio" name="find-what-you-need" value="6">
 											<label for="find-yes">6</label>
 										</div>
 										<div class="multiple-choice" data-target="someone-else">
-											<input id="find-no" type="radio" name="find-what-you-need" value="No">
+											<input id="find-no" type="radio" name="find-what-you-need" value="7">
 											<label for="find-no">7</label>
 										</div>
 										<div class="multiple-choice">
-											<input id="find-yes" type="radio" name="find-what-you-need" value="Yes">
+											<input id="find-yes" type="radio" name="find-what-you-need" value="8">
 											<label for="find-yes">8</label>
 										</div>
 										<div class="multiple-choice" data-target="someone-else">
-											<input id="find-no" type="radio" name="find-what-you-need" value="No">
+											<input id="find-no" type="radio" name="find-what-you-need" value="9">
 											<label for="find-no">9</label>
 										</div>
 										<div class="multiple-choice" data-target="someone-else">
-											<input id="find-no" type="radio" name="find-what-you-need" value="No">
-											<label for="find-no">10</label>
+											<input id="find-no" type="radio" name="find-what-you-need" value="10">
+											<label for="find-no">10 - Extremely likely</label>
 										</div>															
 									</fieldset>
 								</div>
 								<div class="inline">
-									<a href="#1" class="button" onclick="surveyNextQuestion()">Next question</a>
+									<a href="#1" class="button" onclick="surveyNextQuestion()">Send feedback</a>
 								</div>
 							</div>
 			    		</div>
 
-			    		<div class="VOC-consume_survey__page" id="VOC-consume_page6">
+<!-- 			    		<div class="VOC-consume_survey__page" id="VOC-consume_page6">
 				    		<div class="column-two-thirds">
 					    		<a href="#1" class="link-back" onclick="surveyPrevQuestion()">Back</a>
 								<div class="form-group">
@@ -517,36 +549,33 @@
 									<a href="#1" class="button" onclick="surveyNextQuestion()">Submit</a>
 								</div>
 				    		</div>
-			    		</div>			
+			    		</div>	 -->		
 					</form>
 
-		    		<div class="VOC-consume_survey__page" id="VOC-consume_page7">
+		    		<div class="VOC-consume_survey__page" id="VOC-consume_page6">
 			    		<div class="column-two-thirds">
 							<h3 class="heading-large" style="padding-top:15px;">Thank you for your feedback</h3>
-							<p style="padding-bottom:15px;">We use your feedback to improve our service. If you would like to take part in further research, such as testing new features, please fill out the form below</p>
-
-							<h3 class="heading-medium">Be involved with future research</h3>
-
+							<p>We use your feedback to improve our service.</p>
+							<p>Get involved in future research</p>
+							<!-- <h3 class="heading-medium">Be involved with future research</h3> -->
 							<form>
 								<div class="form-group form-group-compound">
 								  <label class="form-label" for="name">Full name (optional)</label>
 								  <input class="form-control" id="name" name="name" type="text">
 								</div>
 								<div class="form-group">
-								  <label class="form-label" for="email-address">Email address (optional)</label>
+								  <label class="form-label" for="email-address">Email address</label>
 								  <input class="form-control" id="email-address" name="email-address" type="text">
 								</div>
-
 								<div class="inline">
-									<a href="#1" class="button" onclick="surveyNextQuestion()">Send contact details</a>
+									<a href="#1" class="button" onclick="submitSurvey()">Send contact details</a>
 									<a href="#1" class="button beta-grey-button" onclick="submitSurvey()">No thanks</a>
 								</div>
-
 							</form>
 						</div>
 		    		</div>
 
-		    		<div class="VOC-consume_survey__page" id="VOC-consume_page8">
+		    		<!-- <div class="VOC-consume_survey__page" id="VOC-consume_page7">
 			    		<div class="column-two-thirds">
 							<h3 class="heading-large" style="padding-top:15px;">Thank you</h3>
 							<p>We will contact you via your email when future research is taking place</p>
@@ -555,7 +584,7 @@
 								<a href="#1" class="button" onclick="submitSurvey()">Close</a>
 							</div>
 						</div>
-		    		</div>
+		    		</div> -->
 			</div>
     	</div>
 	</div>
@@ -597,6 +626,30 @@ function initPageModel() {
 	prevPage = -1;
 }
 
+function initPageBranchModel(){
+	branchModel = {};
+}
+
+function updatePageBranchModel(pageNumber, branchLetter){
+	branchModel[pageNumber] = branchLetter;
+}
+
+function checkForPageBranch(direction){
+	var pageBranch = '';
+	for (var key in branchModel) {
+		if (direction === 'next' && key === nextPage.toString()) {
+			pageBranch = branchModel[key];
+		}
+		if (direction === 'prev' && key === prevPage.toString()) {
+			pageBranch = branchModel[key];
+		}
+		if (direction === 'current' && key === currentPage.toString()) {
+			pageBranch = branchModel[key];
+		}
+	}
+	return pageBranch;
+}
+
 function surveyInit() {
 	var surveyPages = document.getElementsByClassName('VOC-consume_survey__page');
 
@@ -608,15 +661,19 @@ function surveyInit() {
 		}
 	}
 	initPageModel();
+	initPageBranchModel();
 }
 surveyInit();
 
 function surveyNextQuestion() {
-	var thisPageId = 'VOC-consume_page' + currentPage.toString();
+	var branch = checkForPageBranch('next');
+	var branchCurrent = checkForPageBranch('current');
+
+	var thisPageId = 'VOC-consume_page' + currentPage.toString() + branchCurrent;
 	var thisPageElement = document.getElementById(thisPageId);
 	thisPageElement.classList.add('js-hidden');
 
-	var nextPageId = 'VOC-consume_page' + nextPage.toString();
+	var nextPageId = 'VOC-consume_page' + nextPage.toString() + branch;
 	var nextPageElement = document.getElementById(nextPageId);
 	nextPageElement.classList.remove('js-hidden');
 
@@ -624,15 +681,18 @@ function surveyNextQuestion() {
 }
 
 function surveyPrevQuestion() {
-	var thisPageId = 'VOC-consume_page' + currentPage.toString();
+	var branch = checkForPageBranch('prev');
+	var branchCurrent = checkForPageBranch('current');
+
+	var thisPageId = 'VOC-consume_page' + currentPage.toString() + branchCurrent;
 	var thisPageElement = document.getElementById(thisPageId);
 	thisPageElement.classList.add('js-hidden');
 
-	var prevPageId = 'VOC-consume_page' + prevPage.toString();
+	var prevPageId = 'VOC-consume_page' + prevPage.toString() + branch;
 	var prevPageElement = document.getElementById(prevPageId);
 	prevPageElement.classList.remove('js-hidden');
 
-	updatePageModel('prev');
+	updatePageModel();
 }
 
 function updatePageModel(thisDirection) {
@@ -644,6 +704,16 @@ function updatePageModel(thisDirection) {
 		currentPage = currentPage-1;
 		nextPage = nextPage-1;
 		prevPage = prevPage-1
+	}
+}
+
+function didYouFind() {
+	if(document.getElementById('find-no').checked) {
+		updatePageBranchModel(nextPage.toString(), 'b');
+		surveyNextQuestion();
+	} else {
+		updatePageBranchModel(nextPage.toString(), '');
+		surveyNextQuestion();
 	}
 }
 
