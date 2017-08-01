@@ -250,3 +250,64 @@ Consume - Voice of customer survey
 		margin-top:0px;
 	}
 }
+
+/* ----------------------------------------------------
+Exit routes - Voice of customer survey
+----------------------------------------------------- */
+
+.VOC-exit-routes_container {
+	width:100%;
+	background: $govuk-blue;
+	color: $page-colour;
+	font-family: "nta", Arial, sans-serif;
+	font-weight: 400;
+	text-transform: none;
+	font-size: 16px;
+	line-height: 1.25;
+	-webkit-font-smoothing: antialiased;
+	overflow: hidden;
+	padding: 1.2em 0 1.2em 0;
+
+	@include media(tablet) {
+		font-size: 19px;
+		line-height: 1.31579; 
+	}	
+
+	a {
+		color: $page-colour;
+	}
+
+	.VOC-exit-routes_banner {
+		position: relative;
+		.VOC-exit-routes_banner__close-btn {
+			position: absolute;
+			right:0px;
+			top:0px;
+		}
+		.heading-small {
+			margin-top: 0;
+			margin-bottom: 0.3em;
+		}
+	}
+
+	.VOC-exit-routes_survey {
+		.form-label {
+			color: $page-colour;
+		}
+		.form-control {
+			border-color: $page-colour;
+		}
+		.button {
+			background-color: $page-colour;
+			color: $govuk-blue;
+			font-weight: 700;
+		    -webkit-box-shadow: 0 2px 0 $link-hover-colour;
+		    -moz-box-shadow: 0 2px 0 $link-hover-colour;
+		    box-shadow: 0 2px 0 $link-hover-colour; 
+		}
+		.button.beta-link-button {
+			color: $page-colour;
+			font-weight: 500;
+		}
+	}
+}
