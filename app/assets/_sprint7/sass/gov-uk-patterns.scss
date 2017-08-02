@@ -17,19 +17,11 @@ GOV.UK - search results
     margin:5px 15px 0;
     clear:left; 
 
-    // @media screen and (max-width: 379px) {
-    //     margin:5px 15px 0
-    // }
-
-    @media screen and (min-width: 380px) {
-        margin-top:14px;
-        clear:none;   
-    }
-
     @media (min-width: 641px) {
         font-size:24px;
         line-height: 1.25;
         margin-top:8px;
+        clear:none; 
     }
     &:visited, &:hover, &:focus{
         color:white !important;

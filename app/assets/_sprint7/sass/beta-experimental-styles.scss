@@ -19,8 +19,21 @@ Global
 #global-header {
 	.header-container {
 		float:left;
+		clear:both;
+		margin-left:15px;
+		margin-top:4px;
+
+	    @media screen and (min-width: 500px) {
+	        margin-top:14px;
+	        clear: none;
+	    }
+
+		@include media(tablet) {
+			margin-top:8px;
+		}
+
 		.header-title {
-			margin-right:0px;
+			margin:0px;
 		}
 		.phase-tag {
 		    font-family: "nta", Arial, sans-serif;
@@ -33,18 +46,15 @@ Global
 		    letter-spacing: 1px;
 		    vertical-align: middle;
 		    background: #005EA5;
-		    margin:5px 15px 0 6px;
+		    margin:2px 0 0 6px;
+		    float:left;
 
-		    // @media screen and (max-width: 379px) {
-		    //     margin:5px 15px 0
-		    // }
-
-		    // @media screen and (min-width: 380px) {
-		    //     margin-top:14px
+		    // @media screen and (min-width: 500px) {
+		    //     margin-top:0px;
 		    // }
 
 			@include media(tablet){
-				margin:13px 0 0 8px;
+				margin:5px 0 0 8px;
 			    font-size:14px;
 			    line-height: 1.42857;
 			}
