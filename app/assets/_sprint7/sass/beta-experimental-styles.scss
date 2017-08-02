@@ -10,6 +10,12 @@ Global
 	@extend %site-width-container;
 }
 
+#content {
+	#global-header-bar {
+		margin: 0px;
+	}
+}
+
 /* ----------------------------------------------------
 Job categories on homepage
 ----------------------------------------------------- */
@@ -280,34 +286,107 @@ Exit routes - Voice of customer survey
 	.VOC-exit-routes_banner {
 		position: relative;
 		.VOC-exit-routes_banner__close-btn {
+			font-size: 14px;
 			position: absolute;
 			right:0px;
 			top:0px;
+			@include media(tablet){
+				font-size: 16px;
+			}
 		}
 		.heading-small {
+			width: 75%;
 			margin-top: 0;
 			margin-bottom: 0.3em;
+			@include media(tablet) {
+				width: 100%;
+			}
 		}
 	}
 
 	.VOC-exit-routes_survey {
 		.form-label {
 			color: $page-colour;
+			font-size: 16px;
 		}
 		.form-control {
 			border-color: $page-colour;
+			font-size: 16px;
+			margin-bottom: 1em;
+			width: 100%;
+			@include media(tablet){
+				font-size:16px;
+			}
 		}
-		.button {
+		.VOC-exit-routes_survey__button {
 			background-color: $page-colour;
 			color: $govuk-blue;
 			font-weight: 700;
-		    -webkit-box-shadow: 0 2px 0 $link-hover-colour;
-		    -moz-box-shadow: 0 2px 0 $link-hover-colour;
-		    box-shadow: 0 2px 0 $link-hover-colour; 
+		    -webkit-box-shadow: 0 2px 0 #d9d9d9;
+		    -moz-box-shadow: 0 2px 0 #d9d9d9;
+		    box-shadow: 0 2px 0 #d9d9d9; 
+		    margin-bottom: 4px;
 		}
-		.button.beta-link-button {
+		.link-button {
 			color: $page-colour;
 			font-weight: 500;
+			margin-top:1em;
+			display: block;
+			font-size: 14px;
+			@include media(tablet){
+				margin-top:0.65em;
+				display: inline-block;
+				vertical-align: center;
+				font-size:16px;
+			}
+		}
+	}
+}
+
+.VOC-exit-routes_container.BAU-style {
+	background:$yellow;
+	color:$text-colour;
+	.VOC-exit-routes_banner a, .VOC-exit-routes_banner__close-btn, .form-label, .link-button{
+		color:$text-colour;
+	}
+}
+
+.VOC-exit-routes_container.BETA-style {
+	background:#21827b;
+	color:$page-colour;
+	border-bottom: 1px solid #0f655f;
+	.VOC-exit-routes_banner a, .VOC-exit-routes_banner__close-btn, .form-label, .link-button{
+		color:$page-colour;
+	}
+	.VOC-exit-routes_survey__button {
+		color: #21827b;
+	}
+}
+.phase-banner-BAU {
+	overflow: hidden;
+	padding:14px 0 10px 0;
+	p {
+		@include media(tablet){
+			float:left;
+		}
+	}
+	ul.account-navigation {
+		line-height: 1.25;
+		margin-top: 0.3em;
+		@include media(tablet){
+			float:right;
+			margin-top: 0;
+		}
+
+		li {
+			vertical-align: top;
+			display:inline-block;
+			font-size:14px;
+			margin:0 8px 0 0;
+			@include media(tablet) {
+				font-size: 16px;
+				margin:0 0 0 8px;
+			}
 		}
 	}
 }

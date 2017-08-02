@@ -1,22 +1,22 @@
 {% extends "./layout_full-width.html" %}
 
 {% block page_title %}
-	Service Green
+	Careers advice
 {% endblock %}
 
 {% block content %}
 
-<div class="VOC-exit-routes_container" id="VOC-exit-routes_container">
+<div class="VOC-exit-routes_container BAU-style" id="VOC-exit-routes_container">
      <div class="main">
           <div class="VOC-exit-routes_banner">
                <div id="recruit-message">
                     <h2 class="heading-small">Tell us what you think of service green</h2>
-                    <a class="VOC-exit-routes_banner__close-btn font-xsmall" href="#1" onclick="hideOrReset()">Close</a>
+                    <a class="VOC-exit-routes_banner__close-btn" href="#1" onclick="hideOrReset()">Close</a>
                     <a href="#1" onclick="showSurvey()">Take a short survey to give us your feedback</a> 
                </div>
                <div id="survey-header" class="js-hidden">
                     <h2 class="heading-small">Tell us what you think of service green</h2>
-                    <a class="VOC-exit-routes_banner__close-btn font-xsmall" href="#1" onclick="hideOrReset()">Close</a>
+                    <a class="VOC-exit-routes_banner__close-btn" href="#1" onclick="hideOrReset()">Close</a>
                </div>
                <div id="survey-done" class="js-hidden">
                     <h3 class="heading-small" style="margin:0px;">Thank you for your feedback</h3>
@@ -28,13 +28,13 @@
                     <div class="column-two-thirds">
                          <p class="font-xsmall">We'll send you a link to a feedback form. It only takes 2 minutes to fill in. Don't worry we won't send you spam or share your email address with anyone.</p>
                          <form>
-                              <div class="form-group form-group-compound">
+                              <div>
                                 <label class="form-label" for="email">Email address</label>
-                                <input class="form-control form-control-3-4" id="email" name="email" type="text">
+                                <input class="form-control" id="email" name="email" type="text">
                               </div>
                               <div class="inline">
-                                   <a href="#1" class="button">Send contact details</a>
-                                   <a href="#1" class="button beta-link-button">Don't have an email address?</a>
+                                   <a href="#1" class="button" style="margin-right: .5em;">Send contact details</a>
+                                   <a href="#1" class="link-button">Don't have an email address?</a>
                               </div>
                          </form>
                     </div>
@@ -43,69 +43,43 @@
      </div>
 </div>
 
-{% include "./includes/phase_banner_beta_full-width.html" %}
-
-<header class="PROD_hero">
-     <div class="PROD_full-page-width-wrapper">
-          <div class="grid-row">
-               <div class="column-two-thirds">
-                    <h1 class="heading-xlarge">Service Green</h1>
-                    <p class="lede">Explore what kind of work is right for you, and take the next steps towards what you want to be</p>
-                    <form id="searchForm">
-                         <!-- <label>Enter a job title</label> -->
-                         <div class="PROD_search">
-                              <div id="search-box" class="PROD_search__input-container">
-                                   <input id="searchInput" class="PROD_search__input" autocomplete="off" placeholder="Enter a job title or keywords" type="text">
-                              </div>
-                              <input class="PROD_search__submit" onclick="saveSearchTermsAndContinue()" type="button" value="Search">
-                         </div>
-                    </form>
-               </div>
-          </div>
-     </div>
-</header> 
+<div id="global-header-bar" style="background: #005ea5;"></div>
 <main id="content" role="main">
+     <div class="phase-banner-beta phase-banner-BAU">
+          <p>
+               <span>We're building a new service – your <a href="#1">feedback</a> will help us to improve it.</span>
+          </p>
+
+          <ul class="account-navigation">
+               <li><a href="#1">Sign in</a></li>
+               <li><a href="#1">Create account</a></li>
+          </ul>
+     </div>
+
      <div class="grid-row">
-          <div class="column-full">
-               <h2 class="heading-medium">Explore by job category</h2>
-          </div>
-          <div class="column-one-third">
-               <ul class="list category-list">
-                    <li><a href="#1" class="prototype-link">Administration</a></li>
-                    <li><a href="#1" class="prototype-link">Animal care</a></li>
-                    <li><a href="#1" class="prototype-link">Beauty and wellbeing</a></li>
-                    <li><a href="#1" class="prototype-link">Business and finance</a></li>
-                    <li><a href="#1" class="prototype-link">Delivery and storage</a></li>
-                    <li><a href="#1" class="prototype-link">Computing, technology and digital</a></li>
-                    <li><a href="#1" class="prototype-link">Construction and trades</a></li>
-                    <li><a href="#1" class="prototype-link">Creative and media</a></li>
+          <div class="column-two-thirds">
+               <h1 class="heading-xlarge">National Careers Service</h1>
+               <p class="lede">We provide information, advice and guidance to help you make decisions on learning, training and work.</p>
+               <p>We are redesigning this service. If you had a Lifelong Learning Account you can still use your existing details to sign in. You'll be able to view your saved:</p>
+               <ul class="list list-bullet">
+                   <li>CVs</li>
+                   <li>Skills health check reports</li>
+                   <li>action plans</li>
+                   <li>course searches</li>
                </ul>
-          </div>
-          <div class="column-one-third">
-               <ul class="list category-list">
-                    <li><a href="#1" class="prototype-link">Emergency and uniform services</a></li>
-                    <li><a href="#1" class="prototype-link">Engineering and maintenance</a></li>
-                    <li><a href="#1" class="prototype-link">Environment and land</a></li>
-                    <li><a href="#1" class="prototype-link">Government services</a></li>
-                    <li><a href="#1" class="prototype-link">Healthcare</a></li>
-                    <li><a href="#1" class="prototype-link">Hospitality and food</a></li>
-                    <li><a href="#1" class="prototype-link">Legal</a></li>
-                    <li><a href="#1" class="prototype-link">Managerial</a></li>
-               </ul>
-          </div>
-          <div class="column-one-third">
-               <ul class="list category-list">
-                    <li><a href="#1" class="prototype-link">Manufacturing</a></li>
-                    <li><a href="#1" class="prototype-link">Retail and sales</a></li>
-                    <li><a href="#1" class="prototype-link">Science and research</a></li>
-                    <li><a href="#1" class="prototype-link">Social care</a></li>
-                    <li><a href="#1" class="prototype-link">Sports and leisure</a></li>
-                    <li><a href="#1" class="prototype-link">Teaching and education </a></li>
-                    <li><a href="#1" class="prototype-link">Transport</a></li>
-                    <li><a href="#1" class="prototype-link">Travel and tourism</a></li>
-               </ul>
+               <h2 class="heading-small"><a href="#1">Job profiles</a></h2>
+               <p>Find out what a job involves and if it's right for you.</p>
+               <h2 class="heading-small"><a href="#1">Skills health check</a></h2>
+               <p>Use our assessment to find out what kind of jobs could suit you and save your results.</p>
+               <h2 class="heading-small"><a href="#1">Find a course</a></h2>
+               <p>Look for courses and learning providers and save information about them.</p>
+               <h2 class="heading-small"><a href="#1">Contact an adviser</a></h2>
+               <p>Find out about the different ways to get in touch.</p>
+               <h2 class="heading-small"><a href="#1">Help to get a job</a></h2>
+               <p>Get advice on the different stages of a job hunt, including how to improve your interview technique and write an effective CV. You can get help to search for your first job, get back into work or change career direction.</p>
           </div>
      </div>
+
 </main>
 
 <script>
@@ -274,16 +248,6 @@ function updatePageModel(thisDirection) {
           prevPage = prevPage-1
      }
 }
-
-// function didYouFind() {
-//      if(document.getElementById('find-no').checked) {
-//           updatePageBranchModel(nextPage.toString(), 'b');
-//           surveyNextQuestion();
-//      } else {
-//           updatePageBranchModel(nextPage.toString(), '');
-//           surveyNextQuestion();
-//      }
-// }
 
 </script>
 
