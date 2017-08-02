@@ -308,6 +308,9 @@ Exit routes - Voice of customer survey
 		.form-label {
 			color: $page-colour;
 			font-size: 16px;
+			@include media(tablet){
+				font-size:19px;
+			}
 		}
 		.form-control {
 			border-color: $page-colour;
@@ -315,7 +318,7 @@ Exit routes - Voice of customer survey
 			margin-bottom: 1em;
 			width: 100%;
 			@include media(tablet){
-				font-size:16px;
+				font-size:19px;
 			}
 		}
 		.VOC-exit-routes_survey__button {
