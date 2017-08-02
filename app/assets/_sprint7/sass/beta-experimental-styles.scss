@@ -16,11 +16,52 @@ Global
 	}
 }
 
+#global-header {
+	.header-container {
+		float:left;
+		.header-title {
+			margin-right:0px;
+		}
+		.phase-tag {
+		    font-family: "nta", Arial, sans-serif;
+		    font-weight: 700;
+		    text-transform: none;
+		    font-size: 12px;
+		    line-height: 1.25;
+		    padding: 2px 5px 0;
+		    text-transform: uppercase;
+		    letter-spacing: 1px;
+		    vertical-align: middle;
+		    background: #005EA5;
+		    margin:5px 15px 0 6px;
+
+		    // @media screen and (max-width: 379px) {
+		    //     margin:5px 15px 0
+		    // }
+
+		    // @media screen and (min-width: 380px) {
+		    //     margin-top:14px
+		    // }
+
+			@include media(tablet){
+				margin:13px 0 0 8px;
+			    font-size:14px;
+			    line-height: 1.42857;
+			}
+		}	
+	}
+}
+
+
 /* ----------------------------------------------------
 Job categories on homepage
 ----------------------------------------------------- */
 
 .category-list {
+	margin-bottom: 5px;
+	@include media(tablet){
+		margin-bottom: 20px;
+	}
 	li {
 		margin-bottom: 0.526em;
 	}
@@ -321,6 +362,9 @@ Exit routes - Voice of customer survey
 				font-size:19px;
 			}
 		}
+		.button {
+		    margin-bottom: 4px;
+		}
 		.VOC-exit-routes_survey__button {
 			background-color: $page-colour;
 			color: $govuk-blue;
@@ -328,7 +372,6 @@ Exit routes - Voice of customer survey
 		    -webkit-box-shadow: 0 2px 0 #d9d9d9;
 		    -moz-box-shadow: 0 2px 0 #d9d9d9;
 		    box-shadow: 0 2px 0 #d9d9d9; 
-		    margin-bottom: 4px;
 		}
 		.link-button {
 			color: $page-colour;

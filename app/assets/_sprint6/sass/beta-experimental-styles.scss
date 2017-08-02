@@ -15,6 +15,10 @@ Job categories on homepage
 ----------------------------------------------------- */
 
 .category-list {
+	margin-bottom: 5px;
+	@include media(tablet){
+		margin-bottom: 20px;
+	}
 	li {
 		margin-bottom: 0.526em;
 	}
