@@ -12,6 +12,7 @@
                </div>
                <div id="survey-done" class="js-hidden">
                     <h3 class="heading-small" style="margin:0px;">Thank you for your feedback</h3>
+                    <a class="VOC-exit-routes_banner__close-btn" href="#1" onclick="hideOrReset()">Close</a>
                </div>              
           </div>
 
@@ -25,7 +26,7 @@
                                 <input class="form-control" id="email" name="email" type="text">
                               </div>
                               <div class="inline">
-                                   <a href="#1" class="button {% if bannerStyle != 'BAU-style' %}VOC-exit-routes_survey__button{% endif %}" style="margin-right: .5em;">Send contact details</a>
+                                   <a href="#1" onclick="endSurvey()" class="button {% if bannerStyle != 'BAU-style' %}VOC-exit-routes_survey__button{% endif %}" style="margin-right: .5em;">Send contact details</a>
                                    <a href="#1" class="link-button">Don't have an email address?</a>
                               </div>
                          </form>
