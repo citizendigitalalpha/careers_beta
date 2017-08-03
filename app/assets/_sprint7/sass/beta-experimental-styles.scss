@@ -62,6 +62,56 @@ Global
 	}
 }
 
+.BAU-header {
+	.content {
+	    margin: 0 15px;
+	}
+	.BAU-header__service-name {
+	    font-family: "nta", Arial, sans-serif;
+	    font-size: 24px;
+	    line-height: 1.25;
+	    font-weight: 400;
+	    text-transform: none;
+	    font-weight: bold;
+	    color: $page-colour;
+  		text-decoration: none;
+  		overflow: none;
+  		&:hover {
+  			text-decoration: underline;
+  		}
+	}
+	.BAU-header__nav{
+		clear: both;
+	    margin: 2px 0 0 0;
+	    padding: 0;
+	    float:left;
+	    li {
+			display: block;
+			width: auto;
+			padding: 0 15px 0 0;
+			border-bottom: 0;
+			display: block;
+			float: left;
+			a {
+				font-family: "nta", Arial, sans-serif;
+				font-size: 16px;
+				line-height: 1.25;
+				font-weight: 700;
+				text-transform: none;
+				line-height: 23px;
+				color: $page-colour;
+				text-decoration: none;
+		  		&:hover {
+		  			text-decoration: underline;
+		  		}
+				&.active {
+					color: #1d8feb;
+				}
+			}
+	    }
+	}
+}
+
 
 /* ----------------------------------------------------
 Job categories on homepage
@@ -305,6 +355,18 @@ Consume - Voice of customer survey
 	}
 	.form-group .panel-border-narrow:last-child {
 		margin-top:0px;
+	}
+}
+
+.VOC-consume_container--BAU {
+	border-color:$govuk-blue;
+
+	.VOC-consume_banner {
+		background:$govuk-blue;
+	}
+
+	.VOC-consume_survey {
+		border-color:$govuk-blue;
 	}
 }
 
