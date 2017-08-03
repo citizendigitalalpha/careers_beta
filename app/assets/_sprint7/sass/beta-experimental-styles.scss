@@ -324,6 +324,7 @@ Exit routes - Voice of customer survey
 	-webkit-font-smoothing: antialiased;
 	overflow: hidden;
 	padding: 1.2em 0 1.2em 0;
+	border-bottom: 1px solid $page-colour;
 
 	@include media(tablet) {
 		font-size: 19px;
@@ -402,20 +403,9 @@ Exit routes - Voice of customer survey
 .VOC-exit-routes_container.BAU-style {
 	background:$yellow;
 	color:$text-colour;
+	border-bottom: none;
 	.VOC-exit-routes_banner a, .VOC-exit-routes_banner__close-btn, .form-label, .link-button{
 		color:$text-colour;
-	}
-}
-
-.VOC-exit-routes_container.BETA-style {
-	background:#21827b;
-	color:$page-colour;
-	border-bottom: 1px solid #0f655f;
-	.VOC-exit-routes_banner a, .VOC-exit-routes_banner__close-btn, .form-label, .link-button{
-		color:$page-colour;
-	}
-	.VOC-exit-routes_survey__button {
-		color: #21827b;
 	}
 }
 .phase-banner-BAU {
@@ -446,3 +436,16 @@ Exit routes - Voice of customer survey
 		}
 	}
 }
+
+.VOC-exit-routes_container.BETA-style {
+	background:#21827b;
+	color:$page-colour;
+	border-bottom: 1px solid #0f655f;
+	.VOC-exit-routes_banner a, .VOC-exit-routes_banner__close-btn, .form-label, .link-button{
+		color:$page-colour;
+	}
+	.VOC-exit-routes_survey__button {
+		color: #21827b;
+	}
+}
+
