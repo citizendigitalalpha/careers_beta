@@ -1,4 +1,4 @@
-<div class="VOC-exit-routes_container BETA-style" id="VOC-exit-routes_container">
+<div class="VOC-exit-routes_container {{bannerStyle}}" id="VOC-exit-routes_container">
      <div class="main">
           <div class="VOC-exit-routes_banner">
                <div id="recruit-message">
@@ -18,14 +18,14 @@
           <div class="VOC-exit-routes_survey grid-row js-hidden" id="exit-routesSurvey">
                <div class="VOC-exit-routes_survey__page" id="VOC-exit_page0">
                     <div class="column-two-thirds">
-                         <p class="font-xsmall">We'll send you a link to a feedback form. It only takes 2 minutes to fill in. Don't worry we won't send you spam or share your email address with anyone.</p>
+                         <p>We'll send you a link to a feedback form. It only takes 2 minutes to fill in. Don't worry we won't send you spam or share your email address with anyone.</p>
                          <form>
                               <div>
                                 <label class="form-label" for="email">Email address</label>
                                 <input class="form-control" id="email" name="email" type="text">
                               </div>
                               <div class="inline">
-                                   <a href="#1" class="button VOC-exit-routes_survey__button" style="margin-right: .5em;">Send contact details</a>
+                                   <a href="#1" class="button {% if bannerStyle != 'BAU-style' %}VOC-exit-routes_survey__button{% endif %}" style="margin-right: .5em;">Send contact details</a>
                                    <a href="#1" class="link-button">Don't have an email address?</a>
                               </div>
                          </form>

@@ -6,42 +6,8 @@
 
 {% block content %}
 
-<div class="VOC-exit-routes_container BAU-style" id="VOC-exit-routes_container">
-     <div class="main">
-          <div class="VOC-exit-routes_banner">
-               <div id="recruit-message">
-                    <h2 class="heading-small">Tell us what you think of the National Careers Service</h2>
-                    <a class="VOC-exit-routes_banner__close-btn" href="#1" onclick="hideOrReset()">Close</a>
-                    <a href="#1" onclick="showSurvey()">Take a short survey to give us your feedback</a> 
-               </div>
-               <div id="survey-header" class="js-hidden">
-                    <h2 class="heading-small">Tell us what you think of service green</h2>
-                    <a class="VOC-exit-routes_banner__close-btn" href="#1" onclick="hideOrReset()">Close</a>
-               </div>
-               <div id="survey-done" class="js-hidden">
-                    <h3 class="heading-small" style="margin:0px;">Thank you for your feedback</h3>
-               </div>              
-          </div>
-
-          <div class="VOC-exit-routes_survey grid-row js-hidden" id="exit-routesSurvey">
-               <div class="VOC-exit-routes_survey__page" id="VOC-exit_page0">
-                    <div class="column-two-thirds">
-                         <p class="font-xsmall">We'll send you a link to a feedback form. It only takes 2 minutes to fill in. Don't worry we won't send you spam or share your email address with anyone.</p>
-                         <form>
-                              <div>
-                                <label class="form-label" for="email">Email address</label>
-                                <input class="form-control" id="email" name="email" type="text">
-                              </div>
-                              <div class="inline">
-                                   <a href="#1" class="button" style="margin-right: .5em;">Send contact details</a>
-                                   <a href="#1" class="link-button">Don't have an email address?</a>
-                              </div>
-                         </form>
-                    </div>
-               </div>
-          </div>
-     </div>
-</div>
+{% set bannerStyle = 'BAU-style' %}
+{% include "./includes/VOC_exit-routes.html" %}
 
 <div id="global-header-bar" style="background: #005ea5;"></div>
 <main id="content" role="main">
