@@ -33,6 +33,11 @@
 		</fieldset> -->
 	</div>
 
+	<div id="buttonContainer" class="inline" style="margin-bottom: 15px;">
+		<a href="#1" class="button" onclick="loadResults('desktop')">Desktop data</a>
+		<a href="#1" class="button" onclick="loadResults('mobile')">Mobile data</a>
+	</div>
+
 	<div id="results" class="js-live-search-results-block">
 		<div class="results-block">
 			<div class="inner-block js-live-search-results-list">
@@ -137,22 +142,6 @@
 		mainContainer.insertAdjacentHTML( 'beforeend', '<div class="paginated-page ' + pageVisible +'" id="page' + pageNumber + '"></div>' );		
 	}
 
-    // function onChange(event) {
-    //     var reader = new FileReader();
-    //     reader.onload = onReaderLoad;
-    //     reader.readAsText(event.target.files[0]);
-    // }
-
-    // function onReaderLoad(event){
-    //     var JSONFile = JSON.parse(event.target.result);
-    //     JSONLoaded(JSONFile);
-    // }
-
-    // function removeUploadUI(){
-    // 	var uploadUI = document.getElementById('uploadUI');
-    // 	uploadUI.classList.add('js-hidden');
-    // }
-
     function showResultContainer(){
     	var searchResultsList = document.getElementById('searchResultsList');
     	searchResultsList.classList.remove('js-hidden');
@@ -242,9 +231,7 @@
 		}
 	}
 
-	function JSONLoaded(JSONFile){
-		// var data = JSONFile;
-		var dataFilePath = '/public/_sprint7/data/azure-BAU-search_doctor_overview-length.json';
+	function JSONLoaded(dataFilePath){
 		var data = JSON.parse(Get(dataFilePath));
 		
 		// Set result counter
@@ -299,7 +286,17 @@
 	prevBtn.addEventListener('click', function() { paginationClicked('prev'); });
 
 	// Auto load data, use when upload funtion disabled
-	JSONLoaded();
+	// JSONLoaded();
+
+	function loadResults(dataOption){
+		if (dataOption === 'desktop') {
+			var dataFilePath = '/public/_sprint7/data/azure-BAU-search_doctor_overview-length.json';
+		} else {
+			var dataFilePath = '/public/_sprint7/data/azure-BAU-search_doctor_overview-length_mobile.json';
+		}
+		JSONLoaded(dataFilePath);
+		document.getElementById('buttonContainer').classList.add('js-hidden');
+	}
  
 </script>
 
