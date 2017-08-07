@@ -46,7 +46,7 @@ Global
 		    letter-spacing: 1px;
 		    vertical-align: middle;
 		    background: #005EA5;
-		    margin:2px 0 0 6px;
+		    margin:1px 0 0 6px;
 		    float:left;
 
 		    // @media screen and (min-width: 500px) {
@@ -54,7 +54,7 @@ Global
 		    // }
 
 			@include media(tablet){
-				margin:5px 0 0 8px;
+				margin:4px 0 0 8px;
 			    font-size:14px;
 			    line-height: 1.42857;
 			}
