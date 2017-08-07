@@ -10,6 +10,19 @@ Global
 	@extend %site-width-container;
 }
 
+.service-header--green {
+	background: $turquoise;
+	.main {
+		overflow: hidden;
+		padding:10px 0;
+		.service-name {
+			color:$page-colour;
+			font-weight: 700;
+			text-decoration: none;
+		}
+	}
+}
+
 #content {
 	#global-header-bar {
 		margin: 0px;
@@ -431,6 +444,9 @@ Exit routes - Voice of customer survey
 			@include media(tablet) {
 				width: 100%;
 			}
+		}
+		#recruit-message, #survey-done {
+			margin-bottom: -3px;
 		}
 	}
 
