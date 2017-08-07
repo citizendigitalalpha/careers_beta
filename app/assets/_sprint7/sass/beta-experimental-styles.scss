@@ -325,10 +325,26 @@ Consume - Voice of customer survey
 		overflow: hidden;
 		.heading-small {
 			margin:0px 0px 0px 0px;
+			&.on-survey {
+				width: 75%;
+				@include media(tablet){
+					width: 100%;
+				}
+			}
 		}
 		a {
 			color: $page-colour;
 			// font-weight: 700;
+		}
+		#recruit-message, #survey-header, #survey-done {
+			position: relative;
+		}
+		.VOC-consume_banner--close-btn {
+			position: absolute;
+			top:0;
+			right:0;
+			color: $page-colour;
+			font-size: 16px;
 		}
 	}
 	.VOC-consume_survey {
