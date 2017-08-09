@@ -1,3 +1,6 @@
+{% if VocExitHide %}
+     <!-- The user has already interacted with the VOC banner -->
+{% else %}
 <div class="VOC-exit-routes_container {{bannerStyle}}" id="VOC-exit-routes_container">
      <div class="main">
           <div class="VOC-exit-routes_banner">
@@ -30,7 +33,7 @@
                               </div>
                               <div class="inline">
                                    <a href="#1" onclick="endSurvey()" class="button {% if bannerStyle != 'BAU-style' %}VOC-exit-routes_survey__button{% endif %}" style="margin-right: .5em;">Send contact details</a>
-                                   <a href="#1" class="link-button">Don't have an email address?</a>
+                                   <a href="#1" onclick="updateViewAndRedirect(this)" class="link-button" data-href="http://www.smartsurvey.com">Don't have an email address?</a>
                               </div>
                          </form>
                     </div>
@@ -79,9 +82,19 @@ function resetSurvey() {
      surveySubmitted = false;
 }
 
+function updateViewAndRedirect(e) {
+     event.preventDefault();
+
+     hideOrReset();
+
+     var link = e.getAttribute("data-href");
+     window.location.href=link;
+}
+
 function hideOrReset() {
      document.getElementById('VOC-exit-routes_container').classList.add('js-hidden');
      // surveySubmitted ? endSurvey() : resetSurvey();
+     window.setSessionData("VocExitHide",true);
 }
 
 
@@ -175,3 +188,5 @@ function updatePageModel(thisDirection) {
 }
 
 </script>
+
+{% endif %}
