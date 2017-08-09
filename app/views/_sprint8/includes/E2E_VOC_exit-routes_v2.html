@@ -1,3 +1,6 @@
+<!-- {% if VocExitHide %} -->
+     <!-- The user has already interacted with the VOC banner -->
+<!-- {% else %} -->
 <div class="VOC-exit-routes_container {{bannerStyle}}" id="VOC-exit-routes_container">
      <div class="main">
           <div class="VOC-exit-routes_banner">
@@ -91,6 +94,7 @@ function updateViewAndRedirect(e) {
 function hideOrReset() {
      document.getElementById('VOC-exit-routes_container').classList.add('js-hidden');
      // surveySubmitted ? endSurvey() : resetSurvey();
+     window.setSessionData("VocExitHide",true);
 }
 
 
@@ -184,3 +188,5 @@ function updatePageModel(thisDirection) {
 }
 
 </script>
+
+<!-- {% endif %} -->
