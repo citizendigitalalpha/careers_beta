@@ -1,0 +1,31 @@
+{% extends "./layout_E2E.html" %}
+
+{% block page_title %}
+  Service Green
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Service Green' %}
+{% set bannerStyle = 'BETA-style' %}
+{% include "./includes/VOC_exit-routes_v2.html" %}
+
+<!-- {% include "./includes/phase_banner_beta_full-width.html" %} -->
+
+<main id="content" role="main">
+     <div id="global-header-bar"></div>
+     <div class="breadcrumbs">
+          <ol>
+               <li><a href="#1">Home</a></li>
+          </ol>
+     </div>
+     <div class="grid-row">
+          <div class="column-two-thirds">
+               <h2 class="heading-xlarge">This page is not available</h2>
+               <p>Should there be body copy?</p> 
+               <p>I.e. 'Try returning to the <a href="#1" class="prototype-link">Service Green homepage</a>'</p>
+          </div>
+     </div>
+</main>
+
+{% endblock %}
