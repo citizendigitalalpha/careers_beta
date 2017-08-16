@@ -108,11 +108,11 @@
 		// Set salary HTML
 		if (salary.length > 0) {
 			variableSalaryPosition = variableSalaryPosition - 1;
-			if (variableSalaryPosition === 0) {
-				var salaryHTML = '<p class="heading-small">Salary: Variable</p>';
-			} else {
+			// if (variableSalaryPosition === 0) {
+			// 	var salaryHTML = '<p class="heading-small">Salary: Variable</p>';
+			// } else {
 				var salaryHTML = '<p class="heading-small">Salary: ' + salary + ' per year</p>';
-			}	
+			// }	
 		} else {
 			var salaryHTML = emptyDataLabel;
 		}
@@ -265,8 +265,8 @@
 			var alternativeTitles = data.value[i].AlternativeTitles;
 			var overview = data.value[i].Overview;
 			// The data is missing hyperlink & salary 
-			// var salary = data.value[i].Salary;
-			var	salary = '£26,350 to £102,500'; // Manually set salary on all results as there currenlty isn't anything data to use
+			var salary = data.value[i].SalaryOverview;
+			// var	salary = '£26,350 to £102,500'; // Manually set salary on all results as there currenlty isn't anything data to use
 			var link = data.value[i].Link;
 
 			// Add a new page for every ten result items
