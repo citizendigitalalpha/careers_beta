@@ -1,14 +1,12 @@
-{% extends "./layout_full-width.html" %}
+{% extends "../layout_full-width.html" %}
 
 {% block page_title %}
-  Service Green
+	Service Green
 {% endblock %}
 
 {% block content %}
 
-{% set serviceName = 'Service Green' %}
-{% set bannerStyle = 'BETA-style' %}
-{% include "./includes/VOC_exit-routes_v2.html" %}
+{% include "../includes/phase_banner_beta_full-width.html" %}
 
 <header class="PROD_hero">
      <div class="PROD_full-page-width-wrapper">
@@ -32,7 +30,7 @@
 <main id="content" role="main">
      <div class="grid-row">
           <div class="column-full">
-               <h2 class="heading-large">Explore by job category</h2>
+               <h2 class="heading-medium">Explore by job category</h2>
           </div>
           <div class="column-one-third">
                <ul class="list category-list">
@@ -49,7 +47,7 @@
           <div class="column-one-third">
                <ul class="list category-list">
                     <li><a href="#1" class="prototype-link">Emergency and uniform services</a></li>
-                    <li><a href="#1" class="prototype-link">Engineering and maintenance</a></li>
+                    <li><a href="job-categories/PROD_job-category.html" class="prototype-link">Engineering and maintenance</a></li>
                     <li><a href="#1" class="prototype-link">Environment and land</a></li>
                     <li><a href="#1" class="prototype-link">Government services</a></li>
                     <li><a href="#1" class="prototype-link">Healthcare</a></li>
@@ -69,31 +67,6 @@
                     <li><a href="#1" class="prototype-link">Transport</a></li>
                     <li><a href="#1" class="prototype-link">Travel and tourism</a></li>
                </ul>
-          </div>
-     </div>
-     <div class="grid-row">
-          <div class="column-full">
-               <hr/>
-               <h2 class="heading-large">Top 10 jobs of the week</h2>
-               <p>These are popular with others – perhaps they will be with you too.</p>
-          </div>
-          <div class="column-half">
-               <ol class="list list-number category-list">
-                    <li><a href="#1" class="prototype-link">Police officer</a></li>
-                    <li><a href="#1" class="prototype-link">Boarder force officer</a></li>
-                    <li><a href="#1" class="prototype-link">Dental nurse</a></li>
-                    <li><a href="#1" class="prototype-link">Teaching assistant</a></li>
-                    <li><a href="#1" class="prototype-link">Plumber</a></li>
-               </ol>
-          </div>
-          <div class="column-half">
-               <ol class="list list-number category-list" start="6">
-                    <li><a href="#1" class="prototype-link">GP</a></li>
-                    <li><a href="#1" class="prototype-link">Firefigther</a></li>
-                    <li><a href="#1" class="prototype-link">Construction worker</a></li>
-                    <li><a href="#1" class="prototype-link">Refuse collector</a></li>
-                    <li><a href="#1" class="prototype-link">Paralegal</a></li>
-               </ol>
           </div>
      </div>
 </main>

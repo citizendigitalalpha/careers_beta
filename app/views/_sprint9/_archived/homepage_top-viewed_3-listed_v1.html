@@ -1,4 +1,4 @@
-{% extends "./layout_full-width_cookies.html" %}
+{% extends "../layout_full-width.html" %}
 
 {% block page_title %}
   Service Green
@@ -8,9 +8,7 @@
 
 {% set serviceName = 'Service Green' %}
 {% set bannerStyle = 'BETA-style' %}
-{% include "./includes/VOC_exit-routes_v2.html" %}
-
-<!-- {% include "./includes/phase_banner_beta_full-width.html" %} -->
+{% include "../includes/VOC_exit-routes_v2.html" %}
 
 <header class="PROD_hero">
      <div class="PROD_full-page-width-wrapper">
@@ -24,7 +22,7 @@
                               <div id="search-box" class="PROD_search__input-container">
                                    <input id="searchInput" class="PROD_search__input" autocomplete="off" placeholder="Enter a job title or keywords" type="text">
                               </div>
-                              <input class="PROD_search__submit" type="button" value="Search">
+                              <input class="PROD_search__submit" onclick="saveSearchTermsAndContinue()" type="button" value="Search">
                          </div>
                     </form>
                </div>
@@ -34,7 +32,7 @@
 <main id="content" role="main">
      <div class="grid-row">
           <div class="column-full">
-               <h2 class="heading-medium">Explore by job category</h2>
+               <h2 class="heading-large">Explore by job category</h2>
           </div>
           <div class="column-one-third">
                <ul class="list category-list">
@@ -51,7 +49,7 @@
           <div class="column-one-third">
                <ul class="list category-list">
                     <li><a href="#1" class="prototype-link">Emergency and uniform services</a></li>
-                    <li><a href="job-categories/PROD_job-category.html" class="prototype-link">Engineering and maintenance</a></li>
+                    <li><a href="#1" class="prototype-link">Engineering and maintenance</a></li>
                     <li><a href="#1" class="prototype-link">Environment and land</a></li>
                     <li><a href="#1" class="prototype-link">Government services</a></li>
                     <li><a href="#1" class="prototype-link">Healthcare</a></li>
@@ -73,13 +71,69 @@
                </ul>
           </div>
      </div>
+     <div class="grid-row">
+          <div class="column-full">
+               <hr/>
+               <h2 class="heading-large">Top viewed job profiles</h2>
+               <p>These are popular with others – perhaps they will be with you too.</p>
+          </div>
+          <div class="column-one-third">
+               <div class="heroed-job-profile">
+                    <h3 class="heading-medium"><a href="../job-profiles/police-officer_v4" class="prototype-link">Police officer</a></h3>
+                    <!-- <p class="meta grey">Policeman, policewoman, police constable</p> -->
+                    <p>A police officer keeps law and order, investigates crime and supports crime prevention.</p>
+               </div>
+          </div>
+          <div class="column-one-third">
+               <div class="heroed-job-profile">
+                    <h3 class="heading-medium"><a href="../job-profiles/primary-school-teacher_v4" class="prototype-link">Primary school teacher</a></h3>
+                    <p>Primary school teachers look after the educational, social, physical and emotional development of children from ages 5 to 11.</p>
+               </div>
+          </div>
+          <div class="column-one-third">
+               <div class="heroed-job-profile">
+                    <h3 class="heading-medium"><a href="../job-profiles/E2E_psychologist" class="prototype-link">Computer games tester</a></h3>
+                    <!-- <p class="meta grey">Games tester, quality assurance tester, video games tester, quality assurance technician.</p> -->
+                    <p>Computer games testers play computer games to check they work properly. They find and record problems or bugs.</p>
+               </div>
+          </div>
+     </div>
 </main>
 
-<style>
-     .js-enabled #global-cookie-message {
-          display:block !important;
-     }
-</style>
+<script>
+// This function gets the value entered in the search box and saves it to the session data
+// Then loads the next page
+function saveSearchTermsAndContinue() {
+     var searchPrompt = "Enter a job title or keywords";
+     window.setSessionData('searchPrompt', searchPrompt);
+     var searchTerm = document.getElementById('searchInput').value;
+     window.setSessionData('searchTerm', searchTerm, function(){
+          setTimeout(changePage, 500);
+          function changePage() {
+               window.location.href="search-results_blank_v2";
+          }
+     });
+}
+
+// This function make sure the form is submitted when search field is in focus and the user presses enter
+// This function is overriding one set in the accessible-typeahead.min.js that doesn't allow this behaviour if there are auto-complete options
+function searchOnReturn() {
+     var searchContainer = document.getElementById("searchInput");
+     var e = window.event;
+     searchContainer.addEventListener('keydown', function(e) {
+          if (e.which === 13 || e.keycode === 13) {
+               e.preventDefault();
+               saveSearchTermsAndContinue();
+          }
+     });
+} 
+
+function init () {
+     searchOnReturn();
+}
+window.onload = init;
+
+</script>
 
 
 {% endblock %}
