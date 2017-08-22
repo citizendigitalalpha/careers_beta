@@ -36,7 +36,9 @@ gulp.task('generate-assets', function (done) {
                 'sass-S7',
                 'sass-documentation-S7', 
                 'sass-S8',
-                'sass-documentation-S8',                      
+                'sass-documentation-S8', 
+                'sass-S9',
+                'sass-documentation-S9',                      
                 'copy-assets',
                 'copy-documentation-assets',
                 'copy-assets-beta',
@@ -56,7 +58,9 @@ gulp.task('generate-assets', function (done) {
                 'copy-assets-S7',
                 'copy-documentation-assets-S7',  
                 'copy-assets-S8',
-                'copy-documentation-assets-S8',            
+                'copy-documentation-assets-S8',
+                'copy-assets-S9',
+                'copy-documentation-assets-S9',              
                 done)
 })
 
@@ -87,7 +91,9 @@ gulp.task('watch', function (done) {
               'watch-sass-S7',
               'watch-assets-S7', 
               'watch-sass-S8',
-              'watch-assets-S8',            
+              'watch-assets-S8',
+              'watch-sass-S9',
+              'watch-assets-S9',           
               done)
 })
 

@@ -230,3 +230,25 @@ gulp.task('sass-documentation-S8', function () {
   .pipe(sourcemaps.write())
   .pipe(gulp.dest(config.paths.publicS8 + '/stylesheets/'))
 })
+
+gulp.task('sass-S9', function () {
+  return gulp.src(config.paths.assetsS9 + '/sass/*.scss')
+  .pipe(sourcemaps.init())
+  .pipe(sass({outputStyle: 'expanded',
+    includePaths: ['govuk_modules/govuk_frontend_toolkit/stylesheets',
+      'govuk_modules/govuk_template/assets/stylesheets',
+      'govuk_modules/govuk-elements-sass/']}).on('error', sass.logError))
+  .pipe(sourcemaps.write())
+  .pipe(gulp.dest(config.paths.publicS9 + '/stylesheets/'))
+})
+
+gulp.task('sass-documentation-S9', function () {
+  return gulp.src(config.paths.docsAssetsS9 + '/sass/*.scss')
+  .pipe(sourcemaps.init())
+  .pipe(sass({outputStyle: 'expanded',
+    includePaths: ['govuk_modules/govuk_frontend_toolkit/stylesheets',
+      'govuk_modules/govuk_template/assets/stylesheets',
+      'govuk_modules/govuk-elements-sass/']}).on('error', sass.logError))
+  .pipe(sourcemaps.write())
+  .pipe(gulp.dest(config.paths.publicS9 + '/stylesheets/'))
+})

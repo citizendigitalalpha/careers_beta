@@ -104,3 +104,13 @@ gulp.task('watch-assets-S8', function () {
     config.paths.assetsS8 + 'javascripts/**',
     config.paths.assetsS8 + 'data/**'], {cwd: './'}, ['copy-assets-S8']);
 })
+
+gulp.task('watch-sass-S9', function () {
+  return gulp.watch(config.paths.assetsS9 + 'sass/**', {cwd: './'}, ['sass-S9']);
+})
+
+gulp.task('watch-assets-S9', function () {
+  return gulp.watch([config.paths.assetsS9 + 'images/**',
+    config.paths.assetsS9 + 'javascripts/**',
+    config.paths.assetsS9 + 'data/**'], {cwd: './'}, ['copy-assets-S9']);
+})
