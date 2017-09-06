@@ -252,3 +252,25 @@ gulp.task('sass-documentation-S9', function () {
   .pipe(sourcemaps.write())
   .pipe(gulp.dest(config.paths.publicS9 + '/stylesheets/'))
 })
+
+gulp.task('sass-S10', function () {
+  return gulp.src(config.paths.assetsS10 + '/sass/*.scss')
+  .pipe(sourcemaps.init())
+  .pipe(sass({outputStyle: 'expanded',
+    includePaths: ['govuk_modules/govuk_frontend_toolkit/stylesheets',
+      'govuk_modules/govuk_template/assets/stylesheets',
+      'govuk_modules/govuk-elements-sass/']}).on('error', sass.logError))
+  .pipe(sourcemaps.write())
+  .pipe(gulp.dest(config.paths.publicS10 + '/stylesheets/'))
+})
+
+gulp.task('sass-documentation-S10', function () {
+  return gulp.src(config.paths.docsAssetsS10 + '/sass/*.scss')
+  .pipe(sourcemaps.init())
+  .pipe(sass({outputStyle: 'expanded',
+    includePaths: ['govuk_modules/govuk_frontend_toolkit/stylesheets',
+      'govuk_modules/govuk_template/assets/stylesheets',
+      'govuk_modules/govuk-elements-sass/']}).on('error', sass.logError))
+  .pipe(sourcemaps.write())
+  .pipe(gulp.dest(config.paths.publicS10 + '/stylesheets/'))
+})
