@@ -23,13 +23,13 @@
                          <p>We'll send you a link to a feedback form. It only takes 2 minutes to fill in.
                          <br/>
                          We won't send you spam or share your email address with anyone.</p>
-                         <form>
+                         <form onsubmit="event.preventDefault() & vocExit.endSurvey()">
                               <div>
                                 <label class="form-label" for="email">Email address <span class="font-xsmall">(you need to be 16 or older to be eligible for this survey)</span></label>
-                                <input class="form-control" id="email" name="email" type="text">
+                                <input class="form-control voc-email" id="email" name="email" type="email" required>
                               </div>
                               <div class="inline">
-                                   <a href="#1" onclick="vocExit.endSurvey()" class="button {% if bannerStyle != 'BAU-style' %}VOC-exit-routes_survey__button{% endif %}" style="margin-right: .5em;">Send</a>
+                                   <input type="submit" value="Send" class="button {% if bannerStyle != 'BAU-style' %}VOC-exit-routes_survey__button{% endif %}" style="margin-right: .5em;" />
                                    <a href="#1" onclick="vocExit.updateViewAndRedirect(this)" class="link-button" data-href="http://www.smartsurvey.com">Don't have an email address? Leave your feedback online instead.</a>
                               </div>
                          </form>
