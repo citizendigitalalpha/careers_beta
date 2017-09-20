@@ -150,3 +150,15 @@ gulp.task('copy-documentation-assets-S10', function () {
     config.paths.docsAssetsS10 + '/**'])
   .pipe(gulp.dest(config.paths.publicS10))
 })
+
+gulp.task('copy-assets-S11', function () {
+    return gulp.src(['!' + config.paths.assetsS11 + 'sass{,/**/*}',
+    config.paths.assetsS11 + '/**'])
+        .pipe(gulp.dest(config.paths.publicS11))
+})
+
+gulp.task('copy-documentation-assets-S11', function () {
+    return gulp.src(['!' + config.paths.docsAssetsS11 + 'sass{,/**/*}',
+    config.paths.docsAssetsS11 + '/**'])
+        .pipe(gulp.dest(config.paths.publicS11))
+})
