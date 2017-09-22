@@ -125,6 +125,10 @@ gulp.task('watch-assets-S10', function () {
     config.paths.assetsS10 + 'data/**'], {cwd: './'}, ['copy-assets-S10']);
 })
 
+gulp.task('watch-sass-S11', function () {
+  return gulp.watch(config.paths.assetsS11 + 'sass/**', {cwd: './'}, ['sass-S11']);
+})
+
 gulp.task('watch-assets-S11', function () {
     return gulp.watch([config.paths.assetsS11 + 'images/**',
     config.paths.assetsS10 + 'javascripts/**',
