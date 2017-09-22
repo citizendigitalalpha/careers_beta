@@ -104,6 +104,7 @@ gulp.task('watch', function (done) {
               'watch-assets-S9', 
               'watch-sass-S10',
               'watch-assets-S10',    
+              'watch-sass-S11',
               'watch-assets-S11',    
               done)
 })
