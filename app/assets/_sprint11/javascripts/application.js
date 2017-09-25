@@ -38,6 +38,14 @@ $(document).ready(function () {
       callback();
     }
   }
+
+    var $els = $('.jpsection');
+    $els.not('.active').hide()
+    $(".section-showhide-links").on("click", function (e) {
+        var $target = $($(this).attr('href')).show()
+        $els.not($target).hide()
+        e.preventDefault();
+    });
   
-})
+});
 
