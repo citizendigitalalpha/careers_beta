@@ -2,7 +2,7 @@
 // Take a look in /govuk-modules/_govuk-elements.scss to see which files are imported.
 @import 'node_modules/govuk_frontend_toolkit/stylesheets/colours.scss';
 @import 'govuk-elements';
-
+$careers-turquoise: #21827b;
 /* ---------------------------------------------------------------------------
 * Main styles affecting the Application
 * ---------------------------------------------------------------------------
@@ -10,7 +10,7 @@
 
 // ========================================== INDEX PAGE - START ========================================== //
 header.hero {
-  background: $turquoise;
+  background: $careers-turquoise;
   margin: 0 0 0em 0;
   padding: 1.5em;
   color: $white;
@@ -541,7 +541,7 @@ a {
 // ========================================== FEEDBACK FOOTER ========================================== //
 
 .improve-this-page__prompt {
-    background-color: $turquoise;
+    background-color: $careers-turquoise;
     color: #fff;
     padding: 10px 15px 0;
     @extend %site-width-container;
@@ -584,7 +584,7 @@ a {
 .improve-this-page__form {
     margin-top: 30px;
     padding: 15px 0;
-    border-top: 10px solid $turquoise;
+    border-top: 10px solid $careers-turquoise;
 }
 
 .improve-this-page__form .form-control {
@@ -618,7 +618,7 @@ a {
 }
 
 .full-page-width-wrapper {
-     border-bottom: 10px solid $turquoise;
+     border-bottom: 10px solid $careers-turquoise;
 }
 
 // ========================================== TYPOGRAPHY ========================================== //

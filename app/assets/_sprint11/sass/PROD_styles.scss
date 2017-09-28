@@ -4,6 +4,7 @@
 @import 'node_modules/govuk_frontend_toolkit/stylesheets/typography.scss';
 
 $site-width:960px;
+$careers-turquoise: #21827b;
 
 /* -------------------------------------------------------------
 	Global
@@ -36,7 +37,7 @@ $site-width:960px;
 ------------------------------------------------------------- */
 
 .PROD_hero {
-	background: $turquoise;
+	background: $careers-turquoise;
 	margin: 0 0 0em 0;
 	padding: 25px 0px 15px;
 	color: $white;
@@ -125,12 +126,12 @@ $site-width:960px;
 ------------------------------------------------------------- */
 
 .PROD_govuk-related-items {
-	border-top: 3px solid $turquoise;
+	border-top: 3px solid $careers-turquoise;
 	margin-top: 40px;
 	padding-top: 15px;
 
 	@include media(tablet) {
-		border-top: 6px solid $turquoise;
+		border-top: 6px solid $careers-turquoise;
 		padding-top: 10px;
 		margin-top: 34px;
 	}
@@ -164,7 +165,7 @@ $site-width:960px;
 ------------------------------------------------------------- */
 
 .PROD_jobprofile_search {
-    background-color: $turquoise;
+    background-color: $careers-turquoise;
     color: $white;
     padding: 10px;
     margin-bottom: 30px;
@@ -278,7 +279,7 @@ $site-width:960px;
     padding-top: 0px;
 
     @include media(tablet) {
-        border-top: 6px solid $turquoise;
+        border-top: 6px solid $careers-turquoise;
         padding-top: 10px;
         margin-top: 34px;
     }

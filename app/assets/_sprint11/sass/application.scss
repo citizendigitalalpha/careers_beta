@@ -9,11 +9,13 @@ $path: "/public/images/";
 // Take a look at in app/assets/sass/patterns/ to see which files are imported.
 @import 'patterns/check-your-answers';
 
+$careers-turquoise: #21827b;
+
 // Related items
 // (These styles will be moved to GOV.UK elements, duplicating here for now.)
 .govuk-related-items {
 	margin-top: 15px;
-	border-top: 10px solid $turquoise;
+	border-top: 10px solid $careers-turquoise;
 	padding-top: 5px;
 
 	@include media(tablet) {
@@ -118,7 +120,7 @@ $path: "/public/images/";
 }
 
 .opportunity-item {
-	border-left:5px solid $turquoise;
+	border-left:5px solid $careers-turquoise;
 	padding-left:0.8em;
 	.heading-small {
 		margin: 0 0 1.05263em 0;
@@ -150,7 +152,7 @@ $path: "/public/images/";
 	border: 4px solid $orange;
 }
 .blue li {
-	border: 4px solid $turquoise;
+	border: 4px solid $careers-turquoise;
 }
 .green li {
 	border: 4px solid $green;
@@ -232,7 +234,7 @@ h3.heading-medium.appointment {
 	border-bottom: 4px solid $black;
 }
 .main_navigation li a:hover, .main_navigation .active2 a {
-	border-bottom: 4px solid $turquoise;
+	border-bottom: 4px solid $careers-turquoise;
 }
 
 /*Pagination*/
@@ -480,7 +482,7 @@ input[type="search"] {
     float:left;
     border: 1px solid $grey-2;
 	margin: 0.25em;
-    background-color: $turquoise;
+    background-color: $careers-turquoise;
 
 }
 
@@ -537,7 +539,7 @@ input[type="search"] {
 }
 
 .message--user {
-  border-right: 5px solid $turquoise;
+  border-right: 5px solid $careers-turquoise;
   padding-right: 5px;
 }
 
@@ -560,7 +562,7 @@ input[type="search"] {
 /**new homepage**/
 
 #global-header-bar, .welcome_block {
-    background:$turquoise;
+    background:$careers-turquoise;
 }
 
 .home_content {
@@ -616,7 +618,7 @@ ul.menu li.icon {display: none;}
 #az-index-wrapper .largeLetter {
     display: inline;
     float: left;
-    background: $turquoise;
+    background: $careers-turquoise;
     margin: 4px 5px 0px 0px;
     width: 110px;
     height: 119px;
@@ -682,14 +684,134 @@ ul#az-index li {
    color: black;  
 }
 
+.survey_container {
+    @include core-19;
+    color: $white;
+    @extend %contain-floats;
+    padding: 1.2em 0;
+    background-color: darken($careers-turquoise, 5%);
+    position: relative;
+    display: none;
+    border-bottom: 1px solid darken($careers-turquoise, 10%);
 
+    .survey_content {
+        @extend %contain-floats;
+        box-sizing: border-box;
+        position: relative;
 
+        h3 {
+            margin: 0 0 0 0;
 
+            a {
+                color: $white;
+                font-weight: 400;
+            }
+        }
+    }
 
+    .survey_close, .survey_open {
+        color: $white;
+        padding: 0;
+        cursor: pointer;
 
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .survey_open {
+        float: left;
+        width: 40%;
+    }
+
+    .survey_close {
+        top: 0;
+        right: 0;
+        text-align: right;
+        position: absolute;
+        text-decoration: underline;
+    }
+
+    .survey_survey {
+        padding {
+            margin: 0;
+        }
+
+        .survey_email {
+            margin-bottom: 1em;
+        }
+
+        .survey_input {
+            border: $white;
+            width: 100%;
+        }
+
+        .survey_label {
+            color: $white;
+        }
+
+        .survey_button {
+            background-color: #fff;
+            color: #005ea5;
+            font-weight: 700;
+            -webkit-box-shadow: 0 2px 0 #d9d9d9;
+            -moz-box-shadow: 0 2px 0 #d9d9d9;
+            box-shadow: 0 2px 0 #d9d9d9;
+            color: #21827b;
+        }
+
+        .survey_link {
+            color: $white;
+            margin-top: 0.65em;
+            display: inline-block;
+            @include core-16;
+            margin-left: 1em;
+        }
+    }
+}
+
+.survey_container.visible {
+    display: block;
+}
+
+.homepage-categories {
+
+    li {
+        padding-bottom: 0.526em;
+        margin-bottom: 0 !important;
+        display: inline-block;
+        width: 100%;
+    }
+
+    @include media(tablet) {
+        -moz-column-count: 2;
+        -moz-column-gap: 30px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 30px;
+        column-count: 2;
+        column-gap: 30px;
+    }
+
+    @include media(desktop) {
+        -moz-column-count: 3;
+        -moz-column-gap: 30px;
+        -webkit-column-count: 3;
+        -webkit-column-gap: 30px;
+        column-count: 3;
+        column-gap: 30px;
+    }
+
+    a {
+        @include bold-19;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
 
 // ========================================== MAIN NAVIGATION - END ========================================== //
-
 @import 'hybrid';
 @import 'new-gov-uk-elements';
 @import 'mixin';

@@ -46,6 +46,28 @@ $(document).ready(function () {
         $els.not($target).hide()
         e.preventDefault();
     });
-  
+
+
+    $(".survey_close").click(function () {
+        GOVUK.cookie('survey', 'dismissed', { days: 31 });
+        $(".survey_container").removeClass("visible");
+    });
+
+    $(".survey_action").click(function () {
+        GOVUK.cookie('survey', 'dismissed', { days: 31 });
+    });
+
+    if (GOVUK.cookie('survey') != "dismissed") {
+        $(".survey_container").addClass("visible");
+    };
+
+    var currentcat = $('#currentcategory').text();
+
+    if ($('#currentcategory').length > 0) {
+        var currentcatURL = window.location.pathname;
+        sessionStorage.setItem("data.currentcategoryURL", currentcatURL);
+    };
+    sessionStorage.setItem("data.currentcategory", currentcat);
+
 });
 

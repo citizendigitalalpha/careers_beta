@@ -2,6 +2,8 @@
 @import 'node_modules/govuk_frontend_toolkit/stylesheets/conditionals.scss';
 @import 'node_modules/govuk_frontend_toolkit/stylesheets/grid_layout.scss';
 
+$careers-turquoise: #21827b;
+
 /* ----------------------------------------------------
 Global
 ----------------------------------------------------- */
@@ -11,7 +13,7 @@ Global
 }
 
 .service-header--green {
-	background: $turquoise;
+	background: $careers-turquoise;
 	.main {
 		overflow: hidden;
 		padding:10px 0;
@@ -361,7 +363,7 @@ Consume - Voice of customer survey
 	line-height: 1.25;
 	-webkit-font-smoothing: antialiased;
 	overflow: hidden;
-	border-bottom: 10px solid $turquoise;
+	border-bottom: 10px solid $careers-turquoise;
 
 	@include media(tablet) {
 		font-size: 19px;
@@ -370,7 +372,7 @@ Consume - Voice of customer survey
 
 	.VOC-consume_banner {
 		color: $page-colour;
-		background: $turquoise;
+		background: $careers-turquoise;
 		padding: 15px;
 		margin-bottom: -10px;
 		overflow: hidden;
@@ -399,8 +401,8 @@ Consume - Voice of customer survey
 		}
 	}
 	.VOC-consume_survey {
-		border-left: 5px solid $turquoise;
-		border-right: 5px solid $turquoise;
+		border-left: 5px solid $careers-turquoise;
+		border-right: 5px solid $careers-turquoise;
 		padding: 25px 15px 30px 15px;
 
 		.VOC-consume_survey__page {
@@ -586,7 +588,7 @@ Top profiles - Heroed
 ----------------------------------------------------- */
 
 .heroed-job-profile {
-	border-left:5px solid $turquoise;
+	border-left:5px solid $careers-turquoise;
 	padding-left:0.8em;
 	.heading-medium {
 		margin-top: 1em;
