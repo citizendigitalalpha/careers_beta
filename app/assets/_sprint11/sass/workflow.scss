@@ -16,6 +16,8 @@ $grey: #f1f1f1;
 $text: #656565;
 $darkgrey: #333333;
 $black: #000000;
+$meet: #93b1cb;
+$da: #ee76b0;
 
 * {
     box-sizing: border-box
@@ -38,6 +40,7 @@ body {
     font-family: "proxima-nova", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: $grey;
     margin: 0;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5 {
@@ -103,7 +106,6 @@ section {
     margin-top: 0;
     border-left: 10px solid $grey;
     position: relative;
-    overflow: hidden;
 
     &:before {
         position: absolute;
@@ -262,7 +264,7 @@ section {
 
 
     &:before {
-        content: "Usear Research";
+        content: "User Research";
         background-color: darken($ur, 8%);
     }
 }
@@ -274,6 +276,16 @@ section {
     &:before {
         content: "Business Analyst";
         background-color: darken($ba, 5%);
+    }
+}
+
+.dabox {
+    background-color: $da;
+
+
+    &:before {
+        content: "Data Analyst";
+        background-color: darken($da, 5%);
     }
 }
 
@@ -307,11 +319,21 @@ section {
     }
 }
 
+.meetbox {
+    background-color: $meet;
+
+
+    &:before {
+        content: "Meeting";
+        background-color: darken($meet, 8%);
+    }
+}
+
 .arrowdown {
     margin-bottom: 80px;
 
     &:after {
-        background-image: url(../images/workflow/arrowdown.svg);
+        background-image: url(../images/workflow/arrowdown.png);
         background-position: center bottom;
         background-repeat: no-repeat;
         content: "";
@@ -327,14 +349,14 @@ section {
     margin-bottom: 80px;
 
     &:after {
-        background-image: url(../images/workflow/arrowdown.svg);
+        background-image: url(../images/workflow/arrowdown.png);
         background-position: center bottom;
         background-repeat: no-repeat;
         content: "VISUAL FOCUSED";
-        height: 660px;
+        height: 840px;
         font-size: 14px;
         font-weight: bold;
-        line-height: 660px;
+        line-height: 840px;
         color: $text;
         width: 130%;
         left: -15%;
@@ -348,7 +370,7 @@ section {
     margin-bottom: 80px;
 
     &:after {
-        background-image: url(../images/workflow/arrowdown.svg);
+        background-image: url(../images/workflow/arrowdown.png);
         background-position: right bottom;
         background-repeat: no-repeat;
         content: "";
@@ -365,7 +387,7 @@ section {
     margin-bottom: 80px;
 
     &:after {
-        background-image: url(../images/workflow/arrowdown.svg);
+        background-image: url(../images/workflow/arrowdown.png);
         background-position: left bottom;
         background-repeat: no-repeat;
         content: "";
@@ -423,6 +445,7 @@ section {
     margin-bottom: 0px;
 
     &:after {
+        content: "";
         background-image: url(../images/workflow/arrowright.png);
         background-position: right;
         background-repeat: no-repeat;
@@ -562,6 +585,7 @@ section {
 }
 
 .dod {
+    display: none;
     position: absolute;
     z-index: 300;
     color: $text;
