@@ -303,52 +303,89 @@ section.PROD_icon-buttons {
     }
 }
 
-.PROD_icon-buttons {
-    ul {
-        margin: 0;
-        padding-left: 0
-    }
+.PROD_jobprofile_categories {
+    list-style: none;
+    top: -35px;
+    position: relative;
 
-    li:first-child {
-        padding-left: 0;
+    @include media(mobile) {
+        top: -15px;
+
+        li {
+            width: 100%;
+            margin: 0 0 5px 0;
+        }
     }
 
     li {
-        list-style: none;
-        margin-right: 10px;
-        display: block;
-        margin-bottom: 20px;
-        width: 50%;
+        margin: 0 5px 5px 0;
+        display: inline-block;
+        font-size: 15px;
+
+        &:hover {
+            background-color: darken($careers-turquoise, 5%);
+        }
 
         a {
-            padding-left: 25px;
-            background-repeat: no-repeat;
-            background-size: 21px 21px;
-            font-size: 16px;
-            line-height: 1.25;
+            color: $white;
+            display: inline-block;
+            text-decoration: none;
+            background-color: $careers-turquoise;
+            padding: 10px 15px 8px 15px;
 
-            &.twitter {
-                background-image: url(https://insidegovuk.blog.gov.uk/wp-content/themes/gds-blogs/assets/img/icon-twitter.svg);
-            }
-
-            &.facebook {
-                background-image: url(https://insidegovuk.blog.gov.uk/wp-content/themes/gds-blogs/assets/img/icon-facebook.svg);
-            }
-
-            &.google {
-                background-image: url(https://insidegovuk.blog.gov.uk/wp-content/themes/gds-blogs/assets/img/icon-google-plus.svg);
-            }
-
-            &.linkedin {
-                background-image: url(https://insidegovuk.blog.gov.uk/wp-content/themes/gds-blogs/assets/img/icon-linkedin.svg);
-            }
-
-            &.email {
-                background-image: url(https://insidegovuk.blog.gov.uk/wp-content/themes/gds-blogs/assets/img/icon-email.svg);
+            &:hover {
+                text-decoration: underline;
             }
         }
     }
 }
+
+    .PROD_icon-buttons {
+        ul {
+            margin: 0;
+            padding-left: 0
+        }
+
+        li:first-child {
+            padding-left: 0;
+        }
+
+        li {
+            list-style: none;
+            margin-right: 10px;
+            display: block;
+            margin-bottom: 20px;
+            width: 50%;
+
+            a {
+                padding-left: 25px;
+                background-repeat: no-repeat;
+                background-size: 21px 21px;
+                font-size: 16px;
+                line-height: 1.25;
+
+                &.twitter {
+                    background-image: url(https://insidegovuk.blog.gov.uk/wp-content/themes/gds-blogs/assets/img/icon-twitter.svg);
+                }
+
+                &.facebook {
+                    background-image: url(https://insidegovuk.blog.gov.uk/wp-content/themes/gds-blogs/assets/img/icon-facebook.svg);
+                }
+
+                &.google {
+                    background-image: url(https://insidegovuk.blog.gov.uk/wp-content/themes/gds-blogs/assets/img/icon-google-plus.svg);
+                }
+
+                &.linkedin {
+                    background-image: url(https://insidegovuk.blog.gov.uk/wp-content/themes/gds-blogs/assets/img/icon-linkedin.svg);
+                }
+
+                &.email {
+                    background-image: url(https://insidegovuk.blog.gov.uk/wp-content/themes/gds-blogs/assets/img/icon-email.svg);
+                }
+            }
+        }
+    }
 
 
 
