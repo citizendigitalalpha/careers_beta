@@ -12,6 +12,7 @@
 {% set categoryName = 'Administration' %}
 
 {% include "../includes/survey.html" %}
+         
 
 
 <main id="content" role="main">
@@ -47,11 +48,14 @@
                          <p class="category-job__overview">Registrars collect and record details of all births, deaths, marriages and civil partnerships.</p>
                     </div>
                </div>
+              
           </div>
+
           <div class="column-one-third">
               {% include "../includes/other_categories.html" %} 
           </div>
      </div>
+    
 </main>
-
+{% include "../includes/signpost.html" %}
 {% endblock %}
