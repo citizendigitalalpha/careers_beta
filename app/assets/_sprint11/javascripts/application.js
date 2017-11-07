@@ -11,33 +11,33 @@ if (
 }
 
 $(document).ready(function () {
-  // Use GOV.UK selection-buttons.js to set selected
-  // and focused states for block labels
-  var $blockLabels = $(".block-label input[type='radio'], .block-label input[type='checkbox']")
-  new GOVUK.SelectionButtons($blockLabels) // eslint-disable-line
+    // Use GOV.UK selection-buttons.js to set selected
+    // and focused states for block labels
+    var $blockLabels = $(".block-label input[type='radio'], .block-label input[type='checkbox']")
+    new GOVUK.SelectionButtons($blockLabels) // eslint-disable-line
 
-  // Use GOV.UK shim-links-with-button-role.js to trigger a link styled to look like a button,
-  // with role="button" when the space key is pressed.
-  GOVUK.shimLinksWithButtonRole.init()
+    // Use GOV.UK shim-links-with-button-role.js to trigger a link styled to look like a button,
+    // with role="button" when the space key is pressed.
+    GOVUK.shimLinksWithButtonRole.init()
 
-  // Show and hide toggled content
-  // Where .block-label uses the data-target attribute
-  // to toggle hidden content
-  var showHideContent = new GOVUK.ShowHideContent()
-  showHideContent.init()
+    // Show and hide toggled content
+    // Where .block-label uses the data-target attribute
+    // to toggle hidden content
+    var showHideContent = new GOVUK.ShowHideContent()
+    showHideContent.init()
 
-  /* -------------------------------------------------------------
-  Set session data
-  ------------------------------------------------------------- */
+    /* -------------------------------------------------------------
+    Set session data
+    ------------------------------------------------------------- */
 
-  window.setSessionData = function(label, value, callback) {
-    session[label] = value;
-    $.post('/data', session, function(data){}); 
+    window.setSessionData = function (label, value, callback) {
+        session[label] = value;
+        $.post('/data', session, function (data) { });
 
-    if(callback) {
-      callback();
+        if (callback) {
+            callback();
+        }
     }
-  }
 
     var $els = $('.jpsection');
     $els.not('.active').hide()
@@ -68,6 +68,33 @@ $(document).ready(function () {
         sessionStorage.setItem("data.currentcategoryURL", currentcatURL);
     };
     sessionStorage.setItem("data.currentcategory", currentcat);
+
+    $(".search-results-filters li").click(function () {
+        if ($(this).hasClass("active")) {
+            $(this).removeClass("active");
+
+            if ($(this).hasClass("search-filter-jp")) {
+                $(".search-results-list").removeClass("search-jp");
+            }
+            else {
+                $(".search-results-list").removeClass("search-jc");
+            }
+
+        }
+        else {
+            $(".search-results-filters li").removeClass("active");
+            $(this).addClass("active");
+
+            if ($(this).hasClass("search-filter-jp")) {
+                $(".search-results-list").addClass("search-jp");
+                $(".search-results-list").removeClass("search-jc");
+            }
+            else {
+                $(".search-results-list").addClass("search-jc");
+                $(".search-results-list").removeClass("search-jp");
+            }
+        }
+    });
 
 });
 
