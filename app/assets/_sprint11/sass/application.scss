@@ -842,6 +842,48 @@ ul#az-index li {
         }
     }
 }
+
+.search-result {
+    .search-result-type {
+        font-size: 14px;
+        color: $white;
+        padding: 5px 8px;
+        position: relative;
+        bottom: 5px;
+        margin-left: 10px;
+        display: inline-block;
+    }
+}
+
+.search-result-jp {
+    a {
+        color: $govuk-blue !important;
+    }
+
+    .search-result-type {
+        background-color: $govuk-blue;
+    }
+}
+
+.search-result-jc {
+    a {
+    color: $purple !important;
+
+    &:hover {
+        color: lighten($purple, 20%) !important;
+    }
+    }
+
+    .search-result-type {
+        background-color: $purple;
+    }
+}
+
+    .search-results-list {
+        .search-result:last-child {
+            margin-bottom: 0;
+        }
+    }
     // ========================================== MAIN NAVIGATION - END ========================================== //
     @import 'hybrid';
     @import 'new-gov-uk-elements';
