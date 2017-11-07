@@ -811,17 +811,50 @@ ul#az-index li {
     }
 }
 
-// ========================================== MAIN NAVIGATION - END ========================================== //
-@import 'hybrid';
-@import 'new-gov-uk-elements';
-@import 'mixin';
-@import 'prototype-tools';
-@import 'accessible-typeahead';
-@import 'buttons';
 
-header.hero.search p a {color:$link-colour;}
 
-@import 'gov-uk-patterns';
-@import 'PROD_styles';
-@import 'beta-experimental-styles';
-@import '_beta-buttons';
+
+/*Signposting SCSS*/
+
+.signpost_container {
+    @include core-19;
+    color: $white;
+    @extend %contain-floats;
+    padding: 1.25em 0;
+    background-color: $govuk-blue;
+
+
+    .signpost_content {
+        @extend %contain-floats;
+        box-sizing: border-box;
+        position: relative;
+
+        h3 {
+            margin: 0 0 0 0;
+        }
+
+        p {
+            margin: 0;
+            a {
+                color: $white;
+                font-weight: 400;
+            }
+        }
+    }
+}
+    // ========================================== MAIN NAVIGATION - END ========================================== //
+    @import 'hybrid';
+    @import 'new-gov-uk-elements';
+    @import 'mixin';
+    @import 'prototype-tools';
+    @import 'accessible-typeahead';
+    @import 'buttons';
+
+    header.hero.search p a {
+        color: $link-colour;
+    }
+
+    @import 'gov-uk-patterns';
+    @import 'PROD_styles';
+    @import 'beta-experimental-styles';
+    @import '_beta-buttons';
