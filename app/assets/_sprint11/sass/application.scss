@@ -820,136 +820,163 @@ ul#az-index li {
     @include core-19;
     color: $white;
     @extend %contain-floats;
-    padding: 1.25em 0;
-    background-color: $govuk-blue;
 
+    &:hover {
+
+        a {
+            background-color: darken($govuk-blue, 4%);
+        }
+    }
 
     .signpost_content {
-        @extend %contain-floats;
+        padding: 0 !important;
+    }
+}
+
+    .signpost_content {
+        color: $white;
+        @include core-19;
         box-sizing: border-box;
+        background-color: $govuk-blue;
         position: relative;
+        overflow: auto;
+
+        a {
+            color: $white;
+            @include core-19;
+            box-sizing: border-box;
+            background-color: $govuk-blue;
+            display: block;
+            position: relative;
+            padding: 20px;
+            overflow: auto;
+            text-decoration: none;
+
+            &:hover {
+                background-color: darken($govuk-blue, 4%);
+            }
+        }
 
         h3 {
             margin: 0 0 0 0;
+            display: inline;
+            text-decoration: none;
+
         }
 
         p {
-            margin: 0;
-            a {
-                color: $white;
-                font-weight: 400;
-            }
+            margin: 0 0 0 0;
+            display: inline;
         }
     }
-}
-
-.search-result {
-    .search-result-type {
-        @include bold-14;
-        color: $white;
-        padding: 5px 8px;
-        position: relative;
-        bottom: 5px;
-        margin-left: 10px;
-        display: inline-block;
-    }
-}
 
 
-.search-result-jp {
-    a {
-        color: $govuk-blue !important;
-    }
-
-    .search-result-type {
-        background-color: $govuk-blue;
-    }
-}
-
-.search-result-jc {
-    a {
-    color: $purple !important;
-
-    &:hover {
-        color: lighten($purple, 20%) !important;
-    }
-    }
-
-    .search-result-type {
-        background-color: $purple;
-    }
-}
-
-.search-jc {
-    .search-result-jp {
-        display: none;
-    }
-}
-
-.search-jp {
-    .search-result-jc {
-        display: none;
-    }
-}
-
-.search-results-filters {
-    @include bold-14;
-
-    h4 {
-        display: inline-block;
-        @include bold-14;
-        float: left;
-    }
-
-    ul {
-        list-style: none;
-        display: inline-block;
-
-        li {
-            border: 3px solid;
-            float: left;
-            position: relative;
-            bottom: 8px;
+    .search-result {
+        .search-result-type {
+            @include bold-14;
+            color: $white;
             padding: 5px 8px;
+            position: relative;
+            bottom: 5px;
             margin-left: 10px;
             display: inline-block;
+        }
+    }
+
+
+    .search-result-jp {
+        a {
+            color: $govuk-blue !important;
+        }
+
+        .search-result-type {
+            background-color: $govuk-blue;
+        }
+    }
+
+    .search-result-jc {
+        a {
+            color: $purple !important;
 
             &:hover {
-                cursor: pointer;
+                color: lighten($purple, 20%) !important;
+            }
+        }
+
+        .search-result-type {
+            background-color: $purple;
+        }
+    }
+
+    .search-jc {
+        .search-result-jp {
+            display: none;
+        }
+    }
+
+    .search-jp {
+        .search-result-jc {
+            display: none;
+        }
+    }
+
+    .search-results-filters {
+        @include bold-14;
+
+        h4 {
+            display: inline-block;
+            @include bold-14;
+            float: left;
+        }
+
+        ul {
+            list-style: none;
+            display: inline-block;
+
+            li {
+                border: 3px solid;
+                float: left;
+                position: relative;
+                bottom: 8px;
+                padding: 5px 8px;
+                margin-left: 10px;
+                display: inline-block;
+
+                &:hover {
+                    cursor: pointer;
+                    color: $white !important;
+                }
+            }
+
+            li.active {
                 color: $white !important;
             }
-        }
 
-        li.active {
-            color: $white !important;
-        }
+            li.search-filter-jp {
+                border-color: $govuk-blue;
+                color: $govuk-blue;
 
-        li.search-filter-jp {
-            border-color: $govuk-blue;
-            color: $govuk-blue;
-
-            &.active, &:hover {
-                background-color: $govuk-blue;
+                &.active, &:hover {
+                    background-color: $govuk-blue;
+                }
             }
-        }
 
-        li.search-filter-jc {
-            border-color: $purple;
-            color: $purple;
+            li.search-filter-jc {
+                border-color: $purple;
+                color: $purple;
 
-            &.active, &:hover {
-                background-color: $purple;
+                &.active, &:hover {
+                    background-color: $purple;
+                }
             }
         }
     }
-}
 
-.search-results-list {
-    .search-result:last-child {
-        margin-bottom: 0;
+    .search-results-list {
+        .search-result:last-child {
+            margin-bottom: 0;
+        }
     }
-}
-    
     // ========================================== MAIN NAVIGATION - END ========================================== //
     @import 'hybrid';
     @import 'new-gov-uk-elements';
