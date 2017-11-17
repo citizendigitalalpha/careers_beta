@@ -833,42 +833,62 @@ ul#az-index li {
     }
 }
 
-    .signpost_content {
+.signpost_content {
+    color: $white;
+    @include core-19;
+    box-sizing: border-box;
+    background-color: $careers-turquoise;
+    position: relative;
+    overflow: auto;
+
+    a {
         color: $white;
         @include core-19;
         box-sizing: border-box;
-        background-color: $govuk-blue;
+        background-color: $careers-turquoise;
+        display: block;
         position: relative;
+        padding: 20px 40px;
         overflow: auto;
+        text-decoration: none;
 
-        a {
-            color: $white;
-            @include core-19;
-            box-sizing: border-box;
-            background-color: $govuk-blue;
-            display: block;
-            position: relative;
-            padding: 20px;
-            overflow: auto;
-            text-decoration: none;
-
-            &:hover {
-                background-color: darken($govuk-blue, 4%);
-            }
-        }
-
-        h3 {
-            margin: 0 0 0 0;
-            display: inline;
-            text-decoration: none;
-
-        }
-
-        p {
-            margin: 0 0 0 0;
-            display: inline;
+        &:hover {
+            background-color: darken($careers-turquoise, 4%);
         }
     }
+
+    h3 {
+        margin: 0 0 0 0;
+        display: block;
+        text-decoration: underline;
+        font-weight: bold;
+
+        &:before {
+            content: "<";
+            position: absolute;
+            left: 20px;
+            text-decoration: none;
+            font-weight: normal;
+        }
+    }
+
+    p {
+        margin: 5px 0 0 0;
+        display: inline;
+
+
+        @include media(mobile) {
+            display: block;
+        }
+    }
+}
+
+.signpost_jp {
+    h3 {
+        display: inline;
+    }
+}
+
 
 
     .search-result {
