@@ -892,112 +892,168 @@ ul#az-index li {
 
 
 
-    .search-result {
-        .search-result-type {
-            @include bold-14;
-            color: $white;
-            padding: 5px 8px;
+.search-result {
+    .search-result-type {
+        @include bold-14;
+        color: $white;
+        padding: 5px 8px;
+        position: relative;
+        bottom: 5px;
+        margin-left: 10px;
+        display: inline-block;
+    }
+}
+
+
+.search-result-jp {
+    a {
+        color: $govuk-blue !important;
+    }
+
+    .search-result-type {
+        background-color: $govuk-blue;
+    }
+}
+
+.search-result-jc {
+    a {
+        color: $purple !important;
+
+        &:hover {
+            color: lighten($purple, 20%) !important;
+        }
+    }
+
+    .search-result-type {
+        background-color: $purple;
+    }
+}
+
+.search-jc {
+    .search-result-jp {
+        display: none;
+    }
+}
+
+.search-jp {
+    .search-result-jc {
+        display: none;
+    }
+}
+
+.search-results-filters {
+    @include bold-14;
+
+    h4 {
+        display: inline-block;
+        @include bold-14;
+        float: left;
+    }
+
+    ul {
+        list-style: none;
+        display: inline-block;
+
+        li {
+            border: 3px solid;
+            float: left;
             position: relative;
-            bottom: 5px;
+            bottom: 8px;
+            padding: 5px 8px;
             margin-left: 10px;
             display: inline-block;
-        }
-    }
-
-
-    .search-result-jp {
-        a {
-            color: $govuk-blue !important;
-        }
-
-        .search-result-type {
-            background-color: $govuk-blue;
-        }
-    }
-
-    .search-result-jc {
-        a {
-            color: $purple !important;
 
             &:hover {
-                color: lighten($purple, 20%) !important;
-            }
-        }
-
-        .search-result-type {
-            background-color: $purple;
-        }
-    }
-
-    .search-jc {
-        .search-result-jp {
-            display: none;
-        }
-    }
-
-    .search-jp {
-        .search-result-jc {
-            display: none;
-        }
-    }
-
-    .search-results-filters {
-        @include bold-14;
-
-        h4 {
-            display: inline-block;
-            @include bold-14;
-            float: left;
-        }
-
-        ul {
-            list-style: none;
-            display: inline-block;
-
-            li {
-                border: 3px solid;
-                float: left;
-                position: relative;
-                bottom: 8px;
-                padding: 5px 8px;
-                margin-left: 10px;
-                display: inline-block;
-
-                &:hover {
-                    cursor: pointer;
-                    color: $white !important;
-                }
-            }
-
-            li.active {
+                cursor: pointer;
                 color: $white !important;
             }
+        }
 
-            li.search-filter-jp {
-                border-color: $govuk-blue;
-                color: $govuk-blue;
+        li.active {
+            color: $white !important;
+        }
 
-                &.active, &:hover {
-                    background-color: $govuk-blue;
-                }
+        li.search-filter-jp {
+            border-color: $govuk-blue;
+            color: $govuk-blue;
+
+            &.active, &:hover {
+                background-color: $govuk-blue;
             }
+        }
 
-            li.search-filter-jc {
-                border-color: $purple;
-                color: $purple;
+        li.search-filter-jc {
+            border-color: $purple;
+            color: $purple;
 
-                &.active, &:hover {
-                    background-color: $purple;
-                }
+            &.active, &:hover {
+                background-color: $purple;
             }
         }
     }
+}
 
-    .search-results-list {
-        .search-result:last-child {
-            margin-bottom: 0;
-        }
+.search-results-list {
+    .search-result:last-child {
+        margin-bottom: 0;
     }
+}
+
+/*EXPLORE BOXES - HOME PAGE*/
+
+.explore-box {
+    background-color: $grey-3;
+    display: block;
+    color: darken($grey-1, 10%);
+    padding: 20px;
+    transition: 0.3s ease-in-out;
+    margin: 10px 0;
+
+
+    h4 {
+        margin: 0 0 10px 0;
+        padding: 0;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    &:hover, &.active {
+        cursor: pointer;
+        background-color: $careers-turquoise;
+        color: $white;
+    }
+
+    &.active:hover {
+        background-color: darken($careers-turquoise, 10%);
+    }
+}
+
+.explore-button {
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+    background-color: #21827b;
+    color: #fff !important;
+    float: right;
+    padding: 10px 20px;
+    text-decoration: none;
+
+    &:after {
+        content: ">";
+        font-weight: bold;
+        margin-left: 10px;
+    }
+
+    &:hover {
+        background-color: darken($careers-turquoise, 5%);
+        text-decoration: underline;
+
+    }
+}
+
     // ========================================== MAIN NAVIGATION - END ========================================== //
     @import 'hybrid';
     @import 'new-gov-uk-elements';
