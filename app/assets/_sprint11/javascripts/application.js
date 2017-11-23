@@ -96,5 +96,9 @@ $(document).ready(function () {
         }
     });
 
+    $(".explore-box").click(function () {
+        $(this).toggleClass("active");
+    });
+
 });
 
