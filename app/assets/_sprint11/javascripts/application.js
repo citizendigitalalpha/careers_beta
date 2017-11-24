@@ -125,7 +125,7 @@ $(document).ready(function () {
 
         else if ($("#qualifications").hasClass("active")) {
             sessionStorage.setItem("exploresteps", "false");
-            window.open('filters/qualifications.html', '_self', false);
+            window.open('e2e/filters/qualifications.html', '_self', false);
             f.preventDefault();        }
 
         else if ($("#routes").hasClass("active")) {
