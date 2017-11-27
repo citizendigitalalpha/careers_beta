@@ -107,30 +107,35 @@ $(document).ready(function () {
         }
     });
 
+    $(".filters-box").click(function () {
+        $(".filters-box").removeClass("active");
+        $(this).toggleClass("active")
+    });
+
     $("#explore-submit").click(function (f) {
         if ($("#interests").hasClass("active")) {
             sessionStorage.setItem("exploresteps", "false");
-            window.open('filters/interests.html', '_self', false);
+            window.open('filters2/interests.html', '_self', false);
             f.preventDefault();        }
 
         else if ($("#restrictions").hasClass("active")) {
             sessionStorage.setItem("exploresteps", "false");
-            window.open('filters/restrictions.html', '_self', false);
+            window.open('filters2/restrictions.html', '_self', false);
             f.preventDefault();        }
 
         else if ($("#salary").hasClass("active")) {
             sessionStorage.setItem("exploresteps", "false");
-            window.open('filters/salary.html', '_self', false);
+            window.open('filters2/salary.html', '_self', false);
             f.preventDefault();        }
 
         else if ($("#qualifications").hasClass("active")) {
             sessionStorage.setItem("exploresteps", "false");
-            window.open('e2e/filters/qualifications.html', '_self', false);
+            window.open('filters2/qualifications.html', '_self', false);
             f.preventDefault();        }
 
         else if ($("#routes").hasClass("active")) {
             sessionStorage.setItem("exploresteps", "false");
-            window.open('filters/apprenticeship.html', '_self', false);
+            window.open('filters2/apprenticeship.html', '_self', false);
             f.preventDefault();        }
 
         else {
