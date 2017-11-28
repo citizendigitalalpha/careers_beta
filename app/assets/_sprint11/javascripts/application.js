@@ -109,7 +109,8 @@ $(document).ready(function () {
 
     $(".filters-box").click(function () {
         $(".filters-box").removeClass("active");
-        $(this).toggleClass("active")
+        $(this).toggleClass("active");
+        $("#explore-submit").removeClass("js-hidden");
     });
 
     $("#explore-submit").click(function (f) {

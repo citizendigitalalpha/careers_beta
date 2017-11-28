@@ -22,7 +22,7 @@
                     <!-- <label>Enter a job title</label> -->
                     <div class="PROD_search">
                         <div id="search-box" class="PROD_search__input-container">
-                            <input id="searchInput" class="PROD_search__input" autocomplete="off" placeholder="Enter a job title" type="text">
+                            <input id="searchInput" class="PROD_search__input" autocomplete="off" placeholder="" type="text">
                         </div>
                         <input class="PROD_search__submit" onclick="saveSearchTermsAndContinue()" type="button" value="Search">
                     </div>
@@ -38,30 +38,30 @@
         </div>
         <div class="column-full">
             <ul class="list category-list homepage-categories">
-                <li><a href="e2e/job-categories/administration">Administration</a></li>
-                <li><a href="e2e/job-categories/animal-care">Animal care</a></li>
-                <li><a href="e2e/job-categories/beauty-wellbeing">Beauty and wellbeing</a></li>
-                <li><a href="e2e/job-categories/business-finance">Business and finance</a></li>
-                <li><a href="e2e/job-categories/delivery-storage">Delivery and storage</a></li>
-                <li><a href="e2e/job-categories/computing-technology-digital">Computing, technology and digital</a></li>
-                <li><a href="e2e/job-categories/construction-trades">Construction and trades</a></li>
-                <li><a href="e2e/job-categories/creative-media">Creative and media</a></li>
-                <li><a href="e2e/job-categories/emergency-uniform-services">Emergency and uniform services</a></li>
-                <li><a href="e2e/job-categories/engineering-maintenance">Engineering and maintenance</a></li>
-                <li><a href="e2e/job-categories/environment-land">Environment and land</a></li>
-                <li><a href="e2e/job-categories/government-services">Government services</a></li>
-                <li><a href="e2e/job-categories/healthcare">Healthcare</a></li>
-                <li><a href="e2e/job-categories/hospitality-food">Hospitality and food</a></li>
-                <li><a href="e2e/job-categories/legal">Legal</a></li>
-                <li><a href="e2e/job-categories/managerial">Managerial</a></li>
-                <li><a href="e2e/job-categories/manufacturing">Manufacturing</a></li>
-                <li><a href="e2e/job-categories/science-research">Retail and sales</a></li>
-                <li><a href="e2e/job-categories/science-research">Science and research</a></li>
-                <li><a href="e2e/job-categories/social-care">Social care</a></li>
-                <li><a href="e2e/job-categories/sports-leisure">Sports and leisure</a></li>
-                <li><a href="e2e/job-categories/teaching-education">Teaching and education</a></li>
-                <li><a href="e2e/job-categories/transport">Transport</a></li>
-                <li><a href="e2e/job-categories/travel-tourism">Travel and tourism</a></li>
+                <li><a href="job-categories/administration">Administration</a></li>
+                <li><a href="job-categories/animal-care">Animal care</a></li>
+                <li><a href="job-categories/beauty-wellbeing">Beauty and wellbeing</a></li>
+                <li><a href="job-categories/business-finance">Business and finance</a></li>
+                <li><a href="job-categories/delivery-storage">Delivery and storage</a></li>
+                <li><a href="job-categories/computing-technology-digital">Computing, technology and digital</a></li>
+                <li><a href="job-categories/construction-trades">Construction and trades</a></li>
+                <li><a href="job-categories/creative-media">Creative and media</a></li>
+                <li><a href="job-categories/emergency-uniform-services">Emergency and uniform services</a></li>
+                <li><a href="job-categories/engineering-maintenance">Engineering and maintenance</a></li>
+                <li><a href="job-categories/environment-land">Environment and land</a></li>
+                <li><a href="job-categories/government-services">Government services</a></li>
+                <li><a href="job-categories/healthcare">Healthcare</a></li>
+                <li><a href="job-categories/hospitality-food">Hospitality and food</a></li>
+                <li><a href="job-categories/legal">Legal</a></li>
+                <li><a href="job-categories/managerial">Managerial</a></li>
+                <li><a href="job-categories/manufacturing">Manufacturing</a></li>
+                <li><a href="job-categories/science-research">Retail and sales</a></li>
+                <li><a href="job-categories/science-research">Science and research</a></li>
+                <li><a href="job-categories/social-care">Social care</a></li>
+                <li><a href="job-categories/sports-leisure">Sports and leisure</a></li>
+                <li><a href="job-categories/teaching-education">Teaching and education</a></li>
+                <li><a href="job-categories/transport">Transport</a></li>
+                <li><a href="job-categories/travel-tourism">Travel and tourism</a></li>
             </ul>
         </div>
     </div>
@@ -79,7 +79,7 @@ function saveSearchTermsAndContinue() {
      window.setSessionData('searchTerm', searchTerm, function(){
           setTimeout(changePage, 500);
           function changePage() {
-               window.location.href="e2e/search_results";
+               window.location.href="../e2e/search_results";
           }
      });
 }
