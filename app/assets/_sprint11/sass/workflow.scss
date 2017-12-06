@@ -585,6 +585,7 @@ section {
 }
 
 .dod {
+    display: none;
     position: absolute;
     z-index: 300;
     color: $text;
@@ -617,8 +618,4 @@ section {
         display: inline-block;
         margin-bottom: 8px;
     }
-}
-
-#global-header, #global-header-bar, .footer-wrapper {
-    display: none;
 }
