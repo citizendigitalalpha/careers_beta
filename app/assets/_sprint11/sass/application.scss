@@ -1177,6 +1177,99 @@ ul#az-index li {
 .filters-box {
     min-height: 88px;
 }
+
+
+
+
+/*CASE STUDY BLOCK*/
+
+.casestudy-block {
+    margin-top: 40px;
+    display: block;
+    padding: 20px 0;
+    border-top: 1px solid $grey-3;
+    border-bottom: 1px solid $grey-3;
+    text-decoration: none;
+    color: #0b0c0c !important;
+
+    &:hover {
+        background-color: $grey-4;
+
+        span {
+            text-decoration: underline;
+        }
+    }
+
+    .casestudy-image {
+        max-width: 100%;
+        max-height: 200px;
+    }
+
+    h3 {
+        @include bold-19;
+        background-color: $careers-turquoise;
+        color: $white;
+        padding: 10px;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .casestudy-link {
+        float: right;
+        @include bold-16;
+        color: $careers-turquoise;
+    }
+}
+
+.casestudy-content {
+
+    .casestudy-image {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .casestudy-content-top {
+        font-size: 22px;
+    }
+
+    .casestudy-content-link {
+        @include bold-16;
+        background-color: $careers-turquoise;
+        color: $white;
+        float: right;
+        display: inline-block;
+        padding: 10px;
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover {
+            background-color: darken($careers-turquoise, 10%);
+        }
+
+        &:before {
+            content: "<";
+            margin-right: 10px;
+        }
+    }
+}
+
+
+.heading-jp {
+    @include bold-24;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
 // ========================================== MAIN NAVIGATION - END ========================================== //
 @import 'hybrid';
     @import 'new-gov-uk-elements';
@@ -1193,3 +1286,5 @@ ul#az-index li {
     @import 'PROD_styles';
     @import 'beta-experimental-styles';
     @import '_beta-buttons';
+
+
