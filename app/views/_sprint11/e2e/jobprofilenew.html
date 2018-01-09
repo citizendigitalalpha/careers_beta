@@ -43,15 +43,57 @@
                 </div>
             </div>
             <div class="grid-row">
-                <div class="column-one-quarter job-profile-top-section jp-salary">
+                <div class="column-one-quarter-jp job-profile-top-section jp-salary">
                     <h4>Average Salary</h4>
+                    <div class="job-profile-top-section-content"><p>&pound;23,000<span>Per year</span></p></div>
+                </div>
+                <div class="column-one-quarter-jp job-profile-top-section jp-hours">
+                    <h4>Typical hours</h4>
+                    <div class="job-profile-top-section-content"><p>38 - 42<span>Per week</span></p></div>
+                </div>
+                <div class="column-one-quarter-jp job-profile-top-section jp-pattern">
+                    <h4>Working pattern</h4>
+                    <div class="job-profile-top-section-content"><p>Mon - Fri<span>On shift/rota</span></p></div>
+                </div>
+                <div class="column-one-quarter-jp job-profile-top-section jp-outdoor">
+                    <h4>Environment</h4>
+                    <div class="job-profile-top-section-content"><p>Outdoors<span>On patrol</span></p></div>
                 </div>
 
             </div>
         </div>
     </div>
 </header>
-<main id="content" role="main">
+<header class="PROD_hero_jp_secondary">
+    <div class="PROD_full-page-width-wrapper">
+        <div class="job-profile-top-section-secondary">
+            <div class="grid-row">
+                <div class="job-profile-top-section-related">
+                    <h3 class="heading-small">Related careers</h3>
+                    <div class="job-profile-top-section-related-links">
+                        <a href="#">Border force officer</a>
+                        <a href="#">Probation officer</a>
+                        <a href="#">Firefighter</a>
+                    </div>
+                </div>
+                <div class="job-profile-top-section-search PROD_jobprofile_search">
+                    <h3 class="heading-small">Explore further careers</h3>
+                    <form id="searchForm">
+                        <div class="PROD_search">
+                            <div id="search-box" class="PROD_search__input-container">
+                                <input id="searchInput" class="PROD_search__input" autocomplete="off" placeholder="Enter a job title" type="text">
+                            </div>
+                            <input class="PROD_search__submit" onclick="saveSearchTermsAndContinue()" type="button" value="Search">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+        <main id="content" role="main">
 
 
 
@@ -71,12 +113,12 @@
                 </div>
             </div>
 
-</main>
-{% endblock %}
-{% block body_end %}
-  {% include "./includes/scripts.html" %}
-<!-- GOV.UK Prototype kit {{releaseVersion}} -->
-{% endblock %}
+        </main>
+        {% endblock %}
+        {% block body_end %}
+        {% include "./includes/scripts.html" %}
+        <!-- GOV.UK Prototype kit {{releaseVersion}} -->
+        {% endblock %}
 
 
 
