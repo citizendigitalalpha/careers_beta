@@ -173,13 +173,20 @@ $(document).ready(function () {
     };
 
 
-    $(".cc-next").click(function () {
-        if (SHManswer === null) {
+    $("#cc-next").click(function () {
+
+        if (!$(".shm-radio:checked").val()) {
             event.preventDefault();
             $(".cc-error").removeClass("js-hidden");
         }
     });
 
+
+    $("#cc-nextq").click(function () {
+        event.preventDefault();
+        sessionStorage.removeItem('SHManswer');
+        location.href = $(this).attr('href');
+    });
 
 });
 
