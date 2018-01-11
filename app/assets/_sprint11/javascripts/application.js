@@ -173,5 +173,13 @@ $(document).ready(function () {
     };
 
 
+    $(".cc-next").click(function () {
+        if (SHManswer === null) {
+            event.preventDefault();
+            $(".cc-error").removeClass("js-hidden");
+        }
+    });
+
+
 });
 
