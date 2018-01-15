@@ -1944,6 +1944,18 @@ ul#az-index li {
         top: -5px;
     }
 }
+
+
+/*Competency Checker*/
+
+.cc-error {
+    float: right;
+    color: red;
+    margin-top: 20px;
+    display: block;
+}
+
+
 // ========================================== MAIN NAVIGATION - END ========================================== //
 @import 'hybrid';
 @import 'new-gov-uk-elements';
