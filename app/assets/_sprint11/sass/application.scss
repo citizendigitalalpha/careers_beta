@@ -1357,6 +1357,36 @@ ul#az-index li {
         }
     }
 
+    .column-one-third-jp {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+        float: left;
+
+        @include media(tablet) {
+            width: 100%;
+        }
+
+        @include media(desktop) {
+            width: 33.333%;
+        }
+    }
+
+    .column-one-half-jp {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+        float: left;
+
+        @include media(tablet) {
+            width: 100%;
+        }
+
+        @include media(desktop) {
+            width: 50%;
+        }
+    }
+
     .job-profile-top-section {
 
         h4 {
@@ -1436,6 +1466,74 @@ ul#az-index li {
         }
     }
 
+    .jp-salary-range {
+        .job-profile-top-section-content {
+            @include media(mobile) {
+                max-width: 70% !important;
+            }
+        }
+
+        h4 {
+            @include media(mobile) {
+                max-width: 30% !important;
+            }
+        }
+
+        .jp-salary-range-section {
+            border-bottom: 4px solid $careers-turquoise;
+            width: calc(100% - 45px);
+            padding-bottom: 5px;
+            max-width: 300px;
+
+            @include media(mobile) {
+                float: right !important;
+
+                span {
+                    font-size: 18px !important;
+                    }
+            }
+
+            span {
+                font-size: 24px !important;
+                display: block !important;
+                float: left;
+                max-width: 50%;
+                line-height: 24px;
+                position: relative;
+                color: #0b0b0b !important;
+                margin: 0;
+                text-align: left;
+            }
+
+            .jp-range-right {
+                text-align: right;
+            }
+        }
+
+        .jp-salary-range-detail {
+            width: calc(100% - 45px);
+            max-width: 300px;
+
+            @include media(mobile) {
+                float: right !important;
+            }
+
+            span {
+                display: block !important;
+                float: left;
+                max-width: 50%;
+                line-height: 24px;
+                position: relative;
+                margin: 0;
+                text-align: left;
+            }
+
+            .jp-range-right {
+                text-align: right;
+            }
+        }
+    }
+
     .jp-hours {
         .job-profile-top-section-content {
             &:before {
@@ -1489,101 +1587,98 @@ ul#az-index li {
     }
 }
 
-    .PROD_hero_jp_secondary {
-        background-color: #ebebeb;
-        margin: 0 0 4em 0;
-        padding: 0;
-        overflow: hidden;
+.PROD_hero_jp_secondary {
+    background-color: #ebebeb;
+    margin: 0 0 4em 0;
+    padding: 0;
+    overflow: hidden;
 
-        .PROD_jobprofile_search {
+    .PROD_jobprofile_search {
+        margin-bottom: 0;
+    }
+
+    .job-profile-top-section-related {
+        width: 100%;
+        float: left;
+        padding: 30px 50px 0 15px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+
+        @include media(tablet) {
+            width: 50%;
             margin-bottom: 0;
         }
 
-        .job-profile-top-section-related {
-            width: 100%;
-            float: left;
-            padding: 30px 50px 0 15px;
-            box-sizing: border-box;
-            margin-bottom: 20px;
+        @include media(desktop) {
+            width: 60%;
+            margin-bottom: 0;
+        }
 
-            @include media(tablet) {
-                width: 50%;
-                margin-bottom: 0;
+        .job-profile-top-section-related-links {
+            display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox; /* TWEENER - IE 10 */
+            display: -webkit-flex; /* NEW - Chrome */
+            display: flex;
+
+            @include media(mobile) {
+                width: 100%;
+                display: block;
             }
 
-            @include media(desktop) {
-                width: 60%;
-                margin-bottom: 0;
-            }
-
-            .job-profile-top-section-related-links {
-                display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
-                display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
-                display: -ms-flexbox; /* TWEENER - IE 10 */
-                display: -webkit-flex; /* NEW - Chrome */
-                display: flex;
+            a {
+                color: $careers-turquoise;
+                text-decoration: none;
+                font-weight: bold;
+                flex: 1;
+                margin: 0;
+                padding: 5px 0;
+                box-sizing: border-box;
 
                 @include media(mobile) {
                     width: 100%;
-                    display: block;
+                    flex: none;
+                    float: left;
                 }
 
-                a {
-                    color: $careers-turquoise;
-                    text-decoration: none;
-                    font-weight: bold;
-                    flex: 1;
-                    margin: 0;
-                    padding: 5px 0;
-                    box-sizing: border-box;
+                &:hover {
+                    text-decoration: underline;
 
-                    @include media(mobile) {
-                        width: 100%;
-                        flex: none;
-                        float: left;
-                    }
-
-                    &:hover {
-                        text-decoration: underline;
-
-                        &:before {
-                            text-decoration: none !important;
-                        }
+                    &:before {
+                        text-decoration: none !important;
                     }
                 }
-            }
-
-            h3 {
-                border-bottom: 1px solid $grey-2;
-                margin: 0 0 10px 0;
-                display: block;
-                padding: 0;
-                width: 100%;
             }
         }
 
-        .job-profile-top-section-search {
+        h3 {
+            border-bottom: 1px solid $grey-2;
+            margin: 0 0 10px 0;
+            display: block;
+            padding: 0;
             width: 100%;
-            float: left;
-            padding: 20px;
-            box-sizing: border-box;
-            background-color: $careers-turquoise;
-            color: $white;
-            height: 100%;
-            box-shadow: 0px 50px 0px $careers-turquoise;
-
-            @include media(tablet) {
-                width: 50%;
-            }
-
-            @include media(desktop) {
-                width: 40%;
-            }
         }
     }
 
+    .job-profile-top-section-search {
+        width: 100%;
+        float: left;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: $careers-turquoise;
+        color: $white;
+        height: 100%;
+        box-shadow: 0px 50px 0px $careers-turquoise;
 
+        @include media(tablet) {
+            width: 50%;
+        }
 
+        @include media(desktop) {
+            width: 40%;
+        }
+    }
+}
 /*INFOGRAPHIC WHPE*/
 .whpe {
     display: block;
@@ -1865,10 +1960,7 @@ header.hero.search p a {
 @import 'PROD_styles';
 @import 'beta-experimental-styles';
 @import '_beta-buttons';
-
-
 /*UNIVERSAL FIXES*/
-
 .top0 {
     margin-top: 0;
     padding-top: 0;
@@ -1887,4 +1979,4 @@ header.hero.search p a {
 .right0 {
     margin-right: 0;
     padding-right: 0;
-}
+    }
