@@ -29,7 +29,7 @@
 
 {% block before_content %}
 {% include "./includes/survey.html" %}
-<header class="PROD_hero_jp">
+<header class="PROD_hero_jp jp-top-new">
     <div class="PROD_full-page-width-wrapper">
         {% include "./includes/breadcrumb_jobprofile.html" %}
         <div class="job-profile-top">
@@ -43,18 +43,18 @@
                 </div>
             </div>
             <div class="grid-row">
-                <div class="column-one-third-jp jp-salary-range job-profile-top-section jp-salary">
-                    <h4>Average Salary</h4>
+                <div class="column-40-jp jp-salary-range job-profile-top-section jp-salary">
+                    <h4>Average Salary <span>(per year)</span></h4>
                     <div class="job-profile-top-section-content">
-                        <p class="jp-salary-range-section"><span class="jp-range-left">&pound;34,000</span> <span class="jp-range-right">&pound;64,000</span></p>
+                        <p class="jp-salary-range-section"><i class="jp-range-left">&pound;20,000</i> <i class="jp-range-right">&pound;60,000</i></p>
                         <p class="jp-salary-range-detail"><span class="jp-range-left">Starting</span> <span class="jp-range-right">Experienced</span></p>
                     </div>
                 </div>
-                <div class="column-one-third-jp job-profile-top-section jp-hours">
+                <div class="column-30-jp job-profile-top-section jp-hours">
                     <h4>Typical hours</h4>
-                    <div class="job-profile-top-section-content"><p>22 - 40<span>Per week</span></p></div>
+                    <div class="job-profile-top-section-content"><p>37 - 40<span>Per week</span></p></div>
                 </div>
-                <div class="column-one-third-jp job-profile-top-section jp-pattern">
+                <div class="column-30-jp job-profile-top-section jp-pattern">
                     <h4>Working pattern</h4>
                     <div class="job-profile-top-section-content"><p>Mon - Sun<span>On shift/rota</span></p></div>
                 </div>
@@ -63,7 +63,7 @@
         </div>
     </div>
 </header>
-<header class="PROD_hero_jp_secondary">
+<!--<header class="PROD_hero_jp_secondary">
     <div class="PROD_full-page-width-wrapper">
         <div class="job-profile-top-section-secondary">
             <div class="grid-row">
@@ -89,7 +89,7 @@
             </div>
         </div>
     </div>
-</header>
+</header>-->
 
 
         <main id="content" role="main">
@@ -109,7 +109,7 @@
                     {% block after_content %}
                 </div>
                 <div class="column-one-third">
-
+                    {% include "./includes/job-profile_RHC3.html" %}
                 </div>
             </div>
 

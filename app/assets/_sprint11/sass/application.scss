@@ -1359,7 +1359,7 @@ ul#az-index li {
 
     .column-one-third-jp {
         width: 100%;
-        padding: 15px;
+        padding: 25px;
         box-sizing: border-box;
         float: left;
 
@@ -1369,6 +1369,36 @@ ul#az-index li {
 
         @include media(desktop) {
             width: 33.333%;
+        }
+    }
+
+    .column-40-jp {
+        width: 100%;
+        padding: 25px;
+        box-sizing: border-box;
+        float: left;
+
+        @include media(tablet) {
+            width: 100%;
+        }
+
+        @include media(desktop) {
+            width: 40%;
+        }
+    }
+
+    .column-30-jp {
+        width: 100%;
+        padding: 25px;
+        box-sizing: border-box;
+        float: left;
+
+        @include media(tablet) {
+            width: 100%;
+        }
+
+        @include media(desktop) {
+            width: 30%;
         }
     }
 
@@ -1396,6 +1426,12 @@ ul#az-index li {
             font-size: 20px;
             color: $careers-turquoise;
             font-weight: 500;
+            margin-bottom: 10px;
+
+            span {
+                font-size: 14px;
+                white-space: nowrap
+            }
         }
 
         .job-profile-top-section-content {
@@ -1422,7 +1458,7 @@ ul#az-index li {
                 color: $careers-turquoise;
                 max-width: 30px;
                 width: 100%;
-                display: inline-block;
+                display: block;
                 float: left;
                 margin-right: 20px;
             }
@@ -1430,7 +1466,7 @@ ul#az-index li {
 
         @include media(mobile) {
             &:nth-child(odd) {
-                background-color: darken(#f6f6f6, 5%);
+                background-color: darken(#f6f6f6, 2%);
             }
 
             h4 {
@@ -1445,6 +1481,7 @@ ul#az-index li {
                 top: -5px;
                 position: relative;
                 text-align: right;
+                padding-bottom: 0;
 
                 &:before {
                     display: none;
@@ -1456,8 +1493,11 @@ ul#az-index li {
     .jp-salary {
         .job-profile-top-section-content {
             &:before {
-                content: url(../images/pound-sign.svg);
+                content: "";
+                background-image: url(../images/pound-sign.svg);
                 max-width: 25px;
+                width: 25px;
+                height: 40px;
 
                 @include media(mobile) {
                     max-width: 20px;
@@ -1465,7 +1505,18 @@ ul#az-index li {
             }
         }
     }
+    /*.jp-salary-range {
+        .job-profile-top-section-content {
+            &:before {
+                content: "";
+                max-width: 25px;
 
+                @include media(mobile) {
+                    max-width: 20px;
+                }
+            }
+        }
+    }*/
     .jp-salary-range {
         .job-profile-top-section-content {
             @include media(mobile) {
@@ -1482,19 +1533,40 @@ ul#az-index li {
         .jp-salary-range-section {
             border-bottom: 4px solid $careers-turquoise;
             width: calc(100% - 45px);
-            padding-bottom: 5px;
-            max-width: 300px;
+            padding-bottom: 7px;
+            position: relative;
 
             @include media(mobile) {
                 float: right !important;
 
-                span {
-                    font-size: 18px !important;
-                    }
+                i {
+                    font-size: 22px !important;
+                    font-style: normal;
+                }
             }
 
-            span {
-                font-size: 24px !important;
+            &:after {
+                content: ">";
+                position: absolute;
+                left: 27%;
+                top: 23px;
+                color: $careers-turquoise;
+                font-weight: bold;
+                font-size: 25px;
+            }
+
+            &:before {
+                content: ">";
+                position: absolute;
+                left: 67%;
+                top: 23px;
+                color: $careers-turquoise;
+                font-weight: bold;
+                font-size: 25px;
+            }
+
+            i {
+                font-size: 24px;
                 display: block !important;
                 float: left;
                 max-width: 50%;
@@ -1503,16 +1575,18 @@ ul#az-index li {
                 color: #0b0b0b !important;
                 margin: 0;
                 text-align: left;
+                font-style: normal;
             }
 
             .jp-range-right {
                 text-align: right;
+                float: right;
             }
         }
 
         .jp-salary-range-detail {
             width: calc(100% - 45px);
-            max-width: 300px;
+            padding-top: 5px;
 
             @include media(mobile) {
                 float: right !important;
@@ -1537,8 +1611,12 @@ ul#az-index li {
     .jp-hours {
         .job-profile-top-section-content {
             &:before {
-                content: url(../images/clock.svg);
+                content: "";
+                background-image: url(../images/clock.svg);
+                background-repeat: no-repeat;
                 max-width: 40px;
+                width: 40px;
+                height: 40px;
 
                 @include media(mobile) {
                     max-width: 30px;
@@ -1550,8 +1628,12 @@ ul#az-index li {
     .jp-pattern {
         .job-profile-top-section-content {
             &:before {
-                content: url(../images/calendar-alt.svg);
+                content: "";
+                background-image: url(../images/calendar-alt.svg);
+                background-repeat: no-repeat;
                 max-width: 35px;
+                width: 35px;
+                height: 35px;
 
                 @include media(mobile) {
                     max-width: 25px;
@@ -1563,8 +1645,12 @@ ul#az-index li {
     .jp-indoor {
         .job-profile-top-section-content {
             &:before {
-                content: url(../images/building.svg);
+                content: "";
+                background-image: url(../images/building.svg);
+                background-repeat: no-repeat;
                 max-width: 30px;
+                width: 30px;
+                height: 30px;
 
                 @include media(mobile) {
                     max-width: 25px;
@@ -1576,8 +1662,12 @@ ul#az-index li {
     .jp-outdoor {
         .job-profile-top-section-content {
             &:before {
-                content: url(../images/tree.svg);
+                content: "";
+                background-image: url(../images/tree.svg);
+                background-repeat: no-repeat;
                 max-width: 30px;
+                width: 30px;
+                height: 30px;
 
                 @include media(mobile) {
                     max-width: 25px;
@@ -1764,9 +1854,12 @@ ul#az-index li {
             opacity: 0.2;
 
             &:before {
-                content: url(../images/times.svg);
+                content: "";
+                background-image: url(../images/times.svg);
                 display: inline-block;
                 width: 18px;
+                height: 18px;
+                background-repeat: no-repeat;
                 margin-right: 10px;
                 position: relative;
                 top: 6px;
@@ -1777,7 +1870,9 @@ ul#az-index li {
                 opacity: 1;
 
                 &:before {
-                    content: url(../images/check.svg);
+                    content: "";
+                    background-image: url(../images/check.svg);
+                    height: 20px;
                     width: 20px;
                     top: 4px;
                 }
@@ -1945,9 +2040,19 @@ ul#az-index li {
     }
 }
 
+.jp-top-new  {
+margin-bottom: 20px;
 
+@include media(desktop) {
+    margin-bottom: 40px;
+}
+}
+
+.govuk-related-items-alt {
+    top: 0 !important;
+    margin-top: 0 !important;
+}
 /*Competency Checker*/
-
 .cc-error {
     float: right;
     color: red;
