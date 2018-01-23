@@ -1,7 +1,7 @@
 {% set searchTerm = data.searchTerm %}
 {% set searchPrompt = data.searchPrompt %}
 
-{% extends "govuk_template_no-global-header-bar.html" %}
+{% extends "govuk_template_no-gov.html" %}
 
 {% block head %}
 <script>
@@ -25,10 +25,16 @@
   with-proposition
 {% endblock %}
 
+
+
 {% block before_content %}
+{% include "./includes/survey.html" %}
+
 <main id="content" role="main">
     {% include "./includes/global_header_bar.html" %}
     {% include "./includes/breadcrumb_jobprofile.html" %}
+
+    
     <div class="grid-row">
         <div class="column-two-thirds">
             {% include "./includes/job-profile_top.html" %}
@@ -43,6 +49,7 @@
             {% include "./includes/job-profile_RHC.html" %}
         </div>
     </div>
+    
 </main>
 {% endblock %}
 {% block body_end %}
