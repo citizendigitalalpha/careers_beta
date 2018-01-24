@@ -29,40 +29,50 @@
 
 {% block before_content %}
 {% include "./includes/survey.html" %}
-<header class="PROD_hero_jp jp-top-new">
-    <div class="PROD_full-page-width-wrapper">
+
+
+
+<header class="job-profile-hero">
+    <div class="content-container">
         {% include "./includes/breadcrumb_jobprofile.html" %}
-        <div class="job-profile-top">
-            <h1 class="heading-xlarge">
-                {{ profileName }}
-                <span class="heading-secondary">{{ profileSecondaryName }}</span>
-            </h1>
-            <div class="grid-row">
-                <div class="column-two-thirds">
-                    <h3>{{ profileDescription }}</h3>
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <h1 class="heading-xlarge">{{ profileName }}</h1>
+                <h2 class="heading-secondary">{{ profileSecondaryName }}</h2>
+                <p>{{ profileDescription }}</p>
+
+            </div>
+        </div>
+        <div class="grid-row">
+            <div class="column-40 job-profile-heroblock">
+                <h4>Average salary<span>(per year)</span></h4>
+                <div class="job-profile-salary job-profile-heroblock-content">
+                    <h5>{{ salaryLow }} <span>Starter</span></h5><h5>{{ salaryHigh }}<span>Experienced</span></h5>
+
                 </div>
             </div>
-            <div class="grid-row">
-                <div class="column-40-jp jp-salary-range job-profile-top-section jp-salary">
-                    <h4>Average Salary <span>(per year)</span></h4>
-                    <div class="job-profile-top-section-content">
-                        <p class="jp-salary-range-section"><i class="jp-range-left">&pound;20,000</i> <i class="jp-range-right">&pound;60,000</i></p>
-                        <p class="jp-salary-range-detail"><span class="jp-range-left">Starting</span> <span class="jp-range-right">Experienced</span></p>
-                    </div>
-                </div>
-                <div class="column-30-jp job-profile-top-section jp-hours">
-                    <h4>Typical hours</h4>
-                    <div class="job-profile-top-section-content"><p>37 - 40<span>Per week</span></p></div>
-                </div>
-                <div class="column-30-jp job-profile-top-section jp-pattern">
-                    <h4>Working pattern</h4>
-                    <div class="job-profile-top-section-content"><p>Mon - Sun<span>On shift/rota</span></p></div>
-                </div>
+            <div class="column-30 job-profile-heroblock">
+                <h4>Typical hours <span>(per week)</span></h4>
+                <div class="job-profile-hours job-profile-heroblock-content">
+                    <h5>{{ hoursRange }}<span>{{ hoursDetail }}</span></h5>
 
+                </div>
+            </div>
+            <div class="column-30 job-profile-heroblock">
+                <h4>Working <span>(you could also work)</span></h4>
+                <div class="job-profile-pattern job-profile-heroblock-content">
+                    <h5>{{ patternValue }}<span>{{ patternDescription }}</span></h5>
+                </div>
             </div>
         </div>
     </div>
 </header>
+
+
+
+
+
+
 <!--<header class="PROD_hero_jp_secondary">
     <div class="PROD_full-page-width-wrapper">
         <div class="job-profile-top-section-secondary">
