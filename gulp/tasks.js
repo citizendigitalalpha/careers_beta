@@ -68,7 +68,9 @@ gulp.task('generate-assets', function (done) {
                 //'copy-assets-S10',
                 //'copy-documentation-assets-S10',    
                 'copy-assets-S11',
-                'copy-documentation-assets-S11',    
+                  'copy-documentation-assets-S11',  
+                  'copy-assets-S19',
+                  'copy-documentation-assets-S19',  
                 done)
 })
 
@@ -106,6 +108,8 @@ gulp.task('watch', function (done) {
               //'watch-assets-S10',    
               'watch-sass-S11',
               'watch-assets-S11',    
+              'watch-sass-S19',
+              'watch-assets-S19',  
               done)
 })
 
