@@ -2321,6 +2321,56 @@ margin-bottom: 20px;
 }
 
 
+/*FILTERS NEW*/
+
+.filter_hero {
+    background-color: $grey-4;
+    width: 100%;
+    #content {
+        padding-bottom: 0;
+        margin-bottom: 50px;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+}
+
+.filter_header {
+    color: $white;
+    padding: 40px;
+    position: relative;
+    top: 50px;
+    overflow: hidden;
+
+    h1 {
+        font-size: 28px;
+        position: relative;
+        font-weight: bold;
+        z-index: 100;
+    }
+}
+
+.filter_header-q1 {
+    @extend .filter_header;
+    background: #0091cb; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #0091cb 0%, #0042d1 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #0091cb 0%,#0042d1 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #0091cb 0%,#0042d1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    &:after {
+        position: absolute;
+        content: url(../images/graduation-cap.svg);
+        right: 0;
+        top: -50px;
+        width: 400px;
+        height: 400px;
+        z-index: 1;
+        opacity: 0.1;
+    }
+}
+
+
 // ========================================== MAIN NAVIGATION - END ========================================== //
 @import 'hybrid';
 @import 'new-gov-uk-elements';
@@ -2361,3 +2411,4 @@ header.hero.search p a {
 .content-container {
     @extend %site-width-container;
 }
+

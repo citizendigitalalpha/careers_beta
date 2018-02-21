@@ -1,0 +1,44 @@
+{% extends "../layout.html" %}
+
+{% block page_title %}
+  Find a career
+{% endblock %}
+
+{% block content %}
+
+{% set serviceName = 'Find a career' %}
+{% set bannerStyle = 'BETA-style' %}
+{% set filterName = 'Explore by interests and preferences' %}
+
+{% include "../includes/survey.html" %}
+
+
+
+<main id="" role="main">
+    <div class="filter_hero">
+        <div id="content">
+            {% include "../includes/global_header_bar.html" %}
+            {% include "../includes/breadcrumb_filters.html" %}
+
+            <div class="grid-row">
+                <div class="column-full">
+                    <h2>{{filterName}}</h2>
+                </div>
+
+                <div class="column-full">
+                    <div class="filter_header-q1">
+                        <h1>What's your level of education?</h1>
+                        <p>Please choose the level of education and experience you want to search. You can select more than one. Choose 'none' and we won't filter by job level.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</main>
+
+
+
+{% endblock %}

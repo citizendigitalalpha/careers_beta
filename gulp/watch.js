@@ -136,11 +136,11 @@ gulp.task('watch-assets-S11', function () {
 })
 
 gulp.task('watch-sass-S19', function () {
-    return gulp.watch(config.paths.assetsS11 + 'sass/**', { cwd: './' }, ['sass-S11']);
+    return gulp.watch(config.paths.assetsS19 + 'sass/**', { cwd: './' }, ['sass-S19']);
 })
 
 gulp.task('watch-assets-S19', function () {
-    return gulp.watch([config.paths.assetsS11 + 'images/**',
-    config.paths.assetsS10 + 'javascripts/**',
-    config.paths.assetsS10 + 'data/**'], { cwd: './' }, ['copy-assets-S11']);
+    return gulp.watch([config.paths.assetsS19 + 'images/**',
+    config.paths.assetsS19 + 'javascripts/**',
+    config.paths.assetsS19 + 'data/**'], { cwd: './' }, ['copy-assets-S19']);
 })
