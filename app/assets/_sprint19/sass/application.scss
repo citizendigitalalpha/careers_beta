@@ -2350,26 +2350,176 @@ margin-bottom: 20px;
         font-weight: bold;
         z-index: 100;
     }
+
+    p {
+        margin-top: 30px;
+    }
+
+    &:after {
+        position: absolute;
+        right: -100px;
+        top: -100px;
+        width: 500px;
+        height: 500px;
+        z-index: 1;
+        opacity: 0.1;
+        display: block;
+    }
 }
 
-.filter_header-q1 {
-    @extend .filter_header;
+.q1bg {
     background: #0091cb; /* Old browsers */
     background: -moz-linear-gradient(-45deg, #0091cb 0%, #0042d1 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(-45deg, #0091cb 0%,#0042d1 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(135deg, #0091cb 0%,#0042d1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.filter_header-q1 {
+    @extend .q1bg;
+    @extend .filter_header;
+
     &:after {
-        position: absolute;
         content: url(../images/graduation-cap.svg);
-        right: 0;
-        top: -50px;
-        width: 400px;
-        height: 400px;
-        z-index: 1;
-        opacity: 0.1;
     }
 }
 
+.filter_list {
+    margin-top: 5px;
+
+    input {
+        display: none;
+    }
+
+    input:checked + label {
+        color: $white;
+
+        &:after {
+            content: url(../images/check-white.svg);
+            display: block;
+            opacity: 1;
+        }
+    }
+
+    label {
+        width: 100%;
+        display: block;
+        padding: 30px;
+        border-bottom: 1px solid $grey-3;
+        box-sizing: border-box;
+        position: relative;
+        overflow: auto;
+
+        &:after {
+            content: url(../images/check-black.svg);
+            width: 40px;
+            display: none;
+            position: absolute;
+            right: 30px;
+            top: 40px;
+            opacity: 0.3;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: normal;
+            width: 80%;
+            float: left;
+        }
+
+        p {
+            margin: 0;
+            font-size: 16px;
+            width: 80%;
+            float: left;
+        }
+
+        &:hover {
+            background-color: $grey-4;
+            cursor: pointer;
+
+            &:after {
+                display: block;
+            }
+        }
+    }
+}
+
+.filter_lower {
+    background-color: darken($grey-4, 4%);
+    padding: 20px;
+    margin-top: 30px;
+    clear: both;
+    overflow: auto;
+
+    p {
+        color: #0091cb;
+        font-size: 16px;
+        float: left;
+        max-width: 50%;
+        margin: 0 30px 0 0;
+        line-height: 40px;
+
+        span {
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+
+    a {
+        float: right;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+
+        &:after {
+            content: ">";
+            margin-left: 10px;
+        }
+    }
+
+    .filter_button {
+        color: $white;
+    }
+
+    .filter_button_alt {
+        box-sizing: border-box;
+        padding: 7px;
+        margin-right: 20px;
+
+        &:hover {
+            color: $white;
+        }
+    }
+}
+
+.filter_list-q1 {
+        input:checked + label {
+            @extend .q1bg;
+        }
+
+    .filter_lower {
+        p {
+            color: #0091cb;
+        }
+
+        .filter_button {
+            background-color: #0091cb;
+
+            &:hover {
+                background-color: darken(#0091cb, 5%);
+            }
+        }
+
+        .filter_button_alt {
+            border: 3px solid #0091cb;
+            color: #0091cb;
+
+            &:hover {
+                background-color: #0091cb;
+            }
+        }
+    }
 
 // ========================================== MAIN NAVIGATION - END ========================================== //
 @import 'hybrid';

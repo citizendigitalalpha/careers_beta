@@ -188,5 +188,40 @@ $(document).ready(function () {
         location.href = $(this).attr('href');
     });
 
+
+
+
+    $('.checkbox').change(function (e) {
+        var c = $(this).is(":checked");
+        var i = parseInt($(this).attr('increment'));
+        var current_value = parseInt($('span#filter_resultcount').text());
+        if (c) {
+            $('span#filter_resultcount').text(current_value - i);
+            sessionStorage.setItem("resultcountvalue", current_value - i);
+        } else {
+            $('span#filter_resultcount').text(current_value + i);
+            sessionStorage.setItem("resultcountvalue", current_value + i);
+        }
+
+    });
+
+    //Not Applicable Check Uncheck
+    $(".filter_none").change(function () {
+        if (this.checked) {
+            $('input:checked').not(".filter_none").removeAttr('checked');
+            this.change
+            $('span#filter_resultcount').text(start_value);
+            sessionStorage.setItem("resultcountvalue", start_value);
+        }
+    });
+
+    $('input:checkbox').not(".filter_none").change(function () {
+        if ($(".filter_none").prop('checked')) {
+            $(".filter_none").removeAttr('checked');
+        }
+    });
+
+
+
 });
 
