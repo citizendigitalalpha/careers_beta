@@ -2,6 +2,8 @@
 {% set searchPrompt = data.searchPrompt %}
 {% set VocExitHide = data.VocExitHide %}
 {% set VocConsumeHide = data.VocConsumeHide %}
+{% set asset_path = 'public/sprint19/' %}
+
 
 {% extends "govuk_template.html" %}
 
@@ -18,7 +20,7 @@
 {% endblock %}
 
 {% block cookie_message %}
-  <p>Service green uses cookies to make the site simpler. <a href="/_sprint10/cookies.html">Find out more about cookies</a></p>
+  <p>Service green uses cookies to make the site simpler. <a href="/_sprint19/cookies.html">Find out more about cookies</a></p>
 {% endblock %}
 
 {% block proposition_header %}
@@ -30,6 +32,6 @@
 {% endblock %}
 
 {% block body_end %}
-  {% include "./includes/scripts.html" %}
+  {% include "/includes/scripts.html" %}
   <!-- GOV.UK Prototype kit {{releaseVersion}} -->
 {% endblock %}

@@ -188,5 +188,49 @@ $(document).ready(function () {
         location.href = $(this).attr('href');
     });
 
+
+
+    if ($('#filter_resultcount').hasClass('filter_resultcount_first')) {
+        var start_value = "180";
+        $('span#filter_resultcount').text(start_value)
+        sessionStorage.setItem("resultcountvalue", start_value);
+    }
+    else {
+        var start_value = sessionStorage.getItem("resultcountvalue");
+        $('#filter_resultcount').text(start_value)
+    }
+
+    $('.checkbox').change(function (e) {
+        var c = $(this).is(":checked");
+        var i = parseInt($(this).attr('increment'));
+        var current_value = parseInt($('#filter_resultcount').text());
+        if (c) {
+            $('#filter_resultcount').text(current_value - i);
+            sessionStorage.setItem("resultcountvalue", current_value - i);
+        } else {
+            $('#filter_resultcount').text(current_value + i);
+            sessionStorage.setItem("resultcountvalue", current_value + i);
+        }
+
+    });
+
+    //Not Applicable Check Uncheck
+    $(".filter_none").change(function () {
+        if (this.checked) {
+            $('input:checked').not(".filter_none").removeAttr('checked');
+            this.change
+            $('#filter_resultcount').text(start_value);
+            sessionStorage.setItem("resultcountvalue", start_value);
+        }
+    });
+
+    $('input:checkbox').not(".filter_none").change(function () {
+        if ($(".filter_none").prop('checked')) {
+            $(".filter_none").removeAttr('checked');
+        }
+    });
+
+
+
 });
 
