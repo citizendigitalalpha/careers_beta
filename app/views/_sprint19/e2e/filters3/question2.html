@@ -1,5 +1,7 @@
 {% extends "../layout.html" %}
 
+
+
 {% block page_title %}
   Find a career
 {% endblock %}
@@ -14,6 +16,7 @@
 
 
 
+
 <main id="" role="main">
     <div class="filter_hero">
         <div id="content">
@@ -22,13 +25,14 @@
 
             <div class="grid-row">
                 <div class="column-full">
-                    <h2>{{filterName}}</h2>
+                    <h2>{{filterName}} <span>Question 2 of 4</span></h2>
+                    
                 </div>
 
                 <div class="column-full">
-                    <div class="filter_header-q1">
-                        <h1>What's your level of education?</h1>
-                        <p>Please choose the level of education and experience you want to search. You can select more than one. Choose 'none' and we won't filter by job level.</p>
+                    <div class="filter_header-q2">
+                        <h1>What are you interested in?</h1>
+                        <p>Find a career that makes the most of what you really love doing. Choose any interests you'd like to take forward into a job. 'None' won't filter, so that's fine too.</p>
                     </div>
                 </div>
 
@@ -38,42 +42,143 @@
     <div id="content">
         <div class="grid-row">
             <div class="column-full">
-                <form class="filter_list filter_list-q1">
-                    <input type="checkbox" class="checkbox filter_none" id="q1o1" ></input>
-                    <label for="q1o1">
+                <form class="filter_list filter_list-q2">
+                    <input type="checkbox" class="filter_none" id="q2o1" ></input>
+                    <label for="q2o1">
+                        <i class="fas fa-times"></i>
                         <h3>None</h3>
-                        <p>I want to see careers of any education level</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
                     </label>
 
-                    <input type="checkbox" class="checkbox" id="q1o2" increment="9"></input>
-                    <label for="q1o2">
-                        <h3>Job level 1</h3>
-                        <p>I'd like to see careers where no formal qualifications are needed</p>
+                    <input type="checkbox" class="checkbox" id="q2o2" increment="9"></input>
+                    <label for="q2o2">
+                        <i class="fas fa-utensils"></i>
+                        <h3>Food and cookery</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
                     </label>
 
-                    <input type="checkbox" class="checkbox" id="q1o3" increment="14"></input>
-                    <label for="q1o3">
-                        <h3>Semi-skilled (Job level 2)</h3>
-                        <p>I'm intersted in careers that require school level qualifications or equivalent work experience</p>
+                    <input type="checkbox" class="checkbox" id="q2o3" increment="9"></input>
+                    <label for="q2o3">
+                        <i class="fas fa-car"></i>
+                        <h3>Travel</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
                     </label>
 
-                    <input type="checkbox" class="checkbox" id="q1o4" increment="20"></input>
-                    <label for="q1o4">
-                        <h3>Skilled (Job level 3)</h3>
-                        <p>I'm looking for careers that require college level qualifications and/or equivalent work experience</p>
+                    <input type="checkbox" class="checkbox" id="q2o4" increment="9"></input>
+                    <label for="q2o4">
+                        <i class="fas fa-pencil-alt"></i>
+                        <h3>Writing and blogging</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
                     </label>
 
-                    <input type="checkbox" class="checkbox" id="q1o5" increment="5"></input>
-                    <label for="q1o5">
-                        <h3>Professional (Job level 4)</h3>
-                        <p>I'd like to see careers that require university level qualifications and/or equivalent work experience</p>
+                    <input type="checkbox" class="checkbox" id="q2o5" increment="9"></input>
+                    <label for="q2o5">
+                        <i class="fas fa-laptop"></i>
+                        <h3>Computing and tech</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
                     </label>
 
+                    <input type="checkbox" class="checkbox" id="q2o6" increment="9"></input>
+                    <label for="q2o6">
+                        <i class="fas fa-tree"></i>
+                        <h3>Outdoor activities</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur a.</p>
+                    </label>
+
+                    <input type="checkbox" class="checkbox" id="q2o7" increment="9"></input>
+                    <label for="q2o7">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>Gaming</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur a.</p>
+                    </label>
+
+                    <input type="checkbox" class="checkbox" id="q2o8" increment="9"></input>
+                    <label for="q2o8">
+                        <i class="fas fa-futbol"></i>
+                        <h3>Sport - playing or watching</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur a.</p>
+                    </label>
+
+                    <input type="checkbox" class="checkbox" id="q2o9" increment="9"></input>
+                    <label for="q2o9">
+                        <i class="fas fa-newspaper"></i>
+                        <h3>News and current affairs</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur a.</p>
+                    </label>
+
+                    <input type="checkbox" class="checkbox" id="q2o10" increment="9"></input>
+                    <label for="q2o10">
+                        <i class="fas fa-music"></i>
+                        <h3>Music</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur a.</p>
+                    </label>
+
+                    <input type="checkbox" class="checkbox" id="q2o11" increment="9"></input>
+                    <label for="q2o11">
+                        <i class="fas fa-shopping-bag"></i>
+                        <h3>Fashion and beauty</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur a.</p>
+                    </label>
+
+                    <input type="checkbox" class="checkbox" id="q2o12" increment="9"></input>
+                    <label for="q2o12">
+                        <i class="fas fa-eye"></i>
+                        <h3>Visual arts</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur a.</p>
+                    </label>
+
+                    <input type="checkbox" class="checkbox" id="q2o13" increment="9"></input>
+                    <label for="q2o13">
+                        <i class="fas fa-film"></i>
+                        <h3>Broadcasting and performing arts</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur a.</p>
+                    </label>
+
+                    <input type="checkbox" class="checkbox" id="q2o14" increment="9"></input>
+                    <label for="q2o14">
+                        <i class="fas fa-clock"></i>
+                        <h3>History, heritage and culture</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur a.</p>
+                    </label>
+
+                    <input type="checkbox" class="checkbox" id="q2o15" increment="9"></input>
+                    <label for="q2o15">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Crafts and making things</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur a.</p>
+                    </label>
+
+                    <input type="checkbox" class="checkbox" id="q2o16" increment="9"></input>
+                    <label for="q2o16">
+                        <i class="fas fa-wrench"></i>
+                        <h3>DIY and home improvements</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur a.</p>
+                    </label>
+
+                    <input type="checkbox" class="checkbox" id="q2o17" increment="9"></input>
+                    <label for="q2o17">
+                        <i class="fas fa-bug"></i>
+                        <h3>Animals or pets</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur a.</p>
+                    </label>
+
+                    <input type="checkbox" class="checkbox" id="q2o18" increment="9"></input>
+                    <label for="q2o18">
+                        <i class="fas fa-pound-sign"></i>
+                        <h3>Making money</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur a.</p>
+                    </label>
+
+                    <input type="checkbox" class="checkbox" id="q2o19" increment="9"></input>
+                    <label for="q2o19">
+                        <i class="fas fa-truck"></i>
+                        <h3>Transport and driving</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur a.</p>
+                    </label>
                     <div class="filter_lower">
                         <p><span id="filter_resultcount">120</span> possible careers based on your choices so far </p>
-                        <a class="filter_button" href="question2.html">Question 2 - Your interests</a>
+                        <a class="filter_button" href="question3.html">Question 3 - Preferred work tasks</a>
                         <a class="filter_button_alt" href="#">Show me my results</a>
-
                     </div>
                 </form>
             </div>

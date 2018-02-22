@@ -2326,6 +2326,7 @@ margin-bottom: 20px;
 .filter_hero {
     background-color: $grey-4;
     width: 100%;
+
     #content {
         padding-bottom: 0;
         margin-bottom: 50px;
@@ -2334,6 +2335,16 @@ margin-bottom: 20px;
     h2 {
         font-size: 24px;
         font-weight: bold;
+        margin-top: 20px;
+
+        span {
+            display: inline-block;
+            float: right;
+            font-size: 18px;
+            font-weight: normal;
+            line-height: 38px;
+            color: $grey-1;
+        }
     }
 }
 
@@ -2341,14 +2352,17 @@ margin-bottom: 20px;
     color: $white;
     padding: 40px;
     position: relative;
-    top: 50px;
+    top: 30px;
     overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
 
     h1 {
         font-size: 28px;
         position: relative;
         font-weight: bold;
         z-index: 100;
+        width: 100%;
     }
 
     p {
@@ -2374,12 +2388,68 @@ margin-bottom: 20px;
     background: linear-gradient(135deg, #0091cb 0%,#0042d1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
+.q2bg {
+    background: #524dcf; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #524dcf 0%, #716ae6 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #524dcf 0%,#716ae6 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #524dcf 0%,#716ae6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.q3bg {
+    background: #50a83e; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #50a83e 0%, #7cd467 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #50a83e 0%,#7cd467 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #50a83e 0%,#7cd467 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.q4bg {
+    background: #00aee2; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #00aee2 0%, #00c6ea 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #00aee2 0%,#00c6ea 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #00aee2 0%,#00c6ea 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+
 .filter_header-q1 {
     @extend .q1bg;
     @extend .filter_header;
 
     &:after {
         content: url(../images/graduation-cap.svg);
+    }
+}
+
+.filter_header-q2 {
+    @extend .q2bg;
+    @extend .filter_header;
+
+    &:after {
+        content: url(../images/smile.svg);
+        width: 400px;
+    }
+}
+
+
+.filter_header-q3 {
+    @extend .q3bg;
+    @extend .filter_header;
+
+    &:after {
+        content: url(../images/briefcase.svg);
+        width: 370px;
+        top: -40px;
+    }
+}
+
+.filter_header-q4 {
+    @extend .q4bg;
+    @extend .filter_header;
+
+    &:after {
+        content: url(../images/map-signs.svg);
+        width: 250px;
+        top: 10px;
+        right: 20px;
     }
 }
 
@@ -2459,6 +2529,12 @@ margin-bottom: 20px;
         margin: 0 30px 0 0;
         line-height: 40px;
 
+        @media (max-width: 1000px) {
+            max-width: 100%;
+            width: 100%;
+            line-height: 20px;
+        }
+
         span {
             font-weight: bold;
             font-size: 20px;
@@ -2471,6 +2547,12 @@ margin-bottom: 20px;
         text-decoration: none;
         font-size: 16px;
         font-weight: bold;
+        box-sizing: border-box;
+        
+        @media(max-width: 600px) {
+            width: 100%;
+            margin: 10px 0 !important;
+        }
 
         &:after {
             content: ">";
@@ -2488,7 +2570,7 @@ margin-bottom: 20px;
         margin-right: 20px;
 
         &:hover {
-            color: $white;
+            color: $white !important;
         }
     }
 }
@@ -2520,6 +2602,150 @@ margin-bottom: 20px;
             }
         }
     }
+}
+
+.filter_list-q4 {
+    input:checked + label {
+        @extend .q4bg;
+    }
+
+    .filter_lower {
+        p {
+            color: #00aee2;
+        }
+
+        .filter_button {
+            background-color: #00aee2;
+
+            &:hover {
+                background-color: darken(#00aee2, 5%);
+            }
+        }
+
+        .filter_button_alt {
+            border: 3px solid #00aee2;
+            color: #0091cb;
+
+            &:hover {
+                background-color: #00aee2;
+            }
+        }
+    }
+}
+
+.filter_list-q2 {
+    display: flex;
+    flex-wrap: wrap;
+
+    label {
+        width: calc(50% - 20px);
+        margin: 0 20px;
+
+
+        @media (max-width: 800px) {
+            width: 100%;
+            margin: 0;
+
+            &:after {
+                max-width: 20px;
+                right: 20px;
+                top: 16px;
+            }
+        }
+
+        h3 {
+            font-size: 22px;
+        }
+
+        &:nth-child(4n) {
+            margin-right: 0px;
+        }
+
+        &:nth-child(4n+2) {
+            margin-left: 0px;
+        }
+
+        svg {
+            float: left;
+            max-width: 30px;
+            height: 100%;
+            position: relative;
+            left: -10px;
+            margin-right: 10px;
+            color: $grey-3;
+            width: auto !important;
+        }
+    }
+
+
+
+    input:checked + label {
+        @extend .q2bg;
+
+        svg {
+            color: $white;
+        }
+    }
+
+    .filter_lower {
+        width: 100%;
+
+        p {
+            color: #524dcf;
+        }
+
+        .filter_button {
+            background-color: #524dcf;
+
+            &:hover {
+                background-color: darken(#524dcf, 5%);
+            }
+        }
+
+        .filter_button_alt {
+            border: 3px solid #524dcf;
+            color: #524dcf;
+
+            &:hover {
+                background-color: #524dcf;
+            }
+        }
+    }
+}
+
+.filter_list-q3 {
+    @extend .filter_list-q2;
+
+    input:checked + label {
+        @extend .q3bg;
+    }
+
+    .filter_lower {
+        width: 100%;
+
+        p {
+            color: #50a83e;
+        }
+
+        .filter_button {
+            background-color: #50a83e;
+
+            &:hover {
+                background-color: darken(#50a83e, 5%);
+            }
+        }
+
+        .filter_button_alt {
+            border: 3px solid #50a83e;
+            color: #50a83e;
+
+            &:hover {
+                background-color: #50a83e;
+            }
+        }
+    }
+}
+
 
 // ========================================== MAIN NAVIGATION - END ========================================== //
 @import 'hybrid';
