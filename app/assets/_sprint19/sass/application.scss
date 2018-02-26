@@ -2478,6 +2478,7 @@ margin-bottom: 20px;
         box-sizing: border-box;
         position: relative;
         overflow: auto;
+        min-height: 120px;
 
         &:after {
             content: url(../images/check-black.svg);
@@ -2548,7 +2549,7 @@ margin-bottom: 20px;
         font-size: 16px;
         font-weight: bold;
         box-sizing: border-box;
-        
+
         @media(max-width: 600px) {
             width: 100%;
             margin: 10px 0 !important;
@@ -2566,19 +2567,15 @@ margin-bottom: 20px;
 
     .filter_button_alt {
         box-sizing: border-box;
-        padding: 7px;
-        margin-right: 20px;
-
-        &:hover {
-            color: $white !important;
-        }
+        margin: 12px 20px 0 0;
+        padding: 0;
     }
 }
 
 .filter_list-q1 {
-        input:checked + label {
-            @extend .q1bg;
-        }
+    input:checked + label {
+        @extend .q1bg;
+    }
 
     .filter_lower {
         p {
@@ -2594,11 +2591,10 @@ margin-bottom: 20px;
         }
 
         .filter_button_alt {
-            border: 3px solid #0091cb;
             color: #0091cb;
 
             &:hover {
-                background-color: #0091cb;
+                border-bottom: 3px solid #0091cb;
             }
         }
     }
@@ -2623,11 +2619,10 @@ margin-bottom: 20px;
         }
 
         .filter_button_alt {
-            border: 3px solid #00aee2;
             color: #0091cb;
 
             &:hover {
-                background-color: #00aee2;
+                border-bottom: 3px solid #0091cb;
             }
         }
     }
@@ -2705,11 +2700,10 @@ margin-bottom: 20px;
         }
 
         .filter_button_alt {
-            border: 3px solid #524dcf;
             color: #524dcf;
 
             &:hover {
-                background-color: #524dcf;
+                border-bottom: 3px solid #524dcf;
             }
         }
     }
@@ -2726,25 +2720,32 @@ margin-bottom: 20px;
         width: 100%;
 
         p {
-            color: #50a83e;
+            color: darken(#50a83e, 7%);
         }
 
         .filter_button {
-            background-color: #50a83e;
+            background-color: darken(#50a83e, 7%);
 
             &:hover {
-                background-color: darken(#50a83e, 5%);
+                background-color: darken(#50a83e, 12%);
             }
         }
 
         .filter_button_alt {
-            border: 3px solid #50a83e;
-            color: #50a83e;
+            color: darken(#50a83e, 7%);
 
             &:hover {
-                background-color: #50a83e;
+                border-bottom: 3px solid darken(#50a83e, 7%);
             }
         }
+    }
+}
+
+.home-filter-hero {
+    background-color: darken($grey-4, 3%);
+
+    #content {
+        padding-bottom: 40px;
     }
 }
 
