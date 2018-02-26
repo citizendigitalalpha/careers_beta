@@ -2455,6 +2455,8 @@ margin-bottom: 20px;
 
 .filter_list {
     margin-top: 5px;
+    @extend %contain-floats;
+
 
     input {
         display: none;
@@ -2478,6 +2480,7 @@ margin-bottom: 20px;
         box-sizing: border-box;
         position: relative;
         overflow: auto;
+        min-height: 120px;
 
         &:after {
             content: url(../images/check-black.svg);
@@ -2548,7 +2551,7 @@ margin-bottom: 20px;
         font-size: 16px;
         font-weight: bold;
         box-sizing: border-box;
-        
+
         @media(max-width: 600px) {
             width: 100%;
             margin: 10px 0 !important;
@@ -2560,46 +2563,79 @@ margin-bottom: 20px;
         }
     }
 
-    .filter_button {
-        color: $white;
-    }
-
     .filter_button_alt {
         box-sizing: border-box;
-        padding: 7px;
-        margin-right: 20px;
+        margin: 12px 0 0 0;
+        padding: 0;
+    }
 
-        &:hover {
-            color: $white !important;
-        }
+    .filter_button {
+        margin: 0;
+    }
+}
+
+.filter_button {
+    margin-top: 20px;
+    color: $white !important;
+    float: right;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    box-sizing: border-box;
+
+    @media(max-width: 600px) {
+        width: 100%;
+        margin: 10px 0 !important;
+    }
+
+    &:after {
+        content: ">";
+        margin-left: 10px;
+    }
+}
+
+.filter_buttons {
+    width: 100%;
+}
+
+.filter_button_back {
+    float: left;
+
+    &:before {
+        content: "<";
+        margin-right: 10px;
+    }
+    &:after {
+        display: none;
     }
 }
 
 .filter_list-q1 {
-        input:checked + label {
-            @extend .q1bg;
-        }
+    input:checked + label {
+        @extend .q1bg;
+    }
 
     .filter_lower {
         p {
             color: #0091cb;
         }
 
-        .filter_button {
-            background-color: #0091cb;
-
-            &:hover {
-                background-color: darken(#0091cb, 5%);
-            }
-        }
 
         .filter_button_alt {
-            border: 3px solid #0091cb;
             color: #0091cb;
 
             &:hover {
-                background-color: #0091cb;
+                border-bottom: 2px solid #0091cb;
             }
+        }
+    }
+
+    .filter_button {
+        background-color: #0091cb;
+
+        &:hover {
+            background-color: darken(#0091cb, 5%);
         }
     }
 }
@@ -2614,21 +2650,22 @@ margin-bottom: 20px;
             color: #00aee2;
         }
 
-        .filter_button {
-            background-color: #00aee2;
 
-            &:hover {
-                background-color: darken(#00aee2, 5%);
-            }
-        }
 
         .filter_button_alt {
-            border: 3px solid #00aee2;
             color: #0091cb;
 
             &:hover {
-                background-color: #00aee2;
+                border-bottom: 2px solid #0091cb;
             }
+        }
+    }
+
+    .filter_button {
+        background-color: #00aee2;
+
+        &:hover {
+            background-color: darken(#00aee2, 5%);
         }
     }
 }
@@ -2668,6 +2705,8 @@ margin-bottom: 20px;
         svg {
             float: left;
             max-width: 30px;
+            min-width: 30px;
+            max-height: 60px;
             height: 100%;
             position: relative;
             left: -10px;
@@ -2694,21 +2733,21 @@ margin-bottom: 20px;
             color: #524dcf;
         }
 
-        .filter_button {
-            background-color: #524dcf;
-
-            &:hover {
-                background-color: darken(#524dcf, 5%);
-            }
-        }
 
         .filter_button_alt {
-            border: 3px solid #524dcf;
             color: #524dcf;
 
             &:hover {
-                background-color: #524dcf;
+                border-bottom: 2px solid #524dcf;
             }
+        }
+    }
+
+    .filter_button {
+        background-color: #524dcf;
+
+        &:hover {
+            background-color: darken(#524dcf, 5%);
         }
     }
 }
@@ -2724,25 +2763,33 @@ margin-bottom: 20px;
         width: 100%;
 
         p {
-            color: #50a83e;
+            color: darken(#50a83e, 7%);
         }
 
-        .filter_button {
-            background-color: #50a83e;
-
-            &:hover {
-                background-color: darken(#50a83e, 5%);
-            }
-        }
 
         .filter_button_alt {
-            border: 3px solid #50a83e;
-            color: #50a83e;
+            color: darken(#50a83e, 7%);
 
             &:hover {
-                background-color: #50a83e;
+                border-bottom: 2px solid darken(#50a83e, 7%);
             }
         }
+    }
+
+    .filter_button {
+        background-color: darken(#50a83e, 7%);
+
+        &:hover {
+            background-color: darken(#50a83e, 12%);
+        }
+    }
+}
+
+.home-filter-hero {
+    background-color: darken($grey-4, 3%);
+
+    #content {
+        padding-bottom: 40px;
     }
 }
 
