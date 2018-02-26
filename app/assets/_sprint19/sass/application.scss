@@ -1134,12 +1134,16 @@ ul#az-index li {
     padding: 10px 20px;
     text-decoration: none;
     margin-top: 20px;
+    font-weight: bold;
 
     &:after {
         content: ">";
         font-weight: bold;
         margin-left: 10px;
+        display: inline-block;
+        text-decoration: none !important;
     }
+
 
     &:hover {
         background-color: darken($careers-turquoise, 5%);
@@ -2344,6 +2348,8 @@ margin-bottom: 20px;
             font-weight: normal;
             line-height: 38px;
             color: $grey-1;
+            width: 100%;
+            text-align: right;
         }
     }
 }
@@ -2352,7 +2358,7 @@ margin-bottom: 20px;
     color: $white;
     padding: 40px;
     position: relative;
-    top: 30px;
+    top: 10px;
     overflow: hidden;
     width: 100%;
     box-sizing: border-box;
@@ -2363,10 +2369,12 @@ margin-bottom: 20px;
         font-weight: bold;
         z-index: 100;
         width: 100%;
+        margin-bottom: 20px;
     }
 
     p {
-        margin-top: 30px;
+        margin-top: 5px;
+        margin-bottom: 0;
     }
 
     &:after {
@@ -2469,40 +2477,55 @@ margin-bottom: 20px;
         position: relative;
         overflow: auto;
         min-height: 120px;
+        @extend %contain-floats;
 
-        &:after {
-            content: url(../images/check-black.svg);
-            width: 40px;
-            display: none;
-            position: absolute;
-            right: 30px;
-            top: 40px;
-            opacity: 0.3;
-        }
 
-        h3 {
-            font-size: 24px;
-            font-weight: normal;
-            width: 80%;
-            float: left;
-        }
-
-        p {
-            margin: 0;
-            font-size: 16px;
-            width: 80%;
-            float: left;
-        }
-
-        &:hover {
-            background-color: $grey-4;
-            cursor: pointer;
-
+        @media (max-width: 800px) {
             &:after {
-                display: block;
+                max-width: 20px;
+                right: 20px;
+                top: 16px;
+            }
+
+            h3, p {
+                max-width: 80%;
             }
         }
+    
+
+
+
+    &:after {
+        content: url(../images/check-black.svg);
+        width: 40px;
+        display: none;
+        position: absolute;
+        right: 30px;
+        top: 40px;
+        opacity: 0.3;
     }
+
+    h3 {
+        font-size: 24px;
+        font-weight: normal;
+    }
+
+    p {
+        margin: 0;
+        font-size: 16px;
+        width: 80%;
+        float: left;
+    }
+
+    &:hover {
+        background-color: $grey-4;
+        cursor: pointer;
+
+        &:after {
+            display: block;
+        }
+    }
+}
 }
 
 .filter_lower {
@@ -2511,6 +2534,7 @@ margin-bottom: 20px;
     margin-top: 30px;
     clear: both;
     overflow: auto;
+    margin-bottom: 30px;
 
     p {
         color: #0091cb;
@@ -2520,7 +2544,7 @@ margin-bottom: 20px;
         margin: 0 30px 0 0;
         line-height: 40px;
 
-        @media (max-width: 1000px) {
+        @media (max-width: 820px) {
             max-width: 100%;
             width: 100%;
             line-height: 20px;
@@ -2541,8 +2565,7 @@ margin-bottom: 20px;
         box-sizing: border-box;
 
         @media(max-width: 600px) {
-            width: 100%;
-            margin: 10px 0 !important;
+            margin: 20px 0 0 0 !important;
         }
 
         &:after {
@@ -2571,6 +2594,7 @@ margin-bottom: 20px;
     font-size: 16px;
     font-weight: bold;
     box-sizing: border-box;
+    text-align: right;
 
     @media(max-width: 600px) {
         width: 100%;
@@ -2580,6 +2604,12 @@ margin-bottom: 20px;
     &:after {
         content: ">";
         margin-left: 10px;
+        display: inline-block;
+        text-decoration: none !important;
+    }
+
+    &:hover {
+        text-decoration: underline;
     }
 }
 
@@ -2589,13 +2619,23 @@ margin-bottom: 20px;
 
 .filter_button_back {
     float: left;
+    background-color: $grey-3 !important;
+    color: darken($grey-1, 20%) !important;
+    text-align: left;
 
     &:before {
         content: "<";
         margin-right: 10px;
+        display: inline-block;
+        text-decoration: none !important;
     }
+
     &:after {
         display: none;
+    }
+
+    &:hover {
+        text-decoration: underline;
     }
 }
 
@@ -2665,6 +2705,8 @@ margin-bottom: 20px;
     label {
         width: calc(50% - 20px);
         margin: 0 20px;
+        @extend %contain-floats;
+
 
 
         @media (max-width: 800px) {
@@ -2699,7 +2741,7 @@ margin-bottom: 20px;
             position: relative;
             left: -10px;
             margin-right: 10px;
-            color: $grey-3;
+            color: darken($grey-3, 10%);
             width: auto !important;
         }
     }
