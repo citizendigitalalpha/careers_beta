@@ -2389,20 +2389,25 @@ margin-bottom: 20px;
     }
 }
 
+$q1color: $govuk-blue;
+$q2color: $govuk-blue;
+$q3color: $govuk-blue;
+$q4color: $govuk-blue;
+
 .q1bg {
-    background: #0091cb; /* Old browsers */
+    background: $q1color; /* Old browsers */
 }
 
 .q2bg {
-    background: #524dcf; /* Old browsers */
+    background: $q2color; /* Old browsers */
 }
 
 .q3bg {
-    background: #50a83e; /* Old browsers */
+    background: $q3color; /* Old browsers */
 }
 
 .q4bg {
-    background: #00aee2; /* Old browsers */
+    background: $q4color; /* Old browsers */
 }
 
 
@@ -2646,24 +2651,24 @@ margin-bottom: 20px;
 
     .filter_lower {
         p {
-            color: #0091cb;
+            color: $q1color;
         }
 
 
         .filter_button_alt {
-            color: #0091cb;
+            color: $q1color;
 
             &:hover {
-                border-bottom: 2px solid #0091cb;
+                border-bottom: 2px solid $q1color;
             }
         }
     }
 
     .filter_button {
-        background-color: #0091cb;
+        background-color: $q1color;
 
         &:hover {
-            background-color: darken(#0091cb, 5%);
+            background-color: darken($q1color, 5%);
         }
     }
 }
@@ -2675,25 +2680,25 @@ margin-bottom: 20px;
 
     .filter_lower {
         p {
-            color: #00aee2;
+            color: $q4color;
         }
 
 
 
         .filter_button_alt {
-            color: #0091cb;
+            color: $q4color;
 
             &:hover {
-                border-bottom: 2px solid #0091cb;
+                border-bottom: 2px solid $q4color;
             }
         }
     }
 
     .filter_button {
-        background-color: #00aee2;
+        background-color: $q4color;
 
         &:hover {
-            background-color: darken(#00aee2, 5%);
+            background-color: darken($q4color, 5%);
         }
     }
 }
@@ -2760,24 +2765,24 @@ margin-bottom: 20px;
         width: 100%;
 
         p {
-            color: #524dcf;
+            color: $q2color;
         }
 
 
         .filter_button_alt {
-            color: #524dcf;
+            color: $q2color;
 
             &:hover {
-                border-bottom: 2px solid #524dcf;
+                border-bottom: 2px solid $q2color;
             }
         }
     }
 
     .filter_button {
-        background-color: #524dcf;
+        background-color: $q2color;
 
         &:hover {
-            background-color: darken(#524dcf, 5%);
+            background-color: darken($q2color, 5%);
         }
     }
 }
@@ -2793,24 +2798,24 @@ margin-bottom: 20px;
         width: 100%;
 
         p {
-            color: darken(#50a83e, 7%);
+            color: darken($q3color, 7%);
         }
 
 
         .filter_button_alt {
-            color: darken(#50a83e, 7%);
+            color: darken($q3color, 7%);
 
             &:hover {
-                border-bottom: 2px solid darken(#50a83e, 7%);
+                border-bottom: 2px solid darken($q3color, 7%);
             }
         }
     }
 
     .filter_button {
-        background-color: darken(#50a83e, 7%);
+        background-color: darken($q3color, 7%);
 
         &:hover {
-            background-color: darken(#50a83e, 12%);
+            background-color: darken($q3color, 12%);
         }
     }
 }
