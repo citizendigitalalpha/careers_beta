@@ -2573,10 +2573,6 @@ $q4color: $govuk-blue;
             margin: 20px 0 0 0 !important;
         }
 
-        &:after {
-            content: ">";
-            margin-left: 10px;
-        }
     }
 
     .filter_button_alt {
@@ -2727,6 +2723,7 @@ $q4color: $govuk-blue;
 
         h3 {
             font-size: 22px;
+            margin-top: 16px;
         }
 
         &:nth-child(4n) {
