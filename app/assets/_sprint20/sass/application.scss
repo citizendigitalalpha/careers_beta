@@ -2416,7 +2416,7 @@ $q4color: $govuk-blue;
     @extend .filter_header;
 
     &:after {
-        content: url(../images/graduation-cap.svg);
+        /*content: url(../images/graduation-cap.svg);*/
     }
 }
 
@@ -2425,7 +2425,7 @@ $q4color: $govuk-blue;
     @extend .filter_header;
 
     &:after {
-        content: url(../images/smile.svg);
+        /*content: url(../images/smile.svg);*/
         width: 400px;
     }
 }
@@ -2436,7 +2436,7 @@ $q4color: $govuk-blue;
     @extend .filter_header;
 
     &:after {
-        content: url(../images/briefcase.svg);
+        /*content: url(../images/briefcase.svg);*/
         width: 370px;
         top: -40px;
     }
@@ -2447,7 +2447,7 @@ $q4color: $govuk-blue;
     @extend .filter_header;
 
     &:after {
-        content: url(../images/map-signs.svg);
+        /*content: url(../images/map-signs.svg);*/
         width: 250px;
         top: 10px;
         right: 20px;
