@@ -2598,6 +2598,7 @@ $q4color: $govuk-blue;
     font-weight: bold;
     box-sizing: border-box;
     text-align: right;
+    background-color: $careers-turquoise;
 
     @media(max-width: 600px) {
         width: 100%;
@@ -2796,5 +2797,13 @@ header.hero.search p a {
 
 .content-container {
     @extend %site-width-container;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
 }
 
