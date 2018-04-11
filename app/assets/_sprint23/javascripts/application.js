@@ -249,9 +249,29 @@ $(document).ready(function () {
         $(".chatbot_q1").removeClass("js-hidden");
     });
 
+    $(".htb-section h3").click(function () {
+        $(this).parent().toggleClass("active", 250);
+    });
+
+    $("#sticky_item").stick_in_parent();
+
 
 });
 
 function goBack() {
     window.history.back();
 };
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+
+    });
+});
+
+

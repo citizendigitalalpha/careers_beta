@@ -2868,7 +2868,138 @@ $q4color: $govuk-blue;
     padding-bottom: 40px !important;
 }
 
+.jp-heading {
+    font-size: 26px !important;
+    font-weight: bold;
+    border-bottom: 1px solid #cdcdcd;
+    padding: 10px 0;
+}
 
+.jp-heading-first {
+    margin-top: 0px !important;
+}
+
+.jump-links-htb, .jump-links-side {
+    ol {
+        list-style: none;
+
+        li {
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            clear: both;
+            @extend %contain-floats;
+
+            a {
+                color: $black;
+                width: 100%;
+                display: block;
+                padding: 8px 10px;
+                text-decoration: none;
+                float: left;
+                box-sizing: border-box;
+                background-color: $grey-3;
+                border-radius: 3px;
+
+                &:hover {
+                    background-color: $govuk-blue;
+                    color: $white;
+
+                    &:after {
+                        color: $white;
+                    }
+                }
+
+                &:after {
+                    content: ">";
+                    float: right;
+                    color: $govuk-blue;
+                }
+            }
+        }
+    }
+}
+
+.jump-links-side {
+    border-bottom: none;
+    margin-top: 10px;
+    position: sticky;
+    position: -webkit-sticky;
+}
+
+#how-to-become {
+
+
+    .htb-section {
+        margin-bottom: 20px;
+
+        h3 {
+            cursor: pointer;
+            background-color: $grey-3;
+            padding: 16px;
+            font-weight: bold;
+            transition: 0.1s linear;
+
+
+            &:after {
+                content: ">";
+                float: right;
+                font-weight: normal;
+                font-size: 30px;
+                position: relative;
+                top: -5px;
+            }
+
+            &:hover {
+                background-color: $govuk-blue;
+                color: $white;
+                transition: 0.1s linear;
+            }
+        }
+
+        .content {
+            display: none;
+            width: 100%;
+            overflow: auto;
+            clear: both;
+            padding: 20px 0 0 0;
+        }
+
+        &.active {
+            h3 {
+                background-color: $govuk-blue;
+                color: $white;
+
+                &:hover {
+                    background-color: darken($govuk-blue, 5%);
+                }
+
+                &:after {
+                    content: "-";
+                    font-size: 60px;
+                    line-height: 30px;
+                    top: 0;
+                }
+            }
+
+            .content {
+                display: block;
+            }
+        }
+    }
+}
+
+.job-proile-lowerblock {
+    background-color: $grey-3;
+    padding: 40px 0 0 0;
+
+    .jp-lower-heading {
+        font-size: 26px !important;
+        font-weight: bold;
+        border-bottom: 1px solid $grey-2;
+        padding: 10px 0;
+    }
+}
 // ========================================== MAIN NAVIGATION - END ========================================== //
 @import 'hybrid';
 @import 'new-gov-uk-elements';
@@ -2904,7 +3035,7 @@ header.hero.search p a {
 .right0 {
     margin-right: 0;
     padding-right: 0;
-    }
+}
 
 .content-container {
     @extend %site-width-container;
