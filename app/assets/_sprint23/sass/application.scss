@@ -2942,12 +2942,12 @@ $q4color: $govuk-blue;
 
 
             &:after {
-                content: ">";
+                content: "+";
                 float: right;
-                font-weight: normal;
+                font-weight: bold;
                 font-size: 30px;
                 position: relative;
-                top: -5px;
+                top: -4px;
             }
 
             &:hover {
@@ -2978,7 +2978,8 @@ $q4color: $govuk-blue;
                     content: "-";
                     font-size: 60px;
                     line-height: 30px;
-                    top: 0;
+                    font-weight: normal;
+                    top: -2px;
                 }
             }
 
