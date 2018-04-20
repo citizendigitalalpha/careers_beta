@@ -258,6 +258,21 @@ $(document).ready(function () {
 
 });
 
+$('.job-profile-jumps li a').on('click', function (event) {
+    $(this).parent().find('a').removeClass('active');
+    $(this).addClass('active');
+});
+
+$(window).on('scroll', function () {
+    $('.jp-section').each(function () {
+        if ($(window).scrollTop() >= $(this).offset().top) {
+            var id = $(this).attr('id');
+            $('.job-profile-jumps li a').removeClass('active');
+            $('.job-profile-jumps li a[href=#' + id + ']').addClass('active');
+        }
+    });
+});
+
 function goBack() {
     window.history.back();
 };
