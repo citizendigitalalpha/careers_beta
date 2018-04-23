@@ -3002,7 +3002,7 @@ $q4color: $govuk-blue;
             overflow: auto;
             float: left;
 
-            @media (max-width: 910px) {
+            @media (max-width: 950px) {
                 width: 100%;
                 margin: 0 0 10px 0;
             }
@@ -3044,6 +3044,7 @@ $q4color: $govuk-blue;
         margin-bottom: 10px;
         clear: both;
         overflow: auto;
+        text-decoration: none;
     
 
     &:hover {
