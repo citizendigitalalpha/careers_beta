@@ -277,16 +277,28 @@ function goBack() {
     window.history.back();
 };
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+//document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+//    anchor.addEventListener('click', function (e) {
+//        e.preventDefault();
+
+//        document.querySelector(this.getAttribute('href')).scrollIntoView({
+//            behavior: 'smooth',
+//            block: 'start'
+//        });
+//    });
+//});
+
+
+
+var anchors = document.querySelectorAll('a[href^="#"]');
+
+for (ii = 0; ii < anchors.length; ii++) {
+    anchors[ii].addEventListener('click', function (e) {
         e.preventDefault();
 
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth',
             block: 'start'
         });
-
     });
-});
-
-
+};
