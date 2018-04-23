@@ -2963,7 +2963,6 @@ $q4color: $govuk-blue;
             overflow: auto;
             clear: both;
             padding: 20px 0 0 0;
-
         }
 
         &.active {
@@ -3003,27 +3002,33 @@ $q4color: $govuk-blue;
             overflow: auto;
             float: left;
 
+            @media (max-width: 910px) {
+                width: 100%;
+                margin: 0 0 10px 0;
+            }
+
             i {
                 color: $govuk-blue;
                 font-size: 24px;
                 padding: 20px;
                 border-right: 1px solid $grey-2;
                 float: left;
-                margin-right: 10px
+                margin-right: 10px;
+                min-width: 30px;
+                text-align: center;
             }
 
             span {
                 font-size: 14px;
                 margin-top: 10px;
                 display: block;
-
             }
 
             p {
                 margin: 0;
                 padding: 0;
                 font-weight: bold;
-                font-size: 20px;
+                font-size: 18px;
             }
 
             &:last-child {
@@ -3033,42 +3038,51 @@ $q4color: $govuk-blue;
     }
 
     .htb-feature a {
-        background-color: $grey-3;
+        background-color: #dee0e2;
         display: block;
         float: left;
         margin-bottom: 10px;
+        clear: both;
+        overflow: auto;
+    }
 
-        &:hover {
-            background-color: $govuk-blue;
-            color: $white;
-
-            i {
-                background-color: darken($govuk-blue, 5%);
-                color: $white;
-            }
-        }
+    &:hover {
+        background-color: $govuk-blue;
+        color: $white;
 
         i {
-            float: left;
-            line-height: 45px;
-            padding: 0 15px;
-            font-size: 16px;
-            background-color: darken($grey-3, 5%);
-            color: $grey-1;
-        }
-
-        h4 {
-            display: block;
-            font-weight: bold;
-            margin: 0 0 5px 0;
-        }
-
-        p {
-            margin: 0;
-            padding: 10px;
-            float: left;
+            background-color: darken($govuk-blue, 5%);
+            color: $white;
         }
     }
+
+    i {
+        float: left;
+        line-height: 45px;
+        padding: 0 15px;
+        display: block;
+        font-size: 16px;
+        height: 100%;
+        background-color: darken($grey-3, 5%);
+        color: $grey-1;
+        -webkit-box-shadow: 0px 100px 0px 0px darken($grey-3, 5%);
+        -moz-box-shadow: 0px 100px 0px 0px darken($grey-3, 5%);
+        box-shadow: 0px 100px 0px 0px darken($grey-3, 5%);
+    }
+
+    h4 {
+        display: block;
+        font-weight: bold;
+        margin: 0 0 5px 0;
+    }
+
+    p {
+        margin: 0;
+        padding: 10px;
+        margin-left: 50px;
+        display: block;
+    }
+}
 
     .htb-grades-wrapper {
         width: 100%;
@@ -3097,13 +3111,17 @@ $q4color: $govuk-blue;
             height: 100%;
             background-color: darken($grey-3, 5%);
             color: $grey-1;
+            -webkit-box-shadow: 0px 100px 0px 0px darken($grey-3, 5%);
+            -moz-box-shadow: 0px 100px 0px 0px darken($grey-3, 5%);
+            box-shadow: 0px 100px 0px 0px darken($grey-3, 5%);
         }
 
         h4 {
             font-size: 20px;
             padding: 25px 10px;
             display: block;
-            float: left;
+            margin-left: 80px;
+
 
             p {
                 font-size: 14px;
