@@ -162,3 +162,39 @@ gulp.task('copy-documentation-assets-S11', function () {
     config.paths.docsAssetsS11 + '/**'])
         .pipe(gulp.dest(config.paths.publicS11))
 })
+
+gulp.task('copy-assets-S19', function () {
+    return gulp.src(['!' + config.paths.assetsS19 + 'sass{,/**/*}',
+    config.paths.assetsS19 + '/**'])
+        .pipe(gulp.dest(config.paths.publicS19))
+})
+
+gulp.task('copy-documentation-assets-S19', function () {
+    return gulp.src(['!' + config.paths.docsAssetsS19 + 'sass{,/**/*}',
+    config.paths.docsAssetsS19 + '/**'])
+        .pipe(gulp.dest(config.paths.publicS19))
+})
+
+gulp.task('copy-assets-S20', function () {
+    return gulp.src(['!' + config.paths.assetsS20 + 'sass{,/**/*}',
+    config.paths.assetsS20 + '/**'])
+        .pipe(gulp.dest(config.paths.publicS20))
+})
+
+gulp.task('copy-documentation-assets-S20', function () {
+    return gulp.src(['!' + config.paths.docsAssetsS20 + 'sass{,/**/*}',
+    config.paths.docsAssetsS20 + '/**'])
+        .pipe(gulp.dest(config.paths.publicS20))
+})
+
+gulp.task('copy-assets-S23', function () {
+    return gulp.src(['!' + config.paths.assetsS23 + 'sass{,/**/*}',
+    config.paths.assetsS23 + '/**'])
+        .pipe(gulp.dest(config.paths.publicS23))
+})
+
+gulp.task('copy-documentation-assets-S23', function () {
+    return gulp.src(['!' + config.paths.docsAssetsS23 + 'sass{,/**/*}',
+    config.paths.docsAssetsS23 + '/**'])
+        .pipe(gulp.dest(config.paths.publicS23))
+})

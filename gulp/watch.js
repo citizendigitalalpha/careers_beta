@@ -134,3 +134,33 @@ gulp.task('watch-assets-S11', function () {
     config.paths.assetsS10 + 'javascripts/**',
     config.paths.assetsS10 + 'data/**'], { cwd: './' }, ['copy-assets-S11']);
 })
+
+gulp.task('watch-sass-S19', function () {
+    return gulp.watch(config.paths.assetsS19 + 'sass/**', { cwd: './' }, ['sass-S19']);
+})
+
+gulp.task('watch-assets-S19', function () {
+    return gulp.watch([config.paths.assetsS19 + 'images/**',
+    config.paths.assetsS19 + 'javascripts/**',
+    config.paths.assetsS19 + 'data/**'], { cwd: './' }, ['copy-assets-S19']);
+})
+
+gulp.task('watch-sass-S20', function () {
+    return gulp.watch(config.paths.assetsS20 + 'sass/**', { cwd: './' }, ['sass-S20']);
+})
+
+gulp.task('watch-assets-S20', function () {
+    return gulp.watch([config.paths.assetsS20 + 'images/**',
+    config.paths.assetsS20 + 'javascripts/**',
+    config.paths.assetsS20 + 'data/**'], { cwd: './' }, ['copy-assets-S20']);
+})
+
+gulp.task('watch-sass-S23', function () {
+    return gulp.watch(config.paths.assetsS23 + 'sass/**', { cwd: './' }, ['sass-S23']);
+})
+
+gulp.task('watch-assets-S23', function () {
+    return gulp.watch([config.paths.assetsS23 + 'images/**',
+    config.paths.assetsS23 + 'javascripts/**',
+    config.paths.assetsS23 + 'data/**'], { cwd: './' }, ['copy-assets-S23']);
+})
