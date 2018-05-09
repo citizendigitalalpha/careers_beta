@@ -198,3 +198,15 @@ gulp.task('copy-documentation-assets-S23', function () {
     config.paths.docsAssetsS23 + '/**'])
         .pipe(gulp.dest(config.paths.publicS23))
 })
+
+gulp.task('copy-assets-S25', function () {
+    return gulp.src(['!' + config.paths.assetsS25 + 'sass{,/**/*}',
+    config.paths.assetsS25 + '/**'])
+        .pipe(gulp.dest(config.paths.publicS25))
+})
+
+gulp.task('copy-documentation-assets-S25', function () {
+    return gulp.src(['!' + config.paths.docsAssetsS25 + 'sass{,/**/*}',
+    config.paths.docsAssetsS25 + '/**'])
+        .pipe(gulp.dest(config.paths.publicS25))
+})

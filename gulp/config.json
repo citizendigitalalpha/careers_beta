@@ -16,6 +16,7 @@
     "publicS19": "public/_sprint19/",
     "publicS20": "public/_sprint20/",
     "publicS23": "public/_sprint23/",
+    "publicS25": "public/_sprint25/",
     "assets": "app/assets/",
     "assetsbeta": "app/assets/_beta-initial-state/",
     "assetsS1": "app/assets/_sprint1/",
@@ -32,6 +33,7 @@
     "assetsS19": "app/assets/_sprint19/",
     "assetsS20": "app/assets/_sprint20/",
     "assetsS23": "app/assets/_sprint23/",
+    "assetsS25": "app/assets/_sprint25/",
     "docsAssets": "docs/assets/",
     "docsAssetsbeta": "docs/assets/_beta-initial-state/",
     "docsAssetsS1": "docs/assets/_sprint1/",
@@ -48,6 +50,7 @@
     "docsAsstsS19": "docs/assets/_sprint19/",
     "docsAsstsS20": "docs/assets/_sprint20/",
     "docsAsstsS23": "docs/assets/_sprint23/",
+    "docsAsstsS25": "docs/assets/_sprint25/",
     "govukModules": "govuk_modules/",
     "nodeModules": "node_modules/",
     "lib": "lib/"
