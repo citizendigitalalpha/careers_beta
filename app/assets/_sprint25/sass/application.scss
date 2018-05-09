@@ -2942,6 +2942,10 @@ $q4color: $govuk-blue;
     @extend %contain-floats;
 
 
+    h3.heading-medium {
+        margin: 0 !important;
+    }
+
     .htb-section {
         margin: 30px 0;
 
