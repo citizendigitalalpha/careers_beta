@@ -164,3 +164,13 @@ gulp.task('watch-assets-S23', function () {
     config.paths.assetsS23 + 'javascripts/**',
     config.paths.assetsS23 + 'data/**'], { cwd: './' }, ['copy-assets-S23']);
 })
+
+gulp.task('watch-sass-S25', function () {
+    return gulp.watch(config.paths.assetsS25 + 'sass/**', { cwd: './' }, ['sass-S25']);
+})
+
+gulp.task('watch-assets-S25', function () {
+    return gulp.watch([config.paths.assetsS25 + 'images/**',
+    config.paths.assetsS25 + 'javascripts/**',
+    config.paths.assetsS25 + 'data/**'], { cwd: './' }, ['copy-assets-S25']);
+})
