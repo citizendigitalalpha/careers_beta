@@ -1,4 +1,4 @@
-{% extends "../jobprofile-htb.html" %}
+{% extends "../../jobprofile-htb.html" %}
 
 {% block page_title %}
   Find a career
@@ -20,128 +20,26 @@
 
 <!--section 1-->
 <section id="how-to-become">
-    <h2 class="heading-large jp-heading">How to become a {{profileName}}</h2>
-    <p>There are a number of options and routes which could allow you to become a beauty consultant.</p>
-
-    <!-- College Section -->
-    <div class="htb-section" id="apprenticeships">
-        <h3>College</h3>
-        <div class="content">
-            <div class="htb-boxes">
-                <div class="htb-box">
-                    <i class="far fa-clock"></i>
-                    <span>Typically takes</span>
-                    <p>1 year</p>
-                </div>
-                <div class="htb-box">
-                    <i class="fas fa-pound-sign"></i>
-                    <span>Cost / pay</span>
-                    <p>Course Fees</p>
-                </div>
-                <div class="htb-box">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>Min. Qualifications</span>
-                    <p>3 GCSEs</p>
-                </div>
-            </div>
-            <p>You could study for:</p>
-            <ul class="list list-bullet">
-                <li>a level 2 certificate or diploma in beauty consultancy</li>
-                <li>a general qualification in retail, sales or customer service</li>
-            </ul>
-
-            <h4 class="heading-small">Requirements:</h4>
-            <p>To get onto a level 2 course you may need 3 GCSEs at grades 9 to 3 (A* to D). Check with course providers for exact entry requirements. You might be able to use <a href="https://www.gov.uk/what-different-qualification-levels-mean/list-of-qualification-levels">equivalent level qualifications</a> to get onto a course.</p>
-            <h4 class="heading-small">Next steps:</h4>
-            <div class="htb-feature">
-                <a href="#">
-                    <i class="fas fa-link"></i>
-                    <p>Apply for financial help towards studying</p>
-                </a>
-            </div>
-            <div class="htb-feature">
-                <a href="#">
-                    <i class="fas fa-link"></i>
-                    <p>Look for Beatuy consultant courses near you</p>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Work -->
-    <div class="htb-section" id="work">
-        <h3>Work your way up</h3>
-        <div class="content">
-            <div class="htb-boxes">
-                <div class="htb-box">
-                    <i class="far fa-clock"></i>
-                    <span>Typically takes</span>
-                    <p>2 Years</p>
-                </div>
-                <div class="htb-box">
-                    <i class="fas fa-pound-sign"></i>
-                    <span>Cost / pay</span>
-                    <p>Paid</p>
-                </div>
-                <div class="htb-box">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>Min. Qualifications</span>
-                    <p>None</p>
-                </div>
-            </div>
-            <p>You could get useful experience in any sales role and then apply for a job working for a beauty concession (a commercial operation within a department store). </p>
-        </div>
-    </div>
-
-    <!-- Apprenticeships -->
-    <div class="htb-section" id="apprenticeships">
-        <h3>Apprenticeships</h3>
-        <div class="content">
-            <div class="htb-boxes">
-                <div class="htb-box">
-                    <i class="far fa-clock"></i>
-                    <span>Typically takes</span>
-                    <p>1 to 2 years</p>
-                </div>
-                <div class="htb-box">
-                    <i class="fas fa-pound-sign"></i>
-                    <span>Cost / pay</span>
-                    <p>Paid</p>
-                </div>
-                <div class="htb-box">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>Min. qualifications</span>
-                    <p>Level 1</p>
-                </div>
-            </div>
-            <p>You could do an intermediate or advanced <a href="https://www.gov.uk/apprenticeships-guide">apprenticeship</a> in beauty therapy make-up. These last 12 to 18 months. You may need a level 2 qualification to get onto the advanced apprenticeship. Check with course providers for exact entry requirements.</p>
-
-            <h4 class="heading-small">Requirements:</h4>
-            
-            <ul class="list-bullet list">
-            <li>You may need a level 2 qualification to get onto the advanced apprenticeship. Check with course providers for exact entry requirements.</li>
-            <li>Get work experience in sales</li>
-            </ul>
-
-            <h4 class="heading-small">Next steps:</h4>
-
-
-            <div class="htb-feature">
-                <a href="http://www.habia.org/">
-                    <i class="fas fa-link"></i>
-                    <p>The Hairdressing and Beauty Industry Authority (HABIA) has more information about careers in beauty consultancy and therapy.</p>
-                </a>
-            </div>
-            <div class="htb-feature">
-                <a href="https://www.findapprenticeship.service.gov.uk/apprenticeshipsearch">
-                    <i class="fas fa-link"></i>
-                    <p>Look for a beauty therapist apprenticeship near you </p>
-                </a>
-            </div>
-        </div>
-
-    </div>
-
+    <h2 class="heading-large">1. How to become a {{profileName}}</h2>
+    <p>There are no set requirements, but it could help if you were to:</p>
+    <ul class="list list-bullet">
+        <li>do a college qualification</li>
+        <li>get work experience in sales</li>
+        <li>do an apprenticeship</li>
+    </ul>
+    <h3 class="heading-medium">College</h3>
+    <p>You could study for:</p>
+    <ul class="list list-bullet">
+        <li>a level 2 certificate or diploma in beauty consultancy</li>
+        <li>a general qualification in retail, sales or customer service</li>
+    </ul>
+    <p>To get onto a level 2 course you may need 3 GCSEs at grades 9 to 3 (A* to D). Check with course providers for exact entry requirements. You might be able to use <a href="https://www.gov.uk/what-different-qualification-levels-mean/list-of-qualification-levels">equivalent level qualifications</a> to get onto a course.</p>
+    <p>You may be able to get <a href="https://www.gov.uk/further-education-courses/financial-help">financial help</a>.</p>
+    <h3 class="heading-medium">Work</h3>
+    <p>You could get useful experience in any sales role and then apply for a job working for a beauty concession (a commercial operation within a department store). </p>
+    <h3 class="heading-medium">Apprenticeship</h3>
+    <p>You could do an intermediate or advanced <a href="https://www.gov.uk/apprenticeships-guide">apprenticeship</a> in beauty therapy make-up. These last 12 to 18 months. You may need a level 2 qualification to get onto the advanced apprenticeship. Check with course providers for exact entry requirements.</p>
+    <p>The <a href="http://www.habia.org/">Hairdressing and Beauty Industry Authority</a> (HABIA) has more information about careers in beauty consultancy and therapy.</p>
 
 </section>
 
@@ -298,7 +196,7 @@
                 </div>
             </details>
             <br>
-            <a href="/e2e/job-profiles-cad/results_skills_ba">Find other careers with these skills</a>
+            <a href="results_skills_ba">Find other careers with these skills</a>
     </ul>
 </section>
 
@@ -363,7 +261,7 @@
                 </div>
             </details>
             <br>
-            <a href="/e2e/job-profiles-cad/results_duties_ba">Find other careers with these duties</a>
+            <a href="results_duties_ba">Find other careers with these duties</a>
     </ul>
 
 </section>

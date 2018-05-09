@@ -1,16 +1,18 @@
-{% extends "../jobprofile-htb.html" %}
+{% extends "../../jobprofile-htb.html" %}
 
 {% block page_title %}
   Find a career
 {% endblock %}
-{% set profileName = "Beauty consultant" %}
-{% set profileSecondaryName = "Beautician" %}
-{% set profileDescription = "Beauty consultants sell beauty products and help customers choose the right products to buy." %}
-{% set salaryLow = "15,500" %}
-{% set salaryHigh = "18,000" %}
+{% set profileName = "Security officer" %}
+{% set profileSecondaryName = "Security officer" %}
+{% set profileDescription = "Web designers use their creative and technical skills to design new websites and redesign existing ones." %}
+{% set salaryLow = "27,500" %}
+{% set salaryHigh = "32,000" %}
+
 {% set hoursRange = "37 - 40" %}
-{% set hoursDetail = "Mon - Sat" %}
-{% set patternValue = "Evenings & weekends" %}
+{% set hoursDetail = "Mon - Fri" %}
+
+{% set patternValue = "Freelance / self employed" %}
 {% set patternDescription = "" %}
 {% block content %}
 
@@ -20,128 +22,24 @@
 
 <!--section 1-->
 <section id="how-to-become">
-    <h2 class="heading-large jp-heading">How to become a {{profileName}}</h2>
-    <p>There are a number of options and routes which could allow you to become a beauty consultant.</p>
+    <h2 class="heading-large">1. How to become a {{profileName}}</h2>
+    <p>You'll need a Security Industry Authority (SIA) licence for agency and contractor jobs. To get this, you must:</p>
+    <ul class="list list-bullet">
+        <li>be aged 18 or over</li>
+        <li>pass identity and <a href="https://www.gov.uk/criminal-record-checks-apply-role">enhanced criminal records checks</a></li>
+        <li>complete <a href="https://www.sia.homeoffice.gov.uk/Pages/training-qualifications-sg.aspx">approved SIA training</a></li>
+    </ul>
+    <p>An employer will carry out checks on your personal and work history (up to 10 years). You need to let them know about any criminal convictions before you apply for a licence. <br> <br>
 
-    <!-- College Section -->
-    <div class="htb-section" id="apprenticeships">
-        <h3>College</h3>
-        <div class="content">
-            <div class="htb-boxes">
-                <div class="htb-box">
-                    <i class="far fa-clock"></i>
-                    <span>Typically takes</span>
-                    <p>1 year</p>
-                </div>
-                <div class="htb-box">
-                    <i class="fas fa-pound-sign"></i>
-                    <span>Cost / pay</span>
-                    <p>Course Fees</p>
-                </div>
-                <div class="htb-box">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>Min. Qualifications</span>
-                    <p>3 GCSEs</p>
-                </div>
-            </div>
-            <p>You could study for:</p>
-            <ul class="list list-bullet">
-                <li>a level 2 certificate or diploma in beauty consultancy</li>
-                <li>a general qualification in retail, sales or customer service</li>
-            </ul>
+    You won't need an SIA licence for in-house security jobs at your employer's premises.
+    If you work as a contractor on a building site, you'll also need a <a href="https://www.cscs.uk.com/">Construction Skills Certification Scheme card </a> (CSCS). <br> <br>
 
-            <h4 class="heading-small">Requirements:</h4>
-            <p>To get onto a level 2 course you may need 3 GCSEs at grades 9 to 3 (A* to D). Check with course providers for exact entry requirements. You might be able to use <a href="https://www.gov.uk/what-different-qualification-levels-mean/list-of-qualification-levels">equivalent level qualifications</a> to get onto a course.</p>
-            <h4 class="heading-small">Next steps:</h4>
-            <div class="htb-feature">
-                <a href="#">
-                    <i class="fas fa-link"></i>
-                    <p>Apply for financial help towards studying</p>
-                </a>
-            </div>
-            <div class="htb-feature">
-                <a href="#">
-                    <i class="fas fa-link"></i>
-                    <p>Look for Beatuy consultant courses near you</p>
-                </a>
-            </div>
-        </div>
-    </div>
+    Previous experience of working in the police or armed forces could help you get into this job.
 
-    <!-- Work -->
-    <div class="htb-section" id="work">
-        <h3>Work your way up</h3>
-        <div class="content">
-            <div class="htb-boxes">
-                <div class="htb-box">
-                    <i class="far fa-clock"></i>
-                    <span>Typically takes</span>
-                    <p>2 Years</p>
-                </div>
-                <div class="htb-box">
-                    <i class="fas fa-pound-sign"></i>
-                    <span>Cost / pay</span>
-                    <p>Paid</p>
-                </div>
-                <div class="htb-box">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>Min. Qualifications</span>
-                    <p>None</p>
-                </div>
-            </div>
-            <p>You could get useful experience in any sales role and then apply for a job working for a beauty concession (a commercial operation within a department store). </p>
-        </div>
-    </div>
+    <br><br>
+    <a href="https://skillsforsecurity.org.uk/">Skills for Security</a> has more information about becoming a security officer.
 
-    <!-- Apprenticeships -->
-    <div class="htb-section" id="apprenticeships">
-        <h3>Apprenticeships</h3>
-        <div class="content">
-            <div class="htb-boxes">
-                <div class="htb-box">
-                    <i class="far fa-clock"></i>
-                    <span>Typically takes</span>
-                    <p>1 to 2 years</p>
-                </div>
-                <div class="htb-box">
-                    <i class="fas fa-pound-sign"></i>
-                    <span>Cost / pay</span>
-                    <p>Paid</p>
-                </div>
-                <div class="htb-box">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>Min. qualifications</span>
-                    <p>Level 1</p>
-                </div>
-            </div>
-            <p>You could do an intermediate or advanced <a href="https://www.gov.uk/apprenticeships-guide">apprenticeship</a> in beauty therapy make-up. These last 12 to 18 months. You may need a level 2 qualification to get onto the advanced apprenticeship. Check with course providers for exact entry requirements.</p>
-
-            <h4 class="heading-small">Requirements:</h4>
-            
-            <ul class="list-bullet list">
-            <li>You may need a level 2 qualification to get onto the advanced apprenticeship. Check with course providers for exact entry requirements.</li>
-            <li>Get work experience in sales</li>
-            </ul>
-
-            <h4 class="heading-small">Next steps:</h4>
-
-
-            <div class="htb-feature">
-                <a href="http://www.habia.org/">
-                    <i class="fas fa-link"></i>
-                    <p>The Hairdressing and Beauty Industry Authority (HABIA) has more information about careers in beauty consultancy and therapy.</p>
-                </a>
-            </div>
-            <div class="htb-feature">
-                <a href="https://www.findapprenticeship.service.gov.uk/apprenticeshipsearch">
-                    <i class="fas fa-link"></i>
-                    <p>Look for a beauty therapist apprenticeship near you </p>
-                </a>
-            </div>
-        </div>
-
-    </div>
-
+</p>
 
 </section>
 
@@ -298,7 +196,7 @@
                 </div>
             </details>
             <br>
-            <a href="/e2e/job-profiles-cad/results_skills_ba">Find other careers with these skills</a>
+            <a href="results_skills_so">Find other careers with these skills</a>
     </ul>
 </section>
 
@@ -363,16 +261,19 @@
                 </div>
             </details>
             <br>
-            <a href="/e2e/job-profiles-cad/results_duties_ba">Find other careers with these duties</a>
+            <a href="results_duties_so">Find other careers with these duties</a>
     </ul>
 
 </section>
 
+
+
 <!--section 4-->
 <section id="career-path-and-progression">
     <h2 class="heading-large jp-heading">Career path and progression</h2>
-    <p>You'll usually work 35 to 40 hours a week, Monday to Friday. You may sometimes need to work overtime to meet deadlines.</p>
-    <p>Most of your work will be office-based at a computer. There may be some out-of-office duties, like attending meetings with clients or partners.</p>
+    <p>With experience you could move into design team management or expand your skills to become a web content manager.</p>
+    <p>You might work towards a move into business management.</p>
+    <p>You could also work as a freelance web designer, or set up your own web design business.</p>
 </section>
 
 <!--section 5-->
@@ -382,8 +283,6 @@
         <p>There are currently no opportunities in this field of work.</p><p>Check again soon or look for another <a href="https://www.findapprenticeship.service.gov.uk/apprenticeshipsearch">apprenticeship</a>.</p>
     </div>
 </section>
-
-
 
 <p class="grey font-xsmall">Last updated: 23 March 2016</p>
 

@@ -1,17 +1,21 @@
-{% extends "../jobprofile-htb.html" %}
+{% extends "../../jobprofile-htb.html" %}
 
 {% block page_title %}
   Find a career
 {% endblock %}
-{% set profileName = "Beauty consultant" %}
-{% set profileSecondaryName = "Beautician" %}
-{% set profileDescription = "Beauty consultants sell beauty products and help customers choose the right products to buy." %}
-{% set salaryLow = "15,500" %}
-{% set salaryHigh = "18,000" %}
+{% set profileName = "Police Officer" %}
+{% set profileSecondaryName = "Policeman, policewoman, police constable" %}
+{% set profileDescription = "A police officer keeps law and order, investigates crime and supports crime prevention." %}
+
+{% set salaryLow = "19,000" %}
+{% set salaryHigh = "43,000" %}
+
 {% set hoursRange = "37 - 40" %}
-{% set hoursDetail = "Mon - Sat" %}
-{% set patternValue = "Evenings & weekends" %}
+{% set hoursDetail = "Shift/rota" %}
+
+{% set patternValue = "Evenings, weekends & public holidays" %}
 {% set patternDescription = "" %}
+
 {% block content %}
 
 {% set serviceName = 'Find a career' %}
@@ -20,129 +24,47 @@
 
 <!--section 1-->
 <section id="how-to-become">
-    <h2 class="heading-large jp-heading">How to become a {{profileName}}</h2>
-    <p>There are a number of options and routes which could allow you to become a beauty consultant.</p>
+    <h2 class="heading-large">1. How to become a {{ profileName }}</h2>
+    <p>You'll need to:</p>
+    <ul class="list list-bullet">
+        <li>be aged 18 or over</li>
+        <li>be a British or Commonwealth citizen, a European Union (EU) or European Economic Area (EEA) citizen, or a foreign national with the right to stay and work in the UK for an indefinite period</li>
+        <li>pass background and security checks and give details of any previous convictions</li>
+    </ul>
 
-    <!-- College Section -->
-    <div class="htb-section" id="apprenticeships">
-        <h3>College</h3>
-        <div class="content">
-            <div class="htb-boxes">
-                <div class="htb-box">
-                    <i class="far fa-clock"></i>
-                    <span>Typically takes</span>
-                    <p>1 year</p>
-                </div>
-                <div class="htb-box">
-                    <i class="fas fa-pound-sign"></i>
-                    <span>Cost / pay</span>
-                    <p>Course Fees</p>
-                </div>
-                <div class="htb-box">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>Min. Qualifications</span>
-                    <p>3 GCSEs</p>
-                </div>
-            </div>
-            <p>You could study for:</p>
-            <ul class="list list-bullet">
-                <li>a level 2 certificate or diploma in beauty consultancy</li>
-                <li>a general qualification in retail, sales or customer service</li>
-            </ul>
+    <p>Each police force has its own recruitment rules, so you'll need to contact your <a href="https://www.police.uk/contact/force-websites/">local police force</a> to apply.</p>
 
-            <h4 class="heading-small">Requirements:</h4>
-            <p>To get onto a level 2 course you may need 3 GCSEs at grades 9 to 3 (A* to D). Check with course providers for exact entry requirements. You might be able to use <a href="https://www.gov.uk/what-different-qualification-levels-mean/list-of-qualification-levels">equivalent level qualifications</a> to get onto a course.</p>
-            <h4 class="heading-small">Next steps:</h4>
-            <div class="htb-feature">
-                <a href="#">
-                    <i class="fas fa-link"></i>
-                    <p>Apply for financial help towards studying</p>
-                </a>
-            </div>
-            <div class="htb-feature">
-                <a href="#">
-                    <i class="fas fa-link"></i>
-                    <p>Look for Beatuy consultant courses near you</p>
-                </a>
-            </div>
-        </div>
-    </div>
+    <p>Normally, you'll apply to one police force at a time.</p>
 
-    <!-- Work -->
-    <div class="htb-section" id="work">
-        <h3>Work your way up</h3>
-        <div class="content">
-            <div class="htb-boxes">
-                <div class="htb-box">
-                    <i class="far fa-clock"></i>
-                    <span>Typically takes</span>
-                    <p>2 Years</p>
-                </div>
-                <div class="htb-box">
-                    <i class="fas fa-pound-sign"></i>
-                    <span>Cost / pay</span>
-                    <p>Paid</p>
-                </div>
-                <div class="htb-box">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>Min. Qualifications</span>
-                    <p>None</p>
-                </div>
-            </div>
-            <p>You could get useful experience in any sales role and then apply for a job working for a beauty concession (a commercial operation within a department store). </p>
-        </div>
-    </div>
+    <p>If your application is successful, you'll be invited to an assessment centre where you'll:</p>
 
-    <!-- Apprenticeships -->
-    <div class="htb-section" id="apprenticeships">
-        <h3>Apprenticeships</h3>
-        <div class="content">
-            <div class="htb-boxes">
-                <div class="htb-box">
-                    <i class="far fa-clock"></i>
-                    <span>Typically takes</span>
-                    <p>1 to 2 years</p>
-                </div>
-                <div class="htb-box">
-                    <i class="fas fa-pound-sign"></i>
-                    <span>Cost / pay</span>
-                    <p>Paid</p>
-                </div>
-                <div class="htb-box">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>Min. qualifications</span>
-                    <p>Level 1</p>
-                </div>
-            </div>
-            <p>You could do an intermediate or advanced <a href="https://www.gov.uk/apprenticeships-guide">apprenticeship</a> in beauty therapy make-up. These last 12 to 18 months. You may need a level 2 qualification to get onto the advanced apprenticeship. Check with course providers for exact entry requirements.</p>
+    <ul class="list list-bullet">
+        <li>have an interview</li>
+        <li>take written tests</li>
+        <li>take a physical fitness test</li>
+        <li>take a medical and eyesight test</li>
+    </ul>
 
-            <h4 class="heading-small">Requirements:</h4>
-            
-            <ul class="list-bullet list">
-            <li>You may need a level 2 qualification to get onto the advanced apprenticeship. Check with course providers for exact entry requirements.</li>
-            <li>Get work experience in sales</li>
-            </ul>
+    <p>If you're unsuccessful, you may have to wait a minimum of 6 months before you can re-apply.</p>
 
-            <h4 class="heading-small">Next steps:</h4>
+    <p>A good way to prepare before you apply is to do the <a href="http://www.college.police.uk/What-we-do/Learning/Certificate/Pages/Information-for-Students.aspx">Certificate in Knowledge of Policing</a>, although it doesn't guarantee entry.</p>
 
+    <p>You could also prepare by applying for a Level 2 or 3 college course in Public Services.</p>
 
-            <div class="htb-feature">
-                <a href="http://www.habia.org/">
-                    <i class="fas fa-link"></i>
-                    <p>The Hairdressing and Beauty Industry Authority (HABIA) has more information about careers in beauty consultancy and therapy.</p>
-                </a>
-            </div>
-            <div class="htb-feature">
-                <a href="https://www.findapprenticeship.service.gov.uk/apprenticeshipsearch">
-                    <i class="fas fa-link"></i>
-                    <p>Look for a beauty therapist apprenticeship near you </p>
-                </a>
-            </div>
-        </div>
+    <p>If you have a 2:1 degree, you could apply for the <a href="https://www.policenow.org.uk/the-programme/apply/are-you-the-right-fit/">Police Now Graduate Leadership Development Programme</a>.</p>
 
-    </div>
+    <p>If you've got management experience you could <a href="http://www.leadbeyond.police.uk/">apply for direct entry as an inspector or superintendent</a>.</p>
 
+    <p>You could also get into the job through a <a href="https://www.findapprenticeship.service.gov.uk/apprenticeshipsearch">level 3 apprenticeship in policing</a>.</p>
 
+    <p>To get an idea of what it's like to be a police officer, you could either:</p>
+
+    <ul class="list list-bullet">
+        <li>volunteer as a <a href="http://recruit.college.police.uk/Special">special constable</a></li>
+        <li>work as a <a href="http://recruit.college.police.uk/pcso">community support officer</a></li>
+    </ul>
+
+    <p>If you're aged 13 to 18 you could become a <a href="http://www.nationalvpc.org/Become-a-Police-Cadet">police cadet</a>.</p>
 </section>
 
 <!--section 2-->
@@ -298,7 +220,7 @@
                 </div>
             </details>
             <br>
-            <a href="/e2e/job-profiles-cad/results_skills_ba">Find other careers with these skills</a>
+            <a href="results_skills_po">Find other careers with these skills</a>
     </ul>
 </section>
 
@@ -363,26 +285,68 @@
                 </div>
             </details>
             <br>
-            <a href="/e2e/job-profiles-cad/results_duties_ba">Find other careers with these duties</a>
+            <a href="results_duties_po">Find other careers with these duties</a>
     </ul>
 
 </section>
 
+
 <!--section 4-->
 <section id="career-path-and-progression">
     <h2 class="heading-large jp-heading">Career path and progression</h2>
-    <p>You'll usually work 35 to 40 hours a week, Monday to Friday. You may sometimes need to work overtime to meet deadlines.</p>
-    <p>Most of your work will be office-based at a computer. There may be some out-of-office duties, like attending meetings with clients or partners.</p>
+    <p>You'll spend 2 years as a student officer before becoming a police constable. You'll then decide whether you want to specialise in a particular area of policing. You could consider:</p>
+    <ul class="list list-bullet">
+        <li>Criminal Investigation Department (CID), anti-fraud or road traffic</li>
+        <li>drugs or firearms</li>
+        <li>counter-terrorism</li>
+        <li>air support or underwater search</li>
+        <li>dog-handling or mounted policing</li>
+    </ul>
+    <p>With experience you may be able to apply for promotion to sergeant, inspector, chief inspector or higher.</p>
+    <p>In the CID you'll also have the title of detective added to your rank - for example, detective sergeant or detective chief inspector.</p>
+
 </section>
+
+
 
 <!--section 5-->
 <section id="current-opportunities" style="margin-bottom:30px">
     <h2 class="heading-large jp-heading">Current opportunities</h2>
-    <div class="opportunity-footer dfc-code-jp-novacancyText">
-        <p>There are currently no opportunities in this field of work.</p><p>Check again soon or look for another <a href="https://www.findapprenticeship.service.gov.uk/apprenticeshipsearch">apprenticeship</a>.</p>
-    </div>
-</section>
+    <!-- <p>Find the latest opportunities</p> -->
 
+    <div class="grid-row" id="appGeneric">
+        <div class="column-full">
+            <h2 class="heading-medium" style="margin-top:0px;">
+                Apprenticeships
+                <span class="heading-secondary">In England</span>
+            </h2>
+        </div>
+        <div class="column-half">
+            <div class="opportunity-item">
+                <h3 class="heading-small"><a href="https://www.findapprenticeship.service.gov.uk/apprenticeship/-125152">Administration Apprentice</a></h3>
+                <ul class="list">
+                    <li><span class="bold-small">Weekly wage:</span> £230</li>
+                    <li><span class="bold-small">Weekly hours:</span> 37</li>
+                    <li><span class="bold-small">Location:</span> Liverpool</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column-half">
+            <div class="opportunity-item">
+                <h3 class="heading-small"><a href="https://www.findapprenticeship.service.gov.uk/apprenticeship/-115429">Policing Level 3 Apprentice - J2698/J2701</a></h3>
+                <ul class="list">
+                    <li><span class="bold-small">Annual wage:</span> £20,925</li>
+                    <li><span class="bold-small">Weekly hours:</span> 37</li>
+                    <li><span class="bold-small">Location:</span> Merton</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="opportunity-footer">
+        <a href="https://www.findapprenticeship.service.gov.uk/apprenticeshipsearch">Find apprenticeships near you</a>
+    </div>
+
+</section>
 
 
 <p class="grey font-xsmall">Last updated: 23 March 2016</p>
