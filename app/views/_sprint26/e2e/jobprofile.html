@@ -35,6 +35,7 @@
 <header class="job-profile-hero">
     <div class="content-container">
         {% include "./includes/breadcrumb_jobprofile.html" %}
+
         <div class="grid-row">
             <div class="column-two-thirds">
                 <h1 class="heading-xlarge">{{ profileName }}</h1>
@@ -45,21 +46,21 @@
         </div>
         <div class="grid-row">
             <div class="column-40 job-profile-heroblock">
-                <h4>Average salary<span>(per year)</span></h4>
+                <h4>Average salary<span>(a year)</span></h4>
                 <div class="job-profile-salary job-profile-heroblock-content">
                     <h5>{{ salaryLow }} <span>Starter</span></h5><h5>{{ salaryHigh }}<span>Experienced</span></h5>
 
                 </div>
             </div>
             <div class="column-30 job-profile-heroblock">
-                <h4>Typical hours <span>(per week)</span></h4>
+                <h4>Typical hours <span>(a week)</span></h4>
                 <div class="job-profile-hours job-profile-heroblock-content">
                     <h5>{{ hoursRange }}<span>{{ hoursDetail }}</span></h5>
 
                 </div>
             </div>
             <div class="column-30 job-profile-heroblock">
-                <h4>Working <span>(you could also work)</span></h4>
+                <h4>You could work</h4>
                 <div class="job-profile-pattern job-profile-heroblock-content">
                     <h5>{{ patternValue }}<span>{{ patternDescription }}</span></h5>
                 </div>
@@ -80,7 +81,7 @@
     <div class="grid-row">
         <div class="column-two-thirds">
 
-            {% include "./includes/job-profile_nav_small.html" %}
+            {% include "./includes/job-profile_nav_htb.html" %}
 
             {% endblock %}
 
@@ -88,7 +89,15 @@
             {% block after_content %}
         </div>
         <div class="column-one-third">
-            {% include "./includes/job-profile_RHC3.html" %}
+
+            <aside class="PROD_govuk-related-items PROD_govuk-related-items-search govuk-related-items-minimal" role="complementary">
+                <h2 class="heading-medium" id="job-profile-search">Not what you're looking for?</h2>
+                {% include "./includes/job-profile_search.html" %}
+                {% include "./includes/job-profile_related.html" %}
+            </aside>
+
+
+            
         </div>
     </div>
 

@@ -1,4 +1,4 @@
-{% extends "../jobprofile-htb.html" %}
+{% extends "../jobprofile.html" %}
 
 {% block page_title %}
   Find a career
@@ -12,7 +12,20 @@
 {% set hoursDetail = "Shift/rota" %}
 {% set patternValue = "Evenings, weekends & public holidays" %}
 {% set patternDescription = "" %}
+
+<!-- Related Careers -->
+{% set RelatedCareerName1 = 'Police officer' %}
+{% set RelatedCareerLink1 = 'police-officer' %}
+{% set RelatedCareerName2 = 'Catering manager' %}
+{% set RelatedCareerLink2 = 'catering-manager' %}
+{% set RelatedCareerName3 = 'Chef' %}
+{% set RelatedCareerLink3 = 'chef' %}
+{% set RelatedCareerName4 = 'Hotel receptionist' %}
+{% set RelatedCareerLink4 = 'hotel-receptionist' %}
+{% set RelatedCareerName5 = 'Web designer' %}
+{% set RelatedCareerLink5 = 'web-designer' %}
 {% block content %}
+
 
 {% set serviceName = 'Find a career' %}
 {% set bannerStyle = 'BETA-style' %}
