@@ -1,0 +1,50 @@
+{% set searchTerm = data.searchTerm %}
+{% set searchPrompt = data.searchPrompt %}
+{% set currentSprint = '26' %}
+{% extends "./layout.html" %}
+
+{% block head %}
+<script>
+    // Making data object accessible in client
+    var session = {{ data | dump | safe }};
+</script>
+  {% include "./includes/head.html" %}
+{% endblock %}
+{% block proposition_header %}
+<div class="header-container">
+    <div class="header-title">Webchat <span class="right">Find a career</span></div>
+
+</div>
+{% endblock %}
+
+{% block body_classes %}webchat-pop{% endblock %}
+
+
+{% block before_content %}
+
+
+
+
+<main id="content" role="main">
+    <div class="webchat-feedback-top">
+        <h2 class="heading-medium">Thank you for using the Find a career webchat.</h2>
+        <a class="button webchat-button" href="webchat-chat.html" role="button">Email transcript</a>
+        <a class="button webchat-button" href="webchat-chat.html" role="button">Save transcript</a>
+    </div>
+    <div class="webchat-form">
+
+<p>Thanks for your feedback.</p>
+        <a class="button" href="javascript:window.open('','_self').close();">Close</a>
+
+
+
+
+
+    </div>
+</main>
+        {% endblock %}
+        {% block body_end %}
+        {% include "./includes/scripts.html" %}
+<!-- GOV.UK Prototype kit {{releaseVersion}} -->
+ {% endblock %}
+
