@@ -305,4 +305,42 @@ $(document).ready(function () {
             });
         });
     };
+
+
+
+    var firstName = $("#first-name-f1");
+    var emailAdd = $("#email-address-f1");
+    var lastName = $("#last-name-f1");
+
+    var yourQuestion = $("#your-question-f1");
+
+    $('#webchat-submit').click(function (e) {
+        
+        if (firstName.val() == "" || lastName.val() == "" || yourQuestion.val() == "") {
+            e.preventDefault();
+            firstName.closest(".form-group").removeClass("form-group-error").closest(".form-group").addClass("form-group-error");
+            emailAdd.closest(".form-group").removeClass("form-group-error").closest(".form-group").addClass("form-group-error");
+            lastName.closest(".form-group").removeClass("form-group-error").closest(".form-group").addClass("form-group-error");
+            yourQuestion.closest(".form-group").removeClass("form-group-error").closest(".form-group").addClass("form-group-error");
+        }
+        else {
+        }
+    });
+
+    $('#your-question-f1').keyup(function () {
+        var max = 2000;
+        var len = $(this).val().length;
+        if (len >= max) {
+            $('.webchat-count').text(' you have reached the limit');
+        } else {
+            var char = max - len;
+            $('.webchat-count').text(char + ' characters left');
+        }
+    });
+
+    $('.webchat-end').click(function (f) {
+        f.preventDefault();
+        $('.webchat-modal').addClass("active");
+    });
+
 });
