@@ -12,12 +12,12 @@
 {% endblock %}
 {% block proposition_header %}
 <div class="header-container">
-    <div class="header-title">Webchat <span class="right">Find a career</span></div>
+    <div class="header-title">Webchat - Explore careers</div> <div class="header-close"><a href="" class="webchat-end">End chat</a></div>
 
 </div>
 {% endblock %}
 
-{% block body_classes %}webchat-pop{% endblock %}
+{% block body_classes %}webchat-pop webchat-pop-chat {% endblock %}
 
 
 {% block before_content %}
@@ -27,17 +27,13 @@
 
 <main id="content" role="main">
     <div class="webchat-chat">
-        <div class="webchat-chat-top">
-            <a class="button webchat-close" href="webchat-finish.html" role="button">End chat</a>
-        </div>
         <div class="webchat-chat-convo">
             <p class="message message-received">Hello. Welcome to Find a career webchat.<span class="message-detail">Bill - 9:33am</span></p>
             <p class="message message-sent">Hi, I'm looking for more information on how to become a border force officer.<span class="message-detail">Bob - 9:34am</span></p>
-            <p class="message message-received">We have subject matter experts who you can speak to. They will be able to help evaluate your current skills and find the best route towards becoming a border force officer. Would you like me to transfer you?<span class="message-detail">Bill - 9:43am</span></p>
         </div>
         <div class="webchat-chat-input">
             <div class="form-group">
-                <textarea class="form-control form-control-3-4" name="textarea" placeholder="Your message..." id="textarea" rows="5"></textarea>
+                <textarea class="form-control" name="textarea" placeholder="Your message..." id="textarea" rows="5"></textarea>
             </div>
             <a class="button" href="#" role="button">Submit</a>
 
@@ -45,7 +41,17 @@
         </div>
     </div>
 </main>
-        {% endblock %}
+
+<div class="webchat-modal">
+    <div class="modal-content">
+        <p>Would you like a transcript of this conversation sent to <strong>aanderton89@gmail.com</strong>?</p>
+        <a href="webchat-finish" class="button">No</a>
+        <a href="webchat-finish" class="button">Yes</a>
+
+    </div>
+</div>
+
+{% endblock %}
         {% block body_end %}
         {% include "./includes/scripts.html" %}
 <!-- GOV.UK Prototype kit {{releaseVersion}} -->
