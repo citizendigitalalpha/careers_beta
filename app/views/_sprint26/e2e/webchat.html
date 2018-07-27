@@ -12,7 +12,7 @@
 {% endblock %}
 {% block proposition_header %}
 <div class="header-container">
-    <div class="header-title">Webchat <span class="right">Find a career</span></div>
+    <div class="header-title">Webchat - Explore careers</div> 
 
 </div>
 {% endblock %}
@@ -26,26 +26,67 @@
 
 
 <main id="content" role="main">
-    <div class="webchat-form">
+    <form name="webchat" id="webchat-form" class="webchat-form">
         <div class="form-group">
-            <label class="form-label" for="full-name-f1">Full name</label>
-            <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+            <label class="form-label" for="first-name-f1">
+                First name
+                <span class="error-message">
+                    Enter your first name
+                </span>
+
+            </label>
+            <input class="form-control" id="first-name-f1" type="text" name="first-name-f1">
         </div>
 
         <div class="form-group">
-            <label class="form-label" for="email-address-f1">Email Address</label>
+            <label class="form-label" for="last-name-f1">
+                Last name
+                <span class="error-message">
+                    Enter your last name
+                </span>
+
+            </label>
+            <input class="form-control" id="last-name-f1" type="text" name="last-name-f1">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" for="email-address-f1">
+                Email Address
+                <span class="error-message">
+                    Enter your email address
+                </span>
+
+            </label>
             <input class="form-control" id="email-address-f1" type="text" name="email-address-f1">
         </div>
 
         <div class="form-group">
             <label class="form-label" for="textarea">
                 Your question?
-            </label>
-            <textarea class="form-control form-control-3-4" name="textarea" id="textarea" rows="5"></textarea>
-        </div>
-        <a class="button" href="webchat-chat.html" role="button">Start chat</a>
 
-    </div>
+                <span class="error-message">
+                    Enter a question
+                </span>
+            </label>
+            <textarea class="form-control form-control-3-4" name="textarea" id="your-question-f1" rows="5"></textarea>
+            <span class="webchat-count">2000 characters left</span>
+        </div>
+        <div class="webchat-guide">
+            <p>To use our webchat you must:</p>
+            <ul class="list list-bullet">
+                <li>be at least 13 years old</li>
+                <li>live in England</li>
+            </ul>
+        </div>
+        <div class="webchat-start">
+            <a href="webchat-chat.html" type="submit" class="button" id="webchat-submit">Start chat</a>
+        </div>
+        <div class="webchat-guide">
+            <p>By using this webchat service you agree to our <a href="#">terms and conditions</a></p>
+            <p>You can read our <a href="#">privacy policy</a></p>
+        </div>
+
+    </form>
 </main>
         {% endblock %}
         {% block body_end %}
