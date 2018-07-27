@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template app-html-class">
+
+<head>
+  <meta charset="utf-8" />
+  <title>GOV.UK - Customised page template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="blue" />
+
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+  <link rel="mask-icon" href="/images/govuk-mask-icon.svg" color="blue">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/govuk-apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="/images/govuk-apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/govuk-apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" href="/images/govuk-apple-touch-icon.png">
+
+  <!--[if !IE 8]><!-->
+  <link href="/govuk-frontend/all.css" rel="stylesheet" />
+  <!--<![endif]-->
+
+  <!--[if IE 8]>
+    <link href="/govuk-frontend/all-ie8.css" rel="stylesheet" />
+  <![endif]-->
+
+  <!--[if lt IE 9]>
+    <script src="/html5-shiv/html5shiv.js"></script>
+  <![endif]-->
+
+  <meta property="og:image" content="/images/govuk-opengraph-image.png">
+</head>
+
+<body class="govuk-template__body app-body-class">
+  <script>
+    document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+
+  </script>
+
+  <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
+
+  <header class="govuk-header " role="banner" data-module="header">
+    <div class="govuk-header__container govuk-width-container">
+
+      <div class="govuk-header__logo">
+        <a href="#" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+
+          <svg
+            role="presentation"
+            focusable="false"
+            class="govuk-header__logotype-crown"
+            xmlns="http://www.w3.org/2000/svg"
+            viewbox="0 0 132 97"
+            height="32"
+            width="36"
+          >
+            <path
+              fill="currentColor" fill-rule="evenodd"
+              d="M25 30.2c3.5 1.5 7.7-.2 9.1-3.7 1.5-3.6-.2-7.8-3.9-9.2-3.6-1.4-7.6.3-9.1 3.9-1.4 3.5.3 7.5 3.9 9zM9 39.5c3.6 1.5 7.8-.2 9.2-3.7 1.5-3.6-.2-7.8-3.9-9.1-3.6-1.5-7.6.2-9.1 3.8-1.4 3.5.3 7.5 3.8 9zM4.4 57.2c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.5-1.5-7.6.3-9.1 3.8-1.4 3.5.3 7.6 3.9 9.1zm38.3-21.4c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.6-1.5-7.6.3-9.1 3.8-1.3 3.6.4 7.7 3.9 9.1zm64.4-5.6c-3.6 1.5-7.8-.2-9.1-3.7-1.5-3.6.2-7.8 3.8-9.2 3.6-1.4 7.7.3 9.2 3.9 1.3 3.5-.4 7.5-3.9 9zm15.9 9.3c-3.6 1.5-7.7-.2-9.1-3.7-1.5-3.6.2-7.8 3.7-9.1 3.6-1.5 7.7.2 9.2 3.8 1.5 3.5-.3 7.5-3.8 9zm4.7 17.7c-3.6 1.5-7.8-.2-9.2-3.8-1.5-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.3 3.5-.4 7.6-3.9 9.1zM89.3 35.8c-3.6 1.5-7.8-.2-9.2-3.8-1.4-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.4 3.6-.3 7.7-3.9 9.1zM69.7 17.7l8.9 4.7V9.3l-8.9 2.8c-.2-.3-.5-.6-.9-.9L72.4 0H59.6l3.5 11.2c-.3.3-.6.5-.9.9l-8.8-2.8v13.1l8.8-4.7c.3.3.6.7.9.9l-5 15.4v.1c-.2.8-.4 1.6-.4 2.4 0 4.1 3.1 7.5 7 8.1h.2c.3 0 .7.1 1 .1.4 0 .7 0 1-.1h.2c4-.6 7.1-4.1 7.1-8.1 0-.8-.1-1.7-.4-2.4V34l-5.1-15.4c.4-.2.7-.6 1-.9zM66 92.8c16.9 0 32.8 1.1 47.1 3.2 4-16.9 8.9-26.7 14-33.5l-9.6-3.4c1 4.9 1.1 7.2 0 10.2-1.5-1.4-3-4.3-4.2-8.7L108.6 76c2.8-2 5-3.2 7.5-3.3-4.4 9.4-10 11.9-13.6 11.2-4.3-.8-6.3-4.6-5.6-7.9 1-4.7 5.7-5.9 8-.5 4.3-8.7-3-11.4-7.6-8.8 7.1-7.2 7.9-13.5 2.1-21.1-8 6.1-8.1 12.3-4.5 20.8-4.7-5.4-12.1-2.5-9.5 6.2 3.4-5.2 7.9-2 7.2 3.1-.6 4.3-6.4 7.8-13.5 7.2-10.3-.9-10.9-8-11.2-13.8 2.5-.5 7.1 1.8 11 7.3L80.2 60c-4.1 4.4-8 5.3-12.3 5.4 1.4-4.4 8-11.6 8-11.6H55.5s6.4 7.2 7.9 11.6c-4.2-.1-8-1-12.3-5.4l1.4 16.4c3.9-5.5 8.5-7.7 10.9-7.3-.3 5.8-.9 12.8-11.1 13.8-7.2.6-12.9-2.9-13.5-7.2-.7-5 3.8-8.3 7.1-3.1 2.7-8.7-4.6-11.6-9.4-6.2 3.7-8.5 3.6-14.7-4.6-20.8-5.8 7.6-5 13.9 2.2 21.1-4.7-2.6-11.9.1-7.7 8.8 2.3-5.5 7.1-4.2 8.1.5.7 3.3-1.3 7.1-5.7 7.9-3.5.7-9-1.8-13.5-11.2 2.5.1 4.7 1.3 7.5 3.3l-4.7-15.4c-1.2 4.4-2.7 7.2-4.3 8.7-1.1-3-.9-5.3 0-10.2l-9.5 3.4c5 6.9 9.9 16.7 14 33.5 14.8-2.1 30.8-3.2 47.7-3.2z"
+            ></path>
+
+            <image src="/assets/images/govuk-logotype-crown.png" class="govuk-header__logotype-crown-fallback-image"></image>
+          </svg>
+          <span class="govuk-header__logotype-text">
+            GOV.UK
+          </span>
+        </span>
+      </a>
+      </div>
+      <div class="govuk-header__content">
+
+        <a href="#" class="govuk-header__link govuk-header__link--service-name">
+      Service name
+    </a>
+
+        <button role="button" class="govuk-header__menu-button js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+        <nav>
+          <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+            <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+              <a class="govuk-header__link" href="#1">
+                Navigation item 1
+              </a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="#2">
+                Navigation item 2
+              </a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="#3">
+                Navigation item 3
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="govuk-width-container">
+    <div class="govuk-phase-banner">
+      <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+        <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+      </p>
+    </div>
+
+    <a href="#" class="govuk-back-link">Back</a>
+
+    <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+      <h1 class="govuk-heading-xl">Customised page template</h1>
+    </main>
+  </div>
+
+  <footer class="govuk-footer " role="contentinfo">
+    <div class="govuk-width-container ">
+      <div class="govuk-footer__meta">
+        <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+          <h2 class="govuk-visually-hidden">Support links</h2>
+          <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="#1">
+                  Help
+                </a>
+            </li>
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="#2">
+                  Cookies
+                </a>
+            </li>
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="#3">
+                  Contact
+                </a>
+            </li>
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="#4">
+                  Terms and conditions
+                </a>
+            </li>
+          </ul>
+
+          <svg role="presentation" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 483.2 195.7" height="17" width="41">
+          <path
+            fill="currentColor"
+            d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+          />
+        </svg>
+          <span class="govuk-footer__licence-description">
+          All content is available under the
+          <a
+            class="govuk-footer__link"
+            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+            rel="license"
+          >Open Government Licence v3.0</a>, except where otherwise stated
+        </span>
+        </div>
+        <div class="govuk-footer__meta-item">
+          <a class="govuk-footer__link govuk-footer__copyright-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">© Crown copyright</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/govuk-frontend/all.js"></script>
+</body>
+
+</html>
+
+
+
+<!--section 1-->
+<section id="how-to-become">
+    <h2 class="heading-large jp-heading">How to become a {{profileName}}</h2>
+    <p>There are a number of options and routes which could allow you to become a beauty consultant.</p>
+
+
+    <!-- College Section -->
+    <section class="job-profile-subsection" id="apprenticeships">
+
+        <h3>College</h3>
+        <div class="job-profile-subsection-content">
+
+            <p>You could study for:</p>
+            <ul class="list list-bullet">
+                <li>a level 2 certificate or diploma in beauty consultancy</li>
+                <li>a general qualification in retail, sales or customer service</li>
+            </ul>
+
+            <h4 class="heading-small">Requirements:</h4>
+            <p>To get onto a level 2 course you may need:</p>
+            <ul class="list list-bullet">
+                <li>3 GCSEs at grades 9 to 3 (A* to D)</li>
+            </ul>
+            <p>Check with course providers for exact entry requirements. You might be able to use <a href="https://www.gov.uk/what-different-qualification-levels-mean/list-of-qualification-levels">equivalent level qualifications</a> to get onto a course.</p>
+
+            <h4 class="heading-small">More information</h4>
+            <ul class="list list-arrow">
+                <li><a class="htb-feature" href="https://www.gov.uk/further-education-courses/financial-help">You may be able to get financial help to do a course.</a></li>
+                <li><a class="htb-feature" href="https://nationalcareersservice.direct.gov.uk/course-directory/home">Find a web development course near you.</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Work -->
+    <section class="job-profile-subsection" id="work">
+
+        <h3>Work your way up</h3>
+        <div class="job-profile-subsection-content">
+            <p>You could get useful experience in any sales role and then apply for a job working for a beauty concession (a commercial operation within a department store). </p>
+        </div>
+    </section>
+
+    <!-- Apprenticeships -->
+    <section class="job-profile-subsection" id="apprenticeships">
+
+        <h3>Apprenticeships</h3>
+        <div class="job-profile-subsection-content">
+
+            <p>You could do an intermediate or advanced <a href="https://www.gov.uk/apprenticeships-guide">apprenticeship</a> in beauty therapy make-up. These last 12 to 18 months. You may need a level 2 qualification to get onto the advanced apprenticeship. Check with course providers for exact entry requirements.</p>
+
+            <h4 class="heading-small">Requirements:</h4>
+
+            <ul class="list-bullet list">
+                <li>You may need a level 2 qualification to get onto the advanced apprenticeship. Check with course providers for exact entry requirements.</li>
+                <li>Get work experience in sales</li>
+            </ul>
+
+            <h4 class="heading-small">Next steps:</h4>
+
+            <ul class="list list-arrow">
+                <li><a class="htb-feature" href="http://www.habia.org/">The Hairdressing and Beauty Industry Authority (HABIA) has more information about careers in beauty consultancy and therapy.</a></li>
+                <li><a class="htb-feature" href="https://www.findapprenticeship.service.gov.uk/apprenticeshipsearch">Look for a beauty therapist apprenticeship near you.</a> </li>
+            </ul>
+        </div>
+    </section>
+
+
+</section>
+
+<!--section 2-->
+<section id="skills-required">
+    <h2 class="heading-large jp-heading">What it takes</h2>
+    <!-- Skills -->
+    <section class="job-profile-subsection" id="skills">
+        <h3>Skills  and knowledge</h3>
+        <div class="job-profile-subsection-content">
+            <p>You'll need:</p>
+            <ul class="list list-bullet ">
+                <li> a desire to help people </li>
+                <li> customer service skills to put clients at ease </li>
+                <li> excellent speaking and listening skills to understand clients’ needs </li>
+                <li> attention to detail for doing tasks like nail art </li>
+                <li> the ability to work well with your hands for giving treatments like massage </li>
+                <li> reading, writing, spelling and grammar skills for keeping records </li>
+                <li> the ability to sell products and services to earn commission </li>
+                <li> digital skills for communicating and recording information </li>
+            </ul>
+        </div>
+    </section>
+
+</section>
+
+
+<!--section 3-->
+<section id="what-youll-do">
+
+    <h2 class="heading-large jp-heading">What you'll do</h2>
+    <p>You could work in a high street salon, beauty clinic, health spa or hotel. You might also work on a cruise ship. You could also be self-employed where you’d work from home, or visit clients in their own homes.</p>
+
+    <!-- Day to day -->
+    <section class="job-profile-subsection" id="skills">
+        <h3>Day to day tasks:</h3>
+        <div class="job-profile-subsection-content">
+            <p>You could be:</p>
+            <ul class="list list-bullet">
+                <li>giving a facial by cleansing, massaging and toning a client’s skin</li>
+                <li>giving a makeover by applying and advising on make-up</li>
+                <li>shaping eyebrows and colouring eyelashes</li>
+                <li>giving a manicure, pedicure or other nail treatment like extensions and nail art</li>
+                <li>removing unwanted facial and body hair</li>
+                <li>giving electro-therapy treatments to improve body tone and shape</li>
+                <li>giving non-surgical skin improvement treatments</li>
+                <li>offering UV (ultraviolet) and spray tanning</li>
+                <li>offering other treatments like massage, aromatherapy, hydrotherapy and reflexology</li>
+            </ul>
+          
+            <p>As well as giving treatments, you may also be:</p>
+            <ul class="list list-bullet">
+                <li>answering the telephone and greeting clients</li>
+                <li>booking appointments</li>
+                <li>checking and ordering supplies</li>
+                <li>keeping notes of clients’ medical histories and treatment programmes</li>
+                <li>referring clients to a doctor if needed </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- Enviroments -->
+    <section class="job-profile-subsection" id="skills">
+        <h3> Working Environments: </h3>
+        <div class="job-profile-subsection-content">
+            <p>You could work in a hospital, care home, travel to a client home, GP practice or health center</p> 
+            <p>You might find this work physically demanding, stressful or emotinally draining </p>
+            <p>You might also need to wear uniform</p>
+        </div>
+    </section>
+
+
+        <section class="job-profile-subsection" id="skills">
+        <h3> Working Environments: </h3>
+        <div class="job-profile-subsection-content">
+            <p>In this job you may:</p>
+            <ul class="list list-bullet">
+                <li>work in a hospital</li>
+                <li>work in a care home</li>
+                <li>work in a client home</li>
+                <li>work in a GP practice</li>
+                <li>work in a health center</li>
+                <li>find this work physically demanding</li>
+                <li>find this work stressful</li>
+                <li>find this work emotinally draining</li>
+                <li>need to travel</li>
+                <li>you might also need to wear uniform</li>
+        </div>
+    </section>
+
+<!--section 4-->
+<section id="career-path-and-progression">
+    <h2 class="heading-large jp-heading">Career path and progression</h2>
+    <p>You'll usually work 35 to 40 hours a week, Monday to Friday. You may sometimes need to work overtime to meet deadlines.</p>
+    <p>Most of your work will be office-based at a computer. There may be some out-of-office duties, like attending meetings with clients or partners.</p>
+</section>
+
+<!--section 5-->
+<section id="current-opportunities" style="margin-bottom:30px">
+    <h2 class="heading-large jp-heading">Current opportunities</h2>
+    <div class="opportunity-footer dfc-code-jp-novacancyText">
+        <p>There are currently no opportunities in this field of work.</p><p>Check again soon or look for another <a href="https://www.findapprenticeship.service.gov.uk/apprenticeshipsearch">apprenticeship</a>.</p>
+    </div>
+</section>
+
+
+
+<p class="grey font-xsmall">Last updated: 23 March 2016</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
