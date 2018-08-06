@@ -9,7 +9,7 @@ $path: "/public/images/";
 // Take a look at in app/assets/sass/patterns/ to see which files are imported.
 @import 'patterns/check-your-answers';
 
-$careers-turquoise: #21827b;
+$careers-turquoise: #207e77;
 
 // Related items
 // (These styles will be moved to GOV.UK elements, duplicating here for now.)
@@ -1800,7 +1800,6 @@ $careers-turquoise: #21827b;
                         color: $careers-turquoise;
                         width: 100%;
                         display: block;
-                        text-transform: uppercase;
                     }
                 }
 
