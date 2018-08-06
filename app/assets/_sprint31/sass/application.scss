@@ -3375,264 +3375,302 @@ $careers-turquoise: #21827b;
         }
     }
     /* WEBCHAT */
-    .webchat-pop {
-        main {
-            padding-bottom: 0px !important;
-            margin-top: 55px !important;
-            -webkit-box-shadow: 0px 2000px 0px 2000px rgba(255,255,255,1);
-            -moz-box-shadow: 0px 2000px 0px 2000px rgba(255,255,255,1);
-            box-shadow: 0px 2000px 0px 2000px rgba(255,255,255,1);
-        }
+.webchat-pop {
+    main {
+        padding-bottom: 0px !important;
+        margin-top: 55px !important;
+        -webkit-box-shadow: 0px 2000px 0px 2000px rgba(255,255,255,1);
+        -moz-box-shadow: 0px 2000px 0px 2000px rgba(255,255,255,1);
+        box-shadow: 0px 2000px 0px 2000px rgba(255,255,255,1);
+    }
 
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
 
-        footer {
-            display: none;
-        }
+    footer {
+        display: none;
+    }
 
-        .header-container {
-            width: 100%;
-            box-sizing: border-box;
-            margin: 0 !important;
-            padding: 10px 15px;
+    .header-container {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0 !important;
+        padding: 10px 15px;
 
-            .header-title {
-                display: block;
-                float: left;
-            }
-
-            .header-close {
-                float: right;
-                font-size: 14px;
-                line-height: 20px;
-
-                a {
-                    color: $white;
-                    text-decoration: none;
-
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-            }
-        }
-
-
-        .webchat-form {
-            padding: 20px 0;
-
-            .form-group {
-                .form-label {
-                    .error-message {
-                        display: none;
-                    }
-                }
-            }
-
-            .form-group-error {
-                .form-label {
-                    .error-message {
-                        display: block !important;
-                    }
-                }
-            }
-
-            .webchat-count {
-                font-size: 12px;
-                float: right;
-                display: block;
-                margin-top: 5px;
-            }
-        }
-
-        .button {
-            float: right;
-            max-width: 120px;
-            border-radius: 4px;
-        }
-
-        .webchat-chat-top {
-            padding: 15px;
-            @extend %contain-floats;
-            background-color: $grey-3;
-            margin: 0 -15px;
-            position: sticky;
-            top: 0;
-            z-index: 200;
-        }
-
-        .webchat-feedback-top {
-            padding: 15px;
-            @extend %contain-floats;
-            background-color: $grey-3;
-            margin: 0 -15px;
-        }
-
-        .webchat-chat-convo {
-            width: 100%;
-            @extend %contain-floats;
+        .header-title {
             display: block;
-            padding: 20px 0;
-
-            .message {
-                width: 75%;
-                display: block;
-                padding: 15px;
-                margin-bottom: 10px;
-                font-size: 14px;
-
-                span {
-                    position: relative;
-                    bottom: 100%;
-                    display: block;
-                    font-size: 12px;
-                    opacity: 0.8;
-                    margin-top: 10px;
-                }
-
-                &.message-received {
-                    border-radius: 10px 10px 10px 0;
-                    float: left;
-                    background-color: lighten($govuk-blue, 10%);
-                    color: $white;
-
-                    span {
-                        color: $white;
-                    }
-                }
-
-                &.message-sent {
-                    border-radius: 10px 10px 0 10px;
-                    float: right;
-                    background-color: $grey-3;
-
-                    span {
-                        text-align: right;
-                    }
-                }
-
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-        }
-
-        .webchat-chat-input {
-            border-top: 1px solid $grey-2;
-            background-color: $white;
-            padding: 10px;
-            overflow: auto;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            margin: 0 -15px;
-            box-sizing: border-box;
-            max-width: 960px;
-
-            textarea {
-                width: 100%;
-            }
-        }
-
-        .webchat-button {
-            max-width: 40%;
-            margin: 5%;
-            background-color: $govuk-blue;
             float: left;
-
-            &:hover {
-                background-color: darken($govuk-blue, 10%);
-            }
         }
 
-        .multiple-choice {
-            max-width: 50%;
-            float: left;
-            margin-top: 10px;
-            margin-right: 0 !important;
-        }
-
-        .form-label {
-            font-weight: bold;
-        }
-
-        .multiple-choice-scale {
-            width: 220px;
-            display: block;
-            margin-top: 56px;
-            font-size: 12px;
-
-            span:first-child {
-                float: left;
-            }
-
-            span:last-child {
-                float: right;
-            }
-        }
-
-        .webchat-guide {
-            font-size: 12px;
-            float: left;
-
-            p {
-                font-weight: bold;
-            }
-
-            ul {
-                li {
-                    font-size: 12px;
-                    margin: 0;
-                }
-            }
-        }
-
-        .webchat-start {
+        .header-close {
             float: right;
-            margin-top: 30px;
-        }
+            font-size: 14px;
+            line-height: 20px;
 
-        .webchat-feedback {
-            overflow: auto;
-            box-sizing: border-box;
-            min-width: 300px;
-        }
+            a {
+                color: $white;
+                text-decoration: none;
 
-        .webchat-modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgb(0,0,0);
-            background-color: rgba(0,0,0,0.4);
-
-            &.active {
-                display: block;
-            }
-
-            .modal-content {
-                background-color: #fefefe;
-                margin: 15% auto;
-                padding: 20px;
-                border: 1px solid #888;
-                width: 80%;
-                overflow: auto;
-
-                .button {
-                    margin-left: 10px;
+                &:hover {
+                    text-decoration: underline;
                 }
             }
         }
     }
+
+
+    .webchat-form {
+        padding: 20px 0;
+
+        .form-group {
+            .form-label {
+                .error-message {
+                    display: none;
+                }
+            }
+        }
+
+        .form-group-error {
+            .form-label {
+                .error-message {
+                    display: block !important;
+                }
+            }
+        }
+
+        .webchat-count {
+            font-size: 12px;
+            float: right;
+            display: block;
+            margin-top: 5px;
+        }
+    }
+
+    .button {
+        float: right;
+        max-width: 120px;
+        border-radius: 4px;
+    }
+
+    .webchat-chat-top {
+        padding: 15px;
+        @extend %contain-floats;
+        background-color: $grey-3;
+        margin: 0 -15px;
+        position: sticky;
+        top: 0;
+        z-index: 200;
+        text-align: right;
+        color: $grey-1;
+
+        p {
+            display: inline-block;
+            font-weight: bold;
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+        }
+    }
+
+    .webchat-chat-button {
+        color: $grey-1;
+        padding: 5px;
+        text-decoration: none;
+        border-radius: 3px;
+        font-weight: bold;
+        font-size: 14px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        span {
+            font-size: 10px;
+            font-weight: bold;
+            top: -4px;
+            position: relative;
+        }
+    }
+
+    .webchat-chat-button-small {
+        font-size: 14px;
+    }
+
+    .webchat-chat-button-big {
+        font-size: 18px;
+    }
+
+    .webchat-feedback-top {
+        padding: 15px;
+        @extend %contain-floats;
+        background-color: $grey-3;
+        margin: 0 -15px;
+    }
+
+    .webchat-chat-convo {
+        width: 100%;
+        @extend %contain-floats;
+        display: block;
+        padding: 20px 0;
+
+        .message {
+            width: 75%;
+            display: block;
+            padding: 15px;
+            margin-bottom: 10px;
+            font-size: 14px;
+
+            span {
+                position: relative;
+                bottom: 100%;
+                display: block;
+                font-size: 12px;
+                opacity: 0.8;
+                margin-top: 10px;
+            }
+
+            &.message-received {
+                border-radius: 10px 10px 10px 0;
+                float: left;
+                background-color: lighten($govuk-blue, 10%);
+                color: $white;
+
+                span {
+                    color: $white;
+                }
+            }
+
+            &.message-sent {
+                border-radius: 10px 10px 0 10px;
+                float: right;
+                background-color: $grey-3;
+
+                span {
+                    text-align: right;
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .webchat-chat-input {
+        border-top: 1px solid $grey-2;
+        background-color: $white;
+        padding: 10px;
+        overflow: auto;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin: 0 -15px;
+        box-sizing: border-box;
+        max-width: 960px;
+
+        textarea {
+            width: 100%;
+        }
+    }
+
+    .webchat-button {
+        max-width: 40%;
+        margin: 5%;
+        background-color: $govuk-blue;
+        float: left;
+
+        &:hover {
+            background-color: darken($govuk-blue, 10%);
+        }
+    }
+
+    .multiple-choice {
+        max-width: 50%;
+        float: left;
+        margin-top: 10px;
+        margin-right: 0 !important;
+    }
+
+    .form-label {
+        font-weight: bold;
+    }
+
+    .multiple-choice-scale {
+        width: 220px;
+        display: block;
+        margin-top: 56px;
+        font-size: 12px;
+
+        span:first-child {
+            float: left;
+        }
+
+        span:last-child {
+            float: right;
+        }
+    }
+
+    .webchat-guide {
+        font-size: 12px;
+        float: left;
+
+        p {
+            font-weight: bold;
+        }
+
+        ul {
+            li {
+                font-size: 12px;
+                margin: 0;
+            }
+        }
+    }
+
+    .webchat-start {
+        float: right;
+        margin-top: 30px;
+    }
+
+    .webchat-feedback {
+        overflow: auto;
+        box-sizing: border-box;
+        min-width: 300px;
+    }
+
+    .webchat-modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+
+        &.active {
+            display: block;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            overflow: auto;
+
+            .button {
+                margin-left: 10px;
+            }
+        }
+    }
+}
 
     .explorecareers_nav {
         display: block;
