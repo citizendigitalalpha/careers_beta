@@ -3664,3 +3664,21 @@ $careers-turquoise: #21827b;
         }
     }
 
+.phase-banner-alpha {
+    border-bottom: 1px solid $grey-2;
+    overflow: auto;
+
+    p {
+        float: left;
+    }
+
+    .account-info {
+        float: right;
+
+        a, div {
+            font-size: 16px;
+            text-align: right;
+        }
+    }
+}
+
