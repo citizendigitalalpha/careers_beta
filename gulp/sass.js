@@ -430,3 +430,29 @@ gulp.task('sass-documentation-S26', function () {
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(config.paths.publicS26 + '/stylesheets/'))
 })
+
+gulp.task('sass-S31', function () {
+    return gulp.src(config.paths.assetsS31 + '/sass/*.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            outputStyle: 'expanded',
+            includePaths: ['govuk_modules/govuk_frontend_toolkit/stylesheets',
+                'govuk_modules/govuk_template/assets/stylesheets',
+                'govuk_modules/govuk-elements-sass/']
+        }).on('error', sass.logError))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(config.paths.publicS31 + '/stylesheets/'))
+})
+
+gulp.task('sass-documentation-S31', function () {
+    return gulp.src(config.paths.docsAssetsS31 + '/sass/*.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            outputStyle: 'expanded',
+            includePaths: ['govuk_modules/govuk_frontend_toolkit/stylesheets',
+                'govuk_modules/govuk_template/assets/stylesheets',
+                'govuk_modules/govuk-elements-sass/']
+        }).on('error', sass.logError))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(config.paths.publicS31 + '/stylesheets/'))
+})
