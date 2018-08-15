@@ -75,6 +75,7 @@ Global
 		clear:both;
 		margin-left:15px;
 		margin-top:4px;
+		margin-bottom: 4px;
 
 	    @media screen and (min-width: 500px) {
 	        margin-top:14px;
@@ -86,7 +87,7 @@ Global
 		}
 
 		.header-title {
-			margin:0px;
+			margin:0 0 5px 0;
 		}
 		.phase-tag {
 		    font-family: "nta", Arial, sans-serif;
@@ -107,7 +108,7 @@ Global
 		    // }
 
 			@include media(tablet){
-				margin:1px 8px 0 8px;
+				margin:1px 8px 0 6px;
 			    font-size:14px;
 			    line-height: 1.42857;
 			}
