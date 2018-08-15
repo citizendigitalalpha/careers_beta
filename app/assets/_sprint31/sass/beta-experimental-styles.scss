@@ -94,20 +94,20 @@ Global
 		    text-transform: none;
 		    font-size: 12px;
 		    line-height: 1.25;
-		    padding: 2px 5px 0;
+		    padding: 2px 5px;
 		    text-transform: uppercase;
 		    letter-spacing: 1px;
-		    vertical-align: middle;
+		    vertical-align: top;
 		    background: #005EA5;
 		    margin:1px 0 0 6px;
-		    float:left;
+		    float:right;
 
 		    // @media screen and (min-width: 500px) {
 		    //     margin-top:0px;
 		    // }
 
 			@include media(tablet){
-				margin:4px 0 0 8px;
+				margin:1px 0 0 8px;
 			    font-size:14px;
 			    line-height: 1.42857;
 			}
