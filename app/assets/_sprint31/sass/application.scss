@@ -3693,9 +3693,12 @@ $careers-turquoise: #207e77;
                         text-decoration: underline;
                     }
 
-                    &.active {
+                    &:active {
                         color: #1d8feb;
                     }
+                }
+                .selected {
+                    color: #1d8feb;
                 }
             }
         }
