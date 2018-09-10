@@ -305,25 +305,29 @@ $(document).ready(function () {
             });
         });
     };
-
-
-
     var firstName = $("#first-name-f1");
     var emailAdd = $("#email-address-f1");
     var lastName = $("#last-name-f1");
-
     var yourQuestion = $("#your-question-f1");
 
     $('#webchat-submit').click(function (e) {
-        
-        if (firstName.val() == "" || lastName.val() == "" || yourQuestion.val() == "") {
+        if (firstName.val() == "" || lastName.val() == "" || emailAdd.val() == "" || yourQuestion.val() == "") {
             e.preventDefault();
-            firstName.closest(".form-group").removeClass("form-group-error").closest(".form-group").addClass("form-group-error");
-            emailAdd.closest(".form-group").removeClass("form-group-error").closest(".form-group").addClass("form-group-error");
-            lastName.closest(".form-group").removeClass("form-group-error").closest(".form-group").addClass("form-group-error");
-            yourQuestion.closest(".form-group").removeClass("form-group-error").closest(".form-group").addClass("form-group-error");
+
+            $('.webchat-input').each(function () {
+                if ($(this).val() === "") {
+                    $(this).closest(".form-group").addClass("form-group-error");
+                }
+
+                else {
+                    $(this).closest(".form-group").removeClass("form-group-error");
+                }
+            });
         }
         else {
+            localStorage.setItem('webchat-name', firstName.val());
+            localStorage.setItem('webchat-message', yourQuestion.val());
+
         }
     });
 
@@ -342,5 +346,6 @@ $(document).ready(function () {
         f.preventDefault();
         $('.webchat-modal').addClass("active");
     });
+
 
 });

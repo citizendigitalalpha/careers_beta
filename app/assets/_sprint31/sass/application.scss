@@ -3456,7 +3456,7 @@ $careers-turquoise: #207e77;
     }
 
     .webchat-chat-top {
-        padding: 15px;
+        padding: 15px 15px 8px;
         @extend %contain-floats;
         background-color: $grey-3;
         margin: 0 -15px;
@@ -3643,7 +3643,7 @@ $careers-turquoise: #207e77;
     .webchat-modal {
         display: none;
         position: fixed;
-        z-index: 1;
+        z-index: 1000;
         left: 0;
         top: 0;
         width: 100%;
@@ -3755,4 +3755,8 @@ $careers-turquoise: #207e77;
         }
     }
 }
+
+i {
+    font-style: normal;
+} 
 
