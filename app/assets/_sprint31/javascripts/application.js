@@ -327,6 +327,8 @@ $(document).ready(function () {
         else {
             localStorage.setItem('webchat-name', firstName.val());
             localStorage.setItem('webchat-message', yourQuestion.val());
+            localStorage.setItem('webchat-email', emailAdd.val());
+
 
         }
     });

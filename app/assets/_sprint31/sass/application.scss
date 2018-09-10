@@ -3403,6 +3403,10 @@ $careers-turquoise: #207e77;
         .header-title {
             display: block;
             float: left;
+
+            &:hover {
+                text-decoration: none !important;
+            }
         }
 
         .header-close {
@@ -3413,6 +3417,8 @@ $careers-turquoise: #207e77;
             a {
                 color: $white;
                 text-decoration: none;
+                top: 2px;
+                position: relative;
 
                 &:hover {
                     text-decoration: underline;
