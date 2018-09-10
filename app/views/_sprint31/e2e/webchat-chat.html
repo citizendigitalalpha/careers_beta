@@ -19,6 +19,11 @@
         if (localStorage.getItem('webchat-message') !== null) {
             $('#message-content').text(localStorage.getItem('webchat-message'));
         }
+        else { }
+        if (localStorage.getItem('webchat-email') !== null) {
+            $('#message-email').text(localStorage.getItem('webchat-email'));
+        }
+        else { }
     });
 
 </script>
@@ -62,7 +67,7 @@
 
 <div class="webchat-modal">
     <div class="modal-content">
-        <p>Would you like a transcript of this conversation sent to <strong>aanderton89@gmail.com</strong>?</p>
+        <p>Would you like a transcript of this conversation sent to <strong id="message-email">your@email.com</strong>?</p>
         <a href="webchat-finish" class="button">No</a>
         <a href="webchat-finish" class="button">Yes</a>
 
