@@ -3721,3 +3721,38 @@ $careers-turquoise: #207e77;
         }
     }
 }
+
+
+#ipsosBanner {
+    display: none !important;
+}
+
+#global-header-bar {
+    display: none;
+}
+
+.global-header-bar-2 {
+   display: block !important;
+}
+
+.shc-banner {
+    width: 100%;
+    background-color: #DF3034;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    p {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    a {
+        color: white;
+
+        &:visited, &:active, &:focus {
+            color: white;
+        }
+    }
+}
+
