@@ -194,3 +194,13 @@ gulp.task('watch-assets-S31', function () {
     config.paths.assetsS31 + 'javascripts/**',
     config.paths.assetsS31 + 'data/**'], { cwd: './' }, ['copy-assets-S31']);
 })
+
+gulp.task('watch-sass-L1', function () {
+    return gulp.watch(config.paths.assetsL1 + 'sass/**', { cwd: './' }, ['sass-L1']);
+})
+
+gulp.task('watch-assets-L1', function () {
+    return gulp.watch([config.paths.assetsL1 + 'images/**',
+    config.paths.assetsL1 + 'javascripts/**',
+    config.paths.assetsL1 + 'data/**'], { cwd: './' }, ['copy-assets-L1']);
+})

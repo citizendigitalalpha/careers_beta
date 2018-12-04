@@ -3541,7 +3541,7 @@ $careers-turquoise: #207e77;
             &.message-received {
                 border-radius: 10px 10px 10px 0;
                 float: left;
-                background-color: lighten($govuk-blue, 10%);
+                background-color: lighten($link-colour, 10%);
                 color: $white;
 
                 span {
